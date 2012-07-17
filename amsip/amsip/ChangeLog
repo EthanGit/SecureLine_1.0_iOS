@@ -1,0 +1,465 @@
+$Id$
+$Rev$
+
+25/04/2012 - 4.7.0 -cont-
+	* if audio bitrate is set to 30, sdp answer will keep
+	  only one of the lowest bitrate codec from the offer.
+	  This is to be used with 3G network to force usage of
+	  low bitrate codec when the offer contains high bitrate
+	  codecs as prefered codecs.
+	* improve usage of ICE if one side has no ICE support.
+	* update to latest ZRTP
+	  (not compiled by default // ask support)
+
+20/04/2012 - 4.7.0 -cont-
+	* fix osip/exosip time // use sytem time instead
+	  of day time.
+	* improve symmetric RTP when one side don't have
+	  ICE enabled and a delay occur in stream
+	  establishment.
+	* fix when profile-level-id is missing in remote
+	  SDP offer.
+	* initial version with conference API to allow
+	  several audio conference with several sound cards.
+
+18/04/2012 - 4.7.0 -cont-
+	* fix srand for ssrc generation.
+	  windows: replace with windows native API.
+	  other platforms: improve seed generation.
+
+11/04/2012 - 4.7.0 -cont-
+	* add API for non-adaptative RTP buffer configuration.
+	* fix macosx compilation project for no-IPP workspace.
+
+04/04/2012 - 4.7.0 -cont-
+	* improve osip mutex.
+	* avoid RTP failure when ZRTP is choosen but not compiled.
+	* add SRTP overhead for bitrate when ZRTP is used.
+
+04/04/2012 - 4.7.0 -cont-
+	* optionnal ZRTP support available on windows.
+	  (not compiled by default // ask support)
+	  ZRTP support requires a 3rd party license from zfone.
+	* API to control ZRTP support (if available)
+	* new plantronics device (windows): Savi Office 7xx
+	* add API to get RTCP statistics on audio stream.
+
+28/03/2012 - 4.7.0 -cont-
+	* update the RtpTransport model for future improvements.
+	* fix/improve background colors.
+	* send STUN Binding Indication when no RTP video is sent.
+	* add API to enable/disable or set the denoiser level.
+	* add a webcam plugin with no output image.
+	* add H264 hardware encoder based on CUDA.
+	  Note: IDR are too large to fit into MTU. Thus,
+	  packetization-mode is forced in the encoder and
+	  this may introduce interop issue with other devices.
+	* fix usage of asymetric video negotiation.
+
+20/03/2012 - 4.7.0 -cont-
+	* new plantronics device (windows/macosx): BT300,
+	  A478USB and C420 v2.
+	* new jabra device (macosx): UC550MONO UC550DUO
+	  BIZ2400MONOUSB PRO930 PRO9450.
+	  UC250, UC150MONO, UC150DUO are broken (audio is also
+	  broken with itunes).
+	
+16/03/2012 - 4.7.0 -cont-
+	* new jabra device (windows): UC250 UC550MONO UC550DUO
+	  UC150MONO UC150DUO BIZ2400MONOUSB PRO930 PRO9450
+	* fix time issue on windows with timeGetTime on some host
+	  with several processor.
+	* update osip & eXosip2 to 4.0.0 // multireg version
+	  (compile amsip with -DEXOSIP4)
+	* new model with ffmpeg outside mediastreamer2 as
+	  libmsffmpeg and libmswscale plugins.
+	* new jpeg-turbo alternative for JPEG support.
+
+22/02/2012 - 4.6.0 -cont-
+	* update mediastreamer2 .def file to compile VP8/windows.
+	* fix when am_quit/am_reset is called with active ICE
+	  video call still pending.
+	* update to latest libyuv r180
+
+21/02/2012 - 4.6.0 -cont-
+	* add missing vp8 headers for windows.
+	* add new API to provide TLS certificates and keys.
+	* add new API to remove a username/password entry.
+	
+15/02/2012 - 4.6.0 -cont-
+	* add VP8 video on android & windows.
+	* use macosx certificate store for TLS validation.
+	* ignore all TLS errors if no verification is configured.
+	* add missing macosx video driver.
+
+08/02/2012 - 4.6.0 -cont-
+	* fix mslibyuv conversion (all platforms)
+
+03/02/2012 - 4.6.0 -cont-
+	* update libyuv and compile with all adequate optimisation.
+	  performance test show high benefit on iOS and android.
+	* add g729d/g729e/g7291 codecs (Intel Performance Library)
+	* improve AMR/AMR-WB detection of octet-align/band-efficient
+	  (Intel Performance Library only)
+	* minor fix for video on macosx (msv4m2.m)
+	* add macosx workspace to compile without Intel Performance
+	  Library.
+
+26/01/2012 - 4.6.0 -cont-
+	* fix jitter buffer when a live change of codec with different
+	  sample rate occurs on ios.
+	* fix sampling rate conversion when incoming/outgoing codec
+	  use different sampling rates.
+	* add g722 codec.
+
+24/01/2012 - 4.6.0 -cont-
+	* new libyuv plugin for fast conversion // already usable
+	  on iOS, android, windows and macosx.
+	* remove 0.0.0.0 from discovered local IP (iOS//ice issue)
+	* fix osx video format for "nowindow display" mode.
+	* improve macosx build workspace.
+
+30/12/2011 - 4.6.0 -cont-
+	* modification: do not display selfview in main view any more.
+	* srtp: add all standard crypto suite including AES 256bit.
+	* add configurable srtp support // improve negotiation.
+
+22/12/2011 - 4.6.0
+	* new API to make setup sdp parameter optionnal.
+	* fix linux video filter // update to latest structure.
+	* improve/fix when image size change on the fly (iphone)
+	* allow broken Route/Record-Route in incoming INVITE.
+	  (best effort is usefull in re-INVITE/UPDATE...)
+	* full macosx framework updated & ready for xcode 4.2
+	  with latest IPP plugins compiled with Intel C++ Composer.
+	* fix to encode any size for H263-1998.
+	* improve rotation code.
+	* avoid most stretching in display/outgoing image (iphone).
+	* add support for receiving any video size from an encoder.
+	* allow dynamic update for video device list. (updated each
+	  time "am_option_find_camera with camera.card=0" is called)
+	* sip dscp API.
+	* better quality for iphone/android video.
+	* ready for video on iphone.
+	* fix previous subscription modification.
+	* new API to reject all video negotiation.
+	* minor improvments for SUBSCRIBE support.
+	* fix to allow authentication for un-subscribe & TCP/TLS mode.
+	* "nowindowdisplay": 2 image on windows.
+	* "nowindowdisplay": 1 image with selfview inside on macosx.
+	* use adaptative jitter on iphone.
+	* fix srtp with '\' interop issue.
+	* add TLS fragmentation support.
+	* add "nowindowdisplay" replacement (#define NOWINDOW_DISPLAY)
+	* fix srtp for apple/iphone.
+	* improve RTCP support.
+	* allow stitcher to use yuv IPP plugin.
+	* update to latest IPP 7.x.
+	* fix HID for x64 on windows.
+	* fix videostitcher for 9th participant.
+	* improve RTCP content.
+	* improve usage of expires header for registration.
+	* fix DNS bug with SRV record.
+	* add support for x64 build on windows.
+	* add callback support for volume energy on iphone.
+	* fix race condition for reliable (TCP/TLS) BYE authentication.
+	* fix to escape username for contact header in some NAT case.
+	* fix compilation with ndk r5b on android.
+	* fix packetization-mode parameter for h264 for outgoing call.
+	* add support for more video size in mediastreamer2.
+	* remove many warnings for vs2010 compilation.
+	* escape username in contact of in-dialog request/response.
+	* use mode=0/1 to control h264 SDP for "packetization-mode".
+	* add NV21 support in mediastreamer2.
+	* update ffmpeg (git 25/01/2011), theora and ogg.
+	* add c-ares (asynchronous DNS for NAPTR/SRV record)
+	* fix support for extension bit in RTP.
+	* fix interop with RTP packets with timestamp=0 and seq=0
+	* fix TCP/TLS re-connection for "in-progress" use case.
+	* fix TCP/TLS connection failure without keep alive mode.
+	* basic failover upon no answer for REGISTRATION (naptr/srv only)
+	* visual studio 2010 support.
+
+14/12/2010 - 4.5.1
+	* add new video size for lifesize 656*368
+	* complete multitask support for iphone.
+	* add TLS support for android.
+	* add automatic support for rfc5168 (INFO to request SPS/PPS).
+	* add dscp support with TC api. Needs admin rights (XP/vista/w7).
+	* allow stitcher, camera and h264 to be used with 1280x720 (720P)
+	* fix for macosx compilation.
+	* improve echo limitation.
+	* update for iphone echo canceller
+	* update TCP & TLS. Add multitasking support for iphone for TLS.
+	* fix for JABRA GO670 on a java app.
+	* fix mute HID API for bua200 & c420. (wrong code used)
+	* replace application/sipfrag by message/sipfrag for NOTIFY.
+	* add support for NAPTR/SRV record on iphone.
+	* fix ACK retransmission upon receiving 200ok retransmission.
+	* fix usage of NAPTR/SRV record for ACK.
+	* enable jitter for ENABLE_NOCONF_MODE.
+	* fix bug showing up after receiving a 422 for an INVITE.
+	* add a msconf.c replacement without conference capabilities.
+	  You need to compile amsip with #define ENABLE_NOCONF_MODE.
+	* improve de-packetization support for H263. (sbit/ebit support)
+	* fix for linux/macosx/iphone: loop for playing wav file by default.
+	* add HID support for plantronics device: MCD100/BUA200/C420.(win32)
+	* update windows mobile 6 compilation and uncomplete support for MX31.
+	* add HID support for GO670 new firmware.
+	* add support for private extension: P-AM-ST.
+	* remove obsolete authentication header in SUBSCRIBE after a stale.
+	* fix missing authentication in some rare TCP case.
+	* new API for NOTIFY within calls & SUBSCRIBE refresh (flexibility)
+	* fix maximum authorized delay when VAD is disabled or noisy env.
+	* handle packet loss within the last 10 packet in file transfer.
+	* fix when video is restarted and no images has been processed.
+	* fix wrong payload number when sending dtmf in some use-case.
+	* fix bug with speex/16000 and speex/32000
+	* fix race condition when closing directx video grabber on windows.
+	* fix SUBSCRIBE with expire 0 retries if not receiving NOTIFY.
+	* fix bug for large TCP/TLS packets.
+	* fix file transfer issue for 0kb file.
+	* fix dead lock in previous change for UDP file transfer.
+	* add more plantronics and jabra devices on macosx.
+	* add support for settings DSCP in TOS on vista and above.
+	* new API for DSCP in TOS for audio/video/text/udpftp RTP streams.
+	* avoid sending rfc2833 when remote side don't indicate support for telephone-event.
+	* fix crash in mswasapi & directsound when deactivating sound cards.
+	* improve file transfer over UDP.
+	* add volume control in AudioUnit for macosx.
+	* add HID support for link280, link350OC, GO6470, BI2400USB jabra on macosx.
+	* fix audio on macosx (switch to Audiounit)
+	* remove method parameter when building non standard SIP requests.
+	* replace AudioQueue with AudioUnit on macosx.
+	* new password API
+	* fix for hard drive serial detector.
+	* add HID support for more jabra devices.
+	* fix compilation without video for linux.
+	* improve macosx video grabber performance.
+	* use UTF8 path for loading static video images.
+	* return 200 ok after a re-INVITE when no common video codec are found
+	* add HID support for some plantronics and jabra devices.
+	* change API for amsiptools from boolean to integer/extend API to support for control.
+	* HID new architecture.
+	* windows: improve HID support for CS60, CATALINA, and Jabra A330.
+	* macosx: new HID support for CS60, CATALINA, and Jabra A330.
+	* update all IPP plugins to IPP 6.1.
+	* fix default ptime for g729 (from 10ms  to 20ms)
+	* fix wasapi support for some device with same input & output names.
+	* fix hardware resizing with SDL.
+	* prefer YUYV to MPEG format for webcams on linux. (much faster/reduce CPU)
+	
+23/02/2010 - 4.5.0
+	* change SSRC threshold parameter from 50 to 5 for audio.
+	* add API to accept expired or self signed certificates with TLS.
+	* add swsscale API to replace libswscale. (new IPP option based plugin available)
+	* fix memory leak with video display.
+	* fix wasapi driver for cards with same input & output name.
+	* new APIs for video background color and FPS for webcam.
+	* update to newer architecture for video module for all platforms.
+	* new APIs for selfview mode, position and scale factor.
+	* add/improve APIs for Allow/Allow-Events/Supported headers
+	* improve display & self view quality on windows
+	* improve random key generation support for SRTP, remove MKI parameter.
+	* improve support for expires in 200 ok for SUBSCRIBE.
+	* improve player and recorder to support UTF-8 arguments for filenames.
+	* update to newer architecture for video module.
+	* add delay between rfc2833 dtmf RTP packets according to duration.
+	* fix TLS when remote server break connection.
+
+04/12/2009 - 4.4.2
+	* fix sleep value (extra CPU usage) issue with file transfer.
+	* fix MME/DirectSound deadlock after long call time.
+	* remove jitter/delay when receiving video stream with wrong timestamp.
+	* interoperate with server sending empty realm.
+	* new masquerading option: update contact by re-using received & rport even
+	   when stun is not used. (call am_network_masquerade AFTER am_network_start).
+	   static masquerading is still possible if you call am_network_masquerade BEFORE
+	   am_network_start.
+	* improve TLS and TCP support by adding support for non-blocking socket.
+	* improve TLS to use "Windows Certificate Store" for keys and certificates.
+	* fix when receiving additionnal CRLF on reliable transport.
+	* preserve ratio in windows video display.
+	* fix when switching codec with a different sample rate on the fly.
+	* fix SDP memory leak on incoming calls.
+	* use unicode logs on windows mobile.
+	* update to allow using libv4l2.
+
+14/10/2009 - 4.4.1
+	* fix windows mobile compilation.
+	* AudioQueue/macosx: support for several device. Volume support.
+	* initial JPEG/90000 video codec support.
+	* fix setting echo canceller tail_length.
+	* update all configure script to latest autotool (mac/linux).
+	* increase buffer size for RTP socket on video&t140
+	* handle new camera size/do not detect camera with no pins.
+	* add sustain parameter support echo limiter/fixe initial version.
+	* add support for AMR/AMR-WB
+	* handle interoperability with linksys announcing g729a instead of g729.
+	* fix live switching between static image & real video.
+	* zero data when playing wav with msfileplayer.c (non-windows)
+	* add built-in session-timer support.
+	* support for the sprop-parameter-sets.
+	* fix postiion of bandwidth parameter in SDP answers for video.
+	* allow the first 8th calls to have audio enabled/allow video mixing for 8.
+	* keep same SSRC after audio media modification.
+	* dynamic update for MME/DirectSound device.
+	* fix input volume control for MME & Directsound.
+	* add noise-gate support on microphone/echo limiter.
+	* add equalizer support on output & microphone.
+	* fix wrong uri format in registration API.
+	* adapt bitrate/fps values for static image in h263/h264.
+	* fix h264 encoder to accept large image.
+	* fix IDR/SPS/PPS delay with h264 encoder when using static image.
+	* fix issue with wav size shown by windows media player.
+	* fix loading large jpg image for static image. (stack overflow)
+	* fix loading jpg image in format other than YUV420P.
+	* fix to load default jpg when image can't be loaded.
+	* add API to add contact-param in Contact header of REGISTER.
+	* add HID control for CS50/CS60, A330 and GN9350 headsets.
+	
+17/06/2009 - 4.4.0
+	* new API to support echo limiter.
+	* new API to boost capture/playback level. (only playback implemented)
+	* new API to enable AGC.
+	* new API to enable NAPTR+SRV, SRV only, or none.
+	* new wasapi driver for audio on vista: remove other on vista.
+	* new directsound driver for audio on XP with aec effect from microsoft.
+	* new dynamic update of sound cards list on vista.
+	* new default jpg image compiled into exe when jpg is not loadable.
+	* new relative time in log information on linux/windows.
+	* new experimental "half duplex" simulation mode.
+	* new masquerading option: do not use with STUN/ICE/TURN enabled.
+	* new volume control using mediastreamer2 API: volume & mute controls.
+	* new amsiptools library containing webcam settings
+	* update ICE to latest draft-19.
+	* update player to support any sample rate/any sound filter.
+	* fix Contact header in request within dialog for non-UDP transport.
+	* fix NAPTR support for vista platform.
+	* fix bug when there are more than 10 SRV records in DNS answers.
+	* fix bug when there is no common video codec in answer and offer.
+	* fix: unescape last uri parameters.
+	* fix: initial work on TCP fragmentation. (TODO in TLS).
+	* fix to be able to start without audio support.
+	* fix to avoid sending ICMP between initial INVITE and SDP negotiation.
+	* fix to manage change in image size in the stitcher on the fly.
+	* fix to allow adding uri parameter in REGISTER To uri.
+	* remove 481 auto answer for unsolicited NOTIFY.
+	
+27/01/2008 - 4.3.3
+	* remove all HTTP options
+	* upgrade STUN to latest rfc.
+	* try to fix video features introduced in 4.3.2/4.3.1
+	
+12/12/2008 - 4.3.2
+	* fix to get video statistics.
+	* re-introduce self view window.
+	* reduce a little the number of charactere in SIP & SDP messages.
+	* add video codec in OPTIONS's "2xx" answers.
+	* decrease CPU on windows by reducing the fps to 15 on video driver.
+	
+30/11/2008 - 4.3.1
+	* allow changing display window during an active video call.
+	*     usefull when going to full screen mode.
+	
+27/11/2008 - 4.3.1
+	* fix memory leak when using player in "play once" mode.
+	* fix to avoid switching ssrc when receiving two RTP streams on same port.
+	
+01/11/2008 - 4.3.0
+	* allow changing sound cards when a call is active.
+	* fix when no active audio is used when closing a call.
+	* windows sound & video improvments.
+	* video mixing capabilities (4 participants).
+	* ultra wide band support.
+	* replace libresample with speex resampling.
+	* fix when realm is 0 length.
+	* file transfer over UDP/RTP (non standard implementation).
+	* fix various sound issue when using resampling.
+	* update for speex and ffmpeg (compiled with mmx).
+	* mtu detection.
+	* several fix for h264 support, now stable using IPP.
+	
+04/02/2007 - 4.1.1
+	* add support for WM6.0
+	* fix expires header in 200ok for REGISTER and PUBLISH.
+	* add some interop. fixes (hold/inactive/offhold and other...)
+	* fix hold behavior: stream sound (sendonly) and stop video (inactive).
+	* add capability to start call with video enabled.
+	* add some new YUV formats for video.
+	* video is now complete on macosx.
+
+04/02/2007 - 4.1.0
+	* improve quality of sound and use of echo canceller.
+	* improve & fix for player quality.
+	* use directshow driver for video on windows.
+	* fix DTMF timestamp & cseq value.
+	* interop. fixes.
+	* update version number in SDP offers.
+	* fix using ICE with TCP.
+	* add TLS and SRTP support.
+	* add method to stop video.
+	
+04/02/2007 - 4.0.7
+	* minor interoperability fix.
+	
+04/02/2007 - 4.0.6
+	* update vbamsip to support 4 calls.
+	* fix authentication when qop is present in 401/407
+	* transparent handling of OPTIONS request outside calls.
+	* add feature to maintain fake DNS entries.
+	* complete REFER related APIs.
+	* new sound card selection API based on capture/playback capabilities.
+	* fix for TCP handling.
+	* video improvments on windows/linux.
+	* sound improvments on windows.
+	* fix dead lock under heavy load.
+	
+15/12/2006 - 4.0.5
+	* fix broken (application locked) method to receive dtmf.
+	* most video capability working (H263, theora, MPV4-ES)
+	* fix several player issue: now reported to work. 
+	* improve echo canceller with cards that can't provide data each 20ms
+	* improve interoperability when Mime-Version is omitted.
+	* improve conference manager by doing VAD on incoming streams.
+	* add support for resampling between narrowband and wideband.
+	* add support for audio streaming in wideband.
+	* add support for switching codecs on the fly.
+	* allow replacement of audio drivers and RTP manager.
+	* initial video support.
+	
+06/11/2006 - 4.0.4
+	* improve audio scheduling on windows/wince
+	* fix bugs when SDP is in 200ok/ACK
+	* new player feature to play files locally on sound card.
+	
+18/10/2006 - 4.0.3
+	* restart played files after call modification (INVITEs/UPDATEs)
+	* add capability to load plugins from a given directory. (windows)
+	* windows mobile/smartphone support with VS2005 mostly working.
+	* Visual Basic test application for windows CE: vbamsipua
+	* Visual Basic test application for windows: vbamsip
+
+8/09/2006 - 4.0.2
+	* add capability to load plugins from a given directory. (linux)
+	* partial windows mobile/smartphone support with VS2005.
+	
+8/09/2006 - 4.0.1
+	* audio quality is back to normal.
+	
+8/09/2006 - 4.0.0j
+	* API should now be frozen very soon.
+	* echo canceller is working.
+	* hold/offhold API is renamed.
+	* RTP telephone-events are working.
+	* Pre-Route set does not appear any more in message out of dialog.
+	* version is candidate for beta.
+	* lots of other changes.
+	
+XX/08/2006 - 4.0.0h
+	* fix bug when receiving SDP answer with unsupported codec as first codec.
+	* add preprocessor to echo canceller.
+	* add capability to enable/disable echo canceller.
+	* add capability to stop recording before end of call.
+	* add more flexible API for incoming/outgoing subscriptions.
+	* complete API for sending/answering request within/without calls.

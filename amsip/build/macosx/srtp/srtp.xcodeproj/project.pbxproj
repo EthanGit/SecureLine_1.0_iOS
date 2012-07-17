@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		708172BC14AD65D400242A50 /* ekt.h in Headers */ = {isa = PBXBuildFile; fileRef = 708172BB14AD65D400242A50 /* ekt.h */; };
+		708172BF14AD65DD00242A50 /* ekt.c in Sources */ = {isa = PBXBuildFile; fileRef = 708172BE14AD65DD00242A50 /* ekt.c */; };
+		70E0B5DB14867CF10098DE41 /* getopt_s.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A014867CF10098DE41 /* getopt_s.h */; };
+		70E0B5DC14867CF10098DE41 /* rtp_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A114867CF10098DE41 /* rtp_priv.h */; };
+		70E0B5DD14867CF10098DE41 /* rtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A214867CF10098DE41 /* rtp.h */; };
+		70E0B5DE14867CF10098DE41 /* srtp_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A314867CF10098DE41 /* srtp_priv.h */; };
+		70E0B5DF14867CF10098DE41 /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A414867CF10098DE41 /* srtp.h */; };
+		70E0B5E014867CF10098DE41 /* ut_sim.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5A514867CF10098DE41 /* ut_sim.h */; };
+		70E0B5E114867CF10098DE41 /* datatypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5A614867CF10098DE41 /* datatypes.c */; };
+		70E0B5E214867CF10098DE41 /* math.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5A714867CF10098DE41 /* math.c */; };
+		70E0B5E314867CF10098DE41 /* aes_tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5A814867CF10098DE41 /* aes_tables.c */; };
+		70E0B5E414867CF10098DE41 /* srtp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5A914867CF10098DE41 /* srtp.c */; };
+		70E0B5E514867CF10098DE41 /* ctr_prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AA14867CF10098DE41 /* ctr_prng.c */; };
+		70E0B5E614867CF10098DE41 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AB14867CF10098DE41 /* prng.c */; };
+		70E0B5E714867CF10098DE41 /* rand_source.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AC14867CF10098DE41 /* rand_source.c */; };
+		70E0B5E814867CF10098DE41 /* rdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AD14867CF10098DE41 /* rdb.c */; };
+		70E0B5E914867CF10098DE41 /* rdbx.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AE14867CF10098DE41 /* rdbx.c */; };
+		70E0B5EA14867CF10098DE41 /* ut_sim.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5AF14867CF10098DE41 /* ut_sim.c */; };
+		70E0B5EB14867CF10098DE41 /* gf2_8.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B014867CF10098DE41 /* gf2_8.c */; };
+		70E0B5EC14867CF10098DE41 /* stat.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B114867CF10098DE41 /* stat.c */; };
+		70E0B5ED14867CF10098DE41 /* alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B214867CF10098DE41 /* alloc.c */; };
+		70E0B5EE14867CF10098DE41 /* crypto_kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B314867CF10098DE41 /* crypto_kernel.c */; };
+		70E0B5EF14867CF10098DE41 /* err.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B414867CF10098DE41 /* err.c */; };
+		70E0B5F014867CF10098DE41 /* key.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5B514867CF10098DE41 /* key.c */; };
+		70E0B5F114867CF10098DE41 /* aes_cbc.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5B614867CF10098DE41 /* aes_cbc.h */; };
+		70E0B5F214867CF10098DE41 /* aes_icm.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5B714867CF10098DE41 /* aes_icm.h */; };
+		70E0B5F314867CF10098DE41 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5B814867CF10098DE41 /* aes.h */; };
+		70E0B5F414867CF10098DE41 /* alloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5B914867CF10098DE41 /* alloc.h */; };
+		70E0B5F514867CF10098DE41 /* auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BA14867CF10098DE41 /* auth.h */; };
+		70E0B5F614867CF10098DE41 /* cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BB14867CF10098DE41 /* cipher.h */; };
+		70E0B5F714867CF10098DE41 /* crypto_kernel.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BC14867CF10098DE41 /* crypto_kernel.h */; };
+		70E0B5F814867CF10098DE41 /* crypto_math.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BD14867CF10098DE41 /* crypto_math.h */; };
+		70E0B5F914867CF10098DE41 /* crypto_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BE14867CF10098DE41 /* crypto_types.h */; };
+		70E0B5FA14867CF10098DE41 /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5BF14867CF10098DE41 /* crypto.h */; };
+		70E0B5FB14867CF10098DE41 /* cryptoalg.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C014867CF10098DE41 /* cryptoalg.h */; };
+		70E0B5FC14867CF10098DE41 /* datatypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C114867CF10098DE41 /* datatypes.h */; };
+		70E0B5FD14867CF10098DE41 /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C214867CF10098DE41 /* err.h */; };
+		70E0B5FE14867CF10098DE41 /* gf2_8.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C314867CF10098DE41 /* gf2_8.h */; };
+		70E0B5FF14867CF10098DE41 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C414867CF10098DE41 /* hmac.h */; };
+		70E0B60014867CF10098DE41 /* integers.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C514867CF10098DE41 /* integers.h */; };
+		70E0B60114867CF10098DE41 /* kernel_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C614867CF10098DE41 /* kernel_compat.h */; };
+		70E0B60214867CF10098DE41 /* key.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C714867CF10098DE41 /* key.h */; };
+		70E0B60314867CF10098DE41 /* null_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C814867CF10098DE41 /* null_auth.h */; };
+		70E0B60414867CF10098DE41 /* null_cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5C914867CF10098DE41 /* null_cipher.h */; };
+		70E0B60514867CF10098DE41 /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CA14867CF10098DE41 /* prng.h */; };
+		70E0B60614867CF10098DE41 /* rand_source.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CB14867CF10098DE41 /* rand_source.h */; };
+		70E0B60714867CF10098DE41 /* rdb.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CC14867CF10098DE41 /* rdb.h */; };
+		70E0B60814867CF10098DE41 /* rdbx.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CD14867CF10098DE41 /* rdbx.h */; };
+		70E0B60914867CF10098DE41 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CE14867CF10098DE41 /* sha1.h */; };
+		70E0B60A14867CF10098DE41 /* stat.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5CF14867CF10098DE41 /* stat.h */; };
+		70E0B60B14867CF10098DE41 /* xfm.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B5D014867CF10098DE41 /* xfm.h */; };
+		70E0B60C14867CF10098DE41 /* auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D114867CF10098DE41 /* auth.c */; };
+		70E0B60D14867CF10098DE41 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D214867CF10098DE41 /* hmac.c */; };
+		70E0B60E14867CF10098DE41 /* null_auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D314867CF10098DE41 /* null_auth.c */; };
+		70E0B60F14867CF10098DE41 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D414867CF10098DE41 /* sha1.c */; };
+		70E0B61014867CF10098DE41 /* aes_cbc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D514867CF10098DE41 /* aes_cbc.c */; };
+		70E0B61114867CF10098DE41 /* aes_icm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D614867CF10098DE41 /* aes_icm.c */; };
+		70E0B61214867CF10098DE41 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D714867CF10098DE41 /* aes.c */; };
+		70E0B61314867CF10098DE41 /* cipher.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D814867CF10098DE41 /* cipher.c */; };
+		70E0B61414867CF10098DE41 /* null_cipher.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5D914867CF10098DE41 /* null_cipher.c */; };
+		70E0B61514867CF10098DE41 /* xfm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B5DA14867CF10098DE41 /* xfm.c */; };
+		70E0B61914867E970098DE41 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B61814867E970098DE41 /* config.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		708172BB14AD65D400242A50 /* ekt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ekt.h; path = ../../../srtp/include/ekt.h; sourceTree = "<group>"; };
+		708172BE14AD65DD00242A50 /* ekt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ekt.c; path = ../../../srtp/srtp/ekt.c; sourceTree = "<group>"; };
+		70E0B59614867CEB0098DE41 /* libsrtp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsrtp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E0B5A014867CF10098DE41 /* getopt_s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = getopt_s.h; path = ../../../srtp/include/getopt_s.h; sourceTree = "<group>"; };
+		70E0B5A114867CF10098DE41 /* rtp_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtp_priv.h; path = ../../../srtp/include/rtp_priv.h; sourceTree = "<group>"; };
+		70E0B5A214867CF10098DE41 /* rtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtp.h; path = ../../../srtp/include/rtp.h; sourceTree = "<group>"; };
+		70E0B5A314867CF10098DE41 /* srtp_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srtp_priv.h; path = ../../../srtp/include/srtp_priv.h; sourceTree = "<group>"; };
+		70E0B5A414867CF10098DE41 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srtp.h; path = ../../../srtp/include/srtp.h; sourceTree = "<group>"; };
+		70E0B5A514867CF10098DE41 /* ut_sim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ut_sim.h; path = ../../../srtp/include/ut_sim.h; sourceTree = "<group>"; };
+		70E0B5A614867CF10098DE41 /* datatypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = datatypes.c; path = ../../../srtp/crypto/math/datatypes.c; sourceTree = "<group>"; };
+		70E0B5A714867CF10098DE41 /* math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = math.c; path = ../../../srtp/crypto/math/math.c; sourceTree = "<group>"; };
+		70E0B5A814867CF10098DE41 /* aes_tables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes_tables.c; path = ../../../srtp/tables/aes_tables.c; sourceTree = "<group>"; };
+		70E0B5A914867CF10098DE41 /* srtp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = srtp.c; path = ../../../srtp/srtp/srtp.c; sourceTree = "<group>"; };
+		70E0B5AA14867CF10098DE41 /* ctr_prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ctr_prng.c; path = ../../../srtp/crypto/rng/ctr_prng.c; sourceTree = "<group>"; };
+		70E0B5AB14867CF10098DE41 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = prng.c; path = ../../../srtp/crypto/rng/prng.c; sourceTree = "<group>"; };
+		70E0B5AC14867CF10098DE41 /* rand_source.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rand_source.c; path = ../../../srtp/crypto/rng/rand_source.c; sourceTree = "<group>"; };
+		70E0B5AD14867CF10098DE41 /* rdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rdb.c; path = ../../../srtp/crypto/replay/rdb.c; sourceTree = "<group>"; };
+		70E0B5AE14867CF10098DE41 /* rdbx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rdbx.c; path = ../../../srtp/crypto/replay/rdbx.c; sourceTree = "<group>"; };
+		70E0B5AF14867CF10098DE41 /* ut_sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ut_sim.c; path = ../../../srtp/crypto/replay/ut_sim.c; sourceTree = "<group>"; };
+		70E0B5B014867CF10098DE41 /* gf2_8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gf2_8.c; path = ../../../srtp/crypto/math/gf2_8.c; sourceTree = "<group>"; };
+		70E0B5B114867CF10098DE41 /* stat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stat.c; path = ../../../srtp/crypto/math/stat.c; sourceTree = "<group>"; };
+		70E0B5B214867CF10098DE41 /* alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = alloc.c; path = ../../../srtp/crypto/kernel/alloc.c; sourceTree = "<group>"; };
+		70E0B5B314867CF10098DE41 /* crypto_kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crypto_kernel.c; path = ../../../srtp/crypto/kernel/crypto_kernel.c; sourceTree = "<group>"; };
+		70E0B5B414867CF10098DE41 /* err.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = err.c; path = ../../../srtp/crypto/kernel/err.c; sourceTree = "<group>"; };
+		70E0B5B514867CF10098DE41 /* key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = key.c; path = ../../../srtp/crypto/kernel/key.c; sourceTree = "<group>"; };
+		70E0B5B614867CF10098DE41 /* aes_cbc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes_cbc.h; path = ../../../srtp/crypto/include/aes_cbc.h; sourceTree = "<group>"; };
+		70E0B5B714867CF10098DE41 /* aes_icm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes_icm.h; path = ../../../srtp/crypto/include/aes_icm.h; sourceTree = "<group>"; };
+		70E0B5B814867CF10098DE41 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes.h; path = ../../../srtp/crypto/include/aes.h; sourceTree = "<group>"; };
+		70E0B5B914867CF10098DE41 /* alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = alloc.h; path = ../../../srtp/crypto/include/alloc.h; sourceTree = "<group>"; };
+		70E0B5BA14867CF10098DE41 /* auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = auth.h; path = ../../../srtp/crypto/include/auth.h; sourceTree = "<group>"; };
+		70E0B5BB14867CF10098DE41 /* cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cipher.h; path = ../../../srtp/crypto/include/cipher.h; sourceTree = "<group>"; };
+		70E0B5BC14867CF10098DE41 /* crypto_kernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypto_kernel.h; path = ../../../srtp/crypto/include/crypto_kernel.h; sourceTree = "<group>"; };
+		70E0B5BD14867CF10098DE41 /* crypto_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypto_math.h; path = ../../../srtp/crypto/include/crypto_math.h; sourceTree = "<group>"; };
+		70E0B5BE14867CF10098DE41 /* crypto_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypto_types.h; path = ../../../srtp/crypto/include/crypto_types.h; sourceTree = "<group>"; };
+		70E0B5BF14867CF10098DE41 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypto.h; path = ../../../srtp/crypto/include/crypto.h; sourceTree = "<group>"; };
+		70E0B5C014867CF10098DE41 /* cryptoalg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptoalg.h; path = ../../../srtp/crypto/include/cryptoalg.h; sourceTree = "<group>"; };
+		70E0B5C114867CF10098DE41 /* datatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = datatypes.h; path = ../../../srtp/crypto/include/datatypes.h; sourceTree = "<group>"; };
+		70E0B5C214867CF10098DE41 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = err.h; path = ../../../srtp/crypto/include/err.h; sourceTree = "<group>"; };
+		70E0B5C314867CF10098DE41 /* gf2_8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gf2_8.h; path = ../../../srtp/crypto/include/gf2_8.h; sourceTree = "<group>"; };
+		70E0B5C414867CF10098DE41 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = ../../../srtp/crypto/include/hmac.h; sourceTree = "<group>"; };
+		70E0B5C514867CF10098DE41 /* integers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = integers.h; path = ../../../srtp/crypto/include/integers.h; sourceTree = "<group>"; };
+		70E0B5C614867CF10098DE41 /* kernel_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kernel_compat.h; path = ../../../srtp/crypto/include/kernel_compat.h; sourceTree = "<group>"; };
+		70E0B5C714867CF10098DE41 /* key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = key.h; path = ../../../srtp/crypto/include/key.h; sourceTree = "<group>"; };
+		70E0B5C814867CF10098DE41 /* null_auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = null_auth.h; path = ../../../srtp/crypto/include/null_auth.h; sourceTree = "<group>"; };
+		70E0B5C914867CF10098DE41 /* null_cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = null_cipher.h; path = ../../../srtp/crypto/include/null_cipher.h; sourceTree = "<group>"; };
+		70E0B5CA14867CF10098DE41 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prng.h; path = ../../../srtp/crypto/include/prng.h; sourceTree = "<group>"; };
+		70E0B5CB14867CF10098DE41 /* rand_source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand_source.h; path = ../../../srtp/crypto/include/rand_source.h; sourceTree = "<group>"; };
+		70E0B5CC14867CF10098DE41 /* rdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rdb.h; path = ../../../srtp/crypto/include/rdb.h; sourceTree = "<group>"; };
+		70E0B5CD14867CF10098DE41 /* rdbx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rdbx.h; path = ../../../srtp/crypto/include/rdbx.h; sourceTree = "<group>"; };
+		70E0B5CE14867CF10098DE41 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = ../../../srtp/crypto/include/sha1.h; sourceTree = "<group>"; };
+		70E0B5CF14867CF10098DE41 /* stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stat.h; path = ../../../srtp/crypto/include/stat.h; sourceTree = "<group>"; };
+		70E0B5D014867CF10098DE41 /* xfm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xfm.h; path = ../../../srtp/crypto/include/xfm.h; sourceTree = "<group>"; };
+		70E0B5D114867CF10098DE41 /* auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = auth.c; path = ../../../srtp/crypto/hash/auth.c; sourceTree = "<group>"; };
+		70E0B5D214867CF10098DE41 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = ../../../srtp/crypto/hash/hmac.c; sourceTree = "<group>"; };
+		70E0B5D314867CF10098DE41 /* null_auth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = null_auth.c; path = ../../../srtp/crypto/hash/null_auth.c; sourceTree = "<group>"; };
+		70E0B5D414867CF10098DE41 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = ../../../srtp/crypto/hash/sha1.c; sourceTree = "<group>"; };
+		70E0B5D514867CF10098DE41 /* aes_cbc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes_cbc.c; path = ../../../srtp/crypto/cipher/aes_cbc.c; sourceTree = "<group>"; };
+		70E0B5D614867CF10098DE41 /* aes_icm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes_icm.c; path = ../../../srtp/crypto/cipher/aes_icm.c; sourceTree = "<group>"; };
+		70E0B5D714867CF10098DE41 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes.c; path = ../../../srtp/crypto/cipher/aes.c; sourceTree = "<group>"; };
+		70E0B5D814867CF10098DE41 /* cipher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cipher.c; path = ../../../srtp/crypto/cipher/cipher.c; sourceTree = "<group>"; };
+		70E0B5D914867CF10098DE41 /* null_cipher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = null_cipher.c; path = ../../../srtp/crypto/cipher/null_cipher.c; sourceTree = "<group>"; };
+		70E0B5DA14867CF10098DE41 /* xfm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xfm.c; path = ../../../srtp/crypto/ae_xfm/xfm.c; sourceTree = "<group>"; };
+		70E0B61814867E970098DE41 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70E0B59314867CEB0098DE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70E0B58B14867CEB0098DE41 = {
+			isa = PBXGroup;
+			children = (
+				70E0B61814867E970098DE41 /* config.h */,
+				70E0B59D14867CF10098DE41 /* srtp */,
+				70E0B59714867CEB0098DE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70E0B59714867CEB0098DE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B59614867CEB0098DE41 /* libsrtp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70E0B59D14867CF10098DE41 /* srtp */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B59E14867CF10098DE41 /* include */,
+				70E0B59F14867CF10098DE41 /* src */,
+			);
+			name = srtp;
+			path = ../ortp;
+			sourceTree = "<group>";
+		};
+		70E0B59E14867CF10098DE41 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				708172BB14AD65D400242A50 /* ekt.h */,
+				70E0B5A014867CF10098DE41 /* getopt_s.h */,
+				70E0B5A114867CF10098DE41 /* rtp_priv.h */,
+				70E0B5A214867CF10098DE41 /* rtp.h */,
+				70E0B5A314867CF10098DE41 /* srtp_priv.h */,
+				70E0B5A414867CF10098DE41 /* srtp.h */,
+				70E0B5A514867CF10098DE41 /* ut_sim.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		70E0B59F14867CF10098DE41 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				708172BE14AD65DD00242A50 /* ekt.c */,
+				70E0B5A614867CF10098DE41 /* datatypes.c */,
+				70E0B5A714867CF10098DE41 /* math.c */,
+				70E0B5A814867CF10098DE41 /* aes_tables.c */,
+				70E0B5A914867CF10098DE41 /* srtp.c */,
+				70E0B5AA14867CF10098DE41 /* ctr_prng.c */,
+				70E0B5AB14867CF10098DE41 /* prng.c */,
+				70E0B5AC14867CF10098DE41 /* rand_source.c */,
+				70E0B5AD14867CF10098DE41 /* rdb.c */,
+				70E0B5AE14867CF10098DE41 /* rdbx.c */,
+				70E0B5AF14867CF10098DE41 /* ut_sim.c */,
+				70E0B5B014867CF10098DE41 /* gf2_8.c */,
+				70E0B5B114867CF10098DE41 /* stat.c */,
+				70E0B5B214867CF10098DE41 /* alloc.c */,
+				70E0B5B314867CF10098DE41 /* crypto_kernel.c */,
+				70E0B5B414867CF10098DE41 /* err.c */,
+				70E0B5B514867CF10098DE41 /* key.c */,
+				70E0B5B614867CF10098DE41 /* aes_cbc.h */,
+				70E0B5B714867CF10098DE41 /* aes_icm.h */,
+				70E0B5B814867CF10098DE41 /* aes.h */,
+				70E0B5B914867CF10098DE41 /* alloc.h */,
+				70E0B5BA14867CF10098DE41 /* auth.h */,
+				70E0B5BB14867CF10098DE41 /* cipher.h */,
+				70E0B5BC14867CF10098DE41 /* crypto_kernel.h */,
+				70E0B5BD14867CF10098DE41 /* crypto_math.h */,
+				70E0B5BE14867CF10098DE41 /* crypto_types.h */,
+				70E0B5BF14867CF10098DE41 /* crypto.h */,
+				70E0B5C014867CF10098DE41 /* cryptoalg.h */,
+				70E0B5C114867CF10098DE41 /* datatypes.h */,
+				70E0B5C214867CF10098DE41 /* err.h */,
+				70E0B5C314867CF10098DE41 /* gf2_8.h */,
+				70E0B5C414867CF10098DE41 /* hmac.h */,
+				70E0B5C514867CF10098DE41 /* integers.h */,
+				70E0B5C614867CF10098DE41 /* kernel_compat.h */,
+				70E0B5C714867CF10098DE41 /* key.h */,
+				70E0B5C814867CF10098DE41 /* null_auth.h */,
+				70E0B5C914867CF10098DE41 /* null_cipher.h */,
+				70E0B5CA14867CF10098DE41 /* prng.h */,
+				70E0B5CB14867CF10098DE41 /* rand_source.h */,
+				70E0B5CC14867CF10098DE41 /* rdb.h */,
+				70E0B5CD14867CF10098DE41 /* rdbx.h */,
+				70E0B5CE14867CF10098DE41 /* sha1.h */,
+				70E0B5CF14867CF10098DE41 /* stat.h */,
+				70E0B5D014867CF10098DE41 /* xfm.h */,
+				70E0B5D114867CF10098DE41 /* auth.c */,
+				70E0B5D214867CF10098DE41 /* hmac.c */,
+				70E0B5D314867CF10098DE41 /* null_auth.c */,
+				70E0B5D414867CF10098DE41 /* sha1.c */,
+				70E0B5D514867CF10098DE41 /* aes_cbc.c */,
+				70E0B5D614867CF10098DE41 /* aes_icm.c */,
+				70E0B5D714867CF10098DE41 /* aes.c */,
+				70E0B5D814867CF10098DE41 /* cipher.c */,
+				70E0B5D914867CF10098DE41 /* null_cipher.c */,
+				70E0B5DA14867CF10098DE41 /* xfm.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70E0B59414867CEB0098DE41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B5DB14867CF10098DE41 /* getopt_s.h in Headers */,
+				70E0B5DC14867CF10098DE41 /* rtp_priv.h in Headers */,
+				70E0B5DD14867CF10098DE41 /* rtp.h in Headers */,
+				70E0B5DE14867CF10098DE41 /* srtp_priv.h in Headers */,
+				70E0B5DF14867CF10098DE41 /* srtp.h in Headers */,
+				70E0B5E014867CF10098DE41 /* ut_sim.h in Headers */,
+				70E0B5F114867CF10098DE41 /* aes_cbc.h in Headers */,
+				70E0B5F214867CF10098DE41 /* aes_icm.h in Headers */,
+				70E0B5F314867CF10098DE41 /* aes.h in Headers */,
+				70E0B5F414867CF10098DE41 /* alloc.h in Headers */,
+				70E0B5F514867CF10098DE41 /* auth.h in Headers */,
+				70E0B5F614867CF10098DE41 /* cipher.h in Headers */,
+				70E0B5F714867CF10098DE41 /* crypto_kernel.h in Headers */,
+				70E0B5F814867CF10098DE41 /* crypto_math.h in Headers */,
+				70E0B5F914867CF10098DE41 /* crypto_types.h in Headers */,
+				70E0B5FA14867CF10098DE41 /* crypto.h in Headers */,
+				70E0B5FB14867CF10098DE41 /* cryptoalg.h in Headers */,
+				70E0B5FC14867CF10098DE41 /* datatypes.h in Headers */,
+				70E0B5FD14867CF10098DE41 /* err.h in Headers */,
+				70E0B5FE14867CF10098DE41 /* gf2_8.h in Headers */,
+				70E0B5FF14867CF10098DE41 /* hmac.h in Headers */,
+				70E0B60014867CF10098DE41 /* integers.h in Headers */,
+				70E0B60114867CF10098DE41 /* kernel_compat.h in Headers */,
+				70E0B60214867CF10098DE41 /* key.h in Headers */,
+				70E0B60314867CF10098DE41 /* null_auth.h in Headers */,
+				70E0B60414867CF10098DE41 /* null_cipher.h in Headers */,
+				70E0B60514867CF10098DE41 /* prng.h in Headers */,
+				70E0B60614867CF10098DE41 /* rand_source.h in Headers */,
+				70E0B60714867CF10098DE41 /* rdb.h in Headers */,
+				70E0B60814867CF10098DE41 /* rdbx.h in Headers */,
+				70E0B60914867CF10098DE41 /* sha1.h in Headers */,
+				70E0B60A14867CF10098DE41 /* stat.h in Headers */,
+				70E0B60B14867CF10098DE41 /* xfm.h in Headers */,
+				70E0B61914867E970098DE41 /* config.h in Headers */,
+				708172BC14AD65D400242A50 /* ekt.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70E0B59514867CEB0098DE41 /* srtp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E0B59A14867CEB0098DE41 /* Build configuration list for PBXNativeTarget "srtp" */;
+			buildPhases = (
+				70E0B59214867CEB0098DE41 /* Sources */,
+				70E0B59314867CEB0098DE41 /* Frameworks */,
+				70E0B59414867CEB0098DE41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = srtp;
+			productName = srtp;
+			productReference = 70E0B59614867CEB0098DE41 /* libsrtp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70E0B58D14867CEB0098DE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 70E0B59014867CEB0098DE41 /* Build configuration list for PBXProject "srtp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70E0B58B14867CEB0098DE41;
+			productRefGroup = 70E0B59714867CEB0098DE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70E0B59514867CEB0098DE41 /* srtp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70E0B59214867CEB0098DE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B5E114867CF10098DE41 /* datatypes.c in Sources */,
+				70E0B5E214867CF10098DE41 /* math.c in Sources */,
+				70E0B5E314867CF10098DE41 /* aes_tables.c in Sources */,
+				70E0B5E414867CF10098DE41 /* srtp.c in Sources */,
+				70E0B5E514867CF10098DE41 /* ctr_prng.c in Sources */,
+				70E0B5E614867CF10098DE41 /* prng.c in Sources */,
+				70E0B5E714867CF10098DE41 /* rand_source.c in Sources */,
+				70E0B5E814867CF10098DE41 /* rdb.c in Sources */,
+				70E0B5E914867CF10098DE41 /* rdbx.c in Sources */,
+				70E0B5EA14867CF10098DE41 /* ut_sim.c in Sources */,
+				70E0B5EB14867CF10098DE41 /* gf2_8.c in Sources */,
+				70E0B5EC14867CF10098DE41 /* stat.c in Sources */,
+				70E0B5ED14867CF10098DE41 /* alloc.c in Sources */,
+				70E0B5EE14867CF10098DE41 /* crypto_kernel.c in Sources */,
+				70E0B5EF14867CF10098DE41 /* err.c in Sources */,
+				70E0B5F014867CF10098DE41 /* key.c in Sources */,
+				70E0B60C14867CF10098DE41 /* auth.c in Sources */,
+				70E0B60D14867CF10098DE41 /* hmac.c in Sources */,
+				70E0B60E14867CF10098DE41 /* null_auth.c in Sources */,
+				70E0B60F14867CF10098DE41 /* sha1.c in Sources */,
+				70E0B61014867CF10098DE41 /* aes_cbc.c in Sources */,
+				70E0B61114867CF10098DE41 /* aes_icm.c in Sources */,
+				70E0B61214867CF10098DE41 /* aes.c in Sources */,
+				70E0B61314867CF10098DE41 /* cipher.c in Sources */,
+				70E0B61414867CF10098DE41 /* null_cipher.c in Sources */,
+				70E0B61514867CF10098DE41 /* xfm.c in Sources */,
+				708172BF14AD65DD00242A50 /* ekt.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70E0B59814867CEB0098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../srtp;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70E0B59914867CEB0098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../srtp;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70E0B59B14867CEB0098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70E0B59C14867CEB0098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70E0B59014867CEB0098DE41 /* Build configuration list for PBXProject "srtp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B59814867CEB0098DE41 /* Debug */,
+				70E0B59914867CEB0098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E0B59A14867CEB0098DE41 /* Build configuration list for PBXNativeTarget "srtp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B59B14867CEB0098DE41 /* Debug */,
+				70E0B59C14867CEB0098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70E0B58D14867CEB0098DE41 /* Project object */;
+}

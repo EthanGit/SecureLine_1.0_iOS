@@ -1,0 +1,68 @@
+16/03/2012
+
+amsip is a SIP library for softphone (SIP -rfc3261-)
+Copyright (C) 2003-2012 Aymeric MOIZARD - <amoizard@gmail.com>
+
+Linux/unix compilation process:
+------------------------------
+
+Pre-requisite are:
+ * pkg-config must be installed.
+ * you shouldn't have any other versions of third party source code:
+  speex/osip/eXosip/ilbc/ortp/mediastreamer2/...
+  installed on your computer unless you know what you are doing!
+ * must have "write" access to installation directory.
+ * THE ACCOUNT USED FOR COMPILATION MUST BE ALLOWED TO RUN "ldconfig".
+   If this is not the case, many ./configure will incorrectly guess
+   the correct options for compilation. THIS MEANS THAT YOU SHOULD
+   BE ROOT to compile/install the packages.
+
+Additionnal pre-requisite for video:
+ * install libogg and header files
+ * install libvorbisenc and vorbis header files
+ * install autoconf/automake/libtool
+
+
+Edit /etc/ld.so.conf
+
+   Add the installation directory (/usr/local/antisip unless
+   you changed it!) in /etc/ld.so.conf or equivalent.
+
+To compile AND install everything with default setting:
+
+   $> sudo ./compile_amsip.sh compile
+
+   -> This will install everything in /usr/local/antisip unless
+      you edit/modify amsip_config.sh
+
+
+To compile/install everything in a specific directory:
+
+   #!/bin/sh -
+
+   ENABLE_VIDEO=yes
+   ENABLE_SPEEX=yes
+   ENABLE_GSM=yes
+
+   AMSIP_OPTIONS=""
+   AMSIP_PREFIX=/usr/local/antisip
+
+To compile manually, compile and install in this order:
+  codecs/libspeex
+  codecs/libtheora
+  codecs/ffmpeg
+  codecs/gsm
+  srtp
+  ortp
+  mediastreamer2
+  plugins/msvideostitcher
+  c-ares
+  libosip
+  libeXosip
+  libamsip
+
+Additionnally, you can compile the ilbc plugin:
+  libilbc
+  libmsilbc
+
+

@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		709489961487A97C00DAA968 /* stitcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 709489931487A97C00DAA968 /* stitcher.h */; };
+		709489971487A97C00DAA968 /* stitcher.c in Sources */ = {isa = PBXBuildFile; fileRef = 709489941487A97C00DAA968 /* stitcher.c */; };
+		709489981487A97C00DAA968 /* layouts.c in Sources */ = {isa = PBXBuildFile; fileRef = 709489951487A97C00DAA968 /* layouts.c */; };
+		7094899F1487A9BA00DAA968 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7094899B1487A9BA00DAA968 /* libavcodec.dylib */; };
+		709489A01487A9BA00DAA968 /* libavcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7094899C1487A9BA00DAA968 /* libavcore.dylib */; };
+		709489A11487A9BA00DAA968 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7094899D1487A9BA00DAA968 /* libavutil.dylib */; };
+		709489A21487A9BA00DAA968 /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7094899E1487A9BA00DAA968 /* libswscale.dylib */; };
+		70A53102148FD2AF00BA11C9 /* libmediastreamer2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A530F2148FD26500BA11C9 /* libmediastreamer2.dylib */; };
+		70A53103148FD2AF00BA11C9 /* libortp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A530EC148FD26000BA11C9 /* libortp.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70A530EB148FD26000BA11C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A530E7148FD26000BA11C9 /* ortp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B4AC1486642D0098DE41;
+			remoteInfo = ortp;
+		};
+		70A530F1148FD26500BA11C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A530ED148FD26500BA11C9 /* mediastreamer2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B62714867F710098DE41;
+			remoteInfo = mediastreamer2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		709489841487A91A00DAA968 /* libmsvideostitcher.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmsvideostitcher.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		709489931487A97C00DAA968 /* stitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stitcher.h; path = ../../../plugins/msvideostitcher/src/stitcher.h; sourceTree = "<group>"; };
+		709489941487A97C00DAA968 /* stitcher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stitcher.c; path = ../../../plugins/msvideostitcher/src/stitcher.c; sourceTree = "<group>"; };
+		709489951487A97C00DAA968 /* layouts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = layouts.c; path = ../../../plugins/msvideostitcher/src/layouts.c; sourceTree = "<group>"; };
+		7094899B1487A9BA00DAA968 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../mediastreamer2/ffmpeg/libavcodec.dylib; sourceTree = "<group>"; };
+		7094899C1487A9BA00DAA968 /* libavcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcore.dylib; path = ../mediastreamer2/ffmpeg/libavcore.dylib; sourceTree = "<group>"; };
+		7094899D1487A9BA00DAA968 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../mediastreamer2/ffmpeg/libavutil.dylib; sourceTree = "<group>"; };
+		7094899E1487A9BA00DAA968 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswscale.dylib; path = ../mediastreamer2/ffmpeg/libswscale.dylib; sourceTree = "<group>"; };
+		70A530E7148FD26000BA11C9 /* ortp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ortp.xcodeproj; path = ../ortp/ortp.xcodeproj; sourceTree = "<group>"; };
+		70A530ED148FD26500BA11C9 /* mediastreamer2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mediastreamer2.xcodeproj; path = ../mediastreamer2/mediastreamer2.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		709489811487A91A00DAA968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A53102148FD2AF00BA11C9 /* libmediastreamer2.dylib in Frameworks */,
+				70A53103148FD2AF00BA11C9 /* libortp.dylib in Frameworks */,
+				7094899F1487A9BA00DAA968 /* libavcodec.dylib in Frameworks */,
+				709489A01487A9BA00DAA968 /* libavcore.dylib in Frameworks */,
+				709489A11487A9BA00DAA968 /* libavutil.dylib in Frameworks */,
+				709489A21487A9BA00DAA968 /* libswscale.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		709489791487A91A00DAA968 = {
+			isa = PBXGroup;
+			children = (
+				70A530ED148FD26500BA11C9 /* mediastreamer2.xcodeproj */,
+				70A530E7148FD26000BA11C9 /* ortp.xcodeproj */,
+				7094899B1487A9BA00DAA968 /* libavcodec.dylib */,
+				7094899C1487A9BA00DAA968 /* libavcore.dylib */,
+				7094899D1487A9BA00DAA968 /* libavutil.dylib */,
+				7094899E1487A9BA00DAA968 /* libswscale.dylib */,
+				7094898D1487A92500DAA968 /* msvideostitcher */,
+				709489851487A91A00DAA968 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		709489851487A91A00DAA968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				709489841487A91A00DAA968 /* libmsvideostitcher.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7094898B1487A92100DAA968 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				709489931487A97C00DAA968 /* stitcher.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		7094898C1487A92200DAA968 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				709489941487A97C00DAA968 /* stitcher.c */,
+				709489951487A97C00DAA968 /* layouts.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		7094898D1487A92500DAA968 /* msvideostitcher */ = {
+			isa = PBXGroup;
+			children = (
+				7094898C1487A92200DAA968 /* src */,
+				7094898B1487A92100DAA968 /* include */,
+			);
+			name = msvideostitcher;
+			sourceTree = "<group>";
+		};
+		70A530E8148FD26000BA11C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70A530EC148FD26000BA11C9 /* libortp.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70A530EE148FD26500BA11C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70A530F2148FD26500BA11C9 /* libmediastreamer2.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		709489821487A91A00DAA968 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				709489961487A97C00DAA968 /* stitcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		709489831487A91A00DAA968 /* msvideostitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 709489881487A91A00DAA968 /* Build configuration list for PBXNativeTarget "msvideostitcher" */;
+			buildPhases = (
+				709489801487A91A00DAA968 /* Sources */,
+				709489811487A91A00DAA968 /* Frameworks */,
+				709489821487A91A00DAA968 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = msvideostitcher;
+			productName = msvideostitcher;
+			productReference = 709489841487A91A00DAA968 /* libmsvideostitcher.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7094897B1487A91A00DAA968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7094897E1487A91A00DAA968 /* Build configuration list for PBXProject "msvideostitcher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 709489791487A91A00DAA968;
+			productRefGroup = 709489851487A91A00DAA968 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 70A530EE148FD26500BA11C9 /* Products */;
+					ProjectRef = 70A530ED148FD26500BA11C9 /* mediastreamer2.xcodeproj */;
+				},
+				{
+					ProductGroup = 70A530E8148FD26000BA11C9 /* Products */;
+					ProjectRef = 70A530E7148FD26000BA11C9 /* ortp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				709489831487A91A00DAA968 /* msvideostitcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		70A530EC148FD26000BA11C9 /* libortp.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libortp.dylib;
+			remoteRef = 70A530EB148FD26000BA11C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70A530F2148FD26500BA11C9 /* libmediastreamer2.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmediastreamer2.dylib;
+			remoteRef = 70A530F1148FD26500BA11C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		709489801487A91A00DAA968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				709489971487A97C00DAA968 /* stitcher.c in Sources */,
+				709489981487A97C00DAA968 /* layouts.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		709489861487A91A00DAA968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		709489871487A91A00DAA968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		709489891487A91A00DAA968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7094898A1487A91A00DAA968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7094897E1487A91A00DAA968 /* Build configuration list for PBXProject "msvideostitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709489861487A91A00DAA968 /* Debug */,
+				709489871487A91A00DAA968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		709489881487A91A00DAA968 /* Build configuration list for PBXNativeTarget "msvideostitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709489891487A91A00DAA968 /* Debug */,
+				7094898A1487A91A00DAA968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7094897B1487A91A00DAA968 /* Project object */;
+}

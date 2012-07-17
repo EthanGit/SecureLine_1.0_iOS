@@ -1,0 +1,143 @@
+/* 
+  Localizable.strings
+  vbyantisip
+
+  Created by Arthur Tseng on 2012/6/27.
+  Copyright (c) 2012年 Gentrice. All rights reserved.
+*/
+
+
+"btnAdd" = "Add";
+"btnEdit" = "Edit";
+"btnCancel" = "Cancel";
+"btnBack" = "Back";
+"btnDone" = "Done";
+"btnEnter" ="Enter";
+"btnCallAll" = "All";
+"btnCallLost" = "Lost";
+
+"tabRecent" = "Recent";
+"tabContacts" = "Contacts";
+"tabMore" = "More";
+"tabContactInfo"="Contact Info";
+"tabAddContact"="New Contact";
+"tabRecentInfo"="Info";
+
+"moreAbout" = "About";
+"morePSInfo" = "Personal information";
+"moreInvite" = "Invite friends";
+"morePasscode"= "Passcode";
+"moreReport" = "Report";
+"moreLogout" = "Logout";
+
+"callEndCall" = "End Call";
+"callAnswer" = "Answer";
+"callRedial" = "Redial";
+"callConnected" = "Established";
+"callDialing" = "Dialing...";
+"callBusy" = "Busy";
+"callDisconnecting" = "Disconnecting...";
+"callIncoming" = "Incoming call...";
+"callDisconnected" = "Disconnected";
+"callUserNotFound" = "User not found";
+
+//Line Quality
+"qtyTitle" = "line status";
+"qtyPool" = "poor";
+"qtyGood" = "good";
+"qtyDialing" = "dialing";
+
+
+"Yes" = "Yes";
+"No" = "No";
+"Ok" = "Ok";
+
+//Contacts
+
+"sntSecureLineID" = "Secure Line ID";
+"sntCompany" = "Company";
+"sntUserInformation" = "User Information";
+"btnCall" = "Call";
+
+"fphUserFirstname" =  "User's firstname";
+"fphUserLastname" = "User's lastname";
+"fphUserSecureLineID" = "User's Secure Line ID";
+"fphUserCompanyName" = "User's company name";
+
+
+"altmEditContactWarning"="Edit Warning";
+"altmAddContactWarning"="Add Warning";
+"altmContactWarningNoFN"="Please enter your firstname!";
+"altmContactWarningNoLN"="Please enter your lastname!";
+"altmContactWarningNoSID"="Please enter your Secure Line ID!";
+
+
+
+
+//Recent
+
+"Recent"="Recent";
+"Today"="Today";
+"Yesterday"="Yesterday";
+"btnAllCall" = "All";
+"btnLostCall" = "Lost";
+
+
+//More 
+"altPasscodeSetting"="Passcode Setting:";
+"fphNewPasscode"="Please enter your 4-digit";
+"fphConfirmPasscode"="Confirm Passcode";
+
+"altmPasscodemismatch"="Passcode mismatch";
+"altmSettingError"="Setting Error";
+"altmlogoutcheck"="Are you sure?";
+
+
+"fphNewPasscode"="New Passcode";
+"fphConfirmPasscode"="Confirm Passcode";
+
+
+//passcode
+"altmKeyinPassword"="Please enter your passcode.";
+"altmWrongPasscode"="Wrong Passcode.";
+"altPasscodeError"="Passcode Error";
+"altPasscodeWarning"="Passcode Warning";
+
+//inviteFriend
+
+"inviteTitle"="You can invite more friends through these ways:";
+"btnViaEMail"="Via E-Mail";
+"btnViaSMS"="Via SMS";
+"inviteEmailSubject"="Come and join me in Secure Line!";
+"inviteEmailBody"="Join today!!";
+"inviteSMSBody"="Come and join me in Secure Line!";
+"altUnknownError"="Unknown Error";
+
+//Login
+"btnNewAccount"="New Account";
+"btnLogin"="Login";
+"fphSecureLineID"="Secure Line ID";
+"fphPassword"="Password";
+"altmKeyinError"="Keyin Error";
+"altErrorMessage"="Error Message";
+
+"altmLoginExpired"="Your account expired";
+"altmLoginDataError"="Your account or password error";
+"altmLoginAuthServerError"="auth server error";
+"altmLoginAuthError"="auth error";
+
+
+
+//Reports
+"reportTitle"="If you have problems, please let us know.";
+"btnSendReports"="Send Reports";
+"reportEMailSubject"="Secure Line Problems";
+"reportfphEMailBody"="Type your problems here to report";
+
+
+
+//App delegate
+"notifyCallFrom" = "Call from";
+
+
+

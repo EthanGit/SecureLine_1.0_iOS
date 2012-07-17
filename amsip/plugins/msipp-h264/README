@@ -1,0 +1,22 @@
+
+For linux:
+* compile and install the plugin:
+	./configure --prefix=<prefix of linphone/mediastreamer installation>
+	make 
+	make install
+
+For other platforms:
+
+* requirement:
+	Need IPP 7.x
+        directory ../ipp-samples-7.0.5.059/ must contains the IPP samples.
+
+FOR ALL PLATFORMS
+You must modify all files from "h264-ipp-samples" and reintroduce them into:
+  amsip\plugins\ipp-samples-7.0.5.059\
+
+as in:
+
+  #define SLICE_CHECK_LIMIT
+  //#undef SLICE_CHECK_LIMIT
+

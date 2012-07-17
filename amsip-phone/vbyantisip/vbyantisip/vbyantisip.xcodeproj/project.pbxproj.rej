@@ -1,0 +1,64 @@
+***************
+*** 35,40 ****
+  		70A2C3D815338E5E004ACABA /* loading_animation_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CC15338E5E004ACABA /* loading_animation_10.png */; };
+  		70A2C3D915338E5E004ACABA /* loading_animation_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CD15338E5E004ACABA /* loading_animation_11.png */; };
+  		70A2C3DA15338E5E004ACABA /* loading_animation_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CE15338E5E004ACABA /* loading_animation_12.png */; };
+  		70BB8E4A14F2E17900D14E19 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BB8E4914F2E17900D14E19 /* libvpx.a */; };
+  		70C358D4149F7F65004A721A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C358D3149F7F65004A721A /* AssetsLibrary.framework */; };
+  		70C36702152DF2C50096DCB8 /* Contacts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70C36700152DF2C50096DCB8 /* Contacts.xib */; };
+--- 35,41 ----
+  		70A2C3D815338E5E004ACABA /* loading_animation_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CC15338E5E004ACABA /* loading_animation_10.png */; };
+  		70A2C3D915338E5E004ACABA /* loading_animation_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CD15338E5E004ACABA /* loading_animation_11.png */; };
+  		70A2C3DA15338E5E004ACABA /* loading_animation_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CE15338E5E004ACABA /* loading_animation_12.png */; };
++ 		70AFAAE71546F46D00E6E530 /* libzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AFAAE61546F46D00E6E530 /* libzrtp.a */; };
+  		70BB8E4A14F2E17900D14E19 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BB8E4914F2E17900D14E19 /* libvpx.a */; };
+  		70C358D4149F7F65004A721A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C358D3149F7F65004A721A /* AssetsLibrary.framework */; };
+  		70C36702152DF2C50096DCB8 /* Contacts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70C36700152DF2C50096DCB8 /* Contacts.xib */; };
+***************
+*** 152,157 ****
+  		70A2C3CC15338E5E004ACABA /* loading_animation_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_10.png; path = images/loading_animation_10.png; sourceTree = "<group>"; };
+  		70A2C3CD15338E5E004ACABA /* loading_animation_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_11.png; path = images/loading_animation_11.png; sourceTree = "<group>"; };
+  		70A2C3CE15338E5E004ACABA /* loading_animation_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_12.png; path = images/loading_animation_12.png; sourceTree = "<group>"; };
+  		70BB8E4914F2E17900D14E19 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.a; path = ../external/libvpx.a; sourceTree = "<group>"; };
+  		70C358D3149F7F65004A721A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+  		70C36701152DF2C50096DCB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Contacts.xib; sourceTree = "<group>"; };
+--- 153,159 ----
+  		70A2C3CC15338E5E004ACABA /* loading_animation_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_10.png; path = images/loading_animation_10.png; sourceTree = "<group>"; };
+  		70A2C3CD15338E5E004ACABA /* loading_animation_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_11.png; path = images/loading_animation_11.png; sourceTree = "<group>"; };
+  		70A2C3CE15338E5E004ACABA /* loading_animation_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_12.png; path = images/loading_animation_12.png; sourceTree = "<group>"; };
++ 		70AFAAE61546F46D00E6E530 /* libzrtp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzrtp.a; path = "../../../../Library/Developer/Xcode/DerivedData/amsip-ios-duiiaqiodrqduxexlhvrmugimoaf/Build/Products/Debug-iphoneos/libzrtp.a"; sourceTree = "<group>"; };
+  		70BB8E4914F2E17900D14E19 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.a; path = ../external/libvpx.a; sourceTree = "<group>"; };
+  		70C358D3149F7F65004A721A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+  		70C36701152DF2C50096DCB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Contacts.xib; sourceTree = "<group>"; };
+***************
+*** 258,263 ****
+  				702E93401508E9A40057E727 /* libcares.a in Frameworks */,
+  				702E93411508E9A40057E727 /* libexosip2.a in Frameworks */,
+  				702E93421508E9A40057E727 /* libgsm.a in Frameworks */,
+  				702E93431508E9A40057E727 /* libmediastreamer2.a in Frameworks */,
+  				702E93441508E9A40057E727 /* libspeex.a in Frameworks */,
+  				702E93451508E9A40057E727 /* libsrtp.a in Frameworks */,
+--- 260,266 ----
+  				702E93401508E9A40057E727 /* libcares.a in Frameworks */,
+  				702E93411508E9A40057E727 /* libexosip2.a in Frameworks */,
+  				702E93421508E9A40057E727 /* libgsm.a in Frameworks */,
++ 				70AFAAE71546F46D00E6E530 /* libzrtp.a in Frameworks */,
+  				702E93431508E9A40057E727 /* libmediastreamer2.a in Frameworks */,
+  				702E93441508E9A40057E727 /* libspeex.a in Frameworks */,
+  				702E93451508E9A40057E727 /* libsrtp.a in Frameworks */,
+***************
+*** 387,392 ****
+  				702E933A1508E9A30057E727 /* libexosip2.a */,
+  				702E933B1508E9A30057E727 /* libgsm.a */,
+  				702E933C1508E9A30057E727 /* libmediastreamer2.a */,
+  				702E933D1508E9A40057E727 /* libspeex.a */,
+  				702E933E1508E9A40057E727 /* libsrtp.a */,
+  				70D8DAD214FBE80A00AA3286 /* libstdc++.dylib */,
+--- 390,396 ----
+  				702E933A1508E9A30057E727 /* libexosip2.a */,
+  				702E933B1508E9A30057E727 /* libgsm.a */,
+  				702E933C1508E9A30057E727 /* libmediastreamer2.a */,
++ 				70AFAAE61546F46D00E6E530 /* libzrtp.a */,
+  				702E933D1508E9A40057E727 /* libspeex.a */,
+  				702E933E1508E9A40057E727 /* libsrtp.a */,
+  				70D8DAD214FBE80A00AA3286 /* libstdc++.dylib */,

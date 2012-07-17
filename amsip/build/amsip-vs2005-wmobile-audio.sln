@@ -1,0 +1,146 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "amsip", "vs2005-wmobile\amsip\amsip.vcproj", "{C841B444-99A7-4E08-8F94-F890AB7370C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128} = {4A07BB2B-F56E-4F1B-A729-D28B782AC128}
+		{4EA67539-9EE9-4065-BD39-87E517FD8262} = {4EA67539-9EE9-4065-BD39-87E517FD8262}
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197} = {E42FDC95-7243-4219-9EA4-ACCE4AB97197}
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4} = {E972C52F-9E85-4D65-B19C-031E511E9DB4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "vs2005-wmobile\test\test.vcproj", "{81EE1BD8-0A75-43E7-9638-D17A18973FB9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{65945422-B6A5-44E5-A113-6C2248854E44} = {65945422-B6A5-44E5-A113-6C2248854E44}
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128} = {4A07BB2B-F56E-4F1B-A719-D28B782AC128}
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128} = {4A07BB2B-F56E-4F1B-A729-D28B782AC128}
+		{4EA67539-9EE9-4065-BD39-87E517FD8262} = {4EA67539-9EE9-4065-BD39-87E517FD8262}
+		{C841B444-99A7-4E08-8F94-F890AB7370C5} = {C841B444-99A7-4E08-8F94-F890AB7370C5}
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5} = {44F46B7E-0E51-4304-9735-330DFBAB41E5}
+		{85255507-5D16-4218-85E2-F683BB2F04DA} = {85255507-5D16-4218-85E2-F683BB2F04DA}
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197} = {E42FDC95-7243-4219-9EA4-ACCE4AB97197}
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4} = {E972C52F-9E85-4D65-B19C-031E511E9DB4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eXosip", "vs2005-wmobile\eXosip\eXosip.vcproj", "{4EA67539-9EE9-4065-BD39-87E517FD8262}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85255507-5D16-4218-85E2-F683BB2F04DA} = {85255507-5D16-4218-85E2-F683BB2F04DA}
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5} = {44F46B7E-0E51-4304-9735-330DFBAB41E5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osipparser2", "vs2005-wmobile\osipparser2\osipparser2.vcproj", "{44F46B7E-0E51-4304-9735-330DFBAB41E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osip2", "vs2005-wmobile\osip2\osip2.vcproj", "{85255507-5D16-4218-85E2-F683BB2F04DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5} = {44F46B7E-0E51-4304-9735-330DFBAB41E5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oRTP", "vs2005-wmobile\oRTP\oRTP.vcproj", "{4A07BB2B-F56E-4F1B-A719-D28B782AC128}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mediastreamer2", "vs2005-wmobile\mediastreamer2\mediastreamer2.vcproj", "{4A07BB2B-F56E-4F1B-A729-D28B782AC128}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197} = {E42FDC95-7243-4219-9EA4-ACCE4AB97197}
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4} = {E972C52F-9E85-4D65-B19C-031E511E9DB4}
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128} = {4A07BB2B-F56E-4F1B-A719-D28B782AC128}
+		{65945422-B6A5-44E5-A113-6C2248854E44} = {65945422-B6A5-44E5-A113-6C2248854E44}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmsilbc", "vs2005-wmobile\plugins\libmsilbc\libmsilbc.vcproj", "{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5} = {0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128} = {4A07BB2B-F56E-4F1B-A719-D28B782AC128}
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128} = {4A07BB2B-F56E-4F1B-A729-D28B782AC128}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libilbc", "vs2005-wmobile\plugins\libmsilbc\libilbc\libilbc.vcproj", "{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgsmlib", "vs2005-wmobile\libgsmlib\libgsmlib.vcproj", "{65945422-B6A5-44E5-A113-6C2248854E44}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libspeex", "vs2005-wmobile\libspeex\libspeex.vcproj", "{E972C52F-9E85-4D65-B19C-031E511E9DB4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libspeexdsp", "vs2005-wmobile\libspeexdsp\libspeexdsp.vcproj", "{E42FDC95-7243-4219-9EA4-ACCE4AB97197}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmsg726", "vs2005-wmobile\plugins\libmsg726\libmsg726.vcproj", "{453298A8-E581-43FB-80B5-6B00180ABC23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmsitug729", "vs2005-wmobile\plugins\libmsitug729\libmsitug729.vcproj", "{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I) = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I) = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{C841B444-99A7-4E08-8F94-F890AB7370C5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{81EE1BD8-0A75-43E7-9638-D17A18973FB9}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4EA67539-9EE9-4065-BD39-87E517FD8262}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4EA67539-9EE9-4065-BD39-87E517FD8262}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4EA67539-9EE9-4065-BD39-87E517FD8262}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4EA67539-9EE9-4065-BD39-87E517FD8262}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{44F46B7E-0E51-4304-9735-330DFBAB41E5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{85255507-5D16-4218-85E2-F683BB2F04DA}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{85255507-5D16-4218-85E2-F683BB2F04DA}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{85255507-5D16-4218-85E2-F683BB2F04DA}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{85255507-5D16-4218-85E2-F683BB2F04DA}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A719-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{4A07BB2B-F56E-4F1B-A729-D28B782AC128}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{9E87FE89-6DD2-41B2-B71E-93F0DDB09026}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{65945422-B6A5-44E5-A113-6C2248854E44}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{65945422-B6A5-44E5-A113-6C2248854E44}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{65945422-B6A5-44E5-A113-6C2248854E44}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{65945422-B6A5-44E5-A113-6C2248854E44}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E972C52F-9E85-4D65-B19C-031E511E9DB4}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{E42FDC95-7243-4219-9EA4-ACCE4AB97197}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{453298A8-E581-43FB-80B5-6B00180ABC23}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = DebugAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Build.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+		{78C5ADB9-09A1-4EA8-87CE-98EC4A58221A}.ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I).Deploy.0 = ReleaseAudio|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

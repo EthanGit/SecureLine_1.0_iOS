@@ -1,0 +1,15 @@
+To build this ilbc plugin, you need first a linphone source tree with version >=1.4.0; configured and compiled.
+
+
+* compile and install the ilbc source: 
+		tar -xvzf ilbc-rfc3951.tar.gz
+		cd ilbc-rfc2951 
+		./configure --prefix=/usr && make
+		make install 		(as root)
+		cd ..
+* compile and install the plugin:
+	export LINPHONE_BUILD=<path of linphone's source tree compiled>
+	make
+	
+	then install the plugin:
+	make install

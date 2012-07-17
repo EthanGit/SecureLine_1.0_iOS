@@ -1,0 +1,28 @@
+16/03/2012
+
+amsip is a SIP library for softphone (SIP -rfc3261-)
+Copyright (C) 2003-2012 Aymeric MOIZARD - <amoizard@gmail.com>
+
+
+Note:  **** NO VIDEO VERSION AVAILABLE ****
+
+
+Windows Mobile compilation process:
+-----------------------------------
+
+Pre-requisite:
+  * Visual .NET with C++ compiler 2005.
+
+Open "build/amsip-vs2005-wmobile.sln" with Visual .NET 2005
+
+
+Select build process for "DebugAudio" and "ReleaseAudio" configuration.
+
+Compilation is prepared for Windows Mobile 6 Standard SDK. With minor
+modification, you can build for any other windows mobile SDK.
+
+Files & binaries will be copied to:
+   build/vs2005-wmobile-bin/DebugAudio
+   build/vs2005-wmobile-bin/ReleaseAudio
+   include/
+

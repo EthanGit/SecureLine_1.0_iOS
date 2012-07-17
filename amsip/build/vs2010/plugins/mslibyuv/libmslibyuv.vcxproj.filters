@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\yuv.cc" />
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\compare.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\convert.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\cpu_id.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\format_conversion.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\planar_functions.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\rotate.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\rotate_neon.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\row_common.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\row_win.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\scale.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\video_common.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\convert_from.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libyuv\source\mjpeg_decoder.cc">
+      <Filter>libyuv\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdapimin.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\wrtarga.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\wrrle.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\wrppm.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\wrgif.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\wrbmp.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\transupp.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\tjutil.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdtarga.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdswitch.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdrle.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdppm.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdgif.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdcolmap.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\rdbmp.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jutils.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jsimd_none.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jquant2.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jquant1.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jmemnobs.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jmemmgr.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jidctred.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jidctint.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jidctfst.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jidctflt.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jfdctint.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jfdctfst.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jfdctflt.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jerror.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdtrans.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdsample.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdpostct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdphuff.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdmerge.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdmaster.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdmarker.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdmainct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdinput.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdhuff.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jddctmgr.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdcolor.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdcoefct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdatasrc-tj.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdatasrc.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdatadst-tj.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdatadst.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdarith.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdapistd.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jctrans.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcsample.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcprepct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcphuff.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcparam.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcomapi.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcmaster.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcmarker.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcmainct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcinit.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jchuff.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcdctmgr.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jccolor.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jccoefct.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcarith.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcapistd.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jcapimin.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jaricom.c">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\basic_types.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\compare.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\convert.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\cpu_id.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\format_conversion.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\planar_functions.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\rotate.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\scale.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\video_common.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\source\rotate_priv.h">
+      <Filter>libyuv\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\source\row.h">
+      <Filter>libyuv\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\convert_from.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\scoped_ptr.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\version.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libyuv\include\libyuv\mjpeg_decoder.h">
+      <Filter>libyuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jpeglib.h">
+      <Filter>libjpeg-turbo\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\transupp.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\tjutil.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jversion.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jsimddct.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jsimd.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jpegint.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jpegcomp.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jmorecfg.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jmemsys.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jinclude.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jerror.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdhuff.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jdct.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\mslibyuv\libjpeg-turbo\jchuff.h">
+      <Filter>libjpeg-turbo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="jconfig.h">
+      <Filter>libjpeg-turbo</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>libjpeg-turbo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="libyuv">
+      <UniqueIdentifier>{a9b57852-5807-453c-990b-feaf13df8443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libyuv\include">
+      <UniqueIdentifier>{db9ce2f2-8533-4714-940c-651629c06033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libyuv\source">
+      <UniqueIdentifier>{fadbd560-ca3b-423c-9e36-406d8ed69ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg-turbo">
+      <UniqueIdentifier>{590ca35c-f375-46f1-b4af-89493aea9e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg-turbo\src">
+      <UniqueIdentifier>{6df7967d-dd4f-4a94-a4a2-cc5a3ff68aff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg-turbo\include">
+      <UniqueIdentifier>{8feaa898-fbad-420e-bc45-e7b0e00878b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

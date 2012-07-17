@@ -1,0 +1,29 @@
+
+FFMPEG: VERSION TESTED: 7230116000988103449a720f254d5437e13b20ff 14/March
+
+git clone https://github.com/cbreak-black/ffmpeg-ios-build.git
+cd ffmpeg-ios-build
+
+1/ apply patch "ffmpeg-ios-build.patch"
+ (compile armv6, add neon, use clang)
+
+2/ copy gas-preprocessor/gas-preprocessor.pl to /usr/bin (or equivalent)
+
+3/ ./sync.sh, ./build.sh and ./combine.sh
+
+  make sure it use correct optimization
+
+4/ copy dist-uarch to mediastreamer2/ffmpeg-uarch/
+
+
+X264: VERSION TESTED: 5c85e0a2b7992fcaab09418e3fcefc613cffc743 11/March
+
+git clone https://github.com/rodisbored/ffmpeg_x264_iOS5_build.git
+
+1/ apply patch "ffmpeg_x264_iOS5_build.patch"
+ (compile i386, compile no GPL, use clang)
+
+2/run build_x264
+
+3/ copy "ffmpeg_x264_iOS5_build/x264/x264-uarch" to mediastreamer2/x264-uarch
+

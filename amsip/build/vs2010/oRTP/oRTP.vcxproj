@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4A07BB2B-F56E-4F1B-A719-D28B782AC128}</ProjectGuid>
+    <RootNamespace>oRTP</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\win32-bin\include;..\..\..\external\security\libzrtp\include;..\..\..\external\security\libzrtp\third_party\bgaes\;..\..\..\external\security\libzrtp\third_party\bnlib\;..\..\..\oRTP\include;..\..\..\oRTP\include\ortp;..\..\..\oRTP\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_OPENSSL_HMAC_H;HAVE_OPENSSL_MD5_H;_CRT_SECURE_NO_DEPRECATE;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;ORTP_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Traffic.lib;Qwave.lib;delayimp.lib;libeay32.lib;Ws2_32.lib;libsrtp.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\oRTP\build\win32native\oRTP.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>Qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)oRTP.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\win32-bin\include;..\..\..\external\security\libzrtp\include;..\..\..\external\security\libzrtp\third_party\bgaes\;..\..\..\external\security\libzrtp\third_party\bnlib\;..\..\..\oRTP\include;..\..\..\oRTP\include\ortp;..\..\..\oRTP\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_OPENSSL_HMAC_H;HAVE_OPENSSL_MD5_H;_CRT_SECURE_NO_DEPRECATE;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;ORTP_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Traffic.lib;Qwave.lib;delayimp.lib;libeay32.lib;Ws2_32.lib;libsrtp.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\oRTP\build\win32native\oRTP.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>Qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)oRTP.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\win32-bin\include;..\..\..\external\security\libzrtp\include;..\..\..\external\security\libzrtp\third_party\bgaes\;..\..\..\external\security\libzrtp\third_party\bnlib\;..\..\..\oRTP\include;..\..\..\oRTP\include\ortp;..\..\..\oRTP\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_OPENSSL_HMAC_H;HAVE_OPENSSL_MD5_H;_CRT_SECURE_NO_DEPRECATE;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;ORTP_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Traffic.lib;Qwave.lib;delayimp.lib;libeay32.lib;Ws2_32.lib;libsrtp.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\oRTP\build\win32native\oRTP.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>Qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AssemblyLinkResource>%(AssemblyLinkResource)</AssemblyLinkResource>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\win32-bin\include;..\..\..\external\security\libzrtp\include;..\..\..\external\security\libzrtp\third_party\bgaes\;..\..\..\external\security\libzrtp\third_party\bnlib\;..\..\..\oRTP\include;..\..\..\oRTP\include\ortp;..\..\..\oRTP\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_OPENSSL_HMAC_H;HAVE_OPENSSL_MD5_H;_CRT_SECURE_NO_DEPRECATE;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;ORTP_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Traffic.lib;Qwave.lib;delayimp.lib;libeay32.lib;Ws2_32.lib;libsrtp.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\oRTP\build\win32native\oRTP.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>Qwave.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AssemblyLinkResource>%(AssemblyLinkResource)</AssemblyLinkResource>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\oRTP\src\avprofile.c" />
+    <ClCompile Include="..\..\..\oRTP\src\b64.c" />
+    <ClCompile Include="..\..\..\oRTP\src\dll_entry.c" />
+    <ClCompile Include="..\..\..\oRTP\src\event.c" />
+    <ClCompile Include="..\..\..\oRTP\src\jitterctl.c" />
+    <ClCompile Include="..\..\..\oRTP\src\ortp.c" />
+    <ClCompile Include="..\..\..\oRTP\src\payloadtype.c" />
+    <ClCompile Include="..\..\..\oRTP\src\port.c" />
+    <ClCompile Include="..\..\..\oRTP\src\posixtimer.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtcp.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtcpparse.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtpparse.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtpsession.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtpsession_inet.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtpsignaltable.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtptimer.c" />
+    <ClCompile Include="..\..\..\oRTP\src\rtptransport.c" />
+    <ClCompile Include="..\..\..\oRTP\src\scheduler.c" />
+    <ClCompile Include="..\..\..\oRTP\src\sessionset.c" />
+    <ClCompile Include="..\..\..\oRTP\src\srtp.c" />
+    <ClCompile Include="..\..\..\oRTP\src\str_utils.c" />
+    <ClCompile Include="..\..\..\oRTP\src\stun.c" />
+    <ClCompile Include="..\..\..\oRTP\src\stun_udp.c" />
+    <ClCompile Include="..\..\..\oRTP\src\telephonyevents.c" />
+    <ClCompile Include="..\..\..\oRTP\src\turn.c" />
+    <ClCompile Include="..\..\..\oRTP\src\utils.c" />
+    <ClCompile Include="..\..\..\oRTP\src\zrtp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\oRTP\build\win32native\ortp.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\oRTP\include\ortp\b64.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\event.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\rtptransport.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\turn.h" />
+    <ClInclude Include="..\..\..\oRTP\src\jitterctl.h" />
+    <ClInclude Include="..\..\..\oRTP\src\ortp-config-win32.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\ortp.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\payloadtype.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\port.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\rtcp.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\rtp.h" />
+    <ClInclude Include="..\..\..\oRTP\src\rtpmod.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\rtpsession.h" />
+    <ClInclude Include="..\..\..\oRTP\src\rtpsession_priv.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\rtpsignaltable.h" />
+    <ClInclude Include="..\..\..\oRTP\src\rtptimer.h" />
+    <ClInclude Include="..\..\..\oRTP\src\scheduler.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\sessionset.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\srtp.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\str_utils.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\stun.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\stun_udp.h" />
+    <ClInclude Include="..\..\..\oRTP\include\ortp\telephonyevents.h" />
+    <ClInclude Include="..\..\..\oRTP\src\utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

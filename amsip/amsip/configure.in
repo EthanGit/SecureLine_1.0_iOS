@@ -1,0 +1,307 @@
+dnl  ##  The amsip library is a high layer SIP library (SIP -rfc3261-)
+dnl  ##  Copyright (C) 2002-2003-2004-2005  Aymeric MOIZARD - <jack@atosc.org>
+dnl  ##  
+
+dnl Process this file with autoconf to produce a configure script.
+AC_REVISION($Revision: 1.23 $)dnl
+AC_PREREQ(2.50)
+AC_INIT(include/amsip/am_version.h)
+
+dnl require at least autoconf v 2.00
+dnl AC_COPYRIGHT (COPYRIGHT-NOTICE)
+
+AC_MSG_NOTICE([amsip, The amsip SIP library.])
+AC_MSG_NOTICE([Copyright (C) 2002-2012 Aymeric MOIZARD - <amoizard@gmail.com>])
+
+dnl *********************************************************************
+dnl Source packaging numbers
+AMSIP_MAJOR_VERSION=4
+AMSIP_MINOR_VERSION=7
+AMSIP_MICRO_VERSION=0
+
+dnl Library extension
+
+LIBAMSIP_SO_VERSION=`expr $AMSIP_MINOR_VERSION + $AMSIP_MAJOR_VERSION`:$AMSIP_MICRO_VERSION:$AMSIP_MINOR_VERSION
+
+AMSIP_VERSION=$AMSIP_MAJOR_VERSION.$AMSIP_MINOR_VERSION.$AMSIP_MICRO_VERSION
+
+AC_SUBST(AMSIP_VERSION)
+AC_SUBST(LIBAMSIP_SO_VERSION)
+
+PACKAGE=libamsip
+
+AC_MSG_RESULT([Configuring ${PACKAGE} ${AMSIP_VERSION}])
+OS=`uname|sed -e 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
+AC_MSG_RESULT([Building Package on ${OS}])
+
+dnl *********************************************************************
+dnl Initialize automake stuff
+AC_CONFIG_AUX_DIR(scripts)
+AM_INIT_AUTOMAKE($PACKAGE, $AMSIP_VERSION)
+AM_ACLOCAL_INCLUDE(scripts)
+
+AC_CANONICAL_HOST
+
+AC_SUBST(ac_aux_dir)
+
+dnl Checks for programs.
+
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_INSTALL
+
+dnl Initialize libtool
+LT_AC_PROG_SED
+
+AC_LIBTOOL_DLOPEN
+AC_PROG_LIBTOOL
+
+
+dnl declare --enable-* args and collect ac_help strings
+
+AC_ARG_WITH(config-dir,
+  AC_HELP_STRING([--with-config-dir=DIR],[Set config file path (default: sysconfdir)]),
+  if test "x$with_config_dir" = xyes; then
+    SIP_CONFIG_DIR="$sysconfdir/amsip"
+  else
+    if test "x$with_config_dir" = xno; then
+      AC_MSG_ERROR(Config directory required)
+    else
+      SIP_CONFIG_DIR="$with_config_dir"
+    fi
+  fi,
+  SIP_CONFIG_DIR="$sysconfdir/amsip")
+
+AC_DEFINE_DIR(CONFIG_DIR, SIP_CONFIG_DIR, [Location of installed configuration files])
+AC_SUBST(CONFIG_DIR, $SIP_CONFIG_DIR)
+
+dnl support for semaphore.h (linux/sun...)
+AC_ARG_ENABLE(semaphore,
+[  --enable-semaphore      enable support for semaphore (semaphore.h)],
+enable_semaphore=$enableval,enable_semaphore="no")
+
+dnl support for sysV semaphore in sys/sem.h (BSD/linux...)
+AC_ARG_ENABLE(sysv,
+[  --enable-sysv           enable support for sysV semaphore (sys/sem.h).],
+enable_sysv=$enableval,enable_sysv="no")
+
+dnl support for linux-thread or posix thread (pthread.h)
+AC_ARG_ENABLE(autothread,
+[  --enable-autothread     enable autodetection of POSIX threads. (default=yes)],
+enable_autothread=$enableval,enable_autothread="yes")
+
+AC_ARG_ENABLE(mpatrol,
+[  --enable-mpatrol        turn on memory leak detection with patrol.],
+enable_mpatrol=$enableval,enable_mpatrol="no")
+
+AC_ARG_ENABLE(hoard,
+[  --enable-hoard          use hoard replacement for malloc and free.],
+enable_hoard=$enableval,enable_hoard="no")
+
+AC_ARG_ENABLE(debug,
+[  --enable-debug          turn on debugging. (yes)],
+enable_debug=$enableval,enable_debug="yes")
+
+AC_ARG_ENABLE(trace,
+[  --enable-trace          turn on trace. (yes)],
+enable_trace=$enableval,enable_trace="yes")
+
+AC_ARG_ENABLE(syslog,
+[  --enable-syslog         turn on syslog support.],
+enable_syslog=$enableval,enable_syslog="no")
+
+AC_ARG_ENABLE(video,
+[  --enable-video          turn on video. (no)],
+enable_video=$enableval,enable_video="no")
+
+AMSIP_FLAGS="-DEXOSIP4"
+
+dnl compile with mt support
+if test "x$enable_autothread" = "xyes"; then
+  ACX_PTHREAD()
+  AMSIP_FLAGS="$AMSIP_FLAGS -D_REENTRANT -D_THREAD_SAFE -DXOPEN_SOURCE=500"
+fi
+
+AMSIP_FLAGS="$AMSIP_FLAGS -DHAVE_GETADDRINFO"
+
+if test "x$enable_semaphore" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DHAVE_SEMAPHORE_H"
+elif test "x$enable_sysv" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DHAVE_SYS_SEM_H"
+fi
+
+case $OS in
+  linux*)
+     ;;
+  irix*)
+     ;;
+  hpux* | hp-ux*)
+     ;;
+  aix*)
+     ;;
+  osf*)
+     AC_CHECK_LIB(rt,sem_open,[AMSIP_LIB="$AMSIP_LIB -lrt"])
+     ;;
+  sunos*)
+     ;;
+  darwin*)
+     ;;
+  *)
+     ;;
+esac
+
+case $OS in
+  openbsd*)
+     ;;
+  *)
+     CHECK_INADDR_NONE
+     AC_CHECK_LIB(resolv,res_query,[AMSIP_LIB="$AMSIP_LIB -lresolv"])
+     ;;
+esac
+
+if test "x$enable_debug" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DDENABLE_DEBUG -g"
+  CFLAGS=`echo $CFLAGS | sed 's/-O.//'`
+fi
+
+CFLAGS="$CFLAGS -DORTP_INET6"
+
+if test "x$enable_trace" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DENABLE_TRACE"
+fi
+
+if test "x$enable_mpatrol" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DENABLE_MPATROL"
+  AMSIP_LIB="$AMSIP_LIB -lmpatrolmt -lelf"
+fi
+
+if test "x$enable_video" = "xyes"; then
+  AMSIP_FLAGS="$AMSIP_FLAGS -DENABLE_VIDEO"
+fi
+
+AMSIP_FLAGS="$AMSIP_FLAGS -DNOUUID"
+
+dnl Checks for libraries. (those one are needed for sun)
+AC_CHECK_LIB(posix4,sem_open,[AMSIP_LIB="$AMSIP_LIB -lposix4 -mt"])
+AC_CHECK_LIB(nsl,nis_add,[AMSIP_LIB="$AMSIP_LIB -lnsl"])
+AC_CHECK_LIB(socket,sendto,[AMSIP_LIB="$AMSIP_LIB -lsocket"])
+AC_CHECK_LIB(dl,sendto,[AMSIP_LIB="$AMSIP_LIB -ldl"])
+
+AC_CHECK_LIB(srtp,srtp_create,[AMSIP_LIB="$AMSIP_LIB -lsrtp"])
+
+AC_CACHE_CHECK([whether -Wall works], Wall_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wall"
+  AC_TRY_COMPILE(, , Wall_cv_flag=yes, Wall_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wall_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wall"
+fi
+
+AC_CACHE_CHECK([whether -Wcast-align works], Wcast_align_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wcast-align"
+  AC_TRY_COMPILE(, , Wcast_align_cv_flag=yes, Wcast_align_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wcast_align_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wcast-align"
+fi
+
+AC_CACHE_CHECK([whether -Wchar-subscripts works], Wchar_subscripts_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wchar-subscripts"
+  AC_TRY_COMPILE(, , Wchar_subscripts_cv_flag=yes, Wchar_subscripts_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wchar_subscripts_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wchar-subscripts"
+fi
+
+AC_CACHE_CHECK([whether -Wformat works], Wformat_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wformat"
+  AC_TRY_COMPILE(, , Wformat_cv_flag=yes, Wformat_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wformat_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wformat"
+fi
+
+AC_CACHE_CHECK([whether -Winline works], Winline_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Winline"
+  AC_TRY_COMPILE(, , Winline_cv_flag=yes, Winline_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Winline_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Winline"
+fi
+
+AC_CACHE_CHECK([whether -Wmissing-declarations works], Wmissing_declarations_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wmissing-declarations"
+  AC_TRY_COMPILE(, , Wmissing_declarations_cv_flag=yes, Wmissing_declarations_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wmissing_declarations_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wmissing-declarations"
+fi
+
+AC_CACHE_CHECK([whether -Wmissing-prototypes works], Wmissing_prototypes_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wmissing-prototypes"
+  AC_TRY_COMPILE(, , Wmissing_prototypes_cv_flag=yes, Wmissing_prototypes_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wmissing_prototypes_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wmissing-prototypes"
+fi
+
+AC_CACHE_CHECK([whether -Wnested-externs works], Wnested_externs_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wnested-externs"
+  AC_TRY_COMPILE(, , Wnested_externs_cv_flag=yes, Wnested_externs_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wnested_externs_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wnested-externs"
+fi
+
+AC_CACHE_CHECK([whether -Wpointer-arith works], Wpointer_arith_cv_flag, [
+  saved_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="-Wpointer-arith"
+  AC_TRY_COMPILE(, , Wpointer_arith_cv_flag=yes, Wpointer_arith_cv_flag=no)
+  CPPFLAGS=$saved_CPPFLAGS
+])
+
+if test "x$Wpointer_arith_cv_flag" = xyes; then
+  CPPFLAGS="$CPPFLAGS -Wpointer-arith"
+fi
+
+AC_SUBST(AMSIP_FLAGS)
+AC_SUBST(AMSIP_LIB)
+AC_SUBST(ETCDIR)
+
+dnl check if we have the getifaddrs() sytem call
+AC_CHECK_FUNCS(getifaddrs)
+
+AC_OUTPUT(Makefile
+src/Makefile
+include/Makefile
+include/amsip/Makefile
+scripts/Makefile
+help/Makefile
+help/doxygen/Makefile
+help/doxygen/doxygen.dox
+)
+

@@ -1,0 +1,8 @@
+0.7.0:
+	initial version using IPP 6.1.0.032 and ipp samples 6.1.0.038
+0.0.9:
+	Fix when incoming images size does not equal to configured size.
+0.0.8:
+	use dynamic size for bitstream size
+0.0.7:
+	do not reset packetization-mode value upon attach/detach operation.

@@ -1,0 +1,81 @@
+amsip is a SIP library for softphone (SIP -rfc3261-)
+Copyright (C) 2003-2012 Aymeric MOIZARD - <amoizard@gmail.com>
+
+This howto provide information on compilation process under macosx:
+
+What you need:
+----------------
+
+amsip source code: amsip-xxx.tar.gz
+demo code to start registration & calls: vbyantisip-ios-xxx.tar.gz
+
+Requirements:
+----------------
+
+Install the latest xcode (4.2/4.3)
+
+Prepare for compilation:
+---------------------------
+
+Step1: create directories:
+
+  $> mkdir app-project
+  $> mkdir app-project/amsip-phone
+
+Step2: Untar vbyantisip-ios-xxx.tar.gz in app-project/amsip-iphone/
+          and rename "vbyantisip-xxx" directory to "amsip-ios/".
+
+Step3: Untar amsip-xxxx.tar.gz SDK archive in app-project/
+          and rename "amsip-xxx/" directory to amsip/
+
+Compilation:
+------------
+
+IMPORTANT: TO HAVE ZRTP SUPPORT YOU NEED A COMMERCIAL LICENSE FROM ZFONE
+           CHECK "http://zfoneproject.com/" for more information.
+
+IMPORTANT: TO HAVE X264 SUPPORT YOU NEED A COMMERCIAL LICENSE FROM X264
+           CHECK "http://www.x264licensing.com/" for more information.
+
+IMPORTANT: IF YOU WISH TO USE VIDEO VERSION, YOU NEED TO CREATE AN
+           ADDITONNAL PROJECT THAT WILL CONTAINS ALL YOUR RESSOURCES
+           (XIB, Images, Translation?) AS WELL AS BINARY OBJECT FOR
+           ALL AMSIP COMPONENT + BINARY OBJECT FOR YOUR OBJECTIVE-C
+           GUI COMPONENT. THIS WAY, YOU DON'T HAVE TO PUBLISH YOUR
+           OBJECTIVE-C CODE AND CAN STILL BE COMPLIANT WITH LGPL
+           LICENSE OF FFMPEG.
+
+IMPORTANT: ANTISIP IS NOT RESPONSIBLE FOR WRONG USAGE OF THE FFMPEG
+           LICENSE. IF YOU DO HAVE CONCERN, ASK FOR OUR HELP AND A
+           LAWYER.
+
+To compile for audio, open "amsip-audio-ios.xcworkspace" xcode workspace.
+This will compile all amsip component WITHOUT THE DEMO.
+
+To compile for video, open "amsip-ios.xcworkspace/" xcode workspace.
+This will compile all amsip component AND THE DEMO.
+
+To compile ZRTP in video, install the patch "ios-patch-use-zrtp.patch"
+before compiling:
+
+  $> patch -p1 < ios-patch-use-zrtp.patch
+
+vbyantisip-ios demo:
+--------------------
+
+The demo is only available with video option (also it could work with
+no video version with minor modifications).
+
+The demo is very simple and has some GUI limitation:
+
+* settings of the application are located in the "general
+  iphone preference" for applications.
+* settings will allow you to test with various upload/dowload
+  bandwidth settings.
+* will only start "VIDEO CALLS".
+* will not send a re-INVITE to add video, if the current call
+  only contains audio media.
+* After starting a call, if you want to have real video, you
+  still need to click on "tools" button to go to the video
+  window.
+

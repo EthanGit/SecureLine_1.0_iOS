@@ -1,0 +1,37 @@
+LIBRARY amsiptools
+
+EXPORTS
+
+	amsiptools_open_webcam_settings
+	
+	amsiptools_wizard_stop
+	amsiptools_wizard_start
+	amsiptools_wizard_play
+	amsiptools_wizard_get_mic_agc_gain
+	amsiptools_wizard_get_mic_loudness
+	
+	plantronics_hooks_start
+	plantronics_hooks_stop
+	plantronics_hooks_set_ringer
+	plantronics_hooks_set_audioenabled
+	plantronics_hooks_get_mute
+	plantronics_hooks_get_audioenabled
+	plantronics_hooks_get_isattached
+	plantronics_hooks_get_events
+	
+	hid_hooks_start
+	hid_hooks_start_device
+	hid_hooks_stop
+	hid_hooks_set_ringer
+	hid_hooks_set_audioenabled
+	hid_hooks_set_mute
+	hid_hooks_set_messagewaiting
+	hid_hooks_set_sendcalls
+	hid_hooks_get_mute
+	hid_hooks_get_audioenabled
+	hid_hooks_get_events
+
+	hdd_guid_get
+	proc_guid_get
+	mb_guid_get
+

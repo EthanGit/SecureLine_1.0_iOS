@@ -1,0 +1,28 @@
+IMPORTANT:
+
+ZRTP SDK is provided under AGPL and is copyrighted by Philip R. Zimmermann.
+# Copyright (c) 2006-2009 Philip R. Zimmermann. All rights reserved.
+# Contact: http://philzimmermann.com
+# For licensing and other legal details, see the file zrtp_legal.c.
+
+
+The current archive (amsip or mediastreamer2) contains open source SDK
+named "mediastreamer2-antisip/oRTP" released under the GPL terms. 
+
+If you are building a GPL project linked with mediastreamer2-antisip
+and ortp. Then you can compile and use ZRTP under the AGPL license.
+
+However,
+
+1/ if you wish to use mediastreamer2-antisip+ZRTP project in a non-GPL
+application then you must contact <amoizard@gmail.com> and <Philip R. Zimmermann.>
+to purchase license for mediastreamer2-antisip and ZRTP.
+
+2/ if you wish to use amsip+ZRTP in any project, then you must contact
+<amoizard@gmail.com> and <Philip R. Zimmermann.> to purchase license for
+amsip and ZRTP.
+
+As long as you don't fit into the AGPL, you need a commercial license. If
+you are unsure, ask us.
+
+

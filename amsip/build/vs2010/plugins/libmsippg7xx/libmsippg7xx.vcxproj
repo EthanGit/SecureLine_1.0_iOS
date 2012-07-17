@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{45329EA8-E581-43FB-80B5-6B0018EABC23}</ProjectGuid>
+    <RootNamespace>libmsippg7xx</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\..\vs2010-bin\$(Configuration)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\..\..\vs2010-bin\$(Platform)\$(Configuration)\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\..\vs2010-bin\$(Configuration)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\..\..\vs2010-bin\$(Platform)\$(Configuration)\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include;..\..\..\..\plugins\msippg7xx\src;..\..\..\..\mediastreamer2\include;..\..\..\..\oRTP\include;..\..\..\..\win32-bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_SCRATCH_MEMORY_USED;_USC_G7291;_USC_GSMAMR;_USC_AMRWB;_USC_G722;_USC_G711;_USC_G723;_USC_G729;ICE_TEST;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBMSIPPG7XX_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Pdh.lib;ippcore_l.lib;ippi_l.lib;ipps_l.lib;ippsc_l.lib;Setupapi.lib;Ws2_32.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)libmsippg7xx.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include;..\..\..\..\plugins\msippg7xx\src;..\..\..\..\mediastreamer2\include;..\..\..\..\oRTP\include;..\..\..\..\win32-bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_SCRATCH_MEMORY_USED;_USC_G7291;_USC_GSMAMR;_USC_AMRWB;_USC_G722;_USC_G711;_USC_G723;_USC_G729;ICE_TEST;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBMSIPPG7XX_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Pdh.lib;ippcore_l.lib;ippi_l.lib;ipps_l.lib;ippsc_l.lib;Setupapi.lib;Ws2_32.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)libmsippg7xx.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include;..\..\..\..\plugins\msippg7xx\src;..\..\..\..\mediastreamer2\include;..\..\..\..\oRTP\include;..\..\..\..\win32-bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_SCRATCH_MEMORY_USED;_USC_G7291;_USC_GSMAMR;_USC_AMRWB;_USC_G722;_USC_G711;_USC_G723;_USC_G729;ICE_TEST;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBMSIPPG7XX_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Pdh.lib;ippcore_l.lib;ippi_l.lib;ipps_l.lib;ippsc_l.lib;Setupapi.lib;Ws2_32.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)libmsippg7xx.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include;..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include;..\..\..\..\plugins\msippg7xx\src;..\..\..\..\mediastreamer2\include;..\..\..\..\oRTP\include;..\..\..\..\win32-bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_SCRATCH_MEMORY_USED;_USC_G7291;_USC_GSMAMR;_USC_AMRWB;_USC_G722;_USC_G711;_USC_G723;_USC_G729;ICE_TEST;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBMSIPPG7XX_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Pdh.lib;ippcore_l.lib;ippi_l.lib;ipps_l.lib;ippsc_l.lib;Setupapi.lib;Ws2_32.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)libmsippg7xx.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\mediastreamer2\mediastreamer2.vcxproj">
+      <Project>{4a07bb2b-f56e-4f1b-a729-d28b782ac128}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\oRTP\oRTP.vcxproj">
+      <Project>{4a07bb2b-f56e-4f1b-a719-d28b782ac128}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\decamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\dtxamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\encamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\ownamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\tabamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\uscamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\utilamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\src\aux_fnxs.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\src\aux_tbls.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\decg711.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\encg711.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\plcg711.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\uscg711.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\decg722.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\encg722.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\g722api.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\owng722.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\uscg722.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\decg723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\encg723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\owng723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\uscg723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\decg7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\encg7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\owng7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\tabg7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\uscg7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilfec.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilg7291.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilsid.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\decg729.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\encg729.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\owng729.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\uscg729i.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\bitgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\decgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\dtxgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\encgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\gain_util.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\tabgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\uscgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\utilgsmamr.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadamrwb.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadg723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadg729i.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\vadg723.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\vadg729.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\common_rtp_payloads.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\dummy_rtp_payload.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\rtp_amrwbe_payload.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\rtp_amr_payload.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\umc_rtp_packet.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_base_codec.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_default_memory_allocator.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_media_data.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_speech_codec.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_speech_data.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_debug_win32.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_file.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_file_win.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_mutex_win32.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_shared_object_win32.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_sys_info_win32.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_time_win32.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\formats.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\loadcodec.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\msipp.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\player.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\usccodec.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\util.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\wavfile.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\amrwbapi.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\amrwb_types.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\ownamrwb.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include\aux_fnxs.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include\g711api.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include\owng711.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\g722.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\g722api.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\owng722.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include\g723api.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include\g723ipp.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include\g729api.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamr.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamrapi.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamr_types.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\owngsmamr.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include\vadg723.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include\vadg729.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\base_rtp_cnvrt.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\common_rtp_payloads.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\dummy_rtp_payload.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtppayload.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtp_amrwbe_payload.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtp_amr_payload.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\umc_rtp_packet.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_audio_codec.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_base_codec.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_default_memory_allocator.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_dynamic_cast.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_linked_list.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_media_data.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_memory_allocator.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_speech_codec.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_speech_data.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_structures.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_usc.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_usc_base.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\scratchmem.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\uscreg.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_base.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_ec.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_objects_decl.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\sys\vm_file_win.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\sys\vm_types_win32.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_debug.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_file.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_mutex.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_shared_object.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_strings.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_sys_info.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_thread.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_time.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_types.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\formats.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\loadcodec.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\usccodec.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\uscreg.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\util.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\wavfile.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

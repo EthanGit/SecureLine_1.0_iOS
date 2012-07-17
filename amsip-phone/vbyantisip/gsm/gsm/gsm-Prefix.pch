@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'gsm' target in the 'gsm' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'amsip-audio' target in the 'amsip-audio' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+/* SRTP defines */
+#define CPU_CISC 1
+#define HAVE_UINT8_T
+#define HAVE_UINT16_T
+#define HAVE_UINT32_T
+#define HAVE_UINT64_T
+#define HAVE_MACHINE_TYPES_H
+#define SIZEOF_UNSIGNED_LONG 4
+#define SIZEOF_UNSIGNED_LONG_LONG 8

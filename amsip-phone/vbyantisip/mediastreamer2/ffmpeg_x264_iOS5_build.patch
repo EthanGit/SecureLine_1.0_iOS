@@ -1,0 +1,47 @@
+diff --git a/build_x264 b/build_x264
+index b11e78c..5af2288 100755
+--- a/build_x264
++++ b/build_x264
+@@ -11,6 +11,7 @@ trap exit ERR
+ export DIR=./x264
+ export DEST6=armv6/
+ export DEST7=armv7/
++export DEST8=i386/
+ #specify the version of iOS you want to build against
+ export VERSION="5.0"
+ 
+@@ -22,7 +23,7 @@ cd $DIR
+ 
+ echo "Building armv6..."
+ 
+-CC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-gcc ./configure --host=arm-apple-darwin --sysroot=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${VERSION}.sdk --prefix=$DEST6 --extra-cflags='-arch armv6' --extra-ldflags='-L/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/system -arch armv6' --enable-pic --disable-asm --enable-static
++CC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang ./configure --host=arm-apple-darwin --sysroot=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${VERSION}.sdk --prefix=$DEST6 --extra-cflags='-arch armv6 -miphoneos-version-min=4.0' --extra-ldflags='-L/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/system -arch armv6 -miphoneos-version-min=4.0' --enable-pic --disable-asm --enable-static --disable-gpl
+ 
+ make && make install
+ 
+@@ -31,15 +32,23 @@ echo "Installed: $DEST6"
+ 
+ echo "Building armv7..."
+ 
+-CC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-gcc ./configure --host=arm-apple-darwin --sysroot=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${VERSION}.sdk --prefix=$DEST7 --extra-cflags='-arch armv7' --extra-ldflags='-L/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/system -arch armv7' --enable-pic --enable-static
++CC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang ./configure --host=arm-apple-darwin --sysroot=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${VERSION}.sdk --prefix=$DEST7 --extra-cflags='-arch armv7 -miphoneos-version-min=4.0' --extra-ldflags='-L/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/system -arch armv7 -miphoneos-version-min=4.0' --enable-pic --enable-static --disable-gpl
+ 
+ make && make install
+ 
+ echo "Installed: $DEST7"
+ 
++echo "Building i386..."
++
++CC=/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/i686-apple-darwin11-llvm-gcc-4.2 ./configure --sysroot=/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${VERSION}.sdk --prefix=$DEST8 --extra-ldflags='-L/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/system' --enable-static --disable-gpl
++
++make && make install
++
++echo "Installed: $DEST8"
++
+ 
+ echo "Combining Libraries"
+-ARCHS="armv6 armv7"
++ARCHS="armv6 armv7 i386"
+ 
+ BUILD_LIBS="libx264.a"
+ 

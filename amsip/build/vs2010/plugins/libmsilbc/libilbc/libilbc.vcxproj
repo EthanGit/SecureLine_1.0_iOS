@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0A07DB23-1A12-4DD5-92EA-A80C21EDD0F5}</ProjectGuid>
+    <RootNamespace>libilbc</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\..\..\vs2010-bin\$(Configuration)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\..\..\..\vs2010-bin\$(Platform)\$(Configuration)\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\..\..\vs2010-bin\$(Configuration)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\..\..\..\vs2010-bin\$(Platform)\$(Configuration)\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\anaFilter.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\constants.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\createCB.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\doCPLC.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\enhancer.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\filter.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\FrameClassify.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\gainquant.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\getCBvec.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\helpfun.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\hpInput.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\hpOutput.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iCBConstruct.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iCBSearch.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iLBC_decode.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iLBC_encode.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\LPCdecode.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\LPCencode.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\lsf.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\packing.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\StateConstructW.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\StateSearchW.c" />
+    <ClCompile Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\syntFilter.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\anaFilter.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\constants.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\createCB.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\doCPLC.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\enhancer.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\filter.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\FrameClassify.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\gainquant.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\getCBvec.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\helpfun.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\hpInput.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\hpOutput.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iCBConstruct.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iCBSearch.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iLBC_decode.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iLBC_define.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\iLBC_encode.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\LPCdecode.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\LPCencode.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\lsf.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\packing.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\StateConstructW.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\StateSearchW.h" />
+    <ClInclude Include="..\..\..\..\..\plugins\msilbc\ilbc-rfc3951\ilbc\syntFilter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

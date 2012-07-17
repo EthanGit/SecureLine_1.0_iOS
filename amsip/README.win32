@@ -1,0 +1,31 @@
+16/03/2012
+
+amsip is a SIP library for softphone (SIP -rfc3261-)
+Copyright (C) 2003-2012 Aymeric MOIZARD - <amoizard@gmail.com>
+
+Windows compilation process:
+----------------------------
+
+Pre-requisite:
+  * Visual .NET with C++ compiler 2010
+  * For video version: DirectX 9.0 SDK Update - (Summer 2003)
+  * Microsoft Windows SDK 7.1
+
+For video version: Open "amsip-vs2010.sln" with Visual .NET 2005
+or Visual .NET 2010
+
+For audio version: Open "build/amsip-vs2005-audio.sln" with Visual
+.NET 2005
+
+OBSOLETE: You can also use Visual .NET 2005 to compile video
+but the video plugins and compilation architecture is obsolete.
+
+
+Start build process for "Debug" and "Release" configuration.
+
+Files & binaries will be copied to:
+   build/vs20xx-bin/Debug/
+   build/vs20xx-bin/ReleaseAudio/
+   build/vs20xx-bin/Debug/
+   build/vs20xx-bin/ReleaseAudio/
+   include/

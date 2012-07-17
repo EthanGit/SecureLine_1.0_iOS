@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70EE640F150DFAC200195069 /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EE640E150DFAC200195069 /* yuv.c */; };
+		70EE6422150DFC9000195069 /* libmediastreamer2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE641B150DFAF700195069 /* libmediastreamer2.dylib */; };
+		70EE6423150DFC9000195069 /* libortp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE6415150DFAE400195069 /* libortp.dylib */; };
+		70EE6428150DFCA400195069 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE6424150DFCA400195069 /* libavcodec.dylib */; };
+		70EE6429150DFCA400195069 /* libavcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE6425150DFCA400195069 /* libavcore.dylib */; };
+		70EE642A150DFCA400195069 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE6426150DFCA400195069 /* libavutil.dylib */; };
+		70EE642B150DFCA400195069 /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EE6427150DFCA400195069 /* libswscale.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70EE6414150DFAE400195069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70EE6410150DFAE400195069 /* ortp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B4AC1486642D0098DE41;
+			remoteInfo = ortp;
+		};
+		70EE641A150DFAF700195069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70EE6416150DFAF700195069 /* mediastreamer2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B62714867F710098DE41;
+			remoteInfo = mediastreamer2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70EE63FA150DFA9800195069 /* libmsswscale.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmsswscale.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		70EE6405150DFA9800195069 /* msswscale-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "msswscale-Prefix.pch"; sourceTree = "<group>"; };
+		70EE640E150DFAC200195069 /* yuv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yuv.c; path = ../../../../plugins/msswcale/src/yuv.c; sourceTree = "<group>"; };
+		70EE6410150DFAE400195069 /* ortp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ortp.xcodeproj; path = ../ortp/ortp.xcodeproj; sourceTree = "<group>"; };
+		70EE6416150DFAF700195069 /* mediastreamer2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mediastreamer2.xcodeproj; path = ../mediastreamer2/mediastreamer2.xcodeproj; sourceTree = "<group>"; };
+		70EE6424150DFCA400195069 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../mediastreamer2/ffmpeg/libavcodec.dylib; sourceTree = "<group>"; };
+		70EE6425150DFCA400195069 /* libavcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcore.dylib; path = ../mediastreamer2/ffmpeg/libavcore.dylib; sourceTree = "<group>"; };
+		70EE6426150DFCA400195069 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../mediastreamer2/ffmpeg/libavutil.dylib; sourceTree = "<group>"; };
+		70EE6427150DFCA400195069 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswscale.dylib; path = ../mediastreamer2/ffmpeg/libswscale.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70EE63F7150DFA9800195069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EE6428150DFCA400195069 /* libavcodec.dylib in Frameworks */,
+				70EE6429150DFCA400195069 /* libavcore.dylib in Frameworks */,
+				70EE642A150DFCA400195069 /* libavutil.dylib in Frameworks */,
+				70EE642B150DFCA400195069 /* libswscale.dylib in Frameworks */,
+				70EE6422150DFC9000195069 /* libmediastreamer2.dylib in Frameworks */,
+				70EE6423150DFC9000195069 /* libortp.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70EE63EF150DFA9800195069 = {
+			isa = PBXGroup;
+			children = (
+				70EE6424150DFCA400195069 /* libavcodec.dylib */,
+				70EE6425150DFCA400195069 /* libavcore.dylib */,
+				70EE6426150DFCA400195069 /* libavutil.dylib */,
+				70EE6427150DFCA400195069 /* libswscale.dylib */,
+				70EE6410150DFAE400195069 /* ortp.xcodeproj */,
+				70EE6416150DFAF700195069 /* mediastreamer2.xcodeproj */,
+				70EE6403150DFA9800195069 /* msswscale */,
+				70EE63FC150DFA9800195069 /* Frameworks */,
+				70EE63FB150DFA9800195069 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70EE63FB150DFA9800195069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EE63FA150DFA9800195069 /* libmsswscale.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70EE63FC150DFA9800195069 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70EE63FF150DFA9800195069 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70EE63FF150DFA9800195069 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		70EE6403150DFA9800195069 /* msswscale */ = {
+			isa = PBXGroup;
+			children = (
+				70EE640E150DFAC200195069 /* yuv.c */,
+				70EE6404150DFA9800195069 /* Supporting Files */,
+			);
+			path = msswscale;
+			sourceTree = "<group>";
+		};
+		70EE6404150DFA9800195069 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70EE6405150DFA9800195069 /* msswscale-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70EE6411150DFAE400195069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EE6415150DFAE400195069 /* libortp.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70EE6417150DFAF700195069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EE641B150DFAF700195069 /* libmediastreamer2.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70EE63F8150DFA9800195069 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70EE63F9150DFA9800195069 /* msswscale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70EE640B150DFA9800195069 /* Build configuration list for PBXNativeTarget "msswscale" */;
+			buildPhases = (
+				70EE63F6150DFA9800195069 /* Sources */,
+				70EE63F7150DFA9800195069 /* Frameworks */,
+				70EE63F8150DFA9800195069 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = msswscale;
+			productName = msswscale;
+			productReference = 70EE63FA150DFA9800195069 /* libmsswscale.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70EE63F1150DFA9800195069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 70EE63F4150DFA9800195069 /* Build configuration list for PBXProject "msswscale" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70EE63EF150DFA9800195069;
+			productRefGroup = 70EE63FB150DFA9800195069 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 70EE6417150DFAF700195069 /* Products */;
+					ProjectRef = 70EE6416150DFAF700195069 /* mediastreamer2.xcodeproj */;
+				},
+				{
+					ProductGroup = 70EE6411150DFAE400195069 /* Products */;
+					ProjectRef = 70EE6410150DFAE400195069 /* ortp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				70EE63F9150DFA9800195069 /* msswscale */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		70EE6415150DFAE400195069 /* libortp.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libortp.dylib;
+			remoteRef = 70EE6414150DFAE400195069 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70EE641B150DFAF700195069 /* libmediastreamer2.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmediastreamer2.dylib;
+			remoteRef = 70EE641A150DFAF700195069 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70EE63F6150DFA9800195069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EE640F150DFAC200195069 /* yuv.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70EE6409150DFA9800195069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70EE640A150DFA9800195069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70EE640C150DFA9800195069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "msswscale/msswscale-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70EE640D150DFA9800195069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "msswscale/msswscale-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70EE63F4150DFA9800195069 /* Build configuration list for PBXProject "msswscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EE6409150DFA9800195069 /* Debug */,
+				70EE640A150DFA9800195069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70EE640B150DFA9800195069 /* Build configuration list for PBXNativeTarget "msswscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EE640C150DFA9800195069 /* Debug */,
+				70EE640D150DFA9800195069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70EE63F1150DFA9800195069 /* Project object */;
+}

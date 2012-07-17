@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\plugins\msipp-h264\src\h264.cc" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_decode_mb_types.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_decode_mb_types_cabac.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_hp.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_mblevel_calc.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_mt.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_mt_reconstruct_mv.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_store.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_slice_decoding.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_task_broker.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_task_supplier.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_thread.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_au_splitter.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_bitstream.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_bitstream_cabac.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_conversion.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_debug.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_decode_pic.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_defs_yuv.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_ippwrap.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_sei.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_slice_decoder_decode_pic.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_tables.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_dec_tables_cabac.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_direct_pred.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_frame.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_frame_list.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_heap.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_log.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_nal_spl.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_cabac_mt.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_cavlc_mt.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_deblocking.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_deblocking_mbaff.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_deblocking_prepare.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_deblocking_table.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_decode_mb.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\src\umc_h264_segment_decoder_decode_mb_cabac.cpp">
+      <Filter>h264_dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_gen_enc.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_mc.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_me.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_pack.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_sad.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_tables.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_video_encoder.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_base_bitstream.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_aic.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_avbr.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_bs.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_core_enc.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_deblocking.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_deblocking_mbaff.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_deblocking_tools.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_enc_cpb.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\src\umc_h264_ermb.cpp">
+      <Filter>h264_enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_splitter.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_utils.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_video_data.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_video_decoder.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_video_encoder.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_video_render.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_audio_codec.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_audio_render.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_base_codec.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_default_frame_allocator.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_default_memory_allocator.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_dual_thread_codec.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_frame_data.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_index.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_media_buffer.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_media_data.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_media_data_ex.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_muxer.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\src\umc_par_reader.cpp">
+      <Filter>core\umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_shared_object_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_socket_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_sys_info_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_thread_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_time_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_debug_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_event_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_file.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_file_win.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_mmap_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_mutex_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\src\vm_semaphore_win32.c">
+      <Filter>core\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_mmap.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_mutex.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_pendulum.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_semaphore.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_sys_info.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_thread.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_event.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\src\umc_malloc.cpp">
+      <Filter>core\vm_plus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\src\umc_video_processing.cpp">
+      <Filter>color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\src\umc_video_resizing.cpp">
+      <Filter>color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\src\umc_color_space_conversion.cpp">
+      <Filter>color_space_converter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\src\umc_deinterlacing.cpp">
+      <Filter>color_space_converter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_log.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_nal_spl.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_notify.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_reconstruct_templates.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_redual_decoder_templates.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_sd_inlines.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_segment_decoder.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_segment_decoder_mt.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_segment_decoder_templates.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_slice_decoding.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_task_broker.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_task_supplier.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_templates.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_thread.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_timing.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_au_splitter.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_bitstream.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_bitstream_inlines.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_bitstream_templates.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_coeff_token_map.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_deblocking.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_debug.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_defs_dec.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_defs_yuv.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_init_tables_cabac.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_internal_cabac.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_ippwrap.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_run_before.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_tables.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_dec_total_zero.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_frame.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_frame_info.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_frame_list.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_headers.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_dec\include\umc_h264_heap.h">
+      <Filter>h264_dec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_gen_enc_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_mc_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_me_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_pack_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_tables.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_to_ipp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_video_encoder.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_video_encoder_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_wrappers.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_base_bitstream.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_base_bitstream_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_base_bitstream_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_aic_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_avbr.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_bme.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_bs.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_bs_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_bs_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_config.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_core_enc.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_core_enc_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_core_enc_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_mbaff_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_tools.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_tools_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_deblocking_tools_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_defs.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_defs_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_enc_cpb.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_enc_cpb_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_enc_cpb_tmpl.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\h264_enc\include\umc_h264_ermb_tmpl.cpp.h">
+      <Filter>h264_enc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_module_context.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_muxer.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_par_reader.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_splitter.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_splitter_ex.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_structures.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_video_data.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_video_decoder.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_video_encoder.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_video_render.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_audio_codec.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_audio_render.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_base_codec.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_base_color_space_converter.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_data_reader.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_data_writer.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_default_frame_allocator.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_default_memory_allocator.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_defs.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_dual_thread_codec.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_dynamic_cast.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_frame_allocator.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_frame_data.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_index.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_linked_list.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_media_buffer.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_media_data.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_media_data_ex.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_media_receiver.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\umc\include\umc_memory_allocator.h">
+      <Filter>core\umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_file.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_mmap.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_mutex.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_semaphore.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_shared_object.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_socket.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_strings.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_sys_info.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_thread.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_time.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_types.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_debug.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\vm_event.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\sys\vm_file_win.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm\include\sys\vm_types_win32.h">
+      <Filter>core\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_malloc.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_mmap.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_mutex.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_pendulum.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_semaphore.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_sys_info.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_thread.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_automatic_mutex.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\core\vm_plus\include\umc_event.h">
+      <Filter>core\vm_plus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_data_pointers_copy.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_deinterlacing.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_video_processing.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_video_resizing.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_color_space_conversion.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\audio-video-codecs\codec\color_space_converter\include\umc_d3d_video_processing.h">
+      <Filter>color_space_converter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="h264_dec">
+      <UniqueIdentifier>{fa1d5d5a-38a4-45d7-bf82-591d491f55f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h264_enc">
+      <UniqueIdentifier>{d80379f0-d79d-4c09-89b4-e46f1469b61f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{bc91993d-4cf7-45ff-bd30-c3d3ce40b702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\umc">
+      <UniqueIdentifier>{eeeafab1-a8fb-424b-be48-d18a80c36e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vm">
+      <UniqueIdentifier>{88400d0e-0a33-46eb-b61f-add08d13dd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vm_plus">
+      <UniqueIdentifier>{62050dc7-6113-472d-ba88-9ab2a51037a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="color_space_converter">
+      <UniqueIdentifier>{2a58f278-41c3-407e-bbb4-db51c582538a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

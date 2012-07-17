@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4A07BB2B-F56E-4F1B-A729-D28B782AC128}</ProjectGuid>
+    <RootNamespace>mediastreamer2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\portaudio\include;..\..\..\win32-bin\include-vs2010\baseclasses;..\..\..\win32-bin\include;.;..\..\..\mediastreamer2\include;..\..\..\oRTP\include;..\..\..\codecs\speex\include;..\..\..\codecs\gsm\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;__DIRECTSOUND_ENABLED__;__STDC_CONSTANT_MACROS;HAVE_LIBSWSCALE_SWSCALE_H;HAVE_LIBAVCODEC_AVCODEC_H;HAVE_SPEEXDSP;HAVE_DIRECTSHOW;VIDEO_ENABLED;AMD_HACK;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;MEDIASTREAMER2_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libogg.lib;swscale.lib;avutil-51.lib;avcodec.lib;quartz.lib;dmoguids.lib;strmiids.lib;strmbasd.lib;libtheora.lib;vfw32.lib;Ws2_32.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\mediastreamer2\build\win32native\mediastreamer2.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)mediastreamer2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\portaudio\include;..\..\..\win32-bin\include-vs2010\baseclasses;..\..\..\win32-bin\include;.;..\..\..\mediastreamer2\include;..\..\..\oRTP\include;..\..\..\codecs\speex\include;..\..\..\codecs\gsm\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;__DIRECTSOUND_ENABLED__;__STDC_CONSTANT_MACROS;HAVE_LIBSWSCALE_SWSCALE_H;HAVE_LIBAVCODEC_AVCODEC_H;HAVE_SPEEXDSP;HAVE_DIRECTSHOW;VIDEO_ENABLED;AMD_HACK;ORTP_INET6;WIN32;_DEBUG;_WINDOWS;_USRDLL;MEDIASTREAMER2_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libogg.lib;swscale.lib;avutil-51.lib;avcodec.lib;quartz.lib;dmoguids.lib;strmiids.lib;strmbasd.lib;libtheora.lib;vfw32.lib;Ws2_32.lib;Winmm.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\mediastreamer2\build\win32native\mediastreamer2.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)mediastreamer2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\portaudio\include;..\..\..\win32-bin\include-vs2010\baseclasses;..\..\..\win32-bin\include;.;..\..\..\mediastreamer2\include;..\..\..\oRTP\include;..\..\..\codecs\speex\include;..\..\..\codecs\gsm\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;__DIRECTSOUND_ENABLED__;__STDC_CONSTANT_MACROS;HAVE_LIBSWSCALE_SWSCALE_H;HAVE_LIBAVCODEC_AVCODEC_H;HAVE_SPEEXDSP;HAVE_DIRECTSHOW;VIDEO_ENABLED;AMD_HACK;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;MEDIASTREAMER2_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libogg.lib;swscale.lib;avutil-51.lib;avcodec.lib;quartz.lib;dmoguids.lib;strmiids.lib;strmbase.lib;libtheora.lib;vfw32.lib;Ws2_32.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\mediastreamer2\build\win32native\mediastreamer2.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\portaudio\include;..\..\..\win32-bin\include-vs2010\baseclasses;..\..\..\win32-bin\include;.;..\..\..\mediastreamer2\include;..\..\..\oRTP\include;..\..\..\codecs\speex\include;..\..\..\codecs\gsm\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;__DIRECTSOUND_ENABLED__;__STDC_CONSTANT_MACROS;HAVE_LIBSWSCALE_SWSCALE_H;HAVE_LIBAVCODEC_AVCODEC_H;HAVE_SPEEXDSP;HAVE_DIRECTSHOW;VIDEO_ENABLED;AMD_HACK;ORTP_INET6;WIN32;NDEBUG;_WINDOWS;_USRDLL;MEDIASTREAMER2_EXPORTS;WINDOW_NATIVE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libogg.lib;swscale.lib;avutil-51.lib;avcodec.lib;quartz.lib;dmoguids.lib;strmiids.lib;strmbase.lib;libtheora.lib;vfw32.lib;Ws2_32.lib;Winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>..\..\..\mediastreamer2\build\win32native\mediastreamer2.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\mediastreamer2\src\alaw.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\audiomixer.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\audiostream.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\chanadapt.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\drawdib-display.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\dsptools.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\dtmfgen.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\dxfilter.cpp" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\equalizer.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\eventqueue.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\g722_decode.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\g722_encode.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\gsm.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\ice.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\itc.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\kiss_fft.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\kiss_fftr.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\mire.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\mscommon.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msconf.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msfileplayer_win.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msfilerec_win.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msfilter.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msg722.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msjoin.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msqueue.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msresample.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msrtp.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\mssndcard.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msspeex.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msticker.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msvideo.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\msvolume.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\mswebcam.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\mtu.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\nowebcam.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\pixconv.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\rfc3984.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\sizeconv.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\speexec.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\tee.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\theora.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\ulaw.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\videoout.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\videostream.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\void.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\winsnd2.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\winsndds.cpp" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\winvideo2.c" />
+    <ClCompile Include="..\..\..\mediastreamer2\src\winvideods.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\mediastreamer2\src\g722.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\_kiss_fft_guts.h" />
+    <ClInclude Include="alldescs.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\allfilters.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\dtmfgen.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\dxfilter.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\ffmpeg-priv.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\g711common.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\ice.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\kiss_fft.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\kiss_fftr.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mediastream.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msaudiomixer.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mschanadapter.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mscommon.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mseventqueue.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msfileplayer.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msfilerec.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msfilter.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msinterfaces.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msitc.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msqueue.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msrtp.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mssndcard.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msticker.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msv4l.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msvideo.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msvideoout.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\msvolume.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\mswebcam.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\nowebcam.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\rfc2429.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\src\vfw-missing.h" />
+    <ClInclude Include="..\..\..\mediastreamer2\include\mediastreamer2\waveheader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\mediastreamer2\build\win32native\mediastreamer2.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libspeexdsp\libspeexdsp.vcxproj">
+      <Project>{e42fdc95-7243-4219-9ea4-acce4ab97197}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libspeex\libspeex.vcxproj">
+      <Project>{e972c52f-9e85-4d65-b19c-031e511e9db4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libgsmlib\libgsmlib.vcxproj">
+      <Project>{65945422-b6a5-44e5-a113-6c2248854e44}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\oRTP\oRTP.vcxproj">
+      <Project>{4a07bb2b-f56e-4f1b-a719-d28b782ac128}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

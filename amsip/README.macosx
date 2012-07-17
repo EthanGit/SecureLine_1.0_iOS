@@ -1,0 +1,24 @@
+16/03/2012
+
+amsip is a SIP library for softphone (SIP -rfc3261-)
+Copyright (C) 2003-2012 Aymeric MOIZARD - <amoizard@gmail.com>
+
+Mac OS X compilation process:
+-----------------------------
+
+* Latest version of macosx developper tools.
+  (last tested with 4.3.1)
+
+Step 1:
+
+  Open the audio or video workspace file under build/macosx/
+  All the shared library and static library will be built and
+  universal (both 32b and 64b).
+
+Step 2:
+
+  To create your own project, you can import add all amsip projects
+  into your application workspace.
+
+
+

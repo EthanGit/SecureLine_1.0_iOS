@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C841B444-99A7-4E08-8F94-F890AB7370C5}</ProjectGuid>
+    <RootNamespace>amsip</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\..\vs2010-bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\.libs/amsip.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\amsip\include;..\..\..\win32-bin\include;..\..\..\osip\include;..\..\..\exosip\include;..\..\..\amsip\ppl\win32;..\..\..\ortp\include;..\..\..\mediastreamer2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EXOSIP4;ENABLE_VIDEO;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;_USRDLL;AMSIP_EXPORTS;_DEBUG;WIN32;ENABLE_TRACE;OSIP_MT;ORTP_INET6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Crypt32.lib;libsrtp.lib;kernel32.lib;ssleay32.lib;libeay32.lib;Msacm32.lib;Winmm.lib;Ws2_32.lib;Iphlpapi.lib;Dnsapi.lib;libcmtd.lib;user32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <NoEntryPoint>false</NoEntryPoint>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\.libs/amsip.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\amsip\include;..\..\..\win32-bin\include;..\..\..\osip\include;..\..\..\exosip\include;..\..\..\amsip\ppl\win32;..\..\..\ortp\include;..\..\..\mediastreamer2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EXOSIP4;ENABLE_VIDEO;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;_USRDLL;AMSIP_EXPORTS;_DEBUG;WIN32;ENABLE_TRACE;OSIP_MT;ORTP_INET6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Crypt32.lib;libsrtp.lib;kernel32.lib;ssleay32.lib;libeay32.lib;Msacm32.lib;Winmm.lib;Ws2_32.lib;Iphlpapi.lib;Dnsapi.lib;libcmtd.lib;user32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <NoEntryPoint>false</NoEntryPoint>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\.libs/amsip.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\amsip\include;..\..\..\win32-bin\include;..\..\..\osip\include;..\..\..\exosip\include;..\..\..\amsip\ppl\win32;..\..\..\ortp\include;..\..\..\mediastreamer2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EXOSIP4;ENABLE_VIDEO;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;_USRDLL;AMSIP_EXPORTS;NDEBUG;WIN32;ENABLE_TRACE;OSIP_MT;ORTP_INET6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Crypt32.lib;libsrtp.lib;ssleay32.lib;libeay32.lib;Msacm32.lib;Winmm.lib;Ws2_32.lib;Iphlpapi.lib;Dnsapi.lib;libcmt.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\.libs/amsip.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\amsip\include;..\..\..\win32-bin\include;..\..\..\osip\include;..\..\..\exosip\include;..\..\..\amsip\ppl\win32;..\..\..\ortp\include;..\..\..\mediastreamer2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EXOSIP4;ENABLE_VIDEO;_CRT_SECURE_NO_DEPRECATE;_WINDOWS;_USRDLL;AMSIP_EXPORTS;NDEBUG;WIN32;ENABLE_TRACE;OSIP_MT;ORTP_INET6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Crypt32.lib;libsrtp.lib;ssleay32.lib;libeay32.lib;Msacm32.lib;Winmm.lib;Ws2_32.lib;Iphlpapi.lib;Dnsapi.lib;libcmt.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\win32-bin\lib64-vs2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\amsip\src\am_audio_module.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_call.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_calls.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_codec.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_event.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_filter.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_message.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_ms2_text.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_ms2_udpftp.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_ms2_video.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_ms2_win32.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_network.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_options.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_player.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_publish.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_register.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_service.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_subscribe.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_sysdep.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_text_codec.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_text_start.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_udpftp.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_udpftp_codec.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_udpftp_start.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_uuid.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_video_codec.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_video_module.c" />
+    <ClCompile Include="..\..\..\amsip\src\am_video_start.c" />
+    <ClCompile Include="..\..\..\amsip\src\csharp.c" />
+    <ClCompile Include="..\..\..\amsip\src\sdptools.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_call.h" />
+    <ClInclude Include="..\..\..\amsip\src\amsip-internal.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_calls.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_codec.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_event.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_filter.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_message.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_network.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_options.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_player.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_publish.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_register.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_service.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_subscribe.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_sysdep.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_text_codec.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_text_start.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_udpftp_codec.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_udpftp_start.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_uuid.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_version.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\am_video_codec.h" />
+    <ClInclude Include="..\..\..\amsip\src\am_video_start.h" />
+    <ClInclude Include="..\..\..\amsip\include\amsip\csharp.h" />
+    <ClInclude Include="..\..\..\amsip\src\sdptools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amsip.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\amsiptools\amsiptools.vcxproj">
+      <Project>{1d20b3f8-354a-431b-945a-08597b043e63}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\eXosip\eXosip.vcxproj">
+      <Project>{4ea67539-9ee9-4065-bd39-87e517fd8262}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcares\libcares.vcxproj">
+      <Project>{6bce0e64-5a72-4243-b385-88e62c8e398a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\mediastreamer2\mediastreamer2.vcxproj">
+      <Project>{4a07bb2b-f56e-4f1b-a729-d28b782ac128}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\oRTP\oRTP.vcxproj">
+      <Project>{4a07bb2b-f56e-4f1b-a719-d28b782ac128}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\osip2\osip2.vcxproj">
+      <Project>{85255507-5d16-4218-85e2-f683bb2f04da}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\osipparser2\osipparser2.vcxproj">
+      <Project>{44f46b7e-0e51-4304-9735-330dfbab41e5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

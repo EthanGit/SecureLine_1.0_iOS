@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		702E924D1506623D0057E727 /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 702E924C1506623D0057E727 /* internal.h */; };
+		70EBB5691420CDBE00051914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBB5681420CDBE00051914 /* Foundation.framework */; };
+		70EBB5A51420D02400051914 /* osip_body.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB59B1420D02400051914 /* osip_body.h */; };
+		70EBB5A61420D02400051914 /* osip_const.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB59C1420D02400051914 /* osip_const.h */; };
+		70EBB5A71420D02400051914 /* osip_headers.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB59D1420D02400051914 /* osip_headers.h */; };
+		70EBB5A81420D02400051914 /* osip_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB59E1420D02400051914 /* osip_list.h */; };
+		70EBB5A91420D02400051914 /* osip_md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB59F1420D02400051914 /* osip_md5.h */; };
+		70EBB5AA1420D02400051914 /* osip_message.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5A01420D02400051914 /* osip_message.h */; };
+		70EBB5AB1420D02400051914 /* osip_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5A11420D02400051914 /* osip_parser.h */; };
+		70EBB5AC1420D02400051914 /* osip_port.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5A21420D02400051914 /* osip_port.h */; };
+		70EBB5AD1420D02400051914 /* osip_uri.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5A31420D02400051914 /* osip_uri.h */; };
+		70EBB5AE1420D02400051914 /* sdp_message.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5A41420D02400051914 /* sdp_message.h */; };
+		70EBB5CA1420D02E00051914 /* osip_accept_encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5AF1420D02E00051914 /* osip_accept_encoding.h */; };
+		70EBB5CB1420D02E00051914 /* osip_accept_language.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B01420D02E00051914 /* osip_accept_language.h */; };
+		70EBB5CC1420D02E00051914 /* osip_accept.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B11420D02E00051914 /* osip_accept.h */; };
+		70EBB5CD1420D02E00051914 /* osip_alert_info.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B21420D02E00051914 /* osip_alert_info.h */; };
+		70EBB5CE1420D02E00051914 /* osip_allow.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B31420D02E00051914 /* osip_allow.h */; };
+		70EBB5CF1420D02E00051914 /* osip_authentication_info.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B41420D02E00051914 /* osip_authentication_info.h */; };
+		70EBB5D01420D02E00051914 /* osip_authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B51420D02E00051914 /* osip_authorization.h */; };
+		70EBB5D11420D02E00051914 /* osip_call_id.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B61420D02E00051914 /* osip_call_id.h */; };
+		70EBB5D21420D02E00051914 /* osip_call_info.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B71420D02E00051914 /* osip_call_info.h */; };
+		70EBB5D31420D02E00051914 /* osip_contact.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B81420D02E00051914 /* osip_contact.h */; };
+		70EBB5D41420D02E00051914 /* osip_content_disposition.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5B91420D02E00051914 /* osip_content_disposition.h */; };
+		70EBB5D51420D02E00051914 /* osip_content_encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BA1420D02E00051914 /* osip_content_encoding.h */; };
+		70EBB5D61420D02E00051914 /* osip_content_length.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BB1420D02E00051914 /* osip_content_length.h */; };
+		70EBB5D71420D02E00051914 /* osip_content_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BC1420D02E00051914 /* osip_content_type.h */; };
+		70EBB5D81420D02E00051914 /* osip_cseq.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BD1420D02E00051914 /* osip_cseq.h */; };
+		70EBB5D91420D02E00051914 /* osip_error_info.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BE1420D02E00051914 /* osip_error_info.h */; };
+		70EBB5DA1420D02E00051914 /* osip_from.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5BF1420D02E00051914 /* osip_from.h */; };
+		70EBB5DB1420D02E00051914 /* osip_header.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C01420D02E00051914 /* osip_header.h */; };
+		70EBB5DC1420D02E00051914 /* osip_mime_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C11420D02E00051914 /* osip_mime_version.h */; };
+		70EBB5DD1420D02E00051914 /* osip_proxy_authenticate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C21420D02E00051914 /* osip_proxy_authenticate.h */; };
+		70EBB5DE1420D02E00051914 /* osip_proxy_authentication_info.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C31420D02E00051914 /* osip_proxy_authentication_info.h */; };
+		70EBB5DF1420D02E00051914 /* osip_proxy_authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C41420D02E00051914 /* osip_proxy_authorization.h */; };
+		70EBB5E01420D02E00051914 /* osip_record_route.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C51420D02E00051914 /* osip_record_route.h */; };
+		70EBB5E11420D02E00051914 /* osip_route.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C61420D02E00051914 /* osip_route.h */; };
+		70EBB5E21420D02E00051914 /* osip_to.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C71420D02E00051914 /* osip_to.h */; };
+		70EBB5E31420D02E00051914 /* osip_via.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C81420D02E00051914 /* osip_via.h */; };
+		70EBB5E41420D02E00051914 /* osip_www_authenticate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5C91420D02E00051914 /* osip_www_authenticate.h */; };
+		70EBB5EC1420D03E00051914 /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5E51420D03E00051914 /* internal.h */; };
+		70EBB5ED1420D03E00051914 /* osip_condv.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5E61420D03E00051914 /* osip_condv.h */; };
+		70EBB5EE1420D03E00051914 /* osip_dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5E71420D03E00051914 /* osip_dialog.h */; };
+		70EBB5EF1420D03E00051914 /* osip_fifo.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5E81420D03E00051914 /* osip_fifo.h */; };
+		70EBB5F01420D03E00051914 /* osip_mt.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5E91420D03E00051914 /* osip_mt.h */; };
+		70EBB5F11420D03E00051914 /* osip_time.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5EA1420D03E00051914 /* osip_time.h */; };
+		70EBB5F21420D03E00051914 /* osip.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB5EB1420D03E00051914 /* osip.h */; };
+		70EBB61A1420D06000051914 /* osip_accept_encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F31420D06000051914 /* osip_accept_encoding.c */; };
+		70EBB61B1420D06000051914 /* osip_accept_language.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F41420D06000051914 /* osip_accept_language.c */; };
+		70EBB61C1420D06000051914 /* osip_accept.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F51420D06000051914 /* osip_accept.c */; };
+		70EBB61D1420D06000051914 /* osip_alert_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F61420D06000051914 /* osip_alert_info.c */; };
+		70EBB61E1420D06000051914 /* osip_allow.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F71420D06000051914 /* osip_allow.c */; };
+		70EBB61F1420D06000051914 /* osip_authentication_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F81420D06000051914 /* osip_authentication_info.c */; };
+		70EBB6201420D06000051914 /* osip_authorization.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5F91420D06000051914 /* osip_authorization.c */; };
+		70EBB6211420D06000051914 /* osip_body.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FA1420D06000051914 /* osip_body.c */; };
+		70EBB6221420D06000051914 /* osip_call_id.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FB1420D06000051914 /* osip_call_id.c */; };
+		70EBB6231420D06000051914 /* osip_call_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FC1420D06000051914 /* osip_call_info.c */; };
+		70EBB6241420D06000051914 /* osip_contact.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FD1420D06000051914 /* osip_contact.c */; };
+		70EBB6251420D06000051914 /* osip_content_disposition.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FE1420D06000051914 /* osip_content_disposition.c */; };
+		70EBB6261420D06000051914 /* osip_content_encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB5FF1420D06000051914 /* osip_content_encoding.c */; };
+		70EBB6271420D06000051914 /* osip_content_length.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6001420D06000051914 /* osip_content_length.c */; };
+		70EBB6281420D06000051914 /* osip_content_type.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6011420D06000051914 /* osip_content_type.c */; };
+		70EBB6291420D06000051914 /* osip_cseq.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6021420D06000051914 /* osip_cseq.c */; };
+		70EBB62A1420D06000051914 /* osip_error_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6031420D06000051914 /* osip_error_info.c */; };
+		70EBB62B1420D06000051914 /* osip_from.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6041420D06000051914 /* osip_from.c */; };
+		70EBB62C1420D06000051914 /* osip_header.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6051420D06000051914 /* osip_header.c */; };
+		70EBB62D1420D06000051914 /* osip_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6061420D06000051914 /* osip_list.c */; };
+		70EBB62E1420D06000051914 /* osip_md5c.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6071420D06000051914 /* osip_md5c.c */; };
+		70EBB62F1420D06000051914 /* osip_message_parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6081420D06000051914 /* osip_message_parse.c */; };
+		70EBB6301420D06000051914 /* osip_message_to_str.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6091420D06000051914 /* osip_message_to_str.c */; };
+		70EBB6311420D06000051914 /* osip_message.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB60A1420D06000051914 /* osip_message.c */; };
+		70EBB6321420D06000051914 /* osip_mime_version.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB60B1420D06000051914 /* osip_mime_version.c */; };
+		70EBB6331420D06000051914 /* osip_parser_cfg.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB60C1420D06000051914 /* osip_parser_cfg.c */; };
+		70EBB6351420D06000051914 /* osip_proxy_authenticate.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB60E1420D06000051914 /* osip_proxy_authenticate.c */; };
+		70EBB6361420D06000051914 /* osip_proxy_authentication_info.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB60F1420D06000051914 /* osip_proxy_authentication_info.c */; };
+		70EBB6371420D06000051914 /* osip_proxy_authorization.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6101420D06000051914 /* osip_proxy_authorization.c */; };
+		70EBB6381420D06000051914 /* osip_record_route.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6111420D06000051914 /* osip_record_route.c */; };
+		70EBB6391420D06000051914 /* osip_route.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6121420D06000051914 /* osip_route.c */; };
+		70EBB63A1420D06000051914 /* osip_to.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6131420D06000051914 /* osip_to.c */; };
+		70EBB63B1420D06000051914 /* osip_uri.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6141420D06000051914 /* osip_uri.c */; };
+		70EBB63C1420D06000051914 /* osip_via.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6151420D06000051914 /* osip_via.c */; };
+		70EBB63D1420D06000051914 /* osip_www_authenticate.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6161420D06000051914 /* osip_www_authenticate.c */; };
+		70EBB63E1420D06000051914 /* sdp_accessor.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6171420D06000051914 /* sdp_accessor.c */; };
+		70EBB63F1420D06000051914 /* sdp_message.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6181420D06000051914 /* sdp_message.c */; };
+		70EBB6401420D06000051914 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6191420D06000051914 /* parser.h */; };
+		70EBB6551420D07300051914 /* fsm_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6411420D07300051914 /* fsm_misc.c */; };
+		70EBB6561420D07300051914 /* ict_fsm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6421420D07300051914 /* ict_fsm.c */; };
+		70EBB6571420D07300051914 /* ict.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6431420D07300051914 /* ict.c */; };
+		70EBB6581420D07300051914 /* ist_fsm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6441420D07300051914 /* ist_fsm.c */; };
+		70EBB6591420D07300051914 /* ist.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6451420D07300051914 /* ist.c */; };
+		70EBB65A1420D07300051914 /* nict_fsm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6461420D07300051914 /* nict_fsm.c */; };
+		70EBB65B1420D07300051914 /* nict.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6471420D07300051914 /* nict.c */; };
+		70EBB65C1420D07300051914 /* nist_fsm.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6481420D07300051914 /* nist_fsm.c */; };
+		70EBB65D1420D07300051914 /* nist.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6491420D07300051914 /* nist.c */; };
+		70EBB65E1420D07300051914 /* osip_dialog.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64A1420D07300051914 /* osip_dialog.c */; };
+		70EBB65F1420D07300051914 /* osip_event.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64B1420D07300051914 /* osip_event.c */; };
+		70EBB6601420D07300051914 /* osip_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64C1420D07300051914 /* osip_time.c */; };
+		70EBB6611420D07300051914 /* osip_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64D1420D07300051914 /* osip_transaction.c */; };
+		70EBB6621420D07300051914 /* osip.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64E1420D07300051914 /* osip.c */; };
+		70EBB6631420D07300051914 /* port_condv.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB64F1420D07300051914 /* port_condv.c */; };
+		70EBB6641420D07300051914 /* port_fifo.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6501420D07300051914 /* port_fifo.c */; };
+		70EBB6651420D07300051914 /* port_sema.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6511420D07300051914 /* port_sema.c */; };
+		70EBB6661420D07300051914 /* port_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6521420D07300051914 /* port_thread.c */; };
+		70EBB6671420D07300051914 /* fsm.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6531420D07300051914 /* fsm.h */; };
+		70EBB6681420D07300051914 /* xixt.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6541420D07300051914 /* xixt.h */; };
+		70EBB6721420D08C00051914 /* eX_call.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6691420D08C00051914 /* eX_call.h */; };
+		70EBB6731420D08C00051914 /* eX_message.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66A1420D08C00051914 /* eX_message.h */; };
+		70EBB6741420D08C00051914 /* eX_options.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66B1420D08C00051914 /* eX_options.h */; };
+		70EBB6751420D08C00051914 /* eX_publish.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66C1420D08C00051914 /* eX_publish.h */; };
+		70EBB6761420D08C00051914 /* eX_refer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66D1420D08C00051914 /* eX_refer.h */; };
+		70EBB6771420D08C00051914 /* eX_register.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66E1420D08C00051914 /* eX_register.h */; };
+		70EBB6781420D08C00051914 /* eX_setup.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB66F1420D08C00051914 /* eX_setup.h */; };
+		70EBB6791420D08C00051914 /* eX_subscribe.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6701420D08C00051914 /* eX_subscribe.h */; };
+		70EBB67A1420D08C00051914 /* eXosip.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6711420D08C00051914 /* eXosip.h */; };
+		70EBB6A41420D09F00051914 /* eXcall_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB67B1420D09F00051914 /* eXcall_api.c */; };
+		70EBB6A51420D09F00051914 /* eXconf.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB67C1420D09F00051914 /* eXconf.c */; };
+		70EBB6A61420D09F00051914 /* eXinsubscription_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB67D1420D09F00051914 /* eXinsubscription_api.c */; };
+		70EBB6A71420D09F00051914 /* eXmessage_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB67E1420D09F00051914 /* eXmessage_api.c */; };
+		70EBB6A81420D09F00051914 /* eXoptions_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB67F1420D09F00051914 /* eXoptions_api.c */; };
+		70EBB6A91420D09F00051914 /* eXosip.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6801420D09F00051914 /* eXosip.c */; };
+		70EBB6AA1420D09F00051914 /* eXpublish_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6811420D09F00051914 /* eXpublish_api.c */; };
+		70EBB6AB1420D09F00051914 /* eXrefer_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6821420D09F00051914 /* eXrefer_api.c */; };
+		70EBB6AC1420D09F00051914 /* eXregister_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6831420D09F00051914 /* eXregister_api.c */; };
+		70EBB6AD1420D09F00051914 /* eXsubscription_api.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6841420D09F00051914 /* eXsubscription_api.c */; };
+		70EBB6AE1420D09F00051914 /* eXtl_dtls.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6851420D09F00051914 /* eXtl_dtls.c */; };
+		70EBB6AF1420D09F00051914 /* eXtl_tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6861420D09F00051914 /* eXtl_tcp.c */; };
+		70EBB6B01420D09F00051914 /* eXtl_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6871420D09F00051914 /* eXtl_tls.c */; };
+		70EBB6B11420D09F00051914 /* eXtl_udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6881420D09F00051914 /* eXtl_udp.c */; };
+		70EBB6B31420D09F00051914 /* eXtransport.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB68A1420D09F00051914 /* eXtransport.c */; };
+		70EBB6B41420D09F00051914 /* eXutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB68B1420D09F00051914 /* eXutils.c */; };
+		70EBB6B61420D09F00051914 /* jauth.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB68D1420D09F00051914 /* jauth.c */; };
+		70EBB6B71420D09F00051914 /* jcall.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB68E1420D09F00051914 /* jcall.c */; };
+		70EBB6B81420D09F00051914 /* jcallback.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB68F1420D09F00051914 /* jcallback.c */; };
+		70EBB6B91420D09F00051914 /* jdialog.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6901420D09F00051914 /* jdialog.c */; };
+		70EBB6BA1420D09F00051914 /* jevents.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6911420D09F00051914 /* jevents.c */; };
+		70EBB6BB1420D09F00051914 /* jnotify.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6921420D09F00051914 /* jnotify.c */; };
+		70EBB6BC1420D09F00051914 /* jpipe.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6931420D09F00051914 /* jpipe.c */; };
+		70EBB6BD1420D09F00051914 /* jpublish.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6941420D09F00051914 /* jpublish.c */; };
+		70EBB6BE1420D09F00051914 /* jreg.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6951420D09F00051914 /* jreg.c */; };
+		70EBB6BF1420D09F00051914 /* jrequest.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6961420D09F00051914 /* jrequest.c */; };
+		70EBB6C01420D09F00051914 /* jresponse.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6971420D09F00051914 /* jresponse.c */; };
+		70EBB6C11420D09F00051914 /* jsubscribe.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6981420D09F00051914 /* jsubscribe.c */; };
+		70EBB6C21420D09F00051914 /* milenage.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB6991420D09F00051914 /* milenage.c */; };
+		70EBB6C31420D09F00051914 /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB69A1420D09F00051914 /* misc.c */; };
+		70EBB6C41420D09F00051914 /* rijndael.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB69B1420D09F00051914 /* rijndael.c */; };
+		70EBB6C51420D09F00051914 /* sdp_offans.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB69C1420D09F00051914 /* sdp_offans.c */; };
+		70EBB6C61420D09F00051914 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70EBB69D1420D09F00051914 /* udp.c */; };
+		70EBB6C71420D09F00051914 /* eXosip2.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB69E1420D09F00051914 /* eXosip2.h */; };
+		70EBB6C81420D09F00051914 /* eXtransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB69F1420D09F00051914 /* eXtransport.h */; };
+		70EBB6C91420D09F00051914 /* inet_ntop.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6A01420D09F00051914 /* inet_ntop.h */; };
+		70EBB6CA1420D09F00051914 /* jpipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6A11420D09F00051914 /* jpipe.h */; };
+		70EBB6CB1420D09F00051914 /* milenage.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6A21420D09F00051914 /* milenage.h */; };
+		70EBB6CC1420D09F00051914 /* rijndael.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EBB6A31420D09F00051914 /* rijndael.h */; };
+		70EBBB7B14210DED00051914 /* osip_port.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBBB7A14210DED00051914 /* osip_port.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		702E93171508E9030057E727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E93131508E9030057E727 /* cares.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70EBB76B1420E12500051914;
+			remoteInfo = cares;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		702E924C1506623D0057E727 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = internal.h; path = ../../../../amsip/osip/include/osipparser2/internal.h; sourceTree = "<group>"; };
+		702E93131508E9030057E727 /* cares.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cares.xcodeproj; path = ../cares/cares.xcodeproj; sourceTree = "<group>"; };
+		70EBB5651420CDBE00051914 /* libexosip2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libexosip2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		70EBB5681420CDBE00051914 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70EBB56C1420CDBE00051914 /* exosip2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exosip2-Prefix.pch"; sourceTree = "<group>"; };
+		70EBB59B1420D02400051914 /* osip_body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_body.h; path = ../../../../amsip/osip/include/osipparser2/osip_body.h; sourceTree = "<group>"; };
+		70EBB59C1420D02400051914 /* osip_const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_const.h; path = ../../../../amsip/osip/include/osipparser2/osip_const.h; sourceTree = "<group>"; };
+		70EBB59D1420D02400051914 /* osip_headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_headers.h; path = ../../../../amsip/osip/include/osipparser2/osip_headers.h; sourceTree = "<group>"; };
+		70EBB59E1420D02400051914 /* osip_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_list.h; path = ../../../../amsip/osip/include/osipparser2/osip_list.h; sourceTree = "<group>"; };
+		70EBB59F1420D02400051914 /* osip_md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_md5.h; path = ../../../../amsip/osip/include/osipparser2/osip_md5.h; sourceTree = "<group>"; };
+		70EBB5A01420D02400051914 /* osip_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_message.h; path = ../../../../amsip/osip/include/osipparser2/osip_message.h; sourceTree = "<group>"; };
+		70EBB5A11420D02400051914 /* osip_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_parser.h; path = ../../../../amsip/osip/include/osipparser2/osip_parser.h; sourceTree = "<group>"; };
+		70EBB5A21420D02400051914 /* osip_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_port.h; path = ../../../../amsip/osip/include/osipparser2/osip_port.h; sourceTree = "<group>"; };
+		70EBB5A31420D02400051914 /* osip_uri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_uri.h; path = ../../../../amsip/osip/include/osipparser2/osip_uri.h; sourceTree = "<group>"; };
+		70EBB5A41420D02400051914 /* sdp_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sdp_message.h; path = ../../../../amsip/osip/include/osipparser2/sdp_message.h; sourceTree = "<group>"; };
+		70EBB5AF1420D02E00051914 /* osip_accept_encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_accept_encoding.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_accept_encoding.h; sourceTree = "<group>"; };
+		70EBB5B01420D02E00051914 /* osip_accept_language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_accept_language.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_accept_language.h; sourceTree = "<group>"; };
+		70EBB5B11420D02E00051914 /* osip_accept.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_accept.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_accept.h; sourceTree = "<group>"; };
+		70EBB5B21420D02E00051914 /* osip_alert_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_alert_info.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_alert_info.h; sourceTree = "<group>"; };
+		70EBB5B31420D02E00051914 /* osip_allow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_allow.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_allow.h; sourceTree = "<group>"; };
+		70EBB5B41420D02E00051914 /* osip_authentication_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_authentication_info.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_authentication_info.h; sourceTree = "<group>"; };
+		70EBB5B51420D02E00051914 /* osip_authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_authorization.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_authorization.h; sourceTree = "<group>"; };
+		70EBB5B61420D02E00051914 /* osip_call_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_call_id.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_call_id.h; sourceTree = "<group>"; };
+		70EBB5B71420D02E00051914 /* osip_call_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_call_info.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_call_info.h; sourceTree = "<group>"; };
+		70EBB5B81420D02E00051914 /* osip_contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_contact.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_contact.h; sourceTree = "<group>"; };
+		70EBB5B91420D02E00051914 /* osip_content_disposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_content_disposition.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_content_disposition.h; sourceTree = "<group>"; };
+		70EBB5BA1420D02E00051914 /* osip_content_encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_content_encoding.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_content_encoding.h; sourceTree = "<group>"; };
+		70EBB5BB1420D02E00051914 /* osip_content_length.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_content_length.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_content_length.h; sourceTree = "<group>"; };
+		70EBB5BC1420D02E00051914 /* osip_content_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_content_type.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_content_type.h; sourceTree = "<group>"; };
+		70EBB5BD1420D02E00051914 /* osip_cseq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_cseq.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_cseq.h; sourceTree = "<group>"; };
+		70EBB5BE1420D02E00051914 /* osip_error_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_error_info.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_error_info.h; sourceTree = "<group>"; };
+		70EBB5BF1420D02E00051914 /* osip_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_from.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_from.h; sourceTree = "<group>"; };
+		70EBB5C01420D02E00051914 /* osip_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_header.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_header.h; sourceTree = "<group>"; };
+		70EBB5C11420D02E00051914 /* osip_mime_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_mime_version.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_mime_version.h; sourceTree = "<group>"; };
+		70EBB5C21420D02E00051914 /* osip_proxy_authenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_proxy_authenticate.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_proxy_authenticate.h; sourceTree = "<group>"; };
+		70EBB5C31420D02E00051914 /* osip_proxy_authentication_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_proxy_authentication_info.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_proxy_authentication_info.h; sourceTree = "<group>"; };
+		70EBB5C41420D02E00051914 /* osip_proxy_authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_proxy_authorization.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_proxy_authorization.h; sourceTree = "<group>"; };
+		70EBB5C51420D02E00051914 /* osip_record_route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_record_route.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_record_route.h; sourceTree = "<group>"; };
+		70EBB5C61420D02E00051914 /* osip_route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_route.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_route.h; sourceTree = "<group>"; };
+		70EBB5C71420D02E00051914 /* osip_to.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_to.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_to.h; sourceTree = "<group>"; };
+		70EBB5C81420D02E00051914 /* osip_via.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_via.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_via.h; sourceTree = "<group>"; };
+		70EBB5C91420D02E00051914 /* osip_www_authenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_www_authenticate.h; path = ../../../../amsip/osip/include/osipparser2/headers/osip_www_authenticate.h; sourceTree = "<group>"; };
+		70EBB5E51420D03E00051914 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = internal.h; path = ../../../../amsip/osip/include/osip2/internal.h; sourceTree = "<group>"; };
+		70EBB5E61420D03E00051914 /* osip_condv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_condv.h; path = ../../../../amsip/osip/include/osip2/osip_condv.h; sourceTree = "<group>"; };
+		70EBB5E71420D03E00051914 /* osip_dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_dialog.h; path = ../../../../amsip/osip/include/osip2/osip_dialog.h; sourceTree = "<group>"; };
+		70EBB5E81420D03E00051914 /* osip_fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_fifo.h; path = ../../../../amsip/osip/include/osip2/osip_fifo.h; sourceTree = "<group>"; };
+		70EBB5E91420D03E00051914 /* osip_mt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_mt.h; path = ../../../../amsip/osip/include/osip2/osip_mt.h; sourceTree = "<group>"; };
+		70EBB5EA1420D03E00051914 /* osip_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip_time.h; path = ../../../../amsip/osip/include/osip2/osip_time.h; sourceTree = "<group>"; };
+		70EBB5EB1420D03E00051914 /* osip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osip.h; path = ../../../../amsip/osip/include/osip2/osip.h; sourceTree = "<group>"; };
+		70EBB5F31420D06000051914 /* osip_accept_encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_accept_encoding.c; path = ../../../../amsip/osip/src/osipparser2/osip_accept_encoding.c; sourceTree = "<group>"; };
+		70EBB5F41420D06000051914 /* osip_accept_language.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_accept_language.c; path = ../../../../amsip/osip/src/osipparser2/osip_accept_language.c; sourceTree = "<group>"; };
+		70EBB5F51420D06000051914 /* osip_accept.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_accept.c; path = ../../../../amsip/osip/src/osipparser2/osip_accept.c; sourceTree = "<group>"; };
+		70EBB5F61420D06000051914 /* osip_alert_info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_alert_info.c; path = ../../../../amsip/osip/src/osipparser2/osip_alert_info.c; sourceTree = "<group>"; };
+		70EBB5F71420D06000051914 /* osip_allow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_allow.c; path = ../../../../amsip/osip/src/osipparser2/osip_allow.c; sourceTree = "<group>"; };
+		70EBB5F81420D06000051914 /* osip_authentication_info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_authentication_info.c; path = ../../../../amsip/osip/src/osipparser2/osip_authentication_info.c; sourceTree = "<group>"; };
+		70EBB5F91420D06000051914 /* osip_authorization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_authorization.c; path = ../../../../amsip/osip/src/osipparser2/osip_authorization.c; sourceTree = "<group>"; };
+		70EBB5FA1420D06000051914 /* osip_body.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_body.c; path = ../../../../amsip/osip/src/osipparser2/osip_body.c; sourceTree = "<group>"; };
+		70EBB5FB1420D06000051914 /* osip_call_id.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_call_id.c; path = ../../../../amsip/osip/src/osipparser2/osip_call_id.c; sourceTree = "<group>"; };
+		70EBB5FC1420D06000051914 /* osip_call_info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_call_info.c; path = ../../../../amsip/osip/src/osipparser2/osip_call_info.c; sourceTree = "<group>"; };
+		70EBB5FD1420D06000051914 /* osip_contact.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_contact.c; path = ../../../../amsip/osip/src/osipparser2/osip_contact.c; sourceTree = "<group>"; };
+		70EBB5FE1420D06000051914 /* osip_content_disposition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_content_disposition.c; path = ../../../../amsip/osip/src/osipparser2/osip_content_disposition.c; sourceTree = "<group>"; };
+		70EBB5FF1420D06000051914 /* osip_content_encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_content_encoding.c; path = ../../../../amsip/osip/src/osipparser2/osip_content_encoding.c; sourceTree = "<group>"; };
+		70EBB6001420D06000051914 /* osip_content_length.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_content_length.c; path = ../../../../amsip/osip/src/osipparser2/osip_content_length.c; sourceTree = "<group>"; };
+		70EBB6011420D06000051914 /* osip_content_type.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_content_type.c; path = ../../../../amsip/osip/src/osipparser2/osip_content_type.c; sourceTree = "<group>"; };
+		70EBB6021420D06000051914 /* osip_cseq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_cseq.c; path = ../../../../amsip/osip/src/osipparser2/osip_cseq.c; sourceTree = "<group>"; };
+		70EBB6031420D06000051914 /* osip_error_info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_error_info.c; path = ../../../../amsip/osip/src/osipparser2/osip_error_info.c; sourceTree = "<group>"; };
+		70EBB6041420D06000051914 /* osip_from.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_from.c; path = ../../../../amsip/osip/src/osipparser2/osip_from.c; sourceTree = "<group>"; };
+		70EBB6051420D06000051914 /* osip_header.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_header.c; path = ../../../../amsip/osip/src/osipparser2/osip_header.c; sourceTree = "<group>"; };
+		70EBB6061420D06000051914 /* osip_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_list.c; path = ../../../../amsip/osip/src/osipparser2/osip_list.c; sourceTree = "<group>"; };
+		70EBB6071420D06000051914 /* osip_md5c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_md5c.c; path = ../../../../amsip/osip/src/osipparser2/osip_md5c.c; sourceTree = "<group>"; };
+		70EBB6081420D06000051914 /* osip_message_parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_message_parse.c; path = ../../../../amsip/osip/src/osipparser2/osip_message_parse.c; sourceTree = "<group>"; };
+		70EBB6091420D06000051914 /* osip_message_to_str.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_message_to_str.c; path = ../../../../amsip/osip/src/osipparser2/osip_message_to_str.c; sourceTree = "<group>"; };
+		70EBB60A1420D06000051914 /* osip_message.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_message.c; path = ../../../../amsip/osip/src/osipparser2/osip_message.c; sourceTree = "<group>"; };
+		70EBB60B1420D06000051914 /* osip_mime_version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_mime_version.c; path = ../../../../amsip/osip/src/osipparser2/osip_mime_version.c; sourceTree = "<group>"; };
+		70EBB60C1420D06000051914 /* osip_parser_cfg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_parser_cfg.c; path = ../../../../amsip/osip/src/osipparser2/osip_parser_cfg.c; sourceTree = "<group>"; };
+		70EBB60E1420D06000051914 /* osip_proxy_authenticate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_proxy_authenticate.c; path = ../../../../amsip/osip/src/osipparser2/osip_proxy_authenticate.c; sourceTree = "<group>"; };
+		70EBB60F1420D06000051914 /* osip_proxy_authentication_info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_proxy_authentication_info.c; path = ../../../../amsip/osip/src/osipparser2/osip_proxy_authentication_info.c; sourceTree = "<group>"; };
+		70EBB6101420D06000051914 /* osip_proxy_authorization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_proxy_authorization.c; path = ../../../../amsip/osip/src/osipparser2/osip_proxy_authorization.c; sourceTree = "<group>"; };
+		70EBB6111420D06000051914 /* osip_record_route.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_record_route.c; path = ../../../../amsip/osip/src/osipparser2/osip_record_route.c; sourceTree = "<group>"; };
+		70EBB6121420D06000051914 /* osip_route.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_route.c; path = ../../../../amsip/osip/src/osipparser2/osip_route.c; sourceTree = "<group>"; };
+		70EBB6131420D06000051914 /* osip_to.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_to.c; path = ../../../../amsip/osip/src/osipparser2/osip_to.c; sourceTree = "<group>"; };
+		70EBB6141420D06000051914 /* osip_uri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_uri.c; path = ../../../../amsip/osip/src/osipparser2/osip_uri.c; sourceTree = "<group>"; };
+		70EBB6151420D06000051914 /* osip_via.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_via.c; path = ../../../../amsip/osip/src/osipparser2/osip_via.c; sourceTree = "<group>"; };
+		70EBB6161420D06000051914 /* osip_www_authenticate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_www_authenticate.c; path = ../../../../amsip/osip/src/osipparser2/osip_www_authenticate.c; sourceTree = "<group>"; };
+		70EBB6171420D06000051914 /* sdp_accessor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdp_accessor.c; path = ../../../../amsip/osip/src/osipparser2/sdp_accessor.c; sourceTree = "<group>"; };
+		70EBB6181420D06000051914 /* sdp_message.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdp_message.c; path = ../../../../amsip/osip/src/osipparser2/sdp_message.c; sourceTree = "<group>"; };
+		70EBB6191420D06000051914 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ../../../../amsip/osip/src/osipparser2/parser.h; sourceTree = "<group>"; };
+		70EBB6411420D07300051914 /* fsm_misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fsm_misc.c; path = ../../../../amsip/osip/src/osip2/fsm_misc.c; sourceTree = "<group>"; };
+		70EBB6421420D07300051914 /* ict_fsm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ict_fsm.c; path = ../../../../amsip/osip/src/osip2/ict_fsm.c; sourceTree = "<group>"; };
+		70EBB6431420D07300051914 /* ict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ict.c; path = ../../../../amsip/osip/src/osip2/ict.c; sourceTree = "<group>"; };
+		70EBB6441420D07300051914 /* ist_fsm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ist_fsm.c; path = ../../../../amsip/osip/src/osip2/ist_fsm.c; sourceTree = "<group>"; };
+		70EBB6451420D07300051914 /* ist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ist.c; path = ../../../../amsip/osip/src/osip2/ist.c; sourceTree = "<group>"; };
+		70EBB6461420D07300051914 /* nict_fsm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nict_fsm.c; path = ../../../../amsip/osip/src/osip2/nict_fsm.c; sourceTree = "<group>"; };
+		70EBB6471420D07300051914 /* nict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nict.c; path = ../../../../amsip/osip/src/osip2/nict.c; sourceTree = "<group>"; };
+		70EBB6481420D07300051914 /* nist_fsm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nist_fsm.c; path = ../../../../amsip/osip/src/osip2/nist_fsm.c; sourceTree = "<group>"; };
+		70EBB6491420D07300051914 /* nist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nist.c; path = ../../../../amsip/osip/src/osip2/nist.c; sourceTree = "<group>"; };
+		70EBB64A1420D07300051914 /* osip_dialog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_dialog.c; path = ../../../../amsip/osip/src/osip2/osip_dialog.c; sourceTree = "<group>"; };
+		70EBB64B1420D07300051914 /* osip_event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_event.c; path = ../../../../amsip/osip/src/osip2/osip_event.c; sourceTree = "<group>"; };
+		70EBB64C1420D07300051914 /* osip_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_time.c; path = ../../../../amsip/osip/src/osip2/osip_time.c; sourceTree = "<group>"; };
+		70EBB64D1420D07300051914 /* osip_transaction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip_transaction.c; path = ../../../../amsip/osip/src/osip2/osip_transaction.c; sourceTree = "<group>"; };
+		70EBB64E1420D07300051914 /* osip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = osip.c; path = ../../../../amsip/osip/src/osip2/osip.c; sourceTree = "<group>"; };
+		70EBB64F1420D07300051914 /* port_condv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = port_condv.c; path = ../../../../amsip/osip/src/osip2/port_condv.c; sourceTree = "<group>"; };
+		70EBB6501420D07300051914 /* port_fifo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = port_fifo.c; path = ../../../../amsip/osip/src/osip2/port_fifo.c; sourceTree = "<group>"; };
+		70EBB6511420D07300051914 /* port_sema.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = port_sema.c; path = ../../../../amsip/osip/src/osip2/port_sema.c; sourceTree = "<group>"; };
+		70EBB6521420D07300051914 /* port_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = port_thread.c; path = ../../../../amsip/osip/src/osip2/port_thread.c; sourceTree = "<group>"; };
+		70EBB6531420D07300051914 /* fsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fsm.h; path = ../../../../amsip/osip/src/osip2/fsm.h; sourceTree = "<group>"; };
+		70EBB6541420D07300051914 /* xixt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xixt.h; path = ../../../../amsip/osip/src/osip2/xixt.h; sourceTree = "<group>"; };
+		70EBB6691420D08C00051914 /* eX_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_call.h; path = ../../../../amsip/exosip/include/eXosip2/eX_call.h; sourceTree = "<group>"; };
+		70EBB66A1420D08C00051914 /* eX_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_message.h; path = ../../../../amsip/exosip/include/eXosip2/eX_message.h; sourceTree = "<group>"; };
+		70EBB66B1420D08C00051914 /* eX_options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_options.h; path = ../../../../amsip/exosip/include/eXosip2/eX_options.h; sourceTree = "<group>"; };
+		70EBB66C1420D08C00051914 /* eX_publish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_publish.h; path = ../../../../amsip/exosip/include/eXosip2/eX_publish.h; sourceTree = "<group>"; };
+		70EBB66D1420D08C00051914 /* eX_refer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_refer.h; path = ../../../../amsip/exosip/include/eXosip2/eX_refer.h; sourceTree = "<group>"; };
+		70EBB66E1420D08C00051914 /* eX_register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_register.h; path = ../../../../amsip/exosip/include/eXosip2/eX_register.h; sourceTree = "<group>"; };
+		70EBB66F1420D08C00051914 /* eX_setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_setup.h; path = ../../../../amsip/exosip/include/eXosip2/eX_setup.h; sourceTree = "<group>"; };
+		70EBB6701420D08C00051914 /* eX_subscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eX_subscribe.h; path = ../../../../amsip/exosip/include/eXosip2/eX_subscribe.h; sourceTree = "<group>"; };
+		70EBB6711420D08C00051914 /* eXosip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eXosip.h; path = ../../../../amsip/exosip/include/eXosip2/eXosip.h; sourceTree = "<group>"; };
+		70EBB67B1420D09F00051914 /* eXcall_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXcall_api.c; path = ../../../../amsip/exosip/src/eXcall_api.c; sourceTree = "<group>"; };
+		70EBB67C1420D09F00051914 /* eXconf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXconf.c; path = ../../../../amsip/exosip/src/eXconf.c; sourceTree = "<group>"; };
+		70EBB67D1420D09F00051914 /* eXinsubscription_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXinsubscription_api.c; path = ../../../../amsip/exosip/src/eXinsubscription_api.c; sourceTree = "<group>"; };
+		70EBB67E1420D09F00051914 /* eXmessage_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXmessage_api.c; path = ../../../../amsip/exosip/src/eXmessage_api.c; sourceTree = "<group>"; };
+		70EBB67F1420D09F00051914 /* eXoptions_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXoptions_api.c; path = ../../../../amsip/exosip/src/eXoptions_api.c; sourceTree = "<group>"; };
+		70EBB6801420D09F00051914 /* eXosip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXosip.c; path = ../../../../amsip/exosip/src/eXosip.c; sourceTree = "<group>"; };
+		70EBB6811420D09F00051914 /* eXpublish_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXpublish_api.c; path = ../../../../amsip/exosip/src/eXpublish_api.c; sourceTree = "<group>"; };
+		70EBB6821420D09F00051914 /* eXrefer_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXrefer_api.c; path = ../../../../amsip/exosip/src/eXrefer_api.c; sourceTree = "<group>"; };
+		70EBB6831420D09F00051914 /* eXregister_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXregister_api.c; path = ../../../../amsip/exosip/src/eXregister_api.c; sourceTree = "<group>"; };
+		70EBB6841420D09F00051914 /* eXsubscription_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXsubscription_api.c; path = ../../../../amsip/exosip/src/eXsubscription_api.c; sourceTree = "<group>"; };
+		70EBB6851420D09F00051914 /* eXtl_dtls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXtl_dtls.c; path = ../../../../amsip/exosip/src/eXtl_dtls.c; sourceTree = "<group>"; };
+		70EBB6861420D09F00051914 /* eXtl_tcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXtl_tcp.c; path = ../../../../amsip/exosip/src/eXtl_tcp.c; sourceTree = "<group>"; };
+		70EBB6871420D09F00051914 /* eXtl_tls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXtl_tls.c; path = ../../../../amsip/exosip/src/eXtl_tls.c; sourceTree = "<group>"; };
+		70EBB6881420D09F00051914 /* eXtl_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXtl_udp.c; path = ../../../../amsip/exosip/src/eXtl_udp.c; sourceTree = "<group>"; };
+		70EBB68A1420D09F00051914 /* eXtransport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXtransport.c; path = ../../../../amsip/exosip/src/eXtransport.c; sourceTree = "<group>"; };
+		70EBB68B1420D09F00051914 /* eXutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = eXutils.c; path = ../../../../amsip/exosip/src/eXutils.c; sourceTree = "<group>"; };
+		70EBB68D1420D09F00051914 /* jauth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jauth.c; path = ../../../../amsip/exosip/src/jauth.c; sourceTree = "<group>"; };
+		70EBB68E1420D09F00051914 /* jcall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jcall.c; path = ../../../../amsip/exosip/src/jcall.c; sourceTree = "<group>"; };
+		70EBB68F1420D09F00051914 /* jcallback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jcallback.c; path = ../../../../amsip/exosip/src/jcallback.c; sourceTree = "<group>"; };
+		70EBB6901420D09F00051914 /* jdialog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jdialog.c; path = ../../../../amsip/exosip/src/jdialog.c; sourceTree = "<group>"; };
+		70EBB6911420D09F00051914 /* jevents.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jevents.c; path = ../../../../amsip/exosip/src/jevents.c; sourceTree = "<group>"; };
+		70EBB6921420D09F00051914 /* jnotify.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jnotify.c; path = ../../../../amsip/exosip/src/jnotify.c; sourceTree = "<group>"; };
+		70EBB6931420D09F00051914 /* jpipe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jpipe.c; path = ../../../../amsip/exosip/src/jpipe.c; sourceTree = "<group>"; };
+		70EBB6941420D09F00051914 /* jpublish.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jpublish.c; path = ../../../../amsip/exosip/src/jpublish.c; sourceTree = "<group>"; };
+		70EBB6951420D09F00051914 /* jreg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jreg.c; path = ../../../../amsip/exosip/src/jreg.c; sourceTree = "<group>"; };
+		70EBB6961420D09F00051914 /* jrequest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jrequest.c; path = ../../../../amsip/exosip/src/jrequest.c; sourceTree = "<group>"; };
+		70EBB6971420D09F00051914 /* jresponse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jresponse.c; path = ../../../../amsip/exosip/src/jresponse.c; sourceTree = "<group>"; };
+		70EBB6981420D09F00051914 /* jsubscribe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsubscribe.c; path = ../../../../amsip/exosip/src/jsubscribe.c; sourceTree = "<group>"; };
+		70EBB6991420D09F00051914 /* milenage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = milenage.c; path = ../../../../amsip/exosip/src/milenage.c; sourceTree = "<group>"; };
+		70EBB69A1420D09F00051914 /* misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = misc.c; path = ../../../../amsip/exosip/src/misc.c; sourceTree = "<group>"; };
+		70EBB69B1420D09F00051914 /* rijndael.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rijndael.c; path = ../../../../amsip/exosip/src/rijndael.c; sourceTree = "<group>"; };
+		70EBB69C1420D09F00051914 /* sdp_offans.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdp_offans.c; path = ../../../../amsip/exosip/src/sdp_offans.c; sourceTree = "<group>"; };
+		70EBB69D1420D09F00051914 /* udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = udp.c; path = ../../../../amsip/exosip/src/udp.c; sourceTree = "<group>"; };
+		70EBB69E1420D09F00051914 /* eXosip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eXosip2.h; path = ../../../../amsip/exosip/src/eXosip2.h; sourceTree = "<group>"; };
+		70EBB69F1420D09F00051914 /* eXtransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eXtransport.h; path = ../../../../amsip/exosip/src/eXtransport.h; sourceTree = "<group>"; };
+		70EBB6A01420D09F00051914 /* inet_ntop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inet_ntop.h; path = ../../../../amsip/exosip/src/inet_ntop.h; sourceTree = "<group>"; };
+		70EBB6A11420D09F00051914 /* jpipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jpipe.h; path = ../../../../amsip/exosip/src/jpipe.h; sourceTree = "<group>"; };
+		70EBB6A21420D09F00051914 /* milenage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = milenage.h; path = ../../../../amsip/exosip/src/milenage.h; sourceTree = "<group>"; };
+		70EBB6A31420D09F00051914 /* rijndael.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rijndael.h; path = ../../../../amsip/exosip/src/rijndael.h; sourceTree = "<group>"; };
+		70EBBB7A14210DED00051914 /* osip_port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = osip_port.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70EBB5621420CDBE00051914 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EBB5691420CDBE00051914 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		702E93141508E9030057E727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702E93181508E9030057E727 /* libcares.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70EBB55A1420CDBE00051914 = {
+			isa = PBXGroup;
+			children = (
+				702E93131508E9030057E727 /* cares.xcodeproj */,
+				70EBB56A1420CDBE00051914 /* exosip2 */,
+				70EBB5671420CDBE00051914 /* Frameworks */,
+				70EBB5661420CDBE00051914 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70EBB5661420CDBE00051914 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5651420CDBE00051914 /* libexosip2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70EBB5671420CDBE00051914 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5681420CDBE00051914 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70EBB56A1420CDBE00051914 /* exosip2 */ = {
+			isa = PBXGroup;
+			children = (
+				70EBBB7A14210DED00051914 /* osip_port.m */,
+				70EBB5921420CFB400051914 /* osipparser2 */,
+				70EBB5931420CFBF00051914 /* osip2 */,
+				70EBB5941420CFC900051914 /* exosip2 */,
+				70EBB56B1420CDBE00051914 /* Supporting Files */,
+			);
+			path = exosip2;
+			sourceTree = "<group>";
+		};
+		70EBB56B1420CDBE00051914 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB56C1420CDBE00051914 /* exosip2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70EBB5921420CFB400051914 /* osipparser2 */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5961420CFE900051914 /* include */,
+				70EBB5951420CFDC00051914 /* src */,
+			);
+			name = osipparser2;
+			sourceTree = "<group>";
+		};
+		70EBB5931420CFBF00051914 /* osip2 */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5981420CFFA00051914 /* include */,
+				70EBB5971420CFF100051914 /* src */,
+			);
+			name = osip2;
+			sourceTree = "<group>";
+		};
+		70EBB5941420CFC900051914 /* exosip2 */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB59A1420D00800051914 /* include */,
+				70EBB5991420D00200051914 /* src */,
+			);
+			name = exosip2;
+			sourceTree = "<group>";
+		};
+		70EBB5951420CFDC00051914 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5F31420D06000051914 /* osip_accept_encoding.c */,
+				70EBB5F41420D06000051914 /* osip_accept_language.c */,
+				70EBB5F51420D06000051914 /* osip_accept.c */,
+				70EBB5F61420D06000051914 /* osip_alert_info.c */,
+				70EBB5F71420D06000051914 /* osip_allow.c */,
+				70EBB5F81420D06000051914 /* osip_authentication_info.c */,
+				70EBB5F91420D06000051914 /* osip_authorization.c */,
+				70EBB5FA1420D06000051914 /* osip_body.c */,
+				70EBB5FB1420D06000051914 /* osip_call_id.c */,
+				70EBB5FC1420D06000051914 /* osip_call_info.c */,
+				70EBB5FD1420D06000051914 /* osip_contact.c */,
+				70EBB5FE1420D06000051914 /* osip_content_disposition.c */,
+				70EBB5FF1420D06000051914 /* osip_content_encoding.c */,
+				70EBB6001420D06000051914 /* osip_content_length.c */,
+				70EBB6011420D06000051914 /* osip_content_type.c */,
+				70EBB6021420D06000051914 /* osip_cseq.c */,
+				70EBB6031420D06000051914 /* osip_error_info.c */,
+				70EBB6041420D06000051914 /* osip_from.c */,
+				70EBB6051420D06000051914 /* osip_header.c */,
+				70EBB6061420D06000051914 /* osip_list.c */,
+				70EBB6071420D06000051914 /* osip_md5c.c */,
+				70EBB6081420D06000051914 /* osip_message_parse.c */,
+				70EBB6091420D06000051914 /* osip_message_to_str.c */,
+				70EBB60A1420D06000051914 /* osip_message.c */,
+				70EBB60B1420D06000051914 /* osip_mime_version.c */,
+				70EBB60C1420D06000051914 /* osip_parser_cfg.c */,
+				70EBB60E1420D06000051914 /* osip_proxy_authenticate.c */,
+				70EBB60F1420D06000051914 /* osip_proxy_authentication_info.c */,
+				70EBB6101420D06000051914 /* osip_proxy_authorization.c */,
+				70EBB6111420D06000051914 /* osip_record_route.c */,
+				70EBB6121420D06000051914 /* osip_route.c */,
+				70EBB6131420D06000051914 /* osip_to.c */,
+				70EBB6141420D06000051914 /* osip_uri.c */,
+				70EBB6151420D06000051914 /* osip_via.c */,
+				70EBB6161420D06000051914 /* osip_www_authenticate.c */,
+				70EBB6171420D06000051914 /* sdp_accessor.c */,
+				70EBB6181420D06000051914 /* sdp_message.c */,
+				70EBB6191420D06000051914 /* parser.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		70EBB5961420CFE900051914 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				702E924C1506623D0057E727 /* internal.h */,
+				70EBB5AF1420D02E00051914 /* osip_accept_encoding.h */,
+				70EBB5B01420D02E00051914 /* osip_accept_language.h */,
+				70EBB5B11420D02E00051914 /* osip_accept.h */,
+				70EBB5B21420D02E00051914 /* osip_alert_info.h */,
+				70EBB5B31420D02E00051914 /* osip_allow.h */,
+				70EBB5B41420D02E00051914 /* osip_authentication_info.h */,
+				70EBB5B51420D02E00051914 /* osip_authorization.h */,
+				70EBB5B61420D02E00051914 /* osip_call_id.h */,
+				70EBB5B71420D02E00051914 /* osip_call_info.h */,
+				70EBB5B81420D02E00051914 /* osip_contact.h */,
+				70EBB5B91420D02E00051914 /* osip_content_disposition.h */,
+				70EBB5BA1420D02E00051914 /* osip_content_encoding.h */,
+				70EBB5BB1420D02E00051914 /* osip_content_length.h */,
+				70EBB5BC1420D02E00051914 /* osip_content_type.h */,
+				70EBB5BD1420D02E00051914 /* osip_cseq.h */,
+				70EBB5BE1420D02E00051914 /* osip_error_info.h */,
+				70EBB5BF1420D02E00051914 /* osip_from.h */,
+				70EBB5C01420D02E00051914 /* osip_header.h */,
+				70EBB5C11420D02E00051914 /* osip_mime_version.h */,
+				70EBB5C21420D02E00051914 /* osip_proxy_authenticate.h */,
+				70EBB5C31420D02E00051914 /* osip_proxy_authentication_info.h */,
+				70EBB5C41420D02E00051914 /* osip_proxy_authorization.h */,
+				70EBB5C51420D02E00051914 /* osip_record_route.h */,
+				70EBB5C61420D02E00051914 /* osip_route.h */,
+				70EBB5C71420D02E00051914 /* osip_to.h */,
+				70EBB5C81420D02E00051914 /* osip_via.h */,
+				70EBB5C91420D02E00051914 /* osip_www_authenticate.h */,
+				70EBB59B1420D02400051914 /* osip_body.h */,
+				70EBB59C1420D02400051914 /* osip_const.h */,
+				70EBB59D1420D02400051914 /* osip_headers.h */,
+				70EBB59E1420D02400051914 /* osip_list.h */,
+				70EBB59F1420D02400051914 /* osip_md5.h */,
+				70EBB5A01420D02400051914 /* osip_message.h */,
+				70EBB5A11420D02400051914 /* osip_parser.h */,
+				70EBB5A21420D02400051914 /* osip_port.h */,
+				70EBB5A31420D02400051914 /* osip_uri.h */,
+				70EBB5A41420D02400051914 /* sdp_message.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		70EBB5971420CFF100051914 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB6411420D07300051914 /* fsm_misc.c */,
+				70EBB6421420D07300051914 /* ict_fsm.c */,
+				70EBB6431420D07300051914 /* ict.c */,
+				70EBB6441420D07300051914 /* ist_fsm.c */,
+				70EBB6451420D07300051914 /* ist.c */,
+				70EBB6461420D07300051914 /* nict_fsm.c */,
+				70EBB6471420D07300051914 /* nict.c */,
+				70EBB6481420D07300051914 /* nist_fsm.c */,
+				70EBB6491420D07300051914 /* nist.c */,
+				70EBB64A1420D07300051914 /* osip_dialog.c */,
+				70EBB64B1420D07300051914 /* osip_event.c */,
+				70EBB64C1420D07300051914 /* osip_time.c */,
+				70EBB64D1420D07300051914 /* osip_transaction.c */,
+				70EBB64E1420D07300051914 /* osip.c */,
+				70EBB64F1420D07300051914 /* port_condv.c */,
+				70EBB6501420D07300051914 /* port_fifo.c */,
+				70EBB6511420D07300051914 /* port_sema.c */,
+				70EBB6521420D07300051914 /* port_thread.c */,
+				70EBB6531420D07300051914 /* fsm.h */,
+				70EBB6541420D07300051914 /* xixt.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		70EBB5981420CFFA00051914 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB5E51420D03E00051914 /* internal.h */,
+				70EBB5E61420D03E00051914 /* osip_condv.h */,
+				70EBB5E71420D03E00051914 /* osip_dialog.h */,
+				70EBB5E81420D03E00051914 /* osip_fifo.h */,
+				70EBB5E91420D03E00051914 /* osip_mt.h */,
+				70EBB5EA1420D03E00051914 /* osip_time.h */,
+				70EBB5EB1420D03E00051914 /* osip.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		70EBB5991420D00200051914 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB67B1420D09F00051914 /* eXcall_api.c */,
+				70EBB67C1420D09F00051914 /* eXconf.c */,
+				70EBB67D1420D09F00051914 /* eXinsubscription_api.c */,
+				70EBB67E1420D09F00051914 /* eXmessage_api.c */,
+				70EBB67F1420D09F00051914 /* eXoptions_api.c */,
+				70EBB6801420D09F00051914 /* eXosip.c */,
+				70EBB6811420D09F00051914 /* eXpublish_api.c */,
+				70EBB6821420D09F00051914 /* eXrefer_api.c */,
+				70EBB6831420D09F00051914 /* eXregister_api.c */,
+				70EBB6841420D09F00051914 /* eXsubscription_api.c */,
+				70EBB6851420D09F00051914 /* eXtl_dtls.c */,
+				70EBB6861420D09F00051914 /* eXtl_tcp.c */,
+				70EBB6871420D09F00051914 /* eXtl_tls.c */,
+				70EBB6881420D09F00051914 /* eXtl_udp.c */,
+				70EBB68A1420D09F00051914 /* eXtransport.c */,
+				70EBB68B1420D09F00051914 /* eXutils.c */,
+				70EBB68D1420D09F00051914 /* jauth.c */,
+				70EBB68E1420D09F00051914 /* jcall.c */,
+				70EBB68F1420D09F00051914 /* jcallback.c */,
+				70EBB6901420D09F00051914 /* jdialog.c */,
+				70EBB6911420D09F00051914 /* jevents.c */,
+				70EBB6921420D09F00051914 /* jnotify.c */,
+				70EBB6931420D09F00051914 /* jpipe.c */,
+				70EBB6941420D09F00051914 /* jpublish.c */,
+				70EBB6951420D09F00051914 /* jreg.c */,
+				70EBB6961420D09F00051914 /* jrequest.c */,
+				70EBB6971420D09F00051914 /* jresponse.c */,
+				70EBB6981420D09F00051914 /* jsubscribe.c */,
+				70EBB6991420D09F00051914 /* milenage.c */,
+				70EBB69A1420D09F00051914 /* misc.c */,
+				70EBB69B1420D09F00051914 /* rijndael.c */,
+				70EBB69C1420D09F00051914 /* sdp_offans.c */,
+				70EBB69D1420D09F00051914 /* udp.c */,
+				70EBB69E1420D09F00051914 /* eXosip2.h */,
+				70EBB69F1420D09F00051914 /* eXtransport.h */,
+				70EBB6A01420D09F00051914 /* inet_ntop.h */,
+				70EBB6A11420D09F00051914 /* jpipe.h */,
+				70EBB6A21420D09F00051914 /* milenage.h */,
+				70EBB6A31420D09F00051914 /* rijndael.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		70EBB59A1420D00800051914 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				70EBB6691420D08C00051914 /* eX_call.h */,
+				70EBB66A1420D08C00051914 /* eX_message.h */,
+				70EBB66B1420D08C00051914 /* eX_options.h */,
+				70EBB66C1420D08C00051914 /* eX_publish.h */,
+				70EBB66D1420D08C00051914 /* eX_refer.h */,
+				70EBB66E1420D08C00051914 /* eX_register.h */,
+				70EBB66F1420D08C00051914 /* eX_setup.h */,
+				70EBB6701420D08C00051914 /* eX_subscribe.h */,
+				70EBB6711420D08C00051914 /* eXosip.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70EBB5631420CDBE00051914 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EBB5A51420D02400051914 /* osip_body.h in Headers */,
+				70EBB5A61420D02400051914 /* osip_const.h in Headers */,
+				70EBB5A71420D02400051914 /* osip_headers.h in Headers */,
+				70EBB5A81420D02400051914 /* osip_list.h in Headers */,
+				70EBB5A91420D02400051914 /* osip_md5.h in Headers */,
+				70EBB5AA1420D02400051914 /* osip_message.h in Headers */,
+				70EBB5AB1420D02400051914 /* osip_parser.h in Headers */,
+				70EBB5AC1420D02400051914 /* osip_port.h in Headers */,
+				70EBB5AD1420D02400051914 /* osip_uri.h in Headers */,
+				70EBB5AE1420D02400051914 /* sdp_message.h in Headers */,
+				70EBB5CA1420D02E00051914 /* osip_accept_encoding.h in Headers */,
+				70EBB5CB1420D02E00051914 /* osip_accept_language.h in Headers */,
+				70EBB5CC1420D02E00051914 /* osip_accept.h in Headers */,
+				70EBB5CD1420D02E00051914 /* osip_alert_info.h in Headers */,
+				70EBB5CE1420D02E00051914 /* osip_allow.h in Headers */,
+				70EBB5CF1420D02E00051914 /* osip_authentication_info.h in Headers */,
+				70EBB5D01420D02E00051914 /* osip_authorization.h in Headers */,
+				70EBB5D11420D02E00051914 /* osip_call_id.h in Headers */,
+				70EBB5D21420D02E00051914 /* osip_call_info.h in Headers */,
+				70EBB5D31420D02E00051914 /* osip_contact.h in Headers */,
+				70EBB5D41420D02E00051914 /* osip_content_disposition.h in Headers */,
+				70EBB5D51420D02E00051914 /* osip_content_encoding.h in Headers */,
+				70EBB5D61420D02E00051914 /* osip_content_length.h in Headers */,
+				70EBB5D71420D02E00051914 /* osip_content_type.h in Headers */,
+				70EBB5D81420D02E00051914 /* osip_cseq.h in Headers */,
+				70EBB5D91420D02E00051914 /* osip_error_info.h in Headers */,
+				70EBB5DA1420D02E00051914 /* osip_from.h in Headers */,
+				70EBB5DB1420D02E00051914 /* osip_header.h in Headers */,
+				70EBB5DC1420D02E00051914 /* osip_mime_version.h in Headers */,
+				70EBB5DD1420D02E00051914 /* osip_proxy_authenticate.h in Headers */,
+				70EBB5DE1420D02E00051914 /* osip_proxy_authentication_info.h in Headers */,
+				70EBB5DF1420D02E00051914 /* osip_proxy_authorization.h in Headers */,
+				70EBB5E01420D02E00051914 /* osip_record_route.h in Headers */,
+				70EBB5E11420D02E00051914 /* osip_route.h in Headers */,
+				70EBB5E21420D02E00051914 /* osip_to.h in Headers */,
+				70EBB5E31420D02E00051914 /* osip_via.h in Headers */,
+				70EBB5E41420D02E00051914 /* osip_www_authenticate.h in Headers */,
+				70EBB5EC1420D03E00051914 /* internal.h in Headers */,
+				70EBB5ED1420D03E00051914 /* osip_condv.h in Headers */,
+				70EBB5EE1420D03E00051914 /* osip_dialog.h in Headers */,
+				70EBB5EF1420D03E00051914 /* osip_fifo.h in Headers */,
+				70EBB5F01420D03E00051914 /* osip_mt.h in Headers */,
+				70EBB5F11420D03E00051914 /* osip_time.h in Headers */,
+				70EBB5F21420D03E00051914 /* osip.h in Headers */,
+				70EBB6401420D06000051914 /* parser.h in Headers */,
+				70EBB6671420D07300051914 /* fsm.h in Headers */,
+				70EBB6681420D07300051914 /* xixt.h in Headers */,
+				70EBB6721420D08C00051914 /* eX_call.h in Headers */,
+				70EBB6731420D08C00051914 /* eX_message.h in Headers */,
+				70EBB6741420D08C00051914 /* eX_options.h in Headers */,
+				70EBB6751420D08C00051914 /* eX_publish.h in Headers */,
+				70EBB6761420D08C00051914 /* eX_refer.h in Headers */,
+				70EBB6771420D08C00051914 /* eX_register.h in Headers */,
+				70EBB6781420D08C00051914 /* eX_setup.h in Headers */,
+				70EBB6791420D08C00051914 /* eX_subscribe.h in Headers */,
+				70EBB67A1420D08C00051914 /* eXosip.h in Headers */,
+				70EBB6C71420D09F00051914 /* eXosip2.h in Headers */,
+				70EBB6C81420D09F00051914 /* eXtransport.h in Headers */,
+				70EBB6C91420D09F00051914 /* inet_ntop.h in Headers */,
+				70EBB6CA1420D09F00051914 /* jpipe.h in Headers */,
+				70EBB6CB1420D09F00051914 /* milenage.h in Headers */,
+				70EBB6CC1420D09F00051914 /* rijndael.h in Headers */,
+				702E924D1506623D0057E727 /* internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70EBB5641420CDBE00051914 /* exosip2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70EBB58C1420CDBE00051914 /* Build configuration list for PBXNativeTarget "exosip2" */;
+			buildPhases = (
+				70EBB5611420CDBE00051914 /* Sources */,
+				70EBB5621420CDBE00051914 /* Frameworks */,
+				70EBB5631420CDBE00051914 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = exosip2;
+			productName = exosip2;
+			productReference = 70EBB5651420CDBE00051914 /* libexosip2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70EBB55C1420CDBE00051914 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = antisip;
+			};
+			buildConfigurationList = 70EBB55F1420CDBE00051914 /* Build configuration list for PBXProject "exosip2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70EBB55A1420CDBE00051914;
+			productRefGroup = 70EBB5661420CDBE00051914 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 702E93141508E9030057E727 /* Products */;
+					ProjectRef = 702E93131508E9030057E727 /* cares.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				70EBB5641420CDBE00051914 /* exosip2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		702E93181508E9030057E727 /* libcares.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcares.a;
+			remoteRef = 702E93171508E9030057E727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70EBB5611420CDBE00051914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70EBB61A1420D06000051914 /* osip_accept_encoding.c in Sources */,
+				70EBB61B1420D06000051914 /* osip_accept_language.c in Sources */,
+				70EBB61C1420D06000051914 /* osip_accept.c in Sources */,
+				70EBB61D1420D06000051914 /* osip_alert_info.c in Sources */,
+				70EBB61E1420D06000051914 /* osip_allow.c in Sources */,
+				70EBB61F1420D06000051914 /* osip_authentication_info.c in Sources */,
+				70EBB6201420D06000051914 /* osip_authorization.c in Sources */,
+				70EBB6211420D06000051914 /* osip_body.c in Sources */,
+				70EBB6221420D06000051914 /* osip_call_id.c in Sources */,
+				70EBB6231420D06000051914 /* osip_call_info.c in Sources */,
+				70EBB6241420D06000051914 /* osip_contact.c in Sources */,
+				70EBB6251420D06000051914 /* osip_content_disposition.c in Sources */,
+				70EBB6261420D06000051914 /* osip_content_encoding.c in Sources */,
+				70EBB6271420D06000051914 /* osip_content_length.c in Sources */,
+				70EBB6281420D06000051914 /* osip_content_type.c in Sources */,
+				70EBB6291420D06000051914 /* osip_cseq.c in Sources */,
+				70EBB62A1420D06000051914 /* osip_error_info.c in Sources */,
+				70EBB62B1420D06000051914 /* osip_from.c in Sources */,
+				70EBB62C1420D06000051914 /* osip_header.c in Sources */,
+				70EBB62D1420D06000051914 /* osip_list.c in Sources */,
+				70EBB62E1420D06000051914 /* osip_md5c.c in Sources */,
+				70EBB62F1420D06000051914 /* osip_message_parse.c in Sources */,
+				70EBB6301420D06000051914 /* osip_message_to_str.c in Sources */,
+				70EBB6311420D06000051914 /* osip_message.c in Sources */,
+				70EBB6321420D06000051914 /* osip_mime_version.c in Sources */,
+				70EBB6331420D06000051914 /* osip_parser_cfg.c in Sources */,
+				70EBB6351420D06000051914 /* osip_proxy_authenticate.c in Sources */,
+				70EBB6361420D06000051914 /* osip_proxy_authentication_info.c in Sources */,
+				70EBB6371420D06000051914 /* osip_proxy_authorization.c in Sources */,
+				70EBB6381420D06000051914 /* osip_record_route.c in Sources */,
+				70EBB6391420D06000051914 /* osip_route.c in Sources */,
+				70EBB63A1420D06000051914 /* osip_to.c in Sources */,
+				70EBB63B1420D06000051914 /* osip_uri.c in Sources */,
+				70EBB63C1420D06000051914 /* osip_via.c in Sources */,
+				70EBB63D1420D06000051914 /* osip_www_authenticate.c in Sources */,
+				70EBB63E1420D06000051914 /* sdp_accessor.c in Sources */,
+				70EBB63F1420D06000051914 /* sdp_message.c in Sources */,
+				70EBB6551420D07300051914 /* fsm_misc.c in Sources */,
+				70EBB6561420D07300051914 /* ict_fsm.c in Sources */,
+				70EBB6571420D07300051914 /* ict.c in Sources */,
+				70EBB6581420D07300051914 /* ist_fsm.c in Sources */,
+				70EBB6591420D07300051914 /* ist.c in Sources */,
+				70EBB65A1420D07300051914 /* nict_fsm.c in Sources */,
+				70EBB65B1420D07300051914 /* nict.c in Sources */,
+				70EBB65C1420D07300051914 /* nist_fsm.c in Sources */,
+				70EBB65D1420D07300051914 /* nist.c in Sources */,
+				70EBB65E1420D07300051914 /* osip_dialog.c in Sources */,
+				70EBB65F1420D07300051914 /* osip_event.c in Sources */,
+				70EBB6601420D07300051914 /* osip_time.c in Sources */,
+				70EBB6611420D07300051914 /* osip_transaction.c in Sources */,
+				70EBB6621420D07300051914 /* osip.c in Sources */,
+				70EBB6631420D07300051914 /* port_condv.c in Sources */,
+				70EBB6641420D07300051914 /* port_fifo.c in Sources */,
+				70EBB6651420D07300051914 /* port_sema.c in Sources */,
+				70EBB6661420D07300051914 /* port_thread.c in Sources */,
+				70EBB6A41420D09F00051914 /* eXcall_api.c in Sources */,
+				70EBB6A51420D09F00051914 /* eXconf.c in Sources */,
+				70EBB6A61420D09F00051914 /* eXinsubscription_api.c in Sources */,
+				70EBB6A71420D09F00051914 /* eXmessage_api.c in Sources */,
+				70EBB6A81420D09F00051914 /* eXoptions_api.c in Sources */,
+				70EBB6A91420D09F00051914 /* eXosip.c in Sources */,
+				70EBB6AA1420D09F00051914 /* eXpublish_api.c in Sources */,
+				70EBB6AB1420D09F00051914 /* eXrefer_api.c in Sources */,
+				70EBB6AC1420D09F00051914 /* eXregister_api.c in Sources */,
+				70EBB6AD1420D09F00051914 /* eXsubscription_api.c in Sources */,
+				70EBB6AE1420D09F00051914 /* eXtl_dtls.c in Sources */,
+				70EBB6AF1420D09F00051914 /* eXtl_tcp.c in Sources */,
+				70EBB6B01420D09F00051914 /* eXtl_tls.c in Sources */,
+				70EBB6B11420D09F00051914 /* eXtl_udp.c in Sources */,
+				70EBB6B31420D09F00051914 /* eXtransport.c in Sources */,
+				70EBB6B41420D09F00051914 /* eXutils.c in Sources */,
+				70EBB6B61420D09F00051914 /* jauth.c in Sources */,
+				70EBB6B71420D09F00051914 /* jcall.c in Sources */,
+				70EBB6B81420D09F00051914 /* jcallback.c in Sources */,
+				70EBB6B91420D09F00051914 /* jdialog.c in Sources */,
+				70EBB6BA1420D09F00051914 /* jevents.c in Sources */,
+				70EBB6BB1420D09F00051914 /* jnotify.c in Sources */,
+				70EBB6BC1420D09F00051914 /* jpipe.c in Sources */,
+				70EBB6BD1420D09F00051914 /* jpublish.c in Sources */,
+				70EBB6BE1420D09F00051914 /* jreg.c in Sources */,
+				70EBB6BF1420D09F00051914 /* jrequest.c in Sources */,
+				70EBB6C01420D09F00051914 /* jresponse.c in Sources */,
+				70EBB6C11420D09F00051914 /* jsubscribe.c in Sources */,
+				70EBB6C21420D09F00051914 /* milenage.c in Sources */,
+				70EBB6C31420D09F00051914 /* misc.c in Sources */,
+				70EBB6C41420D09F00051914 /* rijndael.c in Sources */,
+				70EBB6C51420D09F00051914 /* sdp_offans.c in Sources */,
+				70EBB6C61420D09F00051914 /* udp.c in Sources */,
+				70EBBB7B14210DED00051914 /* osip_port.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70EBB58A1420CDBE00051914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					HAVE_SRTP,
+					HAVE_CARES_H,
+					"MAX_NUMBER_OF_CALLS=3",
+					HAVE_CONFIG_H,
+					ENABLE_TRACE,
+					OSIP_MT,
+					HAVE_OPENSSL_SSL_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../,
+					"../../../amsip/c-ares",
+					../../../amsip/osip/include,
+					../../../amsip/exosip/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-mno-thumb";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		70EBB58B1420CDBE00051914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HAVE_SRTP,
+					HAVE_CARES_H,
+					"MAX_NUMBER_OF_CALLS=3",
+					HAVE_CONFIG_H,
+					ENABLE_TRACE,
+					OSIP_MT,
+					HAVE_OPENSSL_SSL_H,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../,
+					"../../../amsip/c-ares",
+					../../../amsip/osip/include,
+					../../../amsip/exosip/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-mno-thumb";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70EBB58D1420CDBE00051914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/exosip2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "exosip2/exosip2-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		70EBB58E1420CDBE00051914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/exosip2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "exosip2/exosip2-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70EBB55F1420CDBE00051914 /* Build configuration list for PBXProject "exosip2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EBB58A1420CDBE00051914 /* Debug */,
+				70EBB58B1420CDBE00051914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70EBB58C1420CDBE00051914 /* Build configuration list for PBXNativeTarget "exosip2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70EBB58D1420CDBE00051914 /* Debug */,
+				70EBB58E1420CDBE00051914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70EBB55C1420CDBE00051914 /* Project object */;
+}

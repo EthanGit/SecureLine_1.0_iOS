@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libzrtp</ProjectName>
+    <ProjectGuid>{5EB9EA80-2852-4C1D-AA24-E13E6166501E}</ProjectGuid>
+    <RootNamespace>libzrtp</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\vs2010-bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../external/security/libzrtp/include;../../../external/security/libzrtp/third_party/bnlib;../../../external/security/libzrtp/third_party/bgaes;../../../external/security/libzrtp/test/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;HAVE_CONFIG_H=1;ZRTP_ENABLE_EC=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../external/security/libzrtp/include;../../../external/security/libzrtp/third_party/bnlib;../../../external/security/libzrtp/third_party/bgaes;../../../external/security/libzrtp/test/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HAVE_CONFIG_H=1;WIN32;_DEBUG;_LIB;ZRTP_ENABLE_EC=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName)-vc80.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_base.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_config.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_config_user.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_config_win.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_crypto.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_engine.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_error.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_iface.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_iface_builtin.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_iface_system.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_legal.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_list.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_log.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_pbx.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_protocol.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_srtp.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_srtp_builtin.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_string.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_types.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\include\zrtp_utils.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\bn.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\bn32.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\bnsize00.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\kludge.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\lbn.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\lbn32.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\lbnmem.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bnlib\legal.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\aes.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\aesopt.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\aestab.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\bg2zrtp.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\brg_types.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\sha1.h" />
+    <ClInclude Include="..\..\..\external\security\libzrtp\third_party\bgaes\sha2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crc.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crypto_aes.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crypto_atl.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crypto_hash.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crypto_pk.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_crypto_sas.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_datatypes.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_engine.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_iface_cache.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_iface_scheduler.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_iface_sys.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_initiator.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_legal.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_list.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_log.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_pbx.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_protocol.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_responder.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_rng.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_srtp_builtin.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_string.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_utils.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\src\zrtp_utils_proto.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\bn.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\bn32.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\bninit32.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\bntest00.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\lbn32.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\lbnmem.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bnlib\legal.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\aes_modes.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\aescrypt.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\aeskey.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\aestab.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\sha1.c" />
+    <ClCompile Include="..\..\..\external\security\libzrtp\third_party\bgaes\sha2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\external\security\libzrtp\ChangeLog" />
+    <None Include="..\..\..\external\security\libzrtp\News" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

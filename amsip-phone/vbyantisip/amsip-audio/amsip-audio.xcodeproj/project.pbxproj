@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7079505D143506EE006F3E1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7079505C143506EE006F3E1D /* Foundation.framework */; };
+		707950B9143509FF006F3E1D /* acelp_co.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079508B143509FF006F3E1D /* acelp_co.c */; };
+		707950BA143509FF006F3E1D /* basic_op.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079508C143509FF006F3E1D /* basic_op.c */; };
+		707950BB143509FF006F3E1D /* bits.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079508D143509FF006F3E1D /* bits.c */; };
+		707950BC143509FF006F3E1D /* calcexc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079508E143509FF006F3E1D /* calcexc.c */; };
+		707950BD143509FF006F3E1D /* cod_ld8k.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079508F143509FF006F3E1D /* cod_ld8k.c */; };
+		707950BE143509FF006F3E1D /* de_acelp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795090143509FF006F3E1D /* de_acelp.c */; };
+		707950BF143509FF006F3E1D /* dec_gain.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795091143509FF006F3E1D /* dec_gain.c */; };
+		707950C0143509FF006F3E1D /* dec_lag3.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795092143509FF006F3E1D /* dec_lag3.c */; };
+		707950C1143509FF006F3E1D /* dec_ld8k.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795093143509FF006F3E1D /* dec_ld8k.c */; };
+		707950C2143509FF006F3E1D /* dec_sid.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795094143509FF006F3E1D /* dec_sid.c */; };
+		707950C3143509FF006F3E1D /* dspfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795095143509FF006F3E1D /* dspfunc.c */; };
+		707950C4143509FF006F3E1D /* dtx.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795096143509FF006F3E1D /* dtx.c */; };
+		707950C5143509FF006F3E1D /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795097143509FF006F3E1D /* filter.c */; };
+		707950C6143509FF006F3E1D /* gainpred.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795098143509FF006F3E1D /* gainpred.c */; };
+		707950C7143509FF006F3E1D /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70795099143509FF006F3E1D /* lpc.c */; };
+		707950C8143509FF006F3E1D /* lpcfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509A143509FF006F3E1D /* lpcfunc.c */; };
+		707950C9143509FF006F3E1D /* lspdec.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509B143509FF006F3E1D /* lspdec.c */; };
+		707950CA143509FF006F3E1D /* lspgetq.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509C143509FF006F3E1D /* lspgetq.c */; };
+		707950CB143509FF006F3E1D /* msitug729.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509D143509FF006F3E1D /* msitug729.c */; };
+		707950CC143509FF006F3E1D /* oper_32b.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509E143509FF006F3E1D /* oper_32b.c */; };
+		707950CD143509FF006F3E1D /* p_parity.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079509F143509FF006F3E1D /* p_parity.c */; };
+		707950CE143509FF006F3E1D /* pitch.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A0143509FF006F3E1D /* pitch.c */; };
+		707950CF143509FF006F3E1D /* post_pro.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A1143509FF006F3E1D /* post_pro.c */; };
+		707950D0143509FF006F3E1D /* pre_proc.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A2143509FF006F3E1D /* pre_proc.c */; };
+		707950D1143509FF006F3E1D /* pred_lt3.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A3143509FF006F3E1D /* pred_lt3.c */; };
+		707950D2143509FF006F3E1D /* pst.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A4143509FF006F3E1D /* pst.c */; };
+		707950D3143509FF006F3E1D /* pwf.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A5143509FF006F3E1D /* pwf.c */; };
+		707950D4143509FF006F3E1D /* qsidgain.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A6143509FF006F3E1D /* qsidgain.c */; };
+		707950D5143509FF006F3E1D /* qsidlsf.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A7143509FF006F3E1D /* qsidlsf.c */; };
+		707950D6143509FF006F3E1D /* qua_gain.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A8143509FF006F3E1D /* qua_gain.c */; };
+		707950D7143509FF006F3E1D /* qua_lsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950A9143509FF006F3E1D /* qua_lsp.c */; };
+		707950D8143509FF006F3E1D /* tab_dtx.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950AA143509FF006F3E1D /* tab_dtx.c */; };
+		707950D9143509FF006F3E1D /* tab_ld8k.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950AB143509FF006F3E1D /* tab_ld8k.c */; };
+		707950DA143509FF006F3E1D /* taming.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950AC143509FF006F3E1D /* taming.c */; };
+		707950DB143509FF006F3E1D /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950AD143509FF006F3E1D /* util.c */; };
+		707950DC143509FF006F3E1D /* vad.c in Sources */ = {isa = PBXBuildFile; fileRef = 707950AE143509FF006F3E1D /* vad.c */; };
+		707950DD143509FF006F3E1D /* basic_op.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950AF143509FF006F3E1D /* basic_op.h */; };
+		707950DE143509FF006F3E1D /* dtx.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B0143509FF006F3E1D /* dtx.h */; };
+		707950DF143509FF006F3E1D /* ld8k.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B1143509FF006F3E1D /* ld8k.h */; };
+		707950E0143509FF006F3E1D /* octet.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B2143509FF006F3E1D /* octet.h */; };
+		707950E1143509FF006F3E1D /* oper_32b.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B3143509FF006F3E1D /* oper_32b.h */; };
+		707950E2143509FF006F3E1D /* sid.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B4143509FF006F3E1D /* sid.h */; };
+		707950E3143509FF006F3E1D /* tab_dtx.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B5143509FF006F3E1D /* tab_dtx.h */; };
+		707950E4143509FF006F3E1D /* tab_ld8k.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B6143509FF006F3E1D /* tab_ld8k.h */; };
+		707950E5143509FF006F3E1D /* typedef.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B7143509FF006F3E1D /* typedef.h */; };
+		707950E6143509FF006F3E1D /* vad.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950B8143509FF006F3E1D /* vad.h */; };
+		707950F714350A1F006F3E1D /* am_call.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950E714350A1F006F3E1D /* am_call.h */; };
+		707950F814350A1F006F3E1D /* am_codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950E814350A1F006F3E1D /* am_codec.h */; };
+		707950F914350A1F006F3E1D /* am_event.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950E914350A1F006F3E1D /* am_event.h */; };
+		707950FA14350A1F006F3E1D /* am_filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950EA14350A1F006F3E1D /* am_filter.h */; };
+		707950FB14350A1F006F3E1D /* am_message.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950EB14350A1F006F3E1D /* am_message.h */; };
+		707950FC14350A1F006F3E1D /* am_network.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950EC14350A1F006F3E1D /* am_network.h */; };
+		707950FD14350A1F006F3E1D /* am_options.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950ED14350A1F006F3E1D /* am_options.h */; };
+		707950FE14350A1F006F3E1D /* am_player.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950EE14350A1F006F3E1D /* am_player.h */; };
+		707950FF14350A1F006F3E1D /* am_publish.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950EF14350A1F006F3E1D /* am_publish.h */; };
+		7079510014350A1F006F3E1D /* am_register.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F014350A1F006F3E1D /* am_register.h */; };
+		7079510114350A1F006F3E1D /* am_service.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F114350A1F006F3E1D /* am_service.h */; };
+		7079510214350A1F006F3E1D /* am_subscribe.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F214350A1F006F3E1D /* am_subscribe.h */; };
+		7079510314350A1F006F3E1D /* am_text_codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F314350A1F006F3E1D /* am_text_codec.h */; };
+		7079510414350A1F006F3E1D /* am_udpftp_codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F414350A1F006F3E1D /* am_udpftp_codec.h */; };
+		7079510514350A1F006F3E1D /* am_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F514350A1F006F3E1D /* am_version.h */; };
+		7079510614350A1F006F3E1D /* am_video_codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 707950F614350A1F006F3E1D /* am_video_codec.h */; };
+		7079512414350A63006F3E1D /* am_audio_module.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510714350A63006F3E1D /* am_audio_module.c */; };
+		7079512514350A63006F3E1D /* am_call.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510814350A63006F3E1D /* am_call.c */; };
+		7079512614350A63006F3E1D /* am_calls.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510914350A63006F3E1D /* am_calls.c */; };
+		7079512714350A63006F3E1D /* am_codec.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510A14350A63006F3E1D /* am_codec.c */; };
+		7079512814350A63006F3E1D /* am_event.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510B14350A63006F3E1D /* am_event.c */; };
+		7079512914350A63006F3E1D /* am_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510C14350A63006F3E1D /* am_filter.c */; };
+		7079512A14350A63006F3E1D /* am_message.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510D14350A63006F3E1D /* am_message.c */; };
+		7079512B14350A63006F3E1D /* am_ms2_text.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510E14350A63006F3E1D /* am_ms2_text.c */; };
+		7079512C14350A63006F3E1D /* am_ms2_udpftp.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079510F14350A63006F3E1D /* am_ms2_udpftp.c */; };
+		7079512D14350A63006F3E1D /* am_ms2_win32.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511014350A63006F3E1D /* am_ms2_win32.c */; };
+		7079512E14350A63006F3E1D /* am_network.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511114350A63006F3E1D /* am_network.c */; };
+		7079512F14350A63006F3E1D /* am_options.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511214350A63006F3E1D /* am_options.c */; };
+		7079513014350A63006F3E1D /* am_player.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511314350A63006F3E1D /* am_player.c */; };
+		7079513114350A63006F3E1D /* am_publish.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511414350A63006F3E1D /* am_publish.c */; };
+		7079513214350A63006F3E1D /* am_register.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511514350A63006F3E1D /* am_register.c */; };
+		7079513314350A63006F3E1D /* am_service.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511614350A63006F3E1D /* am_service.c */; };
+		7079513414350A63006F3E1D /* am_subscribe.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511714350A63006F3E1D /* am_subscribe.c */; };
+		7079513514350A63006F3E1D /* am_text_codec.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511814350A63006F3E1D /* am_text_codec.c */; };
+		7079513614350A63006F3E1D /* am_text_start.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511914350A63006F3E1D /* am_text_start.c */; };
+		7079513714350A63006F3E1D /* am_udpftp_codec.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511A14350A63006F3E1D /* am_udpftp_codec.c */; };
+		7079513814350A63006F3E1D /* am_udpftp_start.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511B14350A63006F3E1D /* am_udpftp_start.c */; };
+		7079513914350A63006F3E1D /* am_udpftp.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511C14350A63006F3E1D /* am_udpftp.c */; };
+		7079513A14350A63006F3E1D /* csharp.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511D14350A63006F3E1D /* csharp.c */; };
+		7079513B14350A63006F3E1D /* sdptools.c in Sources */ = {isa = PBXBuildFile; fileRef = 7079511E14350A63006F3E1D /* sdptools.c */; };
+		7079513C14350A63006F3E1D /* am_calls.h in Headers */ = {isa = PBXBuildFile; fileRef = 7079511F14350A63006F3E1D /* am_calls.h */; };
+		7079513D14350A63006F3E1D /* am_sound_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7079512014350A63006F3E1D /* am_sound_common.h */; };
+		7079513E14350A63006F3E1D /* am_text_start.h in Headers */ = {isa = PBXBuildFile; fileRef = 7079512114350A63006F3E1D /* am_text_start.h */; };
+		7079513F14350A63006F3E1D /* am_udpftp_start.h in Headers */ = {isa = PBXBuildFile; fileRef = 7079512214350A63006F3E1D /* am_udpftp_start.h */; };
+		7079514014350A63006F3E1D /* sdptools.h in Headers */ = {isa = PBXBuildFile; fileRef = 7079512314350A63006F3E1D /* sdptools.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		70795059143506EE006F3E1D /* libamsip-audio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libamsip-audio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7079505C143506EE006F3E1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70795060143506EE006F3E1D /* amsip-audio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "amsip-audio-Prefix.pch"; sourceTree = "<group>"; };
+		7079508B143509FF006F3E1D /* acelp_co.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = acelp_co.c; path = ../../../../amsip/plugins/msitug729/src/acelp_co.c; sourceTree = "<group>"; };
+		7079508C143509FF006F3E1D /* basic_op.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = basic_op.c; path = ../../../../amsip/plugins/msitug729/src/basic_op.c; sourceTree = "<group>"; };
+		7079508D143509FF006F3E1D /* bits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bits.c; path = ../../../../amsip/plugins/msitug729/src/bits.c; sourceTree = "<group>"; };
+		7079508E143509FF006F3E1D /* calcexc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = calcexc.c; path = ../../../../amsip/plugins/msitug729/src/calcexc.c; sourceTree = "<group>"; };
+		7079508F143509FF006F3E1D /* cod_ld8k.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cod_ld8k.c; path = ../../../../amsip/plugins/msitug729/src/cod_ld8k.c; sourceTree = "<group>"; };
+		70795090143509FF006F3E1D /* de_acelp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = de_acelp.c; path = ../../../../amsip/plugins/msitug729/src/de_acelp.c; sourceTree = "<group>"; };
+		70795091143509FF006F3E1D /* dec_gain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dec_gain.c; path = ../../../../amsip/plugins/msitug729/src/dec_gain.c; sourceTree = "<group>"; };
+		70795092143509FF006F3E1D /* dec_lag3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dec_lag3.c; path = ../../../../amsip/plugins/msitug729/src/dec_lag3.c; sourceTree = "<group>"; };
+		70795093143509FF006F3E1D /* dec_ld8k.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dec_ld8k.c; path = ../../../../amsip/plugins/msitug729/src/dec_ld8k.c; sourceTree = "<group>"; };
+		70795094143509FF006F3E1D /* dec_sid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dec_sid.c; path = ../../../../amsip/plugins/msitug729/src/dec_sid.c; sourceTree = "<group>"; };
+		70795095143509FF006F3E1D /* dspfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dspfunc.c; path = ../../../../amsip/plugins/msitug729/src/dspfunc.c; sourceTree = "<group>"; };
+		70795096143509FF006F3E1D /* dtx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dtx.c; path = ../../../../amsip/plugins/msitug729/src/dtx.c; sourceTree = "<group>"; };
+		70795097143509FF006F3E1D /* filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = filter.c; path = ../../../../amsip/plugins/msitug729/src/filter.c; sourceTree = "<group>"; };
+		70795098143509FF006F3E1D /* gainpred.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gainpred.c; path = ../../../../amsip/plugins/msitug729/src/gainpred.c; sourceTree = "<group>"; };
+		70795099143509FF006F3E1D /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc.c; path = ../../../../amsip/plugins/msitug729/src/lpc.c; sourceTree = "<group>"; };
+		7079509A143509FF006F3E1D /* lpcfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpcfunc.c; path = ../../../../amsip/plugins/msitug729/src/lpcfunc.c; sourceTree = "<group>"; };
+		7079509B143509FF006F3E1D /* lspdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lspdec.c; path = ../../../../amsip/plugins/msitug729/src/lspdec.c; sourceTree = "<group>"; };
+		7079509C143509FF006F3E1D /* lspgetq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lspgetq.c; path = ../../../../amsip/plugins/msitug729/src/lspgetq.c; sourceTree = "<group>"; };
+		7079509D143509FF006F3E1D /* msitug729.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = msitug729.c; path = ../../../../amsip/plugins/msitug729/src/msitug729.c; sourceTree = "<group>"; };
+		7079509E143509FF006F3E1D /* oper_32b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = oper_32b.c; path = ../../../../amsip/plugins/msitug729/src/oper_32b.c; sourceTree = "<group>"; };
+		7079509F143509FF006F3E1D /* p_parity.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = p_parity.c; path = ../../../../amsip/plugins/msitug729/src/p_parity.c; sourceTree = "<group>"; };
+		707950A0143509FF006F3E1D /* pitch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pitch.c; path = ../../../../amsip/plugins/msitug729/src/pitch.c; sourceTree = "<group>"; };
+		707950A1143509FF006F3E1D /* post_pro.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = post_pro.c; path = ../../../../amsip/plugins/msitug729/src/post_pro.c; sourceTree = "<group>"; };
+		707950A2143509FF006F3E1D /* pre_proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pre_proc.c; path = ../../../../amsip/plugins/msitug729/src/pre_proc.c; sourceTree = "<group>"; };
+		707950A3143509FF006F3E1D /* pred_lt3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pred_lt3.c; path = ../../../../amsip/plugins/msitug729/src/pred_lt3.c; sourceTree = "<group>"; };
+		707950A4143509FF006F3E1D /* pst.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pst.c; path = ../../../../amsip/plugins/msitug729/src/pst.c; sourceTree = "<group>"; };
+		707950A5143509FF006F3E1D /* pwf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pwf.c; path = ../../../../amsip/plugins/msitug729/src/pwf.c; sourceTree = "<group>"; };
+		707950A6143509FF006F3E1D /* qsidgain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qsidgain.c; path = ../../../../amsip/plugins/msitug729/src/qsidgain.c; sourceTree = "<group>"; };
+		707950A7143509FF006F3E1D /* qsidlsf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qsidlsf.c; path = ../../../../amsip/plugins/msitug729/src/qsidlsf.c; sourceTree = "<group>"; };
+		707950A8143509FF006F3E1D /* qua_gain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qua_gain.c; path = ../../../../amsip/plugins/msitug729/src/qua_gain.c; sourceTree = "<group>"; };
+		707950A9143509FF006F3E1D /* qua_lsp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qua_lsp.c; path = ../../../../amsip/plugins/msitug729/src/qua_lsp.c; sourceTree = "<group>"; };
+		707950AA143509FF006F3E1D /* tab_dtx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tab_dtx.c; path = ../../../../amsip/plugins/msitug729/src/tab_dtx.c; sourceTree = "<group>"; };
+		707950AB143509FF006F3E1D /* tab_ld8k.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tab_ld8k.c; path = ../../../../amsip/plugins/msitug729/src/tab_ld8k.c; sourceTree = "<group>"; };
+		707950AC143509FF006F3E1D /* taming.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = taming.c; path = ../../../../amsip/plugins/msitug729/src/taming.c; sourceTree = "<group>"; };
+		707950AD143509FF006F3E1D /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = util.c; path = ../../../../amsip/plugins/msitug729/src/util.c; sourceTree = "<group>"; };
+		707950AE143509FF006F3E1D /* vad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vad.c; path = ../../../../amsip/plugins/msitug729/src/vad.c; sourceTree = "<group>"; };
+		707950AF143509FF006F3E1D /* basic_op.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = basic_op.h; path = ../../../../amsip/plugins/msitug729/src/basic_op.h; sourceTree = "<group>"; };
+		707950B0143509FF006F3E1D /* dtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dtx.h; path = ../../../../amsip/plugins/msitug729/src/dtx.h; sourceTree = "<group>"; };
+		707950B1143509FF006F3E1D /* ld8k.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ld8k.h; path = ../../../../amsip/plugins/msitug729/src/ld8k.h; sourceTree = "<group>"; };
+		707950B2143509FF006F3E1D /* octet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = octet.h; path = ../../../../amsip/plugins/msitug729/src/octet.h; sourceTree = "<group>"; };
+		707950B3143509FF006F3E1D /* oper_32b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oper_32b.h; path = ../../../../amsip/plugins/msitug729/src/oper_32b.h; sourceTree = "<group>"; };
+		707950B4143509FF006F3E1D /* sid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sid.h; path = ../../../../amsip/plugins/msitug729/src/sid.h; sourceTree = "<group>"; };
+		707950B5143509FF006F3E1D /* tab_dtx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tab_dtx.h; path = ../../../../amsip/plugins/msitug729/src/tab_dtx.h; sourceTree = "<group>"; };
+		707950B6143509FF006F3E1D /* tab_ld8k.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tab_ld8k.h; path = ../../../../amsip/plugins/msitug729/src/tab_ld8k.h; sourceTree = "<group>"; };
+		707950B7143509FF006F3E1D /* typedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = typedef.h; path = ../../../../amsip/plugins/msitug729/src/typedef.h; sourceTree = "<group>"; };
+		707950B8143509FF006F3E1D /* vad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vad.h; path = ../../../../amsip/plugins/msitug729/src/vad.h; sourceTree = "<group>"; };
+		707950E714350A1F006F3E1D /* am_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_call.h; path = ../../../../amsip/amsip/include/amsip/am_call.h; sourceTree = "<group>"; };
+		707950E814350A1F006F3E1D /* am_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_codec.h; path = ../../../../amsip/amsip/include/amsip/am_codec.h; sourceTree = "<group>"; };
+		707950E914350A1F006F3E1D /* am_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_event.h; path = ../../../../amsip/amsip/include/amsip/am_event.h; sourceTree = "<group>"; };
+		707950EA14350A1F006F3E1D /* am_filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_filter.h; path = ../../../../amsip/amsip/include/amsip/am_filter.h; sourceTree = "<group>"; };
+		707950EB14350A1F006F3E1D /* am_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_message.h; path = ../../../../amsip/amsip/include/amsip/am_message.h; sourceTree = "<group>"; };
+		707950EC14350A1F006F3E1D /* am_network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_network.h; path = ../../../../amsip/amsip/include/amsip/am_network.h; sourceTree = "<group>"; };
+		707950ED14350A1F006F3E1D /* am_options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_options.h; path = ../../../../amsip/amsip/include/amsip/am_options.h; sourceTree = "<group>"; };
+		707950EE14350A1F006F3E1D /* am_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_player.h; path = ../../../../amsip/amsip/include/amsip/am_player.h; sourceTree = "<group>"; };
+		707950EF14350A1F006F3E1D /* am_publish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_publish.h; path = ../../../../amsip/amsip/include/amsip/am_publish.h; sourceTree = "<group>"; };
+		707950F014350A1F006F3E1D /* am_register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_register.h; path = ../../../../amsip/amsip/include/amsip/am_register.h; sourceTree = "<group>"; };
+		707950F114350A1F006F3E1D /* am_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_service.h; path = ../../../../amsip/amsip/include/amsip/am_service.h; sourceTree = "<group>"; };
+		707950F214350A1F006F3E1D /* am_subscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_subscribe.h; path = ../../../../amsip/amsip/include/amsip/am_subscribe.h; sourceTree = "<group>"; };
+		707950F314350A1F006F3E1D /* am_text_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_text_codec.h; path = ../../../../amsip/amsip/include/amsip/am_text_codec.h; sourceTree = "<group>"; };
+		707950F414350A1F006F3E1D /* am_udpftp_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_udpftp_codec.h; path = ../../../../amsip/amsip/include/amsip/am_udpftp_codec.h; sourceTree = "<group>"; };
+		707950F514350A1F006F3E1D /* am_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_version.h; path = ../../../../amsip/amsip/include/amsip/am_version.h; sourceTree = "<group>"; };
+		707950F614350A1F006F3E1D /* am_video_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_video_codec.h; path = ../../../../amsip/amsip/include/amsip/am_video_codec.h; sourceTree = "<group>"; };
+		7079510714350A63006F3E1D /* am_audio_module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_audio_module.c; path = ../../../../amsip/amsip/src/am_audio_module.c; sourceTree = "<group>"; };
+		7079510814350A63006F3E1D /* am_call.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_call.c; path = ../../../../amsip/amsip/src/am_call.c; sourceTree = "<group>"; };
+		7079510914350A63006F3E1D /* am_calls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_calls.c; path = ../../../../amsip/amsip/src/am_calls.c; sourceTree = "<group>"; };
+		7079510A14350A63006F3E1D /* am_codec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_codec.c; path = ../../../../amsip/amsip/src/am_codec.c; sourceTree = "<group>"; };
+		7079510B14350A63006F3E1D /* am_event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_event.c; path = ../../../../amsip/amsip/src/am_event.c; sourceTree = "<group>"; };
+		7079510C14350A63006F3E1D /* am_filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_filter.c; path = ../../../../amsip/amsip/src/am_filter.c; sourceTree = "<group>"; };
+		7079510D14350A63006F3E1D /* am_message.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_message.c; path = ../../../../amsip/amsip/src/am_message.c; sourceTree = "<group>"; };
+		7079510E14350A63006F3E1D /* am_ms2_text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_ms2_text.c; path = ../../../../amsip/amsip/src/am_ms2_text.c; sourceTree = "<group>"; };
+		7079510F14350A63006F3E1D /* am_ms2_udpftp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_ms2_udpftp.c; path = ../../../../amsip/amsip/src/am_ms2_udpftp.c; sourceTree = "<group>"; };
+		7079511014350A63006F3E1D /* am_ms2_win32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_ms2_win32.c; path = ../../../../amsip/amsip/src/am_ms2_win32.c; sourceTree = "<group>"; };
+		7079511114350A63006F3E1D /* am_network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_network.c; path = ../../../../amsip/amsip/src/am_network.c; sourceTree = "<group>"; };
+		7079511214350A63006F3E1D /* am_options.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_options.c; path = ../../../../amsip/amsip/src/am_options.c; sourceTree = "<group>"; };
+		7079511314350A63006F3E1D /* am_player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_player.c; path = ../../../../amsip/amsip/src/am_player.c; sourceTree = "<group>"; };
+		7079511414350A63006F3E1D /* am_publish.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_publish.c; path = ../../../../amsip/amsip/src/am_publish.c; sourceTree = "<group>"; };
+		7079511514350A63006F3E1D /* am_register.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_register.c; path = ../../../../amsip/amsip/src/am_register.c; sourceTree = "<group>"; };
+		7079511614350A63006F3E1D /* am_service.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_service.c; path = ../../../../amsip/amsip/src/am_service.c; sourceTree = "<group>"; };
+		7079511714350A63006F3E1D /* am_subscribe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_subscribe.c; path = ../../../../amsip/amsip/src/am_subscribe.c; sourceTree = "<group>"; };
+		7079511814350A63006F3E1D /* am_text_codec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_text_codec.c; path = ../../../../amsip/amsip/src/am_text_codec.c; sourceTree = "<group>"; };
+		7079511914350A63006F3E1D /* am_text_start.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_text_start.c; path = ../../../../amsip/amsip/src/am_text_start.c; sourceTree = "<group>"; };
+		7079511A14350A63006F3E1D /* am_udpftp_codec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_udpftp_codec.c; path = ../../../../amsip/amsip/src/am_udpftp_codec.c; sourceTree = "<group>"; };
+		7079511B14350A63006F3E1D /* am_udpftp_start.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_udpftp_start.c; path = ../../../../amsip/amsip/src/am_udpftp_start.c; sourceTree = "<group>"; };
+		7079511C14350A63006F3E1D /* am_udpftp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = am_udpftp.c; path = ../../../../amsip/amsip/src/am_udpftp.c; sourceTree = "<group>"; };
+		7079511D14350A63006F3E1D /* csharp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = csharp.c; path = ../../../../amsip/amsip/src/csharp.c; sourceTree = "<group>"; };
+		7079511E14350A63006F3E1D /* sdptools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sdptools.c; path = ../../../../amsip/amsip/src/sdptools.c; sourceTree = "<group>"; };
+		7079511F14350A63006F3E1D /* am_calls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_calls.h; path = ../../../../amsip/amsip/src/am_calls.h; sourceTree = "<group>"; };
+		7079512014350A63006F3E1D /* am_sound_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_sound_common.h; path = ../../../../amsip/amsip/src/am_sound_common.h; sourceTree = "<group>"; };
+		7079512114350A63006F3E1D /* am_text_start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_text_start.h; path = ../../../../amsip/amsip/src/am_text_start.h; sourceTree = "<group>"; };
+		7079512214350A63006F3E1D /* am_udpftp_start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = am_udpftp_start.h; path = ../../../../amsip/amsip/src/am_udpftp_start.h; sourceTree = "<group>"; };
+		7079512314350A63006F3E1D /* sdptools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sdptools.h; path = ../../../../amsip/amsip/src/sdptools.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70795056143506EE006F3E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7079505D143506EE006F3E1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7079504E143506EE006F3E1D = {
+			isa = PBXGroup;
+			children = (
+				7079505E143506EE006F3E1D /* amsip-audio */,
+				7079505B143506EE006F3E1D /* Frameworks */,
+				7079505A143506EE006F3E1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7079505A143506EE006F3E1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70795059143506EE006F3E1D /* libamsip-audio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7079505B143506EE006F3E1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7079505C143506EE006F3E1D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7079505E143506EE006F3E1D /* amsip-audio */ = {
+			isa = PBXGroup;
+			children = (
+				707950771435083C006F3E1D /* g729 */,
+				707950761435083A006F3E1D /* amsip */,
+				7079505F143506EE006F3E1D /* Supporting Files */,
+			);
+			path = "amsip-audio";
+			sourceTree = "<group>";
+		};
+		7079505F143506EE006F3E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70795060143506EE006F3E1D /* amsip-audio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		707950761435083A006F3E1D /* amsip */ = {
+			isa = PBXGroup;
+			children = (
+				707950891435088B006F3E1D /* include */,
+				7079508814350888006F3E1D /* src */,
+			);
+			name = amsip;
+			sourceTree = "<group>";
+		};
+		707950771435083C006F3E1D /* g729 */ = {
+			isa = PBXGroup;
+			children = (
+				7079508B143509FF006F3E1D /* acelp_co.c */,
+				7079508C143509FF006F3E1D /* basic_op.c */,
+				7079508D143509FF006F3E1D /* bits.c */,
+				7079508E143509FF006F3E1D /* calcexc.c */,
+				7079508F143509FF006F3E1D /* cod_ld8k.c */,
+				70795090143509FF006F3E1D /* de_acelp.c */,
+				70795091143509FF006F3E1D /* dec_gain.c */,
+				70795092143509FF006F3E1D /* dec_lag3.c */,
+				70795093143509FF006F3E1D /* dec_ld8k.c */,
+				70795094143509FF006F3E1D /* dec_sid.c */,
+				70795095143509FF006F3E1D /* dspfunc.c */,
+				70795096143509FF006F3E1D /* dtx.c */,
+				70795097143509FF006F3E1D /* filter.c */,
+				70795098143509FF006F3E1D /* gainpred.c */,
+				70795099143509FF006F3E1D /* lpc.c */,
+				7079509A143509FF006F3E1D /* lpcfunc.c */,
+				7079509B143509FF006F3E1D /* lspdec.c */,
+				7079509C143509FF006F3E1D /* lspgetq.c */,
+				7079509D143509FF006F3E1D /* msitug729.c */,
+				7079509E143509FF006F3E1D /* oper_32b.c */,
+				7079509F143509FF006F3E1D /* p_parity.c */,
+				707950A0143509FF006F3E1D /* pitch.c */,
+				707950A1143509FF006F3E1D /* post_pro.c */,
+				707950A2143509FF006F3E1D /* pre_proc.c */,
+				707950A3143509FF006F3E1D /* pred_lt3.c */,
+				707950A4143509FF006F3E1D /* pst.c */,
+				707950A5143509FF006F3E1D /* pwf.c */,
+				707950A6143509FF006F3E1D /* qsidgain.c */,
+				707950A7143509FF006F3E1D /* qsidlsf.c */,
+				707950A8143509FF006F3E1D /* qua_gain.c */,
+				707950A9143509FF006F3E1D /* qua_lsp.c */,
+				707950AA143509FF006F3E1D /* tab_dtx.c */,
+				707950AB143509FF006F3E1D /* tab_ld8k.c */,
+				707950AC143509FF006F3E1D /* taming.c */,
+				707950AD143509FF006F3E1D /* util.c */,
+				707950AE143509FF006F3E1D /* vad.c */,
+				707950AF143509FF006F3E1D /* basic_op.h */,
+				707950B0143509FF006F3E1D /* dtx.h */,
+				707950B1143509FF006F3E1D /* ld8k.h */,
+				707950B2143509FF006F3E1D /* octet.h */,
+				707950B3143509FF006F3E1D /* oper_32b.h */,
+				707950B4143509FF006F3E1D /* sid.h */,
+				707950B5143509FF006F3E1D /* tab_dtx.h */,
+				707950B6143509FF006F3E1D /* tab_ld8k.h */,
+				707950B7143509FF006F3E1D /* typedef.h */,
+				707950B8143509FF006F3E1D /* vad.h */,
+			);
+			name = g729;
+			sourceTree = "<group>";
+		};
+		7079508814350888006F3E1D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7079510714350A63006F3E1D /* am_audio_module.c */,
+				7079510814350A63006F3E1D /* am_call.c */,
+				7079510914350A63006F3E1D /* am_calls.c */,
+				7079510A14350A63006F3E1D /* am_codec.c */,
+				7079510B14350A63006F3E1D /* am_event.c */,
+				7079510C14350A63006F3E1D /* am_filter.c */,
+				7079510D14350A63006F3E1D /* am_message.c */,
+				7079510E14350A63006F3E1D /* am_ms2_text.c */,
+				7079510F14350A63006F3E1D /* am_ms2_udpftp.c */,
+				7079511014350A63006F3E1D /* am_ms2_win32.c */,
+				7079511114350A63006F3E1D /* am_network.c */,
+				7079511214350A63006F3E1D /* am_options.c */,
+				7079511314350A63006F3E1D /* am_player.c */,
+				7079511414350A63006F3E1D /* am_publish.c */,
+				7079511514350A63006F3E1D /* am_register.c */,
+				7079511614350A63006F3E1D /* am_service.c */,
+				7079511714350A63006F3E1D /* am_subscribe.c */,
+				7079511814350A63006F3E1D /* am_text_codec.c */,
+				7079511914350A63006F3E1D /* am_text_start.c */,
+				7079511A14350A63006F3E1D /* am_udpftp_codec.c */,
+				7079511B14350A63006F3E1D /* am_udpftp_start.c */,
+				7079511C14350A63006F3E1D /* am_udpftp.c */,
+				7079511D14350A63006F3E1D /* csharp.c */,
+				7079511E14350A63006F3E1D /* sdptools.c */,
+				7079511F14350A63006F3E1D /* am_calls.h */,
+				7079512014350A63006F3E1D /* am_sound_common.h */,
+				7079512114350A63006F3E1D /* am_text_start.h */,
+				7079512214350A63006F3E1D /* am_udpftp_start.h */,
+				7079512314350A63006F3E1D /* sdptools.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		707950891435088B006F3E1D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				707950E714350A1F006F3E1D /* am_call.h */,
+				707950E814350A1F006F3E1D /* am_codec.h */,
+				707950E914350A1F006F3E1D /* am_event.h */,
+				707950EA14350A1F006F3E1D /* am_filter.h */,
+				707950EB14350A1F006F3E1D /* am_message.h */,
+				707950EC14350A1F006F3E1D /* am_network.h */,
+				707950ED14350A1F006F3E1D /* am_options.h */,
+				707950EE14350A1F006F3E1D /* am_player.h */,
+				707950EF14350A1F006F3E1D /* am_publish.h */,
+				707950F014350A1F006F3E1D /* am_register.h */,
+				707950F114350A1F006F3E1D /* am_service.h */,
+				707950F214350A1F006F3E1D /* am_subscribe.h */,
+				707950F314350A1F006F3E1D /* am_text_codec.h */,
+				707950F414350A1F006F3E1D /* am_udpftp_codec.h */,
+				707950F514350A1F006F3E1D /* am_version.h */,
+				707950F614350A1F006F3E1D /* am_video_codec.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70795057143506EE006F3E1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707950DD143509FF006F3E1D /* basic_op.h in Headers */,
+				707950DE143509FF006F3E1D /* dtx.h in Headers */,
+				707950DF143509FF006F3E1D /* ld8k.h in Headers */,
+				707950E0143509FF006F3E1D /* octet.h in Headers */,
+				707950E1143509FF006F3E1D /* oper_32b.h in Headers */,
+				707950E2143509FF006F3E1D /* sid.h in Headers */,
+				707950E3143509FF006F3E1D /* tab_dtx.h in Headers */,
+				707950E4143509FF006F3E1D /* tab_ld8k.h in Headers */,
+				707950E5143509FF006F3E1D /* typedef.h in Headers */,
+				707950E6143509FF006F3E1D /* vad.h in Headers */,
+				707950F714350A1F006F3E1D /* am_call.h in Headers */,
+				707950F814350A1F006F3E1D /* am_codec.h in Headers */,
+				707950F914350A1F006F3E1D /* am_event.h in Headers */,
+				707950FA14350A1F006F3E1D /* am_filter.h in Headers */,
+				707950FB14350A1F006F3E1D /* am_message.h in Headers */,
+				707950FC14350A1F006F3E1D /* am_network.h in Headers */,
+				707950FD14350A1F006F3E1D /* am_options.h in Headers */,
+				707950FE14350A1F006F3E1D /* am_player.h in Headers */,
+				707950FF14350A1F006F3E1D /* am_publish.h in Headers */,
+				7079510014350A1F006F3E1D /* am_register.h in Headers */,
+				7079510114350A1F006F3E1D /* am_service.h in Headers */,
+				7079510214350A1F006F3E1D /* am_subscribe.h in Headers */,
+				7079510314350A1F006F3E1D /* am_text_codec.h in Headers */,
+				7079510414350A1F006F3E1D /* am_udpftp_codec.h in Headers */,
+				7079510514350A1F006F3E1D /* am_version.h in Headers */,
+				7079510614350A1F006F3E1D /* am_video_codec.h in Headers */,
+				7079513C14350A63006F3E1D /* am_calls.h in Headers */,
+				7079513D14350A63006F3E1D /* am_sound_common.h in Headers */,
+				7079513E14350A63006F3E1D /* am_text_start.h in Headers */,
+				7079513F14350A63006F3E1D /* am_udpftp_start.h in Headers */,
+				7079514014350A63006F3E1D /* sdptools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70795058143506EE006F3E1D /* amsip-audio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70795066143506EE006F3E1D /* Build configuration list for PBXNativeTarget "amsip-audio" */;
+			buildPhases = (
+				70795055143506EE006F3E1D /* Sources */,
+				70795056143506EE006F3E1D /* Frameworks */,
+				70795057143506EE006F3E1D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "amsip-audio";
+			productName = "amsip-audio";
+			productReference = 70795059143506EE006F3E1D /* libamsip-audio.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70795050143506EE006F3E1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = antisip;
+			};
+			buildConfigurationList = 70795053143506EE006F3E1D /* Build configuration list for PBXProject "amsip-audio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7079504E143506EE006F3E1D;
+			productRefGroup = 7079505A143506EE006F3E1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70795058143506EE006F3E1D /* amsip-audio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70795055143506EE006F3E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707950B9143509FF006F3E1D /* acelp_co.c in Sources */,
+				707950BA143509FF006F3E1D /* basic_op.c in Sources */,
+				707950BB143509FF006F3E1D /* bits.c in Sources */,
+				707950BC143509FF006F3E1D /* calcexc.c in Sources */,
+				707950BD143509FF006F3E1D /* cod_ld8k.c in Sources */,
+				707950BE143509FF006F3E1D /* de_acelp.c in Sources */,
+				707950BF143509FF006F3E1D /* dec_gain.c in Sources */,
+				707950C0143509FF006F3E1D /* dec_lag3.c in Sources */,
+				707950C1143509FF006F3E1D /* dec_ld8k.c in Sources */,
+				707950C2143509FF006F3E1D /* dec_sid.c in Sources */,
+				707950C3143509FF006F3E1D /* dspfunc.c in Sources */,
+				707950C4143509FF006F3E1D /* dtx.c in Sources */,
+				707950C5143509FF006F3E1D /* filter.c in Sources */,
+				707950C6143509FF006F3E1D /* gainpred.c in Sources */,
+				707950C7143509FF006F3E1D /* lpc.c in Sources */,
+				707950C8143509FF006F3E1D /* lpcfunc.c in Sources */,
+				707950C9143509FF006F3E1D /* lspdec.c in Sources */,
+				707950CA143509FF006F3E1D /* lspgetq.c in Sources */,
+				707950CB143509FF006F3E1D /* msitug729.c in Sources */,
+				707950CC143509FF006F3E1D /* oper_32b.c in Sources */,
+				707950CD143509FF006F3E1D /* p_parity.c in Sources */,
+				707950CE143509FF006F3E1D /* pitch.c in Sources */,
+				707950CF143509FF006F3E1D /* post_pro.c in Sources */,
+				707950D0143509FF006F3E1D /* pre_proc.c in Sources */,
+				707950D1143509FF006F3E1D /* pred_lt3.c in Sources */,
+				707950D2143509FF006F3E1D /* pst.c in Sources */,
+				707950D3143509FF006F3E1D /* pwf.c in Sources */,
+				707950D4143509FF006F3E1D /* qsidgain.c in Sources */,
+				707950D5143509FF006F3E1D /* qsidlsf.c in Sources */,
+				707950D6143509FF006F3E1D /* qua_gain.c in Sources */,
+				707950D7143509FF006F3E1D /* qua_lsp.c in Sources */,
+				707950D8143509FF006F3E1D /* tab_dtx.c in Sources */,
+				707950D9143509FF006F3E1D /* tab_ld8k.c in Sources */,
+				707950DA143509FF006F3E1D /* taming.c in Sources */,
+				707950DB143509FF006F3E1D /* util.c in Sources */,
+				707950DC143509FF006F3E1D /* vad.c in Sources */,
+				7079512414350A63006F3E1D /* am_audio_module.c in Sources */,
+				7079512514350A63006F3E1D /* am_call.c in Sources */,
+				7079512614350A63006F3E1D /* am_calls.c in Sources */,
+				7079512714350A63006F3E1D /* am_codec.c in Sources */,
+				7079512814350A63006F3E1D /* am_event.c in Sources */,
+				7079512914350A63006F3E1D /* am_filter.c in Sources */,
+				7079512A14350A63006F3E1D /* am_message.c in Sources */,
+				7079512B14350A63006F3E1D /* am_ms2_text.c in Sources */,
+				7079512C14350A63006F3E1D /* am_ms2_udpftp.c in Sources */,
+				7079512D14350A63006F3E1D /* am_ms2_win32.c in Sources */,
+				7079512E14350A63006F3E1D /* am_network.c in Sources */,
+				7079512F14350A63006F3E1D /* am_options.c in Sources */,
+				7079513014350A63006F3E1D /* am_player.c in Sources */,
+				7079513114350A63006F3E1D /* am_publish.c in Sources */,
+				7079513214350A63006F3E1D /* am_register.c in Sources */,
+				7079513314350A63006F3E1D /* am_service.c in Sources */,
+				7079513414350A63006F3E1D /* am_subscribe.c in Sources */,
+				7079513514350A63006F3E1D /* am_text_codec.c in Sources */,
+				7079513614350A63006F3E1D /* am_text_start.c in Sources */,
+				7079513714350A63006F3E1D /* am_udpftp_codec.c in Sources */,
+				7079513814350A63006F3E1D /* am_udpftp_start.c in Sources */,
+				7079513914350A63006F3E1D /* am_udpftp.c in Sources */,
+				7079513A14350A63006F3E1D /* csharp.c in Sources */,
+				7079513B14350A63006F3E1D /* sdptools.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70795064143506EE006F3E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					HAVE_SRTP,
+					HAVE_CARES_H,
+					"MAX_NUMBER_OF_CALLS=3",
+					HAVE_CONFIG_H,
+					ENABLE_TRACE,
+					OSIP_MT,
+					HAVE_OPENSSL_SSL_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../,
+					../mediastreamer2,
+					../../../amsip/amsip/ppl/unix,
+					../../../amsip/amsip/include,
+					../../../amsip/osip/include,
+					../../../amsip/exosip/include,
+					../../../amsip/oRTP/include,
+					../../../amsip/mediastreamer2/include,
+					../../../amsip/srtp/include,
+					../../../amsip/srtp/crypto/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		70795065143506EE006F3E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HAVE_SRTP,
+					HAVE_CARES_H,
+					"MAX_NUMBER_OF_CALLS=3",
+					HAVE_CONFIG_H,
+					OSIP_MT,
+					HAVE_OPENSSL_SSL_H,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../,
+					../mediastreamer2,
+					../../../amsip/amsip/ppl/unix,
+					../../../amsip/amsip/include,
+					../../../amsip/osip/include,
+					../../../amsip/exosip/include,
+					../../../amsip/oRTP/include,
+					../../../amsip/mediastreamer2/include,
+					../../../amsip/srtp/include,
+					../../../amsip/srtp/crypto/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70795067143506EE006F3E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/amsip_audio.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "amsip-audio/amsip-audio-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		70795068143506EE006F3E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/amsip_audio.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "amsip-audio/amsip-audio-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70795053143506EE006F3E1D /* Build configuration list for PBXProject "amsip-audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70795064143506EE006F3E1D /* Debug */,
+				70795065143506EE006F3E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70795066143506EE006F3E1D /* Build configuration list for PBXNativeTarget "amsip-audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70795067143506EE006F3E1D /* Debug */,
+				70795068143506EE006F3E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70795050143506EE006F3E1D /* Project object */;
+}

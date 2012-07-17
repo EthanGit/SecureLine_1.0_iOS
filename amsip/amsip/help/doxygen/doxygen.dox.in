@@ -1,0 +1,127 @@
+/**
+ * @mainpage
+ * Project Website: http://www.antisip.com
+ * <p>3pp download: http://www.antisip.com/as/download/3pp</p>
+ * <p>3pp download alternative: http://www.antisip.com/download/3pp</p>
+ * 
+ * @verbinclude README-COPYING
+ *
+ */
+
+/** 
+ * @defgroup libamsip The antisip SIP softphone library
+ * @brief libamsip Version @AMSIP_VERSION@
+ *
+ * @see http://www.antisip.com
+ *
+ * @section what_is_it What is amsip
+ *
+ * libamsip implements the Session Initiation Protocol (SIP -rfc3261-)
+ *
+ * libamsip is owned by ANTISIP SARL (COPYING). PLEASE CONTACT
+ * <aymeric@osip.org> FOR COMMERCIAL LICENSE.
+ * 
+ * @section what_is_relation_with_osip What is the relation between osip, eXosip2 and amsip 
+ * 
+ * The GNU osip stack is the first step needed to implement SIP
+ * applications. As a low layer stack, there is no limitation in
+ * the way to use it, but the very large API makes it rather complex
+ * and not suitable for beginners.
+ *
+ * The eXtended eXosip library is based on osip and implements a lot
+ * more SIP stuff so you can quickly build compliant SIP applications.
+ * The API is enough flexible to allow you to control and complete SIP
+ * messages. Thus, it keeps the stack extensible.
+ *
+ * While osip can be used for any SIP applications, eXosip2 only
+ * provide APIs to control endpoints.
+ * 
+ * amsip is a COMMERCIAL LIBRARY which provide a complete and simple
+ * API for softphone. It adds to osip/eXosip RTP support, codec support
+ * (speex/ilbc/g711a/g711u/...), and audio support on linux and windows.
+ *
+ * @section what_is_sip What is SIP
+ *
+ * SIP is an IP telephony protocol made by the IETF.
+ * It is an effort to create a simple (telephony is never
+ * simple) and powerfull protocol for next generation
+ * telephony systems.
+ *
+ * @section what_features SIP features
+ *
+ * SIP is not just about telephony. It's much more
+ * that what you expect from phones. SIP means mobility,
+ * video, textual call informations, file exchange,
+ * instant messaging, presence support and much more!
+ *
+ * @section what_freesoftware eXosip2 is free software
+ *
+ * As eXosip2 is GPL, you MUST choose to release your
+ * SIP applications based on eXosip2 under the GPL license.
+ *
+ * For any use of eXosip2 beyond the rights granted to you by the
+ * GPL license, please contact my company at <aymeric@osip.org>.
+ * 
+ * With oSIP (which is LGPL), you still have the choice to implement
+ * propriatory application and link with oSIP. For the
+ * benefit of the community (and for your own benefit),
+ * please consider implementing your application in GPL.
+ *
+ * Still with osip, you have to respect the license terms.
+ * Mainly, users of your software must be able to fix bugs
+ * in osip themselves. (they must have the source code,
+ * be able to compile it and link your product with the new
+ * version.)
+ *
+ * @section what_thanks Thanks
+ *
+ * Thanks to all the contributors and to all bug reporters.
+ * Enjoy osip!
+ *
+ */
+
+/**
+ * @defgroup amsip_setup General purpose API.
+ * @brief general purpose API in libamsip-@VERSION@.
+ *
+ * XXX
+ */
+
+/**
+ * @defgroup amsip_message SIP messages and call control API
+ * @brief The SIP messages and call control API.
+ *
+ * XXX
+ */
+
+/**
+ * @defgroup amsip_internal internal API for amsip (DO NOT USE)
+ * @brief The SIP internal API for amsip.
+ *
+ * XXX
+ */
+
+/** 
+ * @page libamsip_readme README 
+ * @verbinclude README
+ */
+
+/** 
+ * @page libamsip_install INSTALL 
+ * @verbinclude INSTALL
+ */
+
+/** 
+ * @page libamsip_license COPYING 
+ * @verbinclude COPYING
+ */
+
+/** 
+ * @page libamsip_license ChangeLog 
+ * @verbinclude ChangeLog
+ */
+
+/**
+ * @page libamsip_faq FAQ
+ * @htmlinclude FAQ.html
+ */

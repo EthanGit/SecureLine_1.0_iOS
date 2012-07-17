@@ -1,0 +1,140 @@
+diff --git a/amsip-ios.xcworkspace/contents.xcworkspacedata b/amsip-ios.xcworkspace/contents.xcworkspacedata
+index ce05847..705ce08 100644
+--- a/amsip-ios.xcworkspace/contents.xcworkspacedata
++++ b/amsip-ios.xcworkspace/contents.xcworkspacedata
+@@ -2,6 +2,9 @@
+ <Workspace
+    version = "1.0">
+    <FileRef
++      location = "group:zrtp/zrtp.xcodeproj">
++   </FileRef>
++   <FileRef
+       location = "group:vbyantisip/vbyantisip.xcodeproj">
+    </FileRef>
+    <FileRef
+diff --git a/mediastreamer2/mediastreamer2.xcodeproj/project.pbxproj b/mediastreamer2/mediastreamer2.xcodeproj/project.pbxproj
+index 60baf3d..69d8172 100644
+--- a/mediastreamer2/mediastreamer2.xcodeproj/project.pbxproj
++++ b/mediastreamer2/mediastreamer2.xcodeproj/project.pbxproj
+@@ -290,6 +290,13 @@
+ 			remoteGlobalIDString = 70EBBB22142109A900051914;
+ 			remoteInfo = srtp;
+ 		};
++		70AFAAF21546FD7A00E6E530 /* PBXContainerItemProxy */ = {
++			isa = PBXContainerItemProxy;
++			containerPortal = 70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */;
++			proxyType = 2;
++			remoteGlobalIDString = 7029B3EA152C99920010837C;
++			remoteInfo = zrtp;
++		};
+ /* End PBXContainerItemProxy section */
+ 
+ /* Begin PBXFileReference section */
+@@ -327,6 +334,7 @@
+ 		70860A2514C5D835007ACD33 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_common.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/video_common.h; sourceTree = "<group>"; };
+ 		708C4981143B2D37009A26CE /* turn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = turn.c; path = ../../../../amsip/oRTP/src/turn.c; sourceTree = "<group>"; };
+ 		708C4984143B2D45009A26CE /* turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = turn.h; path = ../../../../amsip/oRTP/include/ortp/turn.h; sourceTree = "<group>"; };
++		70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zrtp.xcodeproj; path = ../zrtp/zrtp.xcodeproj; sourceTree = "<group>"; };
+ 		70BB8E4714F2DFE900D14E19 /* vp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vp8.c; path = ../../../../amsip/plugins/msvp8/src/vp8.c; sourceTree = "<group>"; };
+ 		70BB8E4D14F452F200D14E19 /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert_from.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/convert_from.h; sourceTree = "<group>"; };
+ 		70BB8E4E14F452F200D14E19 /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_ptr.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/scoped_ptr.h; sourceTree = "<group>"; };
+@@ -667,6 +675,14 @@
+ 			name = source;
+ 			sourceTree = "<group>";
+ 		};
++		70AFAAEF1546FD7A00E6E530 /* Products */ = {
++			isa = PBXGroup;
++			children = (
++				70AFAAF31546FD7A00E6E530 /* libzrtp.a */,
++			);
++			name = Products;
++			sourceTree = "<group>";
++		};
+ 		70BB8E4514F2DFBF00D14E19 /* msvp8 */ = {
+ 			isa = PBXGroup;
+ 			children = (
+@@ -806,6 +822,7 @@
+ 		70EBB7FE1420EC6E00051914 = {
+ 			isa = PBXGroup;
+ 			children = (
++				70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */,
+ 				702E93251508E9210057E727 /* srtp.xcodeproj */,
+ 				702E931F1508E91A0057E727 /* speex.xcodeproj */,
+ 				702E93191508E9140057E727 /* gsm.xcodeproj */,
+@@ -1220,6 +1237,10 @@
+ 					ProductGroup = 702E93261508E9210057E727 /* Products */;
+ 					ProjectRef = 702E93251508E9210057E727 /* srtp.xcodeproj */;
+ 				},
++				{
++					ProductGroup = 70AFAAEF1546FD7A00E6E530 /* Products */;
++					ProjectRef = 70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */;
++				},
+ 			);
+ 			projectRoot = "";
+ 			targets = (
+@@ -1250,6 +1271,13 @@
+ 			remoteRef = 702E93291508E9210057E727 /* PBXContainerItemProxy */;
+ 			sourceTree = BUILT_PRODUCTS_DIR;
+ 		};
++		70AFAAF31546FD7A00E6E530 /* libzrtp.a */ = {
++			isa = PBXReferenceProxy;
++			fileType = archive.ar;
++			path = libzrtp.a;
++			remoteRef = 70AFAAF21546FD7A00E6E530 /* PBXContainerItemProxy */;
++			sourceTree = BUILT_PRODUCTS_DIR;
++		};
+ /* End PBXReferenceProxy section */
+ 
+ /* Begin PBXSourcesBuildPhase section */
+@@ -1434,6 +1462,7 @@
+ 				GCC_OPTIMIZATION_LEVEL = 0;
+ 				GCC_PREPROCESSOR_DEFINITIONS = (
+ 					"DEBUG=1",
++					ENABLE_ZRTP,
+ 					HAVE_JPEG,
+ 					HAVE_SRTP,
+ 					ENABLE_VIDEO,
+@@ -1490,6 +1519,7 @@
+ 				GCC_C_LANGUAGE_STANDARD = gnu99;
+ 				GCC_OPTIMIZATION_LEVEL = 3;
+ 				GCC_PREPROCESSOR_DEFINITIONS = (
++					ENABLE_ZRTP,
+ 					ORTP_NOMESSAGE_MODE,
+ 					HAVE_JPEG,
+ 					HAVE_SRTP,
+diff --git a/vbyantisip/vbyantisip.xcodeproj/project.pbxproj b/vbyantisip/vbyantisip.xcodeproj/project.pbxproj
+index b4e07f8..f9d64b3 100644
+--- a/vbyantisip/vbyantisip.xcodeproj/project.pbxproj
++++ b/vbyantisip/vbyantisip.xcodeproj/project.pbxproj
+@@ -33,6 +33,7 @@
+ 		70A2C3D815338E5E004ACABA /* loading_animation_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CC15338E5E004ACABA /* loading_animation_10.png */; };
+ 		70A2C3D915338E5E004ACABA /* loading_animation_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CD15338E5E004ACABA /* loading_animation_11.png */; };
+ 		70A2C3DA15338E5E004ACABA /* loading_animation_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A2C3CE15338E5E004ACABA /* loading_animation_12.png */; };
++		70AFAAE71546F46D00E6E530 /* libzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AFAAE61546F46D00E6E530 /* libzrtp.a */; };
+ 		70BB8E4A14F2E17900D14E19 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BB8E4914F2E17900D14E19 /* libvpx.a */; };
+ 		70C358D4149F7F65004A721A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C358D3149F7F65004A721A /* AssetsLibrary.framework */; };
+ 		70C36702152DF2C50096DCB8 /* Contacts.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70C36700152DF2C50096DCB8 /* Contacts.xib */; };
+@@ -150,6 +151,7 @@
+ 		70A2C3CC15338E5E004ACABA /* loading_animation_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_10.png; path = images/loading_animation_10.png; sourceTree = "<group>"; };
+ 		70A2C3CD15338E5E004ACABA /* loading_animation_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_11.png; path = images/loading_animation_11.png; sourceTree = "<group>"; };
+ 		70A2C3CE15338E5E004ACABA /* loading_animation_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_animation_12.png; path = images/loading_animation_12.png; sourceTree = "<group>"; };
++		70AFAAE61546F46D00E6E530 /* libzrtp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzrtp.a; path = "../../../../Library/Developer/Xcode/DerivedData/amsip-ios-duiiaqiodrqduxexlhvrmugimoaf/Build/Products/Debug-iphoneos/libzrtp.a"; sourceTree = "<group>"; };
+ 		70BB8E4914F2E17900D14E19 /* libvpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpx.a; path = ../external/libvpx.a; sourceTree = "<group>"; };
+ 		70C358D3149F7F65004A721A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+ 		70C36701152DF2C50096DCB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Contacts.xib; sourceTree = "<group>"; };
+@@ -256,6 +258,7 @@
+ 				702E93401508E9A40057E727 /* libcares.a in Frameworks */,
+ 				702E93411508E9A40057E727 /* libexosip2.a in Frameworks */,
+ 				702E93421508E9A40057E727 /* libgsm.a in Frameworks */,
++				70AFAAE71546F46D00E6E530 /* libzrtp.a in Frameworks */,
+ 				702E93431508E9A40057E727 /* libmediastreamer2.a in Frameworks */,
+ 				702E93441508E9A40057E727 /* libspeex.a in Frameworks */,
+ 				702E93451508E9A40057E727 /* libsrtp.a in Frameworks */,
+@@ -385,6 +388,7 @@
+ 				702E933A1508E9A30057E727 /* libexosip2.a */,
+ 				702E933B1508E9A30057E727 /* libgsm.a */,
+ 				702E933C1508E9A30057E727 /* libmediastreamer2.a */,
++				70AFAAE61546F46D00E6E530 /* libzrtp.a */,
+ 				702E933D1508E9A40057E727 /* libspeex.a */,
+ 				702E933E1508E9A40057E727 /* libsrtp.a */,
+ 				70D8DAD214FBE80A00AA3286 /* libstdc++.dylib */,

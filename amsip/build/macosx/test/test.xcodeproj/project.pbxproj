@@ -1,0 +1,273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70E0B79A14868F900098DE41 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B79914868F900098DE41 /* test.m */; };
+		70E0B7AF1486906F0098DE41 /* libamsip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7AC1486906F0098DE41 /* libamsip.dylib */; };
+		70E0B7B01486906F0098DE41 /* libmediastreamer2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7AD1486906F0098DE41 /* libmediastreamer2.dylib */; };
+		70E0B7B11486906F0098DE41 /* libortp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7AE1486906F0098DE41 /* libortp.dylib */; };
+		70E0B7B5148690EB0098DE41 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7B2148690EB0098DE41 /* libavcodec.dylib */; };
+		70E0B7B6148690EB0098DE41 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7B3148690EB0098DE41 /* libavutil.dylib */; };
+		70E0B7B7148690EB0098DE41 /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7B4148690EB0098DE41 /* libswscale.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70E0B78A14868F080098DE41 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		70E0B78C14868F080098DE41 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E0B79914868F900098DE41 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = SOURCE_ROOT; };
+		70E0B79B14868F9A0098DE41 /* test_account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test_account.h; path = ../../../amsip/src/test_account.h; sourceTree = "<group>"; };
+		70E0B7AC1486906F0098DE41 /* libamsip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libamsip.dylib; path = "../../../../../Library/Developer/Xcode/DerivedData/amsip-video-dcrcxiqatebrckdjbcysphbqytkk/Build/Products/Debug/libamsip.dylib"; sourceTree = "<group>"; };
+		70E0B7AD1486906F0098DE41 /* libmediastreamer2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmediastreamer2.dylib; path = "../../../../../Library/Developer/Xcode/DerivedData/amsip-video-dcrcxiqatebrckdjbcysphbqytkk/Build/Products/Debug/libmediastreamer2.dylib"; sourceTree = "<group>"; };
+		70E0B7AE1486906F0098DE41 /* libortp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libortp.dylib; path = "../../../../../Library/Developer/Xcode/DerivedData/amsip-video-dcrcxiqatebrckdjbcysphbqytkk/Build/Products/Debug/libortp.dylib"; sourceTree = "<group>"; };
+		70E0B7B2148690EB0098DE41 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../mediastreamer2/ffmpeg/libavcodec.dylib; sourceTree = "<group>"; };
+		70E0B7B3148690EB0098DE41 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../mediastreamer2/ffmpeg/libavutil.dylib; sourceTree = "<group>"; };
+		70E0B7B4148690EB0098DE41 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswscale.dylib; path = ../mediastreamer2/ffmpeg/libswscale.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70E0B78914868F080098DE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B7B5148690EB0098DE41 /* libavcodec.dylib in Frameworks */,
+				70E0B7B6148690EB0098DE41 /* libavutil.dylib in Frameworks */,
+				70E0B7B7148690EB0098DE41 /* libswscale.dylib in Frameworks */,
+				70E0B7AF1486906F0098DE41 /* libamsip.dylib in Frameworks */,
+				70E0B7B01486906F0098DE41 /* libmediastreamer2.dylib in Frameworks */,
+				70E0B7B11486906F0098DE41 /* libortp.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70E0B78114868F080098DE41 = {
+			isa = PBXGroup;
+			children = (
+				70E0B7B2148690EB0098DE41 /* libavcodec.dylib */,
+				70E0B7B3148690EB0098DE41 /* libavutil.dylib */,
+				70E0B7B4148690EB0098DE41 /* libswscale.dylib */,
+				70E0B7AC1486906F0098DE41 /* libamsip.dylib */,
+				70E0B7AD1486906F0098DE41 /* libmediastreamer2.dylib */,
+				70E0B7AE1486906F0098DE41 /* libortp.dylib */,
+				70E0B78F14868F080098DE41 /* test */,
+				70E0B78D14868F080098DE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70E0B78D14868F080098DE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B78C14868F080098DE41 /* test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70E0B78F14868F080098DE41 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B79914868F900098DE41 /* test.m */,
+				70E0B79B14868F9A0098DE41 /* test_account.h */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70E0B78B14868F080098DE41 /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E0B79614868F080098DE41 /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				70E0B78814868F080098DE41 /* Sources */,
+				70E0B78914868F080098DE41 /* Frameworks */,
+				70E0B78A14868F080098DE41 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test;
+			productName = test;
+			productReference = 70E0B78C14868F080098DE41 /* test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70E0B78314868F080098DE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 70E0B78614868F080098DE41 /* Build configuration list for PBXProject "test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70E0B78114868F080098DE41;
+			productRefGroup = 70E0B78D14868F080098DE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70E0B78B14868F080098DE41 /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70E0B78814868F080098DE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B79A14868F900098DE41 /* test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		70E0B79414868F080098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+					../../../amsip/include/,
+					../../../amsip/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70E0B79514868F080098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+					../../../amsip/include/,
+					../../../amsip/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70E0B79714868F080098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70E0B79814868F080098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70E0B78614868F080098DE41 /* Build configuration list for PBXProject "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B79414868F080098DE41 /* Debug */,
+				70E0B79514868F080098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E0B79614868F080098DE41 /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B79714868F080098DE41 /* Debug */,
+				70E0B79814868F080098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70E0B78314868F080098DE41 /* Project object */;
+}

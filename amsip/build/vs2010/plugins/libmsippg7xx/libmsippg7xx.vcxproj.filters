@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\formats.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\loadcodec.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\msipp.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\player.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\usccodec.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\util.c" />
+    <ClCompile Include="..\..\..\..\plugins\msippg7xx\src\wavfile.c" />
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\owng729.c">
+      <Filter>g729i</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\uscg729i.c">
+      <Filter>g729i</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\decg729.c">
+      <Filter>g729i</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\src\encg729.c">
+      <Filter>g729i</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadg723.c">
+      <Filter>vad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadg729i.c">
+      <Filter>vad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\vadg723.c">
+      <Filter>vad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\vadg729.c">
+      <Filter>vad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\src\uscvadamrwb.c">
+      <Filter>vad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\dtxgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\encgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\gain_util.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\tabgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\uscgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\utilgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\bitgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\src\decgsmamr.c">
+      <Filter>gsmamr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\encg722.c">
+      <Filter>g722.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\g722api.c">
+      <Filter>g722.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\owng722.c">
+      <Filter>g722.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\uscg722.c">
+      <Filter>g722.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\src\decg722.c">
+      <Filter>g722.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\encamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\ownamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\tabamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\uscamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\utilamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\decamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\src\dtxamrwb.c">
+      <Filter>amrwb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\src\aux_fnxs.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\src\aux_tbls.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\encg711.c">
+      <Filter>g711</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\plcg711.c">
+      <Filter>g711</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\uscg711.c">
+      <Filter>g711</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\src\decg711.c">
+      <Filter>g711</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\encg723.c">
+      <Filter>g723.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\owng723.c">
+      <Filter>g723.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\uscg723.c">
+      <Filter>g723.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\src\decg723.c">
+      <Filter>g723.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\common_rtp_payloads.cpp">
+      <Filter>speech_rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\dummy_rtp_payload.cpp">
+      <Filter>speech_rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\rtp_amr_payload.cpp">
+      <Filter>speech_rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\rtp_amrwbe_payload.cpp">
+      <Filter>speech_rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\src\umc_rtp_packet.cpp">
+      <Filter>speech_rtp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_media_data.cpp">
+      <Filter>umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_default_memory_allocator.cpp">
+      <Filter>umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_speech_codec.cpp">
+      <Filter>umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_speech_data.cpp">
+      <Filter>umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\src\umc_base_codec.cpp">
+      <Filter>umc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_file_win.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_mutex_win32.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_shared_object_win32.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_sys_info_win32.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_time_win32.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_debug_win32.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\src\vm_file.c">
+      <Filter>vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\owng7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\tabg7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\uscg7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilfec.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilg7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\utilsid.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\decg7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729.1\src\encg7291.c">
+      <Filter>g729.1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\formats.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\loadcodec.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\usccodec.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\uscreg.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\util.h" />
+    <ClInclude Include="..\..\..\..\plugins\msippg7xx\src\wavfile.h" />
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g729i\include\g729api.h">
+      <Filter>g729i</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include\vadg729.h">
+      <Filter>vad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\vad\include\vadg723.h">
+      <Filter>vad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamr_types.h">
+      <Filter>gsmamr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamrapi.h">
+      <Filter>gsmamr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\owngsmamr.h">
+      <Filter>gsmamr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\gsmamr\include\gsmamr.h">
+      <Filter>gsmamr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\g722api.h">
+      <Filter>g722.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\owng722.h">
+      <Filter>g722.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g722.1\include\g722.h">
+      <Filter>g722.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\amrwbapi.h">
+      <Filter>amrwb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\ownamrwb.h">
+      <Filter>amrwb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\amrwb\include\amrwb_types.h">
+      <Filter>amrwb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\common\include\aux_fnxs.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include\owng711.h">
+      <Filter>g711</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g711\include\g711api.h">
+      <Filter>g711</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include\g723ipp.h">
+      <Filter>g723.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech\g723.1\include\g723api.h">
+      <Filter>g723.1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\common_rtp_payloads.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\dummy_rtp_payload.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtp_amr_payload.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtp_amrwbe_payload.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\rtppayload.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\umc_rtp_packet.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\codec\speech_rtp\include\base_rtp_cnvrt.h">
+      <Filter>speech_rtp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_structures.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_usc.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_usc_base.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_audio_codec.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_base_codec.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_default_memory_allocator.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_dynamic_cast.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_linked_list.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_media_data.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_memory_allocator.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_speech_codec.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\umc\include\umc_speech_data.h">
+      <Filter>umc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_base.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_ec.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc_objects_decl.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\scratchmem.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\usc.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\usc\include\uscreg.h">
+      <Filter>usc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_shared_object.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_strings.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_sys_info.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_thread.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_time.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_types.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_debug.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_file.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\vm_mutex.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\sys\vm_file_win.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\plugins\ipp-samples-7.0.5.059\speech-codecs\core\vm\include\sys\vm_types_win32.h">
+      <Filter>vm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="g711">
+      <UniqueIdentifier>{ed08cd9c-bd37-4303-a6bb-d7074c86f3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="g729i">
+      <UniqueIdentifier>{94584243-7c30-4d96-b339-9bd56f475055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vad">
+      <UniqueIdentifier>{d8a455db-f4da-47a8-8de8-594fbf44979c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gsmamr">
+      <UniqueIdentifier>{ff999e44-e88b-476f-983a-df37590a0d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="g722.1">
+      <UniqueIdentifier>{a826fadf-ad92-4846-9f22-39048a85110a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amrwb">
+      <UniqueIdentifier>{36501d80-e213-4a02-b1e7-93b01991976b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{fe6efab8-6616-4d05-bc90-515703eaffad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="g723.1">
+      <UniqueIdentifier>{2e2deaee-ede2-4bc5-ae9c-07bf51113a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="speech_rtp">
+      <UniqueIdentifier>{bfda34e3-e3af-45d7-adba-65aa7eb270f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="umc">
+      <UniqueIdentifier>{62205c1a-7d65-494a-9fe8-d105e3d030d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usc">
+      <UniqueIdentifier>{e3c6fe5b-62af-49b9-8eec-de6939499ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vm">
+      <UniqueIdentifier>{a4fff426-3227-45a2-b9d6-27c6d89fd30e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="g729.1">
+      <UniqueIdentifier>{c28621ac-d88e-40bd-b533-86bedd27cbae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

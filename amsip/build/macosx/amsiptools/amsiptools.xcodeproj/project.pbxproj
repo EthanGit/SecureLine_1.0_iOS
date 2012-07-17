@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7022DDE4148F98A800A06116 /* hid_hooks.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDE3148F98A800A06116 /* hid_hooks.h */; };
+		7022DDF4148F98B100A06116 /* zmm_devices_osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDE5148F98B100A06116 /* zmm_devices_osx.c */; };
+		7022DDF5148F98B100A06116 /* microsoft_devices_osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDE6148F98B100A06116 /* microsoft_devices_osx.c */; };
+		7022DDF6148F98B100A06116 /* IOHIDElement_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDE7148F98B100A06116 /* IOHIDElement_.h */; };
+		7022DDF7148F98B100A06116 /* HID_Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDE8148F98B100A06116 /* HID_Utilities.c */; };
+		7022DDF8148F98B100A06116 /* IOHIDLib_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDE9148F98B100A06116 /* IOHIDLib_.h */; };
+		7022DDF9148F98B100A06116 /* IOHIDDevice_.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDEA148F98B100A06116 /* IOHIDDevice_.h */; };
+		7022DDFA148F98B100A06116 /* IOHIDElement_.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDEB148F98B100A06116 /* IOHIDElement_.c */; };
+		7022DDFB148F98B100A06116 /* HID_Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDEC148F98B100A06116 /* HID_Utilities.h */; };
+		7022DDFC148F98B100A06116 /* IOHIDDevice_.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDED148F98B100A06116 /* IOHIDDevice_.c */; };
+		7022DDFD148F98B100A06116 /* hid_hooks.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDEE148F98B100A06116 /* hid_hooks.c */; };
+		7022DDFE148F98B100A06116 /* hid_devices.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDEF148F98B100A06116 /* hid_devices.c */; };
+		7022DDFF148F98B100A06116 /* polycom_devices_osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDF0148F98B100A06116 /* polycom_devices_osx.c */; };
+		7022DE00148F98B100A06116 /* plantronics_devices_osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDF1148F98B100A06116 /* plantronics_devices_osx.c */; };
+		7022DE01148F98B100A06116 /* gnetcom_devices_osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 7022DDF2148F98B100A06116 /* gnetcom_devices_osx.c */; };
+		7022DE02148F98B100A06116 /* hid_devices.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022DDF3148F98B100A06116 /* hid_devices.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7022DDD4148F97C700A06116 /* libamsiptools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libamsiptools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7022DDE3148F98A800A06116 /* hid_hooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hid_hooks.h; path = ../../../amsiptools/include/amsiptools/hid_hooks.h; sourceTree = "<group>"; };
+		7022DDE5148F98B100A06116 /* zmm_devices_osx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zmm_devices_osx.c; path = ../../../amsiptools/src/zmm_devices_osx.c; sourceTree = "<group>"; };
+		7022DDE6148F98B100A06116 /* microsoft_devices_osx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = microsoft_devices_osx.c; path = ../../../amsiptools/src/microsoft_devices_osx.c; sourceTree = "<group>"; };
+		7022DDE7148F98B100A06116 /* IOHIDElement_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOHIDElement_.h; path = ../../../amsiptools/src/osx/IOHIDElement_.h; sourceTree = "<group>"; };
+		7022DDE8148F98B100A06116 /* HID_Utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HID_Utilities.c; path = ../../../amsiptools/src/osx/HID_Utilities.c; sourceTree = "<group>"; };
+		7022DDE9148F98B100A06116 /* IOHIDLib_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOHIDLib_.h; path = ../../../amsiptools/src/osx/IOHIDLib_.h; sourceTree = "<group>"; };
+		7022DDEA148F98B100A06116 /* IOHIDDevice_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOHIDDevice_.h; path = ../../../amsiptools/src/osx/IOHIDDevice_.h; sourceTree = "<group>"; };
+		7022DDEB148F98B100A06116 /* IOHIDElement_.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IOHIDElement_.c; path = ../../../amsiptools/src/osx/IOHIDElement_.c; sourceTree = "<group>"; };
+		7022DDEC148F98B100A06116 /* HID_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HID_Utilities.h; path = ../../../amsiptools/src/osx/HID_Utilities.h; sourceTree = "<group>"; };
+		7022DDED148F98B100A06116 /* IOHIDDevice_.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = IOHIDDevice_.c; path = ../../../amsiptools/src/osx/IOHIDDevice_.c; sourceTree = "<group>"; };
+		7022DDEE148F98B100A06116 /* hid_hooks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid_hooks.c; path = ../../../amsiptools/src/hid_hooks.c; sourceTree = "<group>"; };
+		7022DDEF148F98B100A06116 /* hid_devices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hid_devices.c; path = ../../../amsiptools/src/hid_devices.c; sourceTree = "<group>"; };
+		7022DDF0148F98B100A06116 /* polycom_devices_osx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = polycom_devices_osx.c; path = ../../../amsiptools/src/polycom_devices_osx.c; sourceTree = "<group>"; };
+		7022DDF1148F98B100A06116 /* plantronics_devices_osx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = plantronics_devices_osx.c; path = ../../../amsiptools/src/plantronics_devices_osx.c; sourceTree = "<group>"; };
+		7022DDF2148F98B100A06116 /* gnetcom_devices_osx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gnetcom_devices_osx.c; path = ../../../amsiptools/src/gnetcom_devices_osx.c; sourceTree = "<group>"; };
+		7022DDF3148F98B100A06116 /* hid_devices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hid_devices.h; path = ../../../amsiptools/src/hid_devices.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7022DDD1148F97C700A06116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7022DDC9148F97C700A06116 = {
+			isa = PBXGroup;
+			children = (
+				7022DDE0148F988600A06116 /* amsiptools */,
+				7022DDD5148F97C700A06116 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7022DDD5148F97C700A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DDD4148F97C700A06116 /* libamsiptools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DDE0148F988600A06116 /* amsiptools */ = {
+			isa = PBXGroup;
+			children = (
+				7022DDE2148F988E00A06116 /* src */,
+				7022DDE1148F988A00A06116 /* include */,
+			);
+			name = amsiptools;
+			sourceTree = "<group>";
+		};
+		7022DDE1148F988A00A06116 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7022DDE3148F98A800A06116 /* hid_hooks.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		7022DDE2148F988E00A06116 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7022DDE5148F98B100A06116 /* zmm_devices_osx.c */,
+				7022DDE6148F98B100A06116 /* microsoft_devices_osx.c */,
+				7022DDE7148F98B100A06116 /* IOHIDElement_.h */,
+				7022DDE8148F98B100A06116 /* HID_Utilities.c */,
+				7022DDE9148F98B100A06116 /* IOHIDLib_.h */,
+				7022DDEA148F98B100A06116 /* IOHIDDevice_.h */,
+				7022DDEB148F98B100A06116 /* IOHIDElement_.c */,
+				7022DDEC148F98B100A06116 /* HID_Utilities.h */,
+				7022DDED148F98B100A06116 /* IOHIDDevice_.c */,
+				7022DDEE148F98B100A06116 /* hid_hooks.c */,
+				7022DDEF148F98B100A06116 /* hid_devices.c */,
+				7022DDF0148F98B100A06116 /* polycom_devices_osx.c */,
+				7022DDF1148F98B100A06116 /* plantronics_devices_osx.c */,
+				7022DDF2148F98B100A06116 /* gnetcom_devices_osx.c */,
+				7022DDF3148F98B100A06116 /* hid_devices.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7022DDD2148F97C700A06116 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7022DDE4148F98A800A06116 /* hid_hooks.h in Headers */,
+				7022DDF6148F98B100A06116 /* IOHIDElement_.h in Headers */,
+				7022DDF8148F98B100A06116 /* IOHIDLib_.h in Headers */,
+				7022DDF9148F98B100A06116 /* IOHIDDevice_.h in Headers */,
+				7022DDFB148F98B100A06116 /* HID_Utilities.h in Headers */,
+				7022DE02148F98B100A06116 /* hid_devices.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7022DDD3148F97C700A06116 /* amsiptools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7022DDD8148F97C700A06116 /* Build configuration list for PBXNativeTarget "amsiptools" */;
+			buildPhases = (
+				7022DDD0148F97C700A06116 /* Sources */,
+				7022DDD1148F97C700A06116 /* Frameworks */,
+				7022DDD2148F97C700A06116 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = amsiptools;
+			productName = amsiptools;
+			productReference = 7022DDD4148F97C700A06116 /* libamsiptools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7022DDCB148F97C700A06116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7022DDCE148F97C700A06116 /* Build configuration list for PBXProject "amsiptools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7022DDC9148F97C700A06116;
+			productRefGroup = 7022DDD5148F97C700A06116 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7022DDD3148F97C700A06116 /* amsiptools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7022DDD0148F97C700A06116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7022DDF4148F98B100A06116 /* zmm_devices_osx.c in Sources */,
+				7022DDF5148F98B100A06116 /* microsoft_devices_osx.c in Sources */,
+				7022DDF7148F98B100A06116 /* HID_Utilities.c in Sources */,
+				7022DDFA148F98B100A06116 /* IOHIDElement_.c in Sources */,
+				7022DDFC148F98B100A06116 /* IOHIDDevice_.c in Sources */,
+				7022DDFD148F98B100A06116 /* hid_hooks.c in Sources */,
+				7022DDFE148F98B100A06116 /* hid_devices.c in Sources */,
+				7022DDFF148F98B100A06116 /* polycom_devices_osx.c in Sources */,
+				7022DE00148F98B100A06116 /* plantronics_devices_osx.c in Sources */,
+				7022DE01148F98B100A06116 /* gnetcom_devices_osx.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7022DDD6148F97C700A06116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7022DDD7148F97C700A06116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7022DDD9148F97C700A06116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7022DDDA148F97C700A06116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7022DDCE148F97C700A06116 /* Build configuration list for PBXProject "amsiptools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7022DDD6148F97C700A06116 /* Debug */,
+				7022DDD7148F97C700A06116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7022DDD8148F97C700A06116 /* Build configuration list for PBXNativeTarget "amsiptools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7022DDD9148F97C700A06116 /* Debug */,
+				7022DDDA148F97C700A06116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7022DDCB148F97C700A06116 /* Project object */;
+}

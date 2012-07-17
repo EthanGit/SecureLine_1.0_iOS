@@ -1,0 +1,150 @@
+***************
+*** 290,295 ****
+  			remoteGlobalIDString = 70EBBB22142109A900051914;
+  			remoteInfo = srtp;
+  		};
+  /* End PBXContainerItemProxy section */
+  
+  /* Begin PBXFileReference section */
+--- 290,302 ----
+  			remoteGlobalIDString = 70EBBB22142109A900051914;
+  			remoteInfo = srtp;
+  		};
++ 		70AFAAF21546FD7A00E6E530 /* PBXContainerItemProxy */ = {
++ 			isa = PBXContainerItemProxy;
++ 			containerPortal = 70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */;
++ 			proxyType = 2;
++ 			remoteGlobalIDString = 7029B3EA152C99920010837C;
++ 			remoteInfo = zrtp;
++ 		};
+  /* End PBXContainerItemProxy section */
+  
+  /* Begin PBXFileReference section */
+***************
+*** 327,332 ****
+  		70860A2514C5D835007ACD33 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_common.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/video_common.h; sourceTree = "<group>"; };
+  		708C4981143B2D37009A26CE /* turn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = turn.c; path = ../../../../amsip/oRTP/src/turn.c; sourceTree = "<group>"; };
+  		708C4984143B2D45009A26CE /* turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = turn.h; path = ../../../../amsip/oRTP/include/ortp/turn.h; sourceTree = "<group>"; };
+  		70BB8E4714F2DFE900D14E19 /* vp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vp8.c; path = ../../../../amsip/plugins/msvp8/src/vp8.c; sourceTree = "<group>"; };
+  		70BB8E4D14F452F200D14E19 /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert_from.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/convert_from.h; sourceTree = "<group>"; };
+  		70BB8E4E14F452F200D14E19 /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_ptr.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/scoped_ptr.h; sourceTree = "<group>"; };
+--- 334,340 ----
+  		70860A2514C5D835007ACD33 /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_common.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/video_common.h; sourceTree = "<group>"; };
+  		708C4981143B2D37009A26CE /* turn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = turn.c; path = ../../../../amsip/oRTP/src/turn.c; sourceTree = "<group>"; };
+  		708C4984143B2D45009A26CE /* turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = turn.h; path = ../../../../amsip/oRTP/include/ortp/turn.h; sourceTree = "<group>"; };
++ 		70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zrtp.xcodeproj; path = ../zrtp/zrtp.xcodeproj; sourceTree = "<group>"; };
+  		70BB8E4714F2DFE900D14E19 /* vp8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vp8.c; path = ../../../../amsip/plugins/msvp8/src/vp8.c; sourceTree = "<group>"; };
+  		70BB8E4D14F452F200D14E19 /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert_from.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/convert_from.h; sourceTree = "<group>"; };
+  		70BB8E4E14F452F200D14E19 /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_ptr.h; path = ../../../../amsip/plugins/mslibyuv/libyuv/include/libyuv/scoped_ptr.h; sourceTree = "<group>"; };
+***************
+*** 667,672 ****
+  			name = source;
+  			sourceTree = "<group>";
+  		};
+  		70BB8E4514F2DFBF00D14E19 /* msvp8 */ = {
+  			isa = PBXGroup;
+  			children = (
+--- 675,688 ----
+  			name = source;
+  			sourceTree = "<group>";
+  		};
++ 		70AFAAEF1546FD7A00E6E530 /* Products */ = {
++ 			isa = PBXGroup;
++ 			children = (
++ 				70AFAAF31546FD7A00E6E530 /* libzrtp.a */,
++ 			);
++ 			name = Products;
++ 			sourceTree = "<group>";
++ 		};
+  		70BB8E4514F2DFBF00D14E19 /* msvp8 */ = {
+  			isa = PBXGroup;
+  			children = (
+***************
+*** 806,811 ****
+  		70EBB7FE1420EC6E00051914 = {
+  			isa = PBXGroup;
+  			children = (
+  				702E93251508E9210057E727 /* srtp.xcodeproj */,
+  				702E931F1508E91A0057E727 /* speex.xcodeproj */,
+  				702E93191508E9140057E727 /* gsm.xcodeproj */,
+--- 822,828 ----
+  		70EBB7FE1420EC6E00051914 = {
+  			isa = PBXGroup;
+  			children = (
++ 				70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */,
+  				702E93251508E9210057E727 /* srtp.xcodeproj */,
+  				702E931F1508E91A0057E727 /* speex.xcodeproj */,
+  				702E93191508E9140057E727 /* gsm.xcodeproj */,
+***************
+*** 1220,1225 ****
+  					ProductGroup = 702E93261508E9210057E727 /* Products */;
+  					ProjectRef = 702E93251508E9210057E727 /* srtp.xcodeproj */;
+  				},
+  			);
+  			projectRoot = "";
+  			targets = (
+--- 1237,1246 ----
+  					ProductGroup = 702E93261508E9210057E727 /* Products */;
+  					ProjectRef = 702E93251508E9210057E727 /* srtp.xcodeproj */;
+  				},
++ 				{
++ 					ProductGroup = 70AFAAEF1546FD7A00E6E530 /* Products */;
++ 					ProjectRef = 70AFAAEE1546FD7A00E6E530 /* zrtp.xcodeproj */;
++ 				},
+  			);
+  			projectRoot = "";
+  			targets = (
+***************
+*** 1250,1255 ****
+  			remoteRef = 702E93291508E9210057E727 /* PBXContainerItemProxy */;
+  			sourceTree = BUILT_PRODUCTS_DIR;
+  		};
+  /* End PBXReferenceProxy section */
+  
+  /* Begin PBXSourcesBuildPhase section */
+--- 1271,1283 ----
+  			remoteRef = 702E93291508E9210057E727 /* PBXContainerItemProxy */;
+  			sourceTree = BUILT_PRODUCTS_DIR;
+  		};
++ 		70AFAAF31546FD7A00E6E530 /* libzrtp.a */ = {
++ 			isa = PBXReferenceProxy;
++ 			fileType = archive.ar;
++ 			path = libzrtp.a;
++ 			remoteRef = 70AFAAF21546FD7A00E6E530 /* PBXContainerItemProxy */;
++ 			sourceTree = BUILT_PRODUCTS_DIR;
++ 		};
+  /* End PBXReferenceProxy section */
+  
+  /* Begin PBXSourcesBuildPhase section */
+***************
+*** 1434,1439 ****
+  				GCC_OPTIMIZATION_LEVEL = 0;
+  				GCC_PREPROCESSOR_DEFINITIONS = (
+  					"DEBUG=1",
+  					HAVE_JPEG,
+  					HAVE_SRTP,
+  					ENABLE_VIDEO,
+--- 1462,1468 ----
+  				GCC_OPTIMIZATION_LEVEL = 0;
+  				GCC_PREPROCESSOR_DEFINITIONS = (
+  					"DEBUG=1",
++ 					ENABLE_ZRTP,
+  					HAVE_JPEG,
+  					HAVE_SRTP,
+  					ENABLE_VIDEO,
+***************
+*** 1490,1495 ****
+  				GCC_C_LANGUAGE_STANDARD = gnu99;
+  				GCC_OPTIMIZATION_LEVEL = 3;
+  				GCC_PREPROCESSOR_DEFINITIONS = (
+  					ORTP_NOMESSAGE_MODE,
+  					HAVE_JPEG,
+  					HAVE_SRTP,
+--- 1519,1525 ----
+  				GCC_C_LANGUAGE_STANDARD = gnu99;
+  				GCC_OPTIMIZATION_LEVEL = 3;
+  				GCC_PREPROCESSOR_DEFINITIONS = (
++ 					ENABLE_ZRTP,
+  					ORTP_NOMESSAGE_MODE,
+  					HAVE_JPEG,
+  					HAVE_SRTP,

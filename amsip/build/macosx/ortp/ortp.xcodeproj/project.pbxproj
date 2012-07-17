@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7022DEAB148FBFBB00A06116 /* libsrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7022DE16148FBADD00A06116 /* libsrtp.a */; };
+		70C601F1152302F500C77F6B /* rtptransport.c in Sources */ = {isa = PBXBuildFile; fileRef = 70C601F0152302F500C77F6B /* rtptransport.c */; };
+		70C601F4152302FF00C77F6B /* zrtp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70C601F3152302FF00C77F6B /* zrtp.c */; };
+		70C601F61523031900C77F6B /* rtptransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C601F51523031900C77F6B /* rtptransport.h */; };
+		70E0B53F148664A90098DE41 /* turn.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B52F148664A90098DE41 /* turn.h */; };
+		70E0B540148664A90098DE41 /* b64.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B530148664A90098DE41 /* b64.h */; };
+		70E0B541148664A90098DE41 /* event.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B531148664A90098DE41 /* event.h */; };
+		70E0B542148664A90098DE41 /* ortp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B532148664A90098DE41 /* ortp.h */; };
+		70E0B543148664A90098DE41 /* payloadtype.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B533148664A90098DE41 /* payloadtype.h */; };
+		70E0B544148664A90098DE41 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B534148664A90098DE41 /* port.h */; };
+		70E0B545148664A90098DE41 /* rtcp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B535148664A90098DE41 /* rtcp.h */; };
+		70E0B546148664A90098DE41 /* rtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B536148664A90098DE41 /* rtp.h */; };
+		70E0B547148664A90098DE41 /* rtpsession.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B537148664A90098DE41 /* rtpsession.h */; };
+		70E0B548148664A90098DE41 /* rtpsignaltable.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B538148664A90098DE41 /* rtpsignaltable.h */; };
+		70E0B549148664A90098DE41 /* sessionset.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B539148664A90098DE41 /* sessionset.h */; };
+		70E0B54A148664A90098DE41 /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B53A148664A90098DE41 /* srtp.h */; };
+		70E0B54B148664A90098DE41 /* str_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B53B148664A90098DE41 /* str_utils.h */; };
+		70E0B54C148664A90098DE41 /* stun.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B53C148664A90098DE41 /* stun.h */; };
+		70E0B54D148664A90098DE41 /* stun_udp.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B53D148664A90098DE41 /* stun_udp.h */; };
+		70E0B54E148664A90098DE41 /* telephonyevents.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B53E148664A90098DE41 /* telephonyevents.h */; };
+		70E0B56C148664B20098DE41 /* turn.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B54F148664B20098DE41 /* turn.c */; };
+		70E0B56D148664B20098DE41 /* srtp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B550148664B20098DE41 /* srtp.c */; };
+		70E0B56E148664B20098DE41 /* avprofile.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B551148664B20098DE41 /* avprofile.c */; };
+		70E0B56F148664B20098DE41 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B552148664B20098DE41 /* utils.h */; };
+		70E0B570148664B20098DE41 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B553148664B20098DE41 /* utils.c */; };
+		70E0B571148664B20098DE41 /* telephonyevents.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B554148664B20098DE41 /* telephonyevents.c */; };
+		70E0B572148664B20098DE41 /* stun_udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B555148664B20098DE41 /* stun_udp.c */; };
+		70E0B573148664B20098DE41 /* stun.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B556148664B20098DE41 /* stun.c */; };
+		70E0B574148664B20098DE41 /* str_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B557148664B20098DE41 /* str_utils.c */; };
+		70E0B575148664B20098DE41 /* sessionset.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B558148664B20098DE41 /* sessionset.c */; };
+		70E0B576148664B20098DE41 /* scheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B559148664B20098DE41 /* scheduler.h */; };
+		70E0B577148664B20098DE41 /* scheduler.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B55A148664B20098DE41 /* scheduler.c */; };
+		70E0B578148664B20098DE41 /* rtptimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B55B148664B20098DE41 /* rtptimer.h */; };
+		70E0B579148664B20098DE41 /* rtptimer.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B55C148664B20098DE41 /* rtptimer.c */; };
+		70E0B57A148664B20098DE41 /* rtpsignaltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B55D148664B20098DE41 /* rtpsignaltable.c */; };
+		70E0B57B148664B20098DE41 /* rtpsession_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B55E148664B20098DE41 /* rtpsession_priv.h */; };
+		70E0B57C148664B20098DE41 /* rtpsession_inet.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B55F148664B20098DE41 /* rtpsession_inet.c */; };
+		70E0B57D148664B20098DE41 /* rtpsession.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B560148664B20098DE41 /* rtpsession.c */; };
+		70E0B57E148664B20098DE41 /* rtpparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B561148664B20098DE41 /* rtpparse.c */; };
+		70E0B57F148664B20098DE41 /* rtcpparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B562148664B20098DE41 /* rtcpparse.c */; };
+		70E0B580148664B20098DE41 /* rtcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B563148664B20098DE41 /* rtcp.c */; };
+		70E0B581148664B20098DE41 /* jitterctl.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B564148664B20098DE41 /* jitterctl.h */; };
+		70E0B582148664B20098DE41 /* posixtimer.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B565148664B20098DE41 /* posixtimer.c */; };
+		70E0B583148664B20098DE41 /* port.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B566148664B20098DE41 /* port.c */; };
+		70E0B584148664B20098DE41 /* payloadtype.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B567148664B20098DE41 /* payloadtype.c */; };
+		70E0B585148664B20098DE41 /* ortp.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B568148664B20098DE41 /* ortp.c */; };
+		70E0B586148664B20098DE41 /* b64.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B569148664B20098DE41 /* b64.c */; };
+		70E0B587148664B20098DE41 /* jitterctl.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B56A148664B20098DE41 /* jitterctl.c */; };
+		70E0B588148664B20098DE41 /* event.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B56B148664B20098DE41 /* event.c */; };
+		70E0B58A148665090098DE41 /* ortp-config.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E0B589148665090098DE41 /* ortp-config.h */; };
+		70E0B61B14867F150098DE41 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B61A14867F150098DE41 /* libcrypto.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7022DE15148FBADD00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE11148FBADD00A06116 /* srtp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B59614867CEB0098DE41;
+			remoteInfo = srtp;
+		};
+		7022DE8C148FBE1400A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE11148FBADD00A06116 /* srtp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E0B59514867CEB0098DE41;
+			remoteInfo = srtp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7022DE11148FBADD00A06116 /* srtp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = srtp.xcodeproj; path = ../srtp/srtp.xcodeproj; sourceTree = "<group>"; };
+		70C601F0152302F500C77F6B /* rtptransport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtptransport.c; path = ../../../oRTP/src/rtptransport.c; sourceTree = "<group>"; };
+		70C601F3152302FF00C77F6B /* zrtp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zrtp.c; path = ../../../oRTP/src/zrtp.c; sourceTree = "<group>"; };
+		70C601F51523031900C77F6B /* rtptransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtptransport.h; path = ../../../oRTP/include/ortp/rtptransport.h; sourceTree = "<group>"; };
+		70E0B4AC1486642D0098DE41 /* libortp.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libortp.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E0B52F148664A90098DE41 /* turn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = turn.h; path = ../../../oRTP/include/ortp/turn.h; sourceTree = "<group>"; };
+		70E0B530148664A90098DE41 /* b64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b64.h; path = ../../../oRTP/include/ortp/b64.h; sourceTree = "<group>"; };
+		70E0B531148664A90098DE41 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = event.h; path = ../../../oRTP/include/ortp/event.h; sourceTree = "<group>"; };
+		70E0B532148664A90098DE41 /* ortp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ortp.h; path = ../../../oRTP/include/ortp/ortp.h; sourceTree = "<group>"; };
+		70E0B533148664A90098DE41 /* payloadtype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = payloadtype.h; path = ../../../oRTP/include/ortp/payloadtype.h; sourceTree = "<group>"; };
+		70E0B534148664A90098DE41 /* port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = port.h; path = ../../../oRTP/include/ortp/port.h; sourceTree = "<group>"; };
+		70E0B535148664A90098DE41 /* rtcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtcp.h; path = ../../../oRTP/include/ortp/rtcp.h; sourceTree = "<group>"; };
+		70E0B536148664A90098DE41 /* rtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtp.h; path = ../../../oRTP/include/ortp/rtp.h; sourceTree = "<group>"; };
+		70E0B537148664A90098DE41 /* rtpsession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtpsession.h; path = ../../../oRTP/include/ortp/rtpsession.h; sourceTree = "<group>"; };
+		70E0B538148664A90098DE41 /* rtpsignaltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtpsignaltable.h; path = ../../../oRTP/include/ortp/rtpsignaltable.h; sourceTree = "<group>"; };
+		70E0B539148664A90098DE41 /* sessionset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sessionset.h; path = ../../../oRTP/include/ortp/sessionset.h; sourceTree = "<group>"; };
+		70E0B53A148664A90098DE41 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srtp.h; path = ../../../oRTP/include/ortp/srtp.h; sourceTree = "<group>"; };
+		70E0B53B148664A90098DE41 /* str_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = str_utils.h; path = ../../../oRTP/include/ortp/str_utils.h; sourceTree = "<group>"; };
+		70E0B53C148664A90098DE41 /* stun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stun.h; path = ../../../oRTP/include/ortp/stun.h; sourceTree = "<group>"; };
+		70E0B53D148664A90098DE41 /* stun_udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stun_udp.h; path = ../../../oRTP/include/ortp/stun_udp.h; sourceTree = "<group>"; };
+		70E0B53E148664A90098DE41 /* telephonyevents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = telephonyevents.h; path = ../../../oRTP/include/ortp/telephonyevents.h; sourceTree = "<group>"; };
+		70E0B54F148664B20098DE41 /* turn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = turn.c; path = ../../../oRTP/src/turn.c; sourceTree = "<group>"; };
+		70E0B550148664B20098DE41 /* srtp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = srtp.c; path = ../../../oRTP/src/srtp.c; sourceTree = "<group>"; };
+		70E0B551148664B20098DE41 /* avprofile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = avprofile.c; path = ../../../oRTP/src/avprofile.c; sourceTree = "<group>"; };
+		70E0B552148664B20098DE41 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = ../../../oRTP/src/utils.h; sourceTree = "<group>"; };
+		70E0B553148664B20098DE41 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utils.c; path = ../../../oRTP/src/utils.c; sourceTree = "<group>"; };
+		70E0B554148664B20098DE41 /* telephonyevents.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = telephonyevents.c; path = ../../../oRTP/src/telephonyevents.c; sourceTree = "<group>"; };
+		70E0B555148664B20098DE41 /* stun_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stun_udp.c; path = ../../../oRTP/src/stun_udp.c; sourceTree = "<group>"; };
+		70E0B556148664B20098DE41 /* stun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stun.c; path = ../../../oRTP/src/stun.c; sourceTree = "<group>"; };
+		70E0B557148664B20098DE41 /* str_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = str_utils.c; path = ../../../oRTP/src/str_utils.c; sourceTree = "<group>"; };
+		70E0B558148664B20098DE41 /* sessionset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sessionset.c; path = ../../../oRTP/src/sessionset.c; sourceTree = "<group>"; };
+		70E0B559148664B20098DE41 /* scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scheduler.h; path = ../../../oRTP/src/scheduler.h; sourceTree = "<group>"; };
+		70E0B55A148664B20098DE41 /* scheduler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scheduler.c; path = ../../../oRTP/src/scheduler.c; sourceTree = "<group>"; };
+		70E0B55B148664B20098DE41 /* rtptimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtptimer.h; path = ../../../oRTP/src/rtptimer.h; sourceTree = "<group>"; };
+		70E0B55C148664B20098DE41 /* rtptimer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtptimer.c; path = ../../../oRTP/src/rtptimer.c; sourceTree = "<group>"; };
+		70E0B55D148664B20098DE41 /* rtpsignaltable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtpsignaltable.c; path = ../../../oRTP/src/rtpsignaltable.c; sourceTree = "<group>"; };
+		70E0B55E148664B20098DE41 /* rtpsession_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtpsession_priv.h; path = ../../../oRTP/src/rtpsession_priv.h; sourceTree = "<group>"; };
+		70E0B55F148664B20098DE41 /* rtpsession_inet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtpsession_inet.c; path = ../../../oRTP/src/rtpsession_inet.c; sourceTree = "<group>"; };
+		70E0B560148664B20098DE41 /* rtpsession.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtpsession.c; path = ../../../oRTP/src/rtpsession.c; sourceTree = "<group>"; };
+		70E0B561148664B20098DE41 /* rtpparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtpparse.c; path = ../../../oRTP/src/rtpparse.c; sourceTree = "<group>"; };
+		70E0B562148664B20098DE41 /* rtcpparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtcpparse.c; path = ../../../oRTP/src/rtcpparse.c; sourceTree = "<group>"; };
+		70E0B563148664B20098DE41 /* rtcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rtcp.c; path = ../../../oRTP/src/rtcp.c; sourceTree = "<group>"; };
+		70E0B564148664B20098DE41 /* jitterctl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jitterctl.h; path = ../../../oRTP/src/jitterctl.h; sourceTree = "<group>"; };
+		70E0B565148664B20098DE41 /* posixtimer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = posixtimer.c; path = ../../../oRTP/src/posixtimer.c; sourceTree = "<group>"; };
+		70E0B566148664B20098DE41 /* port.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = port.c; path = ../../../oRTP/src/port.c; sourceTree = "<group>"; };
+		70E0B567148664B20098DE41 /* payloadtype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = payloadtype.c; path = ../../../oRTP/src/payloadtype.c; sourceTree = "<group>"; };
+		70E0B568148664B20098DE41 /* ortp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ortp.c; path = ../../../oRTP/src/ortp.c; sourceTree = "<group>"; };
+		70E0B569148664B20098DE41 /* b64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = b64.c; path = ../../../oRTP/src/b64.c; sourceTree = "<group>"; };
+		70E0B56A148664B20098DE41 /* jitterctl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jitterctl.c; path = ../../../oRTP/src/jitterctl.c; sourceTree = "<group>"; };
+		70E0B56B148664B20098DE41 /* event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = event.c; path = ../../../oRTP/src/event.c; sourceTree = "<group>"; };
+		70E0B589148665090098DE41 /* ortp-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ortp-config.h"; sourceTree = "<group>"; };
+		70E0B61A14867F150098DE41 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70E0B4A91486642D0098DE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7022DEAB148FBFBB00A06116 /* libsrtp.a in Frameworks */,
+				70E0B61B14867F150098DE41 /* libcrypto.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7022DE12148FBADD00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE16148FBADD00A06116 /* libsrtp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70E0B4A11486642D0098DE41 = {
+			isa = PBXGroup;
+			children = (
+				7022DE11148FBADD00A06116 /* srtp.xcodeproj */,
+				70E0B61A14867F150098DE41 /* libcrypto.dylib */,
+				70E0B589148665090098DE41 /* ortp-config.h */,
+				70E0B4B51486643B0098DE41 /* ortp */,
+				70E0B4AD1486642D0098DE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70E0B4AD1486642D0098DE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B4AC1486642D0098DE41 /* libortp.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70E0B4B3148664370098DE41 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B54F148664B20098DE41 /* turn.c */,
+				70E0B550148664B20098DE41 /* srtp.c */,
+				70E0B551148664B20098DE41 /* avprofile.c */,
+				70E0B552148664B20098DE41 /* utils.h */,
+				70E0B553148664B20098DE41 /* utils.c */,
+				70E0B554148664B20098DE41 /* telephonyevents.c */,
+				70E0B555148664B20098DE41 /* stun_udp.c */,
+				70E0B556148664B20098DE41 /* stun.c */,
+				70E0B557148664B20098DE41 /* str_utils.c */,
+				70E0B558148664B20098DE41 /* sessionset.c */,
+				70E0B559148664B20098DE41 /* scheduler.h */,
+				70E0B55A148664B20098DE41 /* scheduler.c */,
+				70E0B55B148664B20098DE41 /* rtptimer.h */,
+				70E0B55C148664B20098DE41 /* rtptimer.c */,
+				70C601F0152302F500C77F6B /* rtptransport.c */,
+				70E0B55D148664B20098DE41 /* rtpsignaltable.c */,
+				70E0B55E148664B20098DE41 /* rtpsession_priv.h */,
+				70E0B55F148664B20098DE41 /* rtpsession_inet.c */,
+				70E0B560148664B20098DE41 /* rtpsession.c */,
+				70E0B561148664B20098DE41 /* rtpparse.c */,
+				70E0B562148664B20098DE41 /* rtcpparse.c */,
+				70E0B563148664B20098DE41 /* rtcp.c */,
+				70E0B564148664B20098DE41 /* jitterctl.h */,
+				70E0B565148664B20098DE41 /* posixtimer.c */,
+				70E0B566148664B20098DE41 /* port.c */,
+				70E0B567148664B20098DE41 /* payloadtype.c */,
+				70E0B568148664B20098DE41 /* ortp.c */,
+				70E0B569148664B20098DE41 /* b64.c */,
+				70E0B56A148664B20098DE41 /* jitterctl.c */,
+				70E0B56B148664B20098DE41 /* event.c */,
+				70C601F3152302FF00C77F6B /* zrtp.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		70E0B4B4148664390098DE41 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B52F148664A90098DE41 /* turn.h */,
+				70E0B530148664A90098DE41 /* b64.h */,
+				70E0B531148664A90098DE41 /* event.h */,
+				70E0B532148664A90098DE41 /* ortp.h */,
+				70E0B533148664A90098DE41 /* payloadtype.h */,
+				70E0B534148664A90098DE41 /* port.h */,
+				70E0B535148664A90098DE41 /* rtcp.h */,
+				70E0B536148664A90098DE41 /* rtp.h */,
+				70C601F51523031900C77F6B /* rtptransport.h */,
+				70E0B537148664A90098DE41 /* rtpsession.h */,
+				70E0B538148664A90098DE41 /* rtpsignaltable.h */,
+				70E0B539148664A90098DE41 /* sessionset.h */,
+				70E0B53A148664A90098DE41 /* srtp.h */,
+				70E0B53B148664A90098DE41 /* str_utils.h */,
+				70E0B53C148664A90098DE41 /* stun.h */,
+				70E0B53D148664A90098DE41 /* stun_udp.h */,
+				70E0B53E148664A90098DE41 /* telephonyevents.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		70E0B4B51486643B0098DE41 /* ortp */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B4B4148664390098DE41 /* include */,
+				70E0B4B3148664370098DE41 /* src */,
+			);
+			name = ortp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70E0B4AA1486642D0098DE41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B53F148664A90098DE41 /* turn.h in Headers */,
+				70E0B540148664A90098DE41 /* b64.h in Headers */,
+				70E0B541148664A90098DE41 /* event.h in Headers */,
+				70E0B542148664A90098DE41 /* ortp.h in Headers */,
+				70E0B543148664A90098DE41 /* payloadtype.h in Headers */,
+				70E0B544148664A90098DE41 /* port.h in Headers */,
+				70E0B545148664A90098DE41 /* rtcp.h in Headers */,
+				70E0B546148664A90098DE41 /* rtp.h in Headers */,
+				70E0B547148664A90098DE41 /* rtpsession.h in Headers */,
+				70E0B548148664A90098DE41 /* rtpsignaltable.h in Headers */,
+				70E0B549148664A90098DE41 /* sessionset.h in Headers */,
+				70E0B54A148664A90098DE41 /* srtp.h in Headers */,
+				70E0B54B148664A90098DE41 /* str_utils.h in Headers */,
+				70E0B54C148664A90098DE41 /* stun.h in Headers */,
+				70E0B54D148664A90098DE41 /* stun_udp.h in Headers */,
+				70E0B54E148664A90098DE41 /* telephonyevents.h in Headers */,
+				70E0B56F148664B20098DE41 /* utils.h in Headers */,
+				70E0B576148664B20098DE41 /* scheduler.h in Headers */,
+				70E0B578148664B20098DE41 /* rtptimer.h in Headers */,
+				70E0B57B148664B20098DE41 /* rtpsession_priv.h in Headers */,
+				70E0B581148664B20098DE41 /* jitterctl.h in Headers */,
+				70E0B58A148665090098DE41 /* ortp-config.h in Headers */,
+				70C601F61523031900C77F6B /* rtptransport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		70E0B4AB1486642D0098DE41 /* ortp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E0B4B01486642D0098DE41 /* Build configuration list for PBXNativeTarget "ortp" */;
+			buildPhases = (
+				70E0B4A81486642D0098DE41 /* Sources */,
+				70E0B4A91486642D0098DE41 /* Frameworks */,
+				70E0B4AA1486642D0098DE41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7022DE8D148FBE1400A06116 /* PBXTargetDependency */,
+			);
+			name = ortp;
+			productName = ortp;
+			productReference = 70E0B4AC1486642D0098DE41 /* libortp.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70E0B4A31486642D0098DE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 70E0B4A61486642D0098DE41 /* Build configuration list for PBXProject "ortp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70E0B4A11486642D0098DE41;
+			productRefGroup = 70E0B4AD1486642D0098DE41 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7022DE12148FBADD00A06116 /* Products */;
+					ProjectRef = 7022DE11148FBADD00A06116 /* srtp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				70E0B4AB1486642D0098DE41 /* ortp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7022DE16148FBADD00A06116 /* libsrtp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsrtp.a;
+			remoteRef = 7022DE15148FBADD00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70E0B4A81486642D0098DE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B56C148664B20098DE41 /* turn.c in Sources */,
+				70E0B56D148664B20098DE41 /* srtp.c in Sources */,
+				70E0B56E148664B20098DE41 /* avprofile.c in Sources */,
+				70E0B570148664B20098DE41 /* utils.c in Sources */,
+				70E0B571148664B20098DE41 /* telephonyevents.c in Sources */,
+				70E0B572148664B20098DE41 /* stun_udp.c in Sources */,
+				70E0B573148664B20098DE41 /* stun.c in Sources */,
+				70E0B574148664B20098DE41 /* str_utils.c in Sources */,
+				70E0B575148664B20098DE41 /* sessionset.c in Sources */,
+				70E0B577148664B20098DE41 /* scheduler.c in Sources */,
+				70E0B579148664B20098DE41 /* rtptimer.c in Sources */,
+				70E0B57A148664B20098DE41 /* rtpsignaltable.c in Sources */,
+				70E0B57C148664B20098DE41 /* rtpsession_inet.c in Sources */,
+				70E0B57D148664B20098DE41 /* rtpsession.c in Sources */,
+				70E0B57E148664B20098DE41 /* rtpparse.c in Sources */,
+				70E0B57F148664B20098DE41 /* rtcpparse.c in Sources */,
+				70E0B580148664B20098DE41 /* rtcp.c in Sources */,
+				70E0B582148664B20098DE41 /* posixtimer.c in Sources */,
+				70E0B583148664B20098DE41 /* port.c in Sources */,
+				70E0B584148664B20098DE41 /* payloadtype.c in Sources */,
+				70E0B585148664B20098DE41 /* ortp.c in Sources */,
+				70E0B586148664B20098DE41 /* b64.c in Sources */,
+				70E0B587148664B20098DE41 /* jitterctl.c in Sources */,
+				70E0B588148664B20098DE41 /* event.c in Sources */,
+				70C601F1152302F500C77F6B /* rtptransport.c in Sources */,
+				70C601F4152302FF00C77F6B /* zrtp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7022DE8D148FBE1400A06116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = srtp;
+			targetProxy = 7022DE8C148FBE1400A06116 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		70E0B4AE1486642D0098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					HAVE_CONFIG_H,
+					_ISOC99_SOURCE,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../srtp;
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70E0B4AF1486642D0098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HAVE_CONFIG_H,
+					_ISOC99_SOURCE,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../srtp;
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70E0B4B11486642D0098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70E0B4B21486642D0098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70E0B4A61486642D0098DE41 /* Build configuration list for PBXProject "ortp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B4AE1486642D0098DE41 /* Debug */,
+				70E0B4AF1486642D0098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E0B4B01486642D0098DE41 /* Build configuration list for PBXNativeTarget "ortp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B4B11486642D0098DE41 /* Debug */,
+				70E0B4B21486642D0098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70E0B4A31486642D0098DE41 /* Project object */;
+}

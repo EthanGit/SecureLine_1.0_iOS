@@ -1,0 +1,1185 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		701BA1801487C11C0032D41F /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701BA17F1487C11C0032D41F /* Preferences.xib */; };
+		701BA1AB14880E800032D41F /* AppEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1A314880E7F0032D41F /* AppEngine.m */; };
+		701BA1AC14880E800032D41F /* Call.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1A414880E7F0032D41F /* Call.m */; };
+		701BA1AD14880E800032D41F /* MultiCastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1A514880E7F0032D41F /* MultiCastDelegate.m */; };
+		701BA1AE14880E800032D41F /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1A614880E7F0032D41F /* Registration.m */; };
+		701BA1B114880EC20032D41F /* iAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1AF14880EC20032D41F /* iAudioPlayer.m */; };
+		701BA1D0148845680032D41F /* Vbyantisip_NSOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BA1CF148845670032D41F /* Vbyantisip_NSOpenGLView.m */; };
+		701BA1D214884A090032D41F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701BA1D114884A090032D41F /* OpenGL.framework */; };
+		702E93061508E1E50057E727 /* libmsffmpeg.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 702E92E51508DC140057E727 /* libmsffmpeg.dylib */; };
+		703C1C001489252200D10CD7 /* libmsipph264.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1BFD148924C500D10CD7 /* libmsipph264.dylib */; };
+		703C1C0D148948A200D10CD7 /* libirc.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1C0A14892B4200D10CD7 /* libirc.dylib */; };
+		703C1C0E148948A200D10CD7 /* libimf.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1C011489270D00D10CD7 /* libimf.dylib */; };
+		703C1C0F148948A200D10CD7 /* libintlc.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1C04148927F900D10CD7 /* libintlc.dylib */; };
+		703C1C10148948A200D10CD7 /* libiomp5.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1C05148927F900D10CD7 /* libiomp5.dylib */; };
+		703C1C3C14894C1900D10CD7 /* libmsippyuv.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 703C1C3914894C0300D10CD7 /* libmsippyuv.dylib */; };
+		704CCFFE1487ADD5007A666F /* libmsvideostitcher.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 704CCFFB1487ADA1007A666F /* libmsvideostitcher.dylib */; };
+		704CD0391487C081007A666F /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704CD0381487C081007A666F /* AppController.m */; };
+		704CD03C1487C0BA007A666F /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704CD03B1487C0BA007A666F /* PreferenceController.m */; };
+		7067148E149501CA00A371B3 /* libmsippg7xx.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7067148B1495018600A371B3 /* libmsippg7xx.dylib */; };
+		707D023D148FC52B003EDD29 /* libexosip2.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE5E148FBC6B00A06116 /* libexosip2.a */; };
+		707D023E148FC52B003EDD29 /* libcares.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE67148FBC8A00A06116 /* libcares.a */; };
+		707D0241148FC52B003EDD29 /* libsrtp.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 707D0238148FC4A4003EDD29 /* libsrtp.a */; };
+		707D0242148FC52B003EDD29 /* libspeex.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE73148FBCC500A06116 /* libspeex.a */; };
+		707D0243148FC52B003EDD29 /* libgsm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE79148FBCCF00A06116 /* libgsm.a */; };
+		707D0244148FC9EE003EDD29 /* libamsip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7022DE49148FBB6A00A06116 /* libamsip.dylib */; };
+		707D0245148FC9EE003EDD29 /* libmediastreamer2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7022DE61148FBC6B00A06116 /* libmediastreamer2.dylib */; };
+		707D0246148FC9EE003EDD29 /* libortp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7022DE6D148FBCBA00A06116 /* libortp.dylib */; };
+		707D0247148FCA13003EDD29 /* libamsip.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE49148FBB6A00A06116 /* libamsip.dylib */; };
+		707D0248148FCA30003EDD29 /* libmediastreamer2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE61148FBC6B00A06116 /* libmediastreamer2.dylib */; };
+		707D0249148FCA57003EDD29 /* libortp.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE6D148FBCBA00A06116 /* libortp.dylib */; };
+		7088749A14BB709500B98C64 /* libmslibyuv.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7088749714BB705300B98C64 /* libmslibyuv.dylib */; };
+		70A2368014F83FAD0016D796 /* libmsvp8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70A2367514F83E2B0016D796 /* libmsvp8.dylib */; };
+		70D8D98E14F8557000AA3286 /* nowebcamCIF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70D8D98D14F8557000AA3286 /* nowebcamCIF.jpg */; };
+		70E0B7C8148692440098DE41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7C7148692440098DE41 /* Cocoa.framework */; };
+		70E0B7D2148692440098DE41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70E0B7D0148692440098DE41 /* InfoPlist.strings */; };
+		70E0B7D4148692440098DE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B7D3148692440098DE41 /* main.m */; };
+		70E0B7D8148692440098DE41 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 70E0B7D6148692440098DE41 /* Credits.rtf */; };
+		70E0B7DB148692440098DE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E0B7DA148692440098DE41 /* AppDelegate.m */; };
+		70E0B7DE148692440098DE41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E0B7DC148692440098DE41 /* MainMenu.xib */; };
+		70EE642E150DFCF300195069 /* libmsswscale.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70EE6421150DFC3100195069 /* libmsswscale.dylib */; };
+		70EED7E41486A233007C537E /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7EA148695610098DE41 /* libavcodec.dylib */; };
+		70EED7E51486A233007C537E /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7EB148695610098DE41 /* libavutil.dylib */; };
+		70EED7E61486A233007C537E /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E0B7EC148695610098DE41 /* libswscale.dylib */; };
+		70EED7E81486A38E007C537E /* libavcodec.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70E0B7EA148695610098DE41 /* libavcodec.dylib */; };
+		70EED7E91486A38E007C537E /* libavutil.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70E0B7EB148695610098DE41 /* libavutil.dylib */; };
+		70EED7EA1486A38E007C537E /* libswscale.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70E0B7EC148695610098DE41 /* libswscale.dylib */; };
+		70EED7EF1486A3C6007C537E /* libavcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EED7EE1486A3C6007C537E /* libavcore.dylib */; };
+		70EED7F01486A3D4007C537E /* libavcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 70EED7EE1486A3C6007C537E /* libavcore.dylib */; };
+		70FCCC60151675B600C93742 /* libamsiptools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7022DE4F148FBB7400A06116 /* libamsiptools.a */; };
+		70FCCC61151675C200C93742 /* libamsiptools.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7022DE4F148FBB7400A06116 /* libamsiptools.a */; };
+		70FCCC631516764500C93742 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCCC621516764500C93742 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7022DE48148FBB6A00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE44148FBB6900A06116 /* amsip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B70114868C3F0098DE41;
+			remoteInfo = amsip;
+		};
+		7022DE4E148FBB7400A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE4A148FBB7400A06116 /* amsiptools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7022DDD4148F97C700A06116;
+			remoteInfo = amsiptools;
+		};
+		7022DE5D148FBC6B00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE56148FBC6B00A06116 /* exosip2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70717F0914865DEF001E87D8;
+			remoteInfo = exosip2;
+		};
+		7022DE60148FBC6B00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE57148FBC6B00A06116 /* mediastreamer2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B62714867F710098DE41;
+			remoteInfo = mediastreamer2;
+		};
+		7022DE66148FBC8A00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE62148FBC8A00A06116 /* cares.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B33C148660C90098DE41;
+			remoteInfo = cares;
+		};
+		7022DE6C148FBCBA00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE68148FBCBA00A06116 /* ortp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B4AC1486642D0098DE41;
+			remoteInfo = ortp;
+		};
+		7022DE72148FBCC500A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE6E148FBCC500A06116 /* speex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B3D3148662990098DE41;
+			remoteInfo = speex;
+		};
+		7022DE78148FBCCF00A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE74148FBCCF00A06116 /* gsm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7071808D14865FAD001E87D8;
+			remoteInfo = gsm;
+		};
+		7022DE7C148FBD1600A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE56148FBC6B00A06116 /* exosip2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70717F0814865DEF001E87D8;
+			remoteInfo = exosip2;
+		};
+		7022DE80148FBD1600A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE62148FBC8A00A06116 /* cares.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E0B33B148660C90098DE41;
+			remoteInfo = cares;
+		};
+		7022DE82148FBD1600A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE6E148FBCC500A06116 /* speex.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E0B3D2148662990098DE41;
+			remoteInfo = speex;
+		};
+		7022DE84148FBD1600A06116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7022DE74148FBCCF00A06116 /* gsm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7071808C14865FAD001E87D8;
+			remoteInfo = gsm;
+		};
+		702E92E41508DC140057E727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E92E01508DC130057E727 /* msffmpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 702E92C81508DA360057E727;
+			remoteInfo = msffmpeg;
+		};
+		702E92E61508DC250057E727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E92E01508DC130057E727 /* msffmpeg.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 702E92C71508DA360057E727;
+			remoteInfo = msffmpeg;
+		};
+		703C1BFC148924C500D10CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 703C1BF8148924C500D10CD7 /* msipph264.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 703C1BBC1488FF9C00D10CD7;
+			remoteInfo = msipph264;
+		};
+		703C1BFE1489251900D10CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 703C1BF8148924C500D10CD7 /* msipph264.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 703C1BBB1488FF9C00D10CD7;
+			remoteInfo = msipph264;
+		};
+		703C1C3814894C0300D10CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 703C1C3414894C0300D10CD7 /* msippyuv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 703C1C1C14894AC900D10CD7;
+			remoteInfo = msippyuv;
+		};
+		703C1C3A14894C1200D10CD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 703C1C3414894C0300D10CD7 /* msippyuv.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 703C1C1B14894AC900D10CD7;
+			remoteInfo = msippyuv;
+		};
+		704CCFFA1487ADA1007A666F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 704CCFF61487ADA1007A666F /* msvideostitcher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 709489841487A91A00DAA968;
+			remoteInfo = msvideostitcher;
+		};
+		704CCFFC1487ADB7007A666F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 704CCFF61487ADA1007A666F /* msvideostitcher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 709489831487A91A00DAA968;
+			remoteInfo = msvideostitcher;
+		};
+		7067148A1495018600A371B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 706714861495018600A371B3 /* msippg7xx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7067138E1494EDB400A371B3;
+			remoteInfo = msippg7xx;
+		};
+		7067148C149501A900A371B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 706714861495018600A371B3 /* msippg7xx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7067138D1494EDB400A371B3;
+			remoteInfo = msippg7xx;
+		};
+		707D0237148FC4A4003EDD29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707D0233148FC4A4003EDD29 /* srtp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B59614867CEB0098DE41;
+			remoteInfo = srtp;
+		};
+		707D0239148FC4AC003EDD29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707D0233148FC4A4003EDD29 /* srtp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E0B59514867CEB0098DE41;
+			remoteInfo = srtp;
+		};
+		7088749614BB705300B98C64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7088749214BB705300B98C64 /* mslibyuv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70DDDF3214BB4F22008B343C;
+			remoteInfo = mslibyuv;
+		};
+		7088749814BB706700B98C64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7088749214BB705300B98C64 /* mslibyuv.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70DDDF3114BB4F22008B343C;
+			remoteInfo = mslibyuv;
+		};
+		70A2367414F83E2B0016D796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A2367014F83E2A0016D796 /* msvp8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70A2364D14F83D040016D796;
+			remoteInfo = msvp8;
+		};
+		70A2368114F8405A0016D796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70A2367014F83E2A0016D796 /* msvp8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A2364C14F83D040016D796;
+			remoteInfo = msvp8;
+		};
+		70EE6420150DFC3100195069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70EE641C150DFC3100195069 /* msswscale.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70EE63FA150DFA9800195069;
+			remoteInfo = msswscale;
+		};
+		70EE642C150DFCE200195069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70EE641C150DFC3100195069 /* msswscale.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70EE63F9150DFA9800195069;
+			remoteInfo = msswscale;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		709489A31487AA7300DAA968 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				70EE642E150DFCF300195069 /* libmsswscale.dylib in CopyFiles */,
+				702E93061508E1E50057E727 /* libmsffmpeg.dylib in CopyFiles */,
+				70A2368014F83FAD0016D796 /* libmsvp8.dylib in CopyFiles */,
+				7088749A14BB709500B98C64 /* libmslibyuv.dylib in CopyFiles */,
+				7067148E149501CA00A371B3 /* libmsippg7xx.dylib in CopyFiles */,
+				703C1C3C14894C1900D10CD7 /* libmsippyuv.dylib in CopyFiles */,
+				703C1C001489252200D10CD7 /* libmsipph264.dylib in CopyFiles */,
+				704CCFFE1487ADD5007A666F /* libmsvideostitcher.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70EED7E71486A346007C537E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70FCCC61151675C200C93742 /* libamsiptools.a in CopyFiles */,
+				707D0249148FCA57003EDD29 /* libortp.dylib in CopyFiles */,
+				707D0248148FCA30003EDD29 /* libmediastreamer2.dylib in CopyFiles */,
+				707D0247148FCA13003EDD29 /* libamsip.dylib in CopyFiles */,
+				707D023D148FC52B003EDD29 /* libexosip2.a in CopyFiles */,
+				707D023E148FC52B003EDD29 /* libcares.a in CopyFiles */,
+				707D0241148FC52B003EDD29 /* libsrtp.a in CopyFiles */,
+				707D0242148FC52B003EDD29 /* libspeex.a in CopyFiles */,
+				707D0243148FC52B003EDD29 /* libgsm.a in CopyFiles */,
+				703C1C0D148948A200D10CD7 /* libirc.dylib in CopyFiles */,
+				703C1C0E148948A200D10CD7 /* libimf.dylib in CopyFiles */,
+				703C1C0F148948A200D10CD7 /* libintlc.dylib in CopyFiles */,
+				703C1C10148948A200D10CD7 /* libiomp5.dylib in CopyFiles */,
+				70EED7F01486A3D4007C537E /* libavcore.dylib in CopyFiles */,
+				70EED7E81486A38E007C537E /* libavcodec.dylib in CopyFiles */,
+				70EED7E91486A38E007C537E /* libavutil.dylib in CopyFiles */,
+				70EED7EA1486A38E007C537E /* libswscale.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		701BA17F1487C11C0032D41F /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		701BA1A314880E7F0032D41F /* AppEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppEngine.m; sourceTree = "<group>"; };
+		701BA1A414880E7F0032D41F /* Call.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Call.m; sourceTree = "<group>"; };
+		701BA1A514880E7F0032D41F /* MultiCastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiCastDelegate.m; sourceTree = "<group>"; };
+		701BA1A614880E7F0032D41F /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registration.m; sourceTree = "<group>"; };
+		701BA1A714880E7F0032D41F /* AppEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppEngine.h; sourceTree = "<group>"; };
+		701BA1A814880E800032D41F /* Call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Call.h; sourceTree = "<group>"; };
+		701BA1A914880E800032D41F /* MultiCastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiCastDelegate.h; sourceTree = "<group>"; };
+		701BA1AA14880E800032D41F /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registration.h; sourceTree = "<group>"; };
+		701BA1AF14880EC20032D41F /* iAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAudioPlayer.m; sourceTree = "<group>"; };
+		701BA1B014880EC20032D41F /* iAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAudioPlayer.h; sourceTree = "<group>"; };
+		701BA1CE148845670032D41F /* Vbyantisip_NSOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vbyantisip_NSOpenGLView.h; sourceTree = "<group>"; };
+		701BA1CF148845670032D41F /* Vbyantisip_NSOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vbyantisip_NSOpenGLView.m; sourceTree = "<group>"; };
+		701BA1D114884A090032D41F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		7022DE44148FBB6900A06116 /* amsip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = amsip.xcodeproj; path = ../amsip/amsip.xcodeproj; sourceTree = "<group>"; };
+		7022DE4A148FBB7400A06116 /* amsiptools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = amsiptools.xcodeproj; path = ../amsiptools/amsiptools.xcodeproj; sourceTree = "<group>"; };
+		7022DE56148FBC6B00A06116 /* exosip2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = exosip2.xcodeproj; path = ../exosip2/exosip2.xcodeproj; sourceTree = "<group>"; };
+		7022DE57148FBC6B00A06116 /* mediastreamer2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mediastreamer2.xcodeproj; path = ../mediastreamer2/mediastreamer2.xcodeproj; sourceTree = "<group>"; };
+		7022DE62148FBC8A00A06116 /* cares.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cares.xcodeproj; path = ../cares/cares.xcodeproj; sourceTree = "<group>"; };
+		7022DE68148FBCBA00A06116 /* ortp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ortp.xcodeproj; path = ../ortp/ortp.xcodeproj; sourceTree = "<group>"; };
+		7022DE6E148FBCC500A06116 /* speex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = speex.xcodeproj; path = ../speex/speex.xcodeproj; sourceTree = "<group>"; };
+		7022DE74148FBCCF00A06116 /* gsm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gsm.xcodeproj; path = ../gsm/gsm.xcodeproj; sourceTree = "<group>"; };
+		702E92E01508DC130057E727 /* msffmpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msffmpeg.xcodeproj; path = ../msffmpeg/msffmpeg.xcodeproj; sourceTree = "<group>"; };
+		703C1BF8148924C500D10CD7 /* msipph264.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msipph264.xcodeproj; path = ../msipph264/msipph264.xcodeproj; sourceTree = "<group>"; };
+		703C1C011489270D00D10CD7 /* libimf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimf.dylib; path = ../msipph264/libimf.dylib; sourceTree = "<group>"; };
+		703C1C04148927F900D10CD7 /* libintlc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libintlc.dylib; path = ../msipph264/libintlc.dylib; sourceTree = "<group>"; };
+		703C1C05148927F900D10CD7 /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = ../msipph264/libiomp5.dylib; sourceTree = "<group>"; };
+		703C1C0A14892B4200D10CD7 /* libirc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirc.dylib; path = ../msipph264/libirc.dylib; sourceTree = "<group>"; };
+		703C1C3414894C0300D10CD7 /* msippyuv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msippyuv.xcodeproj; path = ../msippyuv/msippyuv.xcodeproj; sourceTree = "<group>"; };
+		704CCFF61487ADA1007A666F /* msvideostitcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msvideostitcher.xcodeproj; path = ../msvideostitcher/msvideostitcher.xcodeproj; sourceTree = "<group>"; };
+		704CD0371487C081007A666F /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		704CD0381487C081007A666F /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		704CD03A1487C0BA007A666F /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		704CD03B1487C0BA007A666F /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		706714861495018600A371B3 /* msippg7xx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msippg7xx.xcodeproj; path = ../msippg7xx/msippg7xx.xcodeproj; sourceTree = "<group>"; };
+		707D0233148FC4A4003EDD29 /* srtp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = srtp.xcodeproj; path = ../srtp/srtp.xcodeproj; sourceTree = "<group>"; };
+		7088749214BB705300B98C64 /* mslibyuv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mslibyuv.xcodeproj; path = ../mslibyuv/mslibyuv.xcodeproj; sourceTree = "<group>"; };
+		70A2367014F83E2A0016D796 /* msvp8.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msvp8.xcodeproj; path = ../msvp8/msvp8.xcodeproj; sourceTree = "<group>"; };
+		70D8D98D14F8557000AA3286 /* nowebcamCIF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nowebcamCIF.jpg; path = images/nowebcamCIF.jpg; sourceTree = "<group>"; };
+		70E0B7C3148692440098DE41 /* vbyantisip-macosx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vbyantisip-macosx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E0B7C7148692440098DE41 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		70E0B7CA148692440098DE41 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		70E0B7CB148692440098DE41 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		70E0B7CC148692440098DE41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70E0B7CF148692440098DE41 /* vbyantisip-macosx-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vbyantisip-macosx-Info.plist"; sourceTree = "<group>"; };
+		70E0B7D1148692440098DE41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70E0B7D3148692440098DE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70E0B7D5148692440098DE41 /* vbyantisip-macosx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vbyantisip-macosx-Prefix.pch"; sourceTree = "<group>"; };
+		70E0B7D7148692440098DE41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		70E0B7D9148692440098DE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		70E0B7DA148692440098DE41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		70E0B7DD148692440098DE41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		70E0B7EA148695610098DE41 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../mediastreamer2/ffmpeg/libavcodec.dylib; sourceTree = "<group>"; };
+		70E0B7EB148695610098DE41 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../mediastreamer2/ffmpeg/libavutil.dylib; sourceTree = "<group>"; };
+		70E0B7EC148695610098DE41 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswscale.dylib; path = ../mediastreamer2/ffmpeg/libswscale.dylib; sourceTree = "<group>"; };
+		70EE641C150DFC3100195069 /* msswscale.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = msswscale.xcodeproj; path = ../msswscale/msswscale.xcodeproj; sourceTree = "<group>"; };
+		70EED7EE1486A3C6007C537E /* libavcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcore.dylib; path = ../mediastreamer2/ffmpeg/libavcore.dylib; sourceTree = "<group>"; };
+		70FCCC621516764500C93742 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70E0B7C0148692440098DE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FCCC631516764500C93742 /* IOKit.framework in Frameworks */,
+				70FCCC60151675B600C93742 /* libamsiptools.a in Frameworks */,
+				707D0244148FC9EE003EDD29 /* libamsip.dylib in Frameworks */,
+				707D0245148FC9EE003EDD29 /* libmediastreamer2.dylib in Frameworks */,
+				707D0246148FC9EE003EDD29 /* libortp.dylib in Frameworks */,
+				701BA1D214884A090032D41F /* OpenGL.framework in Frameworks */,
+				70EED7EF1486A3C6007C537E /* libavcore.dylib in Frameworks */,
+				70EED7E41486A233007C537E /* libavcodec.dylib in Frameworks */,
+				70EED7E51486A233007C537E /* libavutil.dylib in Frameworks */,
+				70EED7E61486A233007C537E /* libswscale.dylib in Frameworks */,
+				70E0B7C8148692440098DE41 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7022DE45148FBB6900A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE49148FBB6A00A06116 /* libamsip.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE4B148FBB7400A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE4F148FBB7400A06116 /* libamsiptools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE58148FBC6B00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE5E148FBC6B00A06116 /* libexosip2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE5A148FBC6B00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE61148FBC6B00A06116 /* libmediastreamer2.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE63148FBC8A00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE67148FBC8A00A06116 /* libcares.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE69148FBCBA00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE6D148FBCBA00A06116 /* libortp.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE6F148FBCC500A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE73148FBCC500A06116 /* libspeex.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7022DE75148FBCCF00A06116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7022DE79148FBCCF00A06116 /* libgsm.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		702E92E11508DC130057E727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702E92E51508DC140057E727 /* libmsffmpeg.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		703C1BF9148924C500D10CD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				703C1BFD148924C500D10CD7 /* libmsipph264.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		703C1C3514894C0300D10CD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				703C1C3914894C0300D10CD7 /* libmsippyuv.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		704CCFF71487ADA1007A666F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				704CCFFB1487ADA1007A666F /* libmsvideostitcher.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		706714871495018600A371B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7067148B1495018600A371B3 /* libmsippg7xx.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		707D0234148FC4A4003EDD29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				707D0238148FC4A4003EDD29 /* libsrtp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7088749314BB705300B98C64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7088749714BB705300B98C64 /* libmslibyuv.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70A2367114F83E2A0016D796 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70A2367514F83E2B0016D796 /* libmsvp8.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70D8D98B14F854BC00AA3286 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				70D8D98D14F8557000AA3286 /* nowebcamCIF.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		70D8D98C14F854F900AA3286 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
+		70E0B7B8148692440098DE41 = {
+			isa = PBXGroup;
+			children = (
+				70FCCC621516764500C93742 /* IOKit.framework */,
+				7022DE4A148FBB7400A06116 /* amsiptools.xcodeproj */,
+				7022DE44148FBB6900A06116 /* amsip.xcodeproj */,
+				7022DE56148FBC6B00A06116 /* exosip2.xcodeproj */,
+				7022DE62148FBC8A00A06116 /* cares.xcodeproj */,
+				7022DE57148FBC6B00A06116 /* mediastreamer2.xcodeproj */,
+				7022DE68148FBCBA00A06116 /* ortp.xcodeproj */,
+				707D0233148FC4A4003EDD29 /* srtp.xcodeproj */,
+				7022DE6E148FBCC500A06116 /* speex.xcodeproj */,
+				7022DE74148FBCCF00A06116 /* gsm.xcodeproj */,
+				706714861495018600A371B3 /* msippg7xx.xcodeproj */,
+				703C1C3414894C0300D10CD7 /* msippyuv.xcodeproj */,
+				703C1BF8148924C500D10CD7 /* msipph264.xcodeproj */,
+				704CCFF61487ADA1007A666F /* msvideostitcher.xcodeproj */,
+				7088749214BB705300B98C64 /* mslibyuv.xcodeproj */,
+				70A2367014F83E2A0016D796 /* msvp8.xcodeproj */,
+				702E92E01508DC130057E727 /* msffmpeg.xcodeproj */,
+				70EE641C150DFC3100195069 /* msswscale.xcodeproj */,
+				70EED7EE1486A3C6007C537E /* libavcore.dylib */,
+				70E0B7EA148695610098DE41 /* libavcodec.dylib */,
+				70E0B7EB148695610098DE41 /* libavutil.dylib */,
+				70E0B7EC148695610098DE41 /* libswscale.dylib */,
+				703C1C011489270D00D10CD7 /* libimf.dylib */,
+				703C1C04148927F900D10CD7 /* libintlc.dylib */,
+				703C1C05148927F900D10CD7 /* libiomp5.dylib */,
+				703C1C0A14892B4200D10CD7 /* libirc.dylib */,
+				70E0B7CD148692440098DE41 /* vbyantisip-macosx */,
+				70E0B7C6148692440098DE41 /* Frameworks */,
+				70D8D98C14F854F900AA3286 /* audio */,
+				70D8D98B14F854BC00AA3286 /* images */,
+				70E0B7C4148692440098DE41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70E0B7C4148692440098DE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B7C3148692440098DE41 /* vbyantisip-macosx.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70E0B7C6148692440098DE41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B7C7148692440098DE41 /* Cocoa.framework */,
+				70E0B7C9148692440098DE41 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E0B7C9148692440098DE41 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B7CA148692440098DE41 /* AppKit.framework */,
+				70E0B7CB148692440098DE41 /* CoreData.framework */,
+				70E0B7CC148692440098DE41 /* Foundation.framework */,
+				701BA1D114884A090032D41F /* OpenGL.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		70E0B7CD148692440098DE41 /* vbyantisip-macosx */ = {
+			isa = PBXGroup;
+			children = (
+				701BA1B014880EC20032D41F /* iAudioPlayer.h */,
+				701BA1AF14880EC20032D41F /* iAudioPlayer.m */,
+				701BA1A714880E7F0032D41F /* AppEngine.h */,
+				701BA1A314880E7F0032D41F /* AppEngine.m */,
+				701BA1A814880E800032D41F /* Call.h */,
+				701BA1A414880E7F0032D41F /* Call.m */,
+				701BA1A914880E800032D41F /* MultiCastDelegate.h */,
+				701BA1A514880E7F0032D41F /* MultiCastDelegate.m */,
+				701BA1A614880E7F0032D41F /* Registration.m */,
+				701BA1AA14880E800032D41F /* Registration.h */,
+				701BA1CE148845670032D41F /* Vbyantisip_NSOpenGLView.h */,
+				701BA1CF148845670032D41F /* Vbyantisip_NSOpenGLView.m */,
+				704CD0371487C081007A666F /* AppController.h */,
+				704CD0381487C081007A666F /* AppController.m */,
+				704CD03A1487C0BA007A666F /* PreferenceController.h */,
+				704CD03B1487C0BA007A666F /* PreferenceController.m */,
+				70E0B7D9148692440098DE41 /* AppDelegate.h */,
+				70E0B7DA148692440098DE41 /* AppDelegate.m */,
+				70E0B7DC148692440098DE41 /* MainMenu.xib */,
+				70E0B7CE148692440098DE41 /* Supporting Files */,
+				701BA17F1487C11C0032D41F /* Preferences.xib */,
+			);
+			path = "vbyantisip-macosx";
+			sourceTree = "<group>";
+		};
+		70E0B7CE148692440098DE41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70E0B7CF148692440098DE41 /* vbyantisip-macosx-Info.plist */,
+				70E0B7D0148692440098DE41 /* InfoPlist.strings */,
+				70E0B7D3148692440098DE41 /* main.m */,
+				70E0B7D5148692440098DE41 /* vbyantisip-macosx-Prefix.pch */,
+				70E0B7D6148692440098DE41 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70EE641D150DFC3100195069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70EE6421150DFC3100195069 /* libmsswscale.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70E0B7C2148692440098DE41 /* vbyantisip-macosx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E0B7E1148692440098DE41 /* Build configuration list for PBXNativeTarget "vbyantisip-macosx" */;
+			buildPhases = (
+				70E0B7BF148692440098DE41 /* Sources */,
+				70E0B7C0148692440098DE41 /* Frameworks */,
+				70E0B7C1148692440098DE41 /* Resources */,
+				70EED7E71486A346007C537E /* CopyFiles */,
+				709489A31487AA7300DAA968 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70EE642D150DFCE200195069 /* PBXTargetDependency */,
+				702E92E71508DC250057E727 /* PBXTargetDependency */,
+				70A2368214F8405A0016D796 /* PBXTargetDependency */,
+				7088749914BB706700B98C64 /* PBXTargetDependency */,
+				707D023A148FC4AC003EDD29 /* PBXTargetDependency */,
+				7022DE7D148FBD1600A06116 /* PBXTargetDependency */,
+				7022DE81148FBD1600A06116 /* PBXTargetDependency */,
+				7022DE83148FBD1600A06116 /* PBXTargetDependency */,
+				7022DE85148FBD1600A06116 /* PBXTargetDependency */,
+				7067148D149501A900A371B3 /* PBXTargetDependency */,
+				703C1C3B14894C1200D10CD7 /* PBXTargetDependency */,
+				703C1BFF1489251900D10CD7 /* PBXTargetDependency */,
+				704CCFFD1487ADB7007A666F /* PBXTargetDependency */,
+			);
+			name = "vbyantisip-macosx";
+			productName = "vbyantisip-macosx";
+			productReference = 70E0B7C3148692440098DE41 /* vbyantisip-macosx.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70E0B7BA148692440098DE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 70E0B7BD148692440098DE41 /* Build configuration list for PBXProject "vbyantisip-macosx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 70E0B7B8148692440098DE41;
+			productRefGroup = 70E0B7C4148692440098DE41 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7022DE45148FBB6900A06116 /* Products */;
+					ProjectRef = 7022DE44148FBB6900A06116 /* amsip.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE4B148FBB7400A06116 /* Products */;
+					ProjectRef = 7022DE4A148FBB7400A06116 /* amsiptools.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE63148FBC8A00A06116 /* Products */;
+					ProjectRef = 7022DE62148FBC8A00A06116 /* cares.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE58148FBC6B00A06116 /* Products */;
+					ProjectRef = 7022DE56148FBC6B00A06116 /* exosip2.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE75148FBCCF00A06116 /* Products */;
+					ProjectRef = 7022DE74148FBCCF00A06116 /* gsm.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE5A148FBC6B00A06116 /* Products */;
+					ProjectRef = 7022DE57148FBC6B00A06116 /* mediastreamer2.xcodeproj */;
+				},
+				{
+					ProductGroup = 702E92E11508DC130057E727 /* Products */;
+					ProjectRef = 702E92E01508DC130057E727 /* msffmpeg.xcodeproj */;
+				},
+				{
+					ProductGroup = 706714871495018600A371B3 /* Products */;
+					ProjectRef = 706714861495018600A371B3 /* msippg7xx.xcodeproj */;
+				},
+				{
+					ProductGroup = 703C1BF9148924C500D10CD7 /* Products */;
+					ProjectRef = 703C1BF8148924C500D10CD7 /* msipph264.xcodeproj */;
+				},
+				{
+					ProductGroup = 703C1C3514894C0300D10CD7 /* Products */;
+					ProjectRef = 703C1C3414894C0300D10CD7 /* msippyuv.xcodeproj */;
+				},
+				{
+					ProductGroup = 7088749314BB705300B98C64 /* Products */;
+					ProjectRef = 7088749214BB705300B98C64 /* mslibyuv.xcodeproj */;
+				},
+				{
+					ProductGroup = 70EE641D150DFC3100195069 /* Products */;
+					ProjectRef = 70EE641C150DFC3100195069 /* msswscale.xcodeproj */;
+				},
+				{
+					ProductGroup = 704CCFF71487ADA1007A666F /* Products */;
+					ProjectRef = 704CCFF61487ADA1007A666F /* msvideostitcher.xcodeproj */;
+				},
+				{
+					ProductGroup = 70A2367114F83E2A0016D796 /* Products */;
+					ProjectRef = 70A2367014F83E2A0016D796 /* msvp8.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE69148FBCBA00A06116 /* Products */;
+					ProjectRef = 7022DE68148FBCBA00A06116 /* ortp.xcodeproj */;
+				},
+				{
+					ProductGroup = 7022DE6F148FBCC500A06116 /* Products */;
+					ProjectRef = 7022DE6E148FBCC500A06116 /* speex.xcodeproj */;
+				},
+				{
+					ProductGroup = 707D0234148FC4A4003EDD29 /* Products */;
+					ProjectRef = 707D0233148FC4A4003EDD29 /* srtp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				70E0B7C2148692440098DE41 /* vbyantisip-macosx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7022DE49148FBB6A00A06116 /* libamsip.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libamsip.dylib;
+			remoteRef = 7022DE48148FBB6A00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE4F148FBB7400A06116 /* libamsiptools.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libamsiptools.a;
+			remoteRef = 7022DE4E148FBB7400A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE5E148FBC6B00A06116 /* libexosip2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libexosip2.a;
+			remoteRef = 7022DE5D148FBC6B00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE61148FBC6B00A06116 /* libmediastreamer2.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmediastreamer2.dylib;
+			remoteRef = 7022DE60148FBC6B00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE67148FBC8A00A06116 /* libcares.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcares.a;
+			remoteRef = 7022DE66148FBC8A00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE6D148FBCBA00A06116 /* libortp.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libortp.dylib;
+			remoteRef = 7022DE6C148FBCBA00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE73148FBCC500A06116 /* libspeex.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libspeex.a;
+			remoteRef = 7022DE72148FBCC500A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7022DE79148FBCCF00A06116 /* libgsm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgsm.a;
+			remoteRef = 7022DE78148FBCCF00A06116 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		702E92E51508DC140057E727 /* libmsffmpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsffmpeg.dylib;
+			remoteRef = 702E92E41508DC140057E727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		703C1BFD148924C500D10CD7 /* libmsipph264.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsipph264.dylib;
+			remoteRef = 703C1BFC148924C500D10CD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		703C1C3914894C0300D10CD7 /* libmsippyuv.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsippyuv.dylib;
+			remoteRef = 703C1C3814894C0300D10CD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		704CCFFB1487ADA1007A666F /* libmsvideostitcher.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsvideostitcher.dylib;
+			remoteRef = 704CCFFA1487ADA1007A666F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7067148B1495018600A371B3 /* libmsippg7xx.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsippg7xx.dylib;
+			remoteRef = 7067148A1495018600A371B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		707D0238148FC4A4003EDD29 /* libsrtp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsrtp.a;
+			remoteRef = 707D0237148FC4A4003EDD29 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7088749714BB705300B98C64 /* libmslibyuv.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmslibyuv.dylib;
+			remoteRef = 7088749614BB705300B98C64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70A2367514F83E2B0016D796 /* libmsvp8.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsvp8.dylib;
+			remoteRef = 70A2367414F83E2B0016D796 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70EE6421150DFC3100195069 /* libmsswscale.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmsswscale.dylib;
+			remoteRef = 70EE6420150DFC3100195069 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70E0B7C1148692440098DE41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B7D2148692440098DE41 /* InfoPlist.strings in Resources */,
+				70E0B7D8148692440098DE41 /* Credits.rtf in Resources */,
+				70E0B7DE148692440098DE41 /* MainMenu.xib in Resources */,
+				701BA1801487C11C0032D41F /* Preferences.xib in Resources */,
+				70D8D98E14F8557000AA3286 /* nowebcamCIF.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70E0B7BF148692440098DE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E0B7D4148692440098DE41 /* main.m in Sources */,
+				70E0B7DB148692440098DE41 /* AppDelegate.m in Sources */,
+				704CD0391487C081007A666F /* AppController.m in Sources */,
+				704CD03C1487C0BA007A666F /* PreferenceController.m in Sources */,
+				701BA1AB14880E800032D41F /* AppEngine.m in Sources */,
+				701BA1AC14880E800032D41F /* Call.m in Sources */,
+				701BA1AD14880E800032D41F /* MultiCastDelegate.m in Sources */,
+				701BA1AE14880E800032D41F /* Registration.m in Sources */,
+				701BA1B114880EC20032D41F /* iAudioPlayer.m in Sources */,
+				701BA1D0148845680032D41F /* Vbyantisip_NSOpenGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7022DE7D148FBD1600A06116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = exosip2;
+			targetProxy = 7022DE7C148FBD1600A06116 /* PBXContainerItemProxy */;
+		};
+		7022DE81148FBD1600A06116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cares;
+			targetProxy = 7022DE80148FBD1600A06116 /* PBXContainerItemProxy */;
+		};
+		7022DE83148FBD1600A06116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = speex;
+			targetProxy = 7022DE82148FBD1600A06116 /* PBXContainerItemProxy */;
+		};
+		7022DE85148FBD1600A06116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = gsm;
+			targetProxy = 7022DE84148FBD1600A06116 /* PBXContainerItemProxy */;
+		};
+		702E92E71508DC250057E727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msffmpeg;
+			targetProxy = 702E92E61508DC250057E727 /* PBXContainerItemProxy */;
+		};
+		703C1BFF1489251900D10CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msipph264;
+			targetProxy = 703C1BFE1489251900D10CD7 /* PBXContainerItemProxy */;
+		};
+		703C1C3B14894C1200D10CD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msippyuv;
+			targetProxy = 703C1C3A14894C1200D10CD7 /* PBXContainerItemProxy */;
+		};
+		704CCFFD1487ADB7007A666F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msvideostitcher;
+			targetProxy = 704CCFFC1487ADB7007A666F /* PBXContainerItemProxy */;
+		};
+		7067148D149501A900A371B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msippg7xx;
+			targetProxy = 7067148C149501A900A371B3 /* PBXContainerItemProxy */;
+		};
+		707D023A148FC4AC003EDD29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = srtp;
+			targetProxy = 707D0239148FC4AC003EDD29 /* PBXContainerItemProxy */;
+		};
+		7088749914BB706700B98C64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mslibyuv;
+			targetProxy = 7088749814BB706700B98C64 /* PBXContainerItemProxy */;
+		};
+		70A2368214F8405A0016D796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msvp8;
+			targetProxy = 70A2368114F8405A0016D796 /* PBXContainerItemProxy */;
+		};
+		70EE642D150DFCE200195069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = msswscale;
+			targetProxy = 70EE642C150DFCE200195069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70E0B7D0148692440098DE41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70E0B7D1148692440098DE41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70E0B7D6148692440098DE41 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70E0B7D7148692440098DE41 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		70E0B7DC148692440098DE41 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70E0B7DD148692440098DE41 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70E0B7DF148692440098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+					../../../amsip/include/,
+					../../../amsiptools/include/,
+					../../../amsip/src,
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		70E0B7E0148692440098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSIP_MT,
+					ENABLE_TRACE,
+					HAVE_CONFIG_H,
+					VIDEO_ENABLED,
+					ENABLE_VIDEO,
+					ENABLE_HID,
+					HAVE_LIBAVCODEC_AVCODEC_H,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../srtp,
+					../../../osip/include/,
+					../../../exosip/include/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+					../../../amsip/include/,
+					../../../amsiptools/include/,
+					../../../amsip/src,
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		70E0B7E2148692440098DE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vbyantisip-macosx/vbyantisip-macosx-Prefix.pch";
+				INFOPLIST_FILE = "vbyantisip-macosx/vbyantisip-macosx-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+					"\"$(SRCROOT)/../msipph264\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		70E0B7E3148692440098DE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vbyantisip-macosx/vbyantisip-macosx-Prefix.pch";
+				INFOPLIST_FILE = "vbyantisip-macosx/vbyantisip-macosx-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+					"\"$(SRCROOT)/../msipph264\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70E0B7BD148692440098DE41 /* Build configuration list for PBXProject "vbyantisip-macosx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B7DF148692440098DE41 /* Debug */,
+				70E0B7E0148692440098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E0B7E1148692440098DE41 /* Build configuration list for PBXNativeTarget "vbyantisip-macosx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E0B7E2148692440098DE41 /* Debug */,
+				70E0B7E3148692440098DE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70E0B7BA148692440098DE41 /* Project object */;
+}

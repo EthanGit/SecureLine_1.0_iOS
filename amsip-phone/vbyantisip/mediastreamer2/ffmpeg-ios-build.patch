@@ -1,0 +1,85 @@
+diff --git a/build.sh b/build.sh
+index e29d576..34051c9 100755
+--- a/build.sh
++++ b/build.sh
+@@ -13,8 +13,8 @@ then
+   echo "ffmpeg source directory does not exist, run sync.sh"
+ fi
+ 
+-#ARCHS=${ARCHS:-"armv6 armv7 i386"}
+-ARCHS=${ARCHS:-"armv7 i386"}
++ARCHS=${ARCHS:-"armv6 armv7 i386"}
++#ARCHS=${ARCHS:-"armv7 i386"}
+ 
+ for ARCH in $ARCHS
+ do
+@@ -34,13 +34,15 @@ do
+     case $ARCH in
+         armv6)
+             EXTRA_FLAGS="--cpu=arm1176jzf-s"
+-            EXTRA_CFLAGS=""
++            EXTRA_CFLAGS="-miphoneos-version-min=4.0"
++            EXTRA_LDFLAGS="-miphoneos-version-min=4.0"
+             PLATFORM="${PLATFORMBASE}/iPhoneOS.platform"
+             IOSSDK=iPhoneOS${IOSSDKVERSION}
+             ;;
+         armv7)
+             EXTRA_FLAGS="--cpu=cortex-a8 --enable-pic"
+-            EXTRA_CFLAGS="-mfpu=neon"
++            EXTRA_CFLAGS="-mfpu=neon -miphoneos-version-min=4.0"
++            EXTRA_LDFLAGS="-miphoneos-version-min=4.0"
+             PLATFORM="${PLATFORMBASE}/iPhoneOS.platform"
+             IOSSDK=iPhoneOS${IOSSDKVERSION}
+             ;;
+@@ -56,20 +58,23 @@ do
+             ;;
+     esac
+ 
++    EXTRA_FLAGS="$EXTRA_FLAGS --enable-swscale --disable-decoders --enable-decoder=h263 --enable-decoder=h263i --enable-decoder=h264 --enable-decoder=mpeg4 --enable-decoder=mjpeg --disable-encoders --enable-encoder=h263 --enable-encoder=h263p --enable-encoder=mpeg4 --enable-encoder=mjpeg --disable-hwaccels --disable-muxers --disable-demuxers --disable-parsers --disable-protocols --enable-protocol=http --enable-protocol=tcp --disable-bsfs --disable-indevs --disable-outdevs --disable-filters --disable-avdevice --disable-debug"
++
+     echo "Configuring ffmpeg for $ARCH..."
+     ./configure \
+     --prefix=$DIST_DIR \
+     --enable-cross-compile --target-os=darwin --arch=$ARCH \
+     --cross-prefix="${PLATFORM}/Developer/usr/bin/" \
+     --sysroot="${PLATFORM}/Developer/SDKs/${IOSSDK}.sdk" \
+-    --extra-ldflags=-L${PLATFORM}/Developer/SDKs/${IOSSDK}.sdk/usr/lib/system \
++    --extra-ldflags="-L${PLATFORM}/Developer/SDKs/${IOSSDK}.sdk/usr/lib/system ${EXTRA_LDFLAGS}" \
+     --disable-bzlib \
+     --disable-doc \
+     --disable-ffmpeg \
+     --disable-ffplay \
+     --disable-ffserver \
+     --disable-ffprobe \
+-    --as="gas-preprocessor.pl ${PLATFORM}/Developer/usr/bin/as" \
++    --cc="${PLATFORM}/Developer/usr/bin/clang" \
++    --as="gas-preprocessor.pl ${PLATFORM}/Developer/usr/bin/clang" \
+     --extra-ldflags="-arch $ARCH" \
+     --extra-cflags="-arch $ARCH $EXTRA_CFLAGS" \
+     --extra-cxxflags="-arch $ARCH" \
+diff --git a/ffmpeg b/ffmpeg
+index 23934e5..7230116 160000
+--- a/ffmpeg
++++ b/ffmpeg
+@@ -1 +1 @@
+-Subproject commit 23934e5f41f017587c15b9de4c3594a2627e14b5
++Subproject commit 7230116000988103449a720f254d5437e13b20ff
+diff --git a/sync.sh b/sync.sh
+index 438500e..54812b5 100755
+--- a/sync.sh
++++ b/sync.sh
+@@ -10,11 +10,11 @@ then
+   echo "Found ffmpeg source directory, no need to fetch from git..."
+ else
+   echo "Fetching ffmpeg from git://git.videolan.org/ffmpeg.git..."
+-  git submodule update --init ffmpeg
++  git clone git://git.videolan.org/ffmpeg.git
+ fi
+ 
+-#ARCHS=${ARCHS:-"armv6 armv7 i386"}
+-ARCHS=${ARCHS:-"armv7 i386"}
++ARCHS=${ARCHS:-"armv6 armv7 i386"}
++#ARCHS=${ARCHS:-"armv7 i386"}
+ 
+ for ARCH in $ARCHS
+ do

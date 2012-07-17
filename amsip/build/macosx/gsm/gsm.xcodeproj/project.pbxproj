@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		707180A914865FE2001E87D8 /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809714865FE2001E87D8 /* add.c */; };
+		707180AA14865FE2001E87D8 /* code.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809814865FE2001E87D8 /* code.c */; };
+		707180AC14865FE2001E87D8 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809A14865FE2001E87D8 /* decode.c */; };
+		707180AD14865FE2001E87D8 /* gsm_create.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809B14865FE2001E87D8 /* gsm_create.c */; };
+		707180AE14865FE2001E87D8 /* gsm_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809C14865FE2001E87D8 /* gsm_decode.c */; };
+		707180AF14865FE2001E87D8 /* gsm_destroy.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809D14865FE2001E87D8 /* gsm_destroy.c */; };
+		707180B014865FE2001E87D8 /* gsm_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809E14865FE2001E87D8 /* gsm_encode.c */; };
+		707180B114865FE2001E87D8 /* gsm_explode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7071809F14865FE2001E87D8 /* gsm_explode.c */; };
+		707180B214865FE2001E87D8 /* gsm_implode.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A014865FE2001E87D8 /* gsm_implode.c */; };
+		707180B314865FE2001E87D8 /* gsm_option.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A114865FE2001E87D8 /* gsm_option.c */; };
+		707180B414865FE2001E87D8 /* gsm_print.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A214865FE2001E87D8 /* gsm_print.c */; };
+		707180B514865FE2001E87D8 /* long_term.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A314865FE2001E87D8 /* long_term.c */; };
+		707180B614865FE2001E87D8 /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A414865FE2001E87D8 /* lpc.c */; };
+		707180B714865FE2001E87D8 /* preprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A514865FE2001E87D8 /* preprocess.c */; };
+		707180B814865FE2001E87D8 /* rpe.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A614865FE2001E87D8 /* rpe.c */; };
+		707180B914865FE2001E87D8 /* short_term.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A714865FE2001E87D8 /* short_term.c */; };
+		707180BA14865FE2001E87D8 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 707180A814865FE2001E87D8 /* table.c */; };
+		707180C014865FE8001E87D8 /* gsm.h in Headers */ = {isa = PBXBuildFile; fileRef = 707180BB14865FE8001E87D8 /* gsm.h */; };
+		707180C114865FE8001E87D8 /* private.h in Headers */ = {isa = PBXBuildFile; fileRef = 707180BC14865FE8001E87D8 /* private.h */; };
+		707180C214865FE8001E87D8 /* proto.h in Headers */ = {isa = PBXBuildFile; fileRef = 707180BD14865FE8001E87D8 /* proto.h */; };
+		707180C314865FE8001E87D8 /* toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 707180BE14865FE8001E87D8 /* toast.h */; };
+		707180C414865FE8001E87D8 /* unproto.h in Headers */ = {isa = PBXBuildFile; fileRef = 707180BF14865FE8001E87D8 /* unproto.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7071808D14865FAD001E87D8 /* libgsm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgsm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7071809714865FE2001E87D8 /* add.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = add.c; path = ../../../codecs/gsm/src/add.c; sourceTree = "<group>"; };
+		7071809814865FE2001E87D8 /* code.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = code.c; path = ../../../codecs/gsm/src/code.c; sourceTree = "<group>"; };
+		7071809A14865FE2001E87D8 /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = ../../../codecs/gsm/src/decode.c; sourceTree = "<group>"; };
+		7071809B14865FE2001E87D8 /* gsm_create.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_create.c; path = ../../../codecs/gsm/src/gsm_create.c; sourceTree = "<group>"; };
+		7071809C14865FE2001E87D8 /* gsm_decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_decode.c; path = ../../../codecs/gsm/src/gsm_decode.c; sourceTree = "<group>"; };
+		7071809D14865FE2001E87D8 /* gsm_destroy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_destroy.c; path = ../../../codecs/gsm/src/gsm_destroy.c; sourceTree = "<group>"; };
+		7071809E14865FE2001E87D8 /* gsm_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_encode.c; path = ../../../codecs/gsm/src/gsm_encode.c; sourceTree = "<group>"; };
+		7071809F14865FE2001E87D8 /* gsm_explode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_explode.c; path = ../../../codecs/gsm/src/gsm_explode.c; sourceTree = "<group>"; };
+		707180A014865FE2001E87D8 /* gsm_implode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_implode.c; path = ../../../codecs/gsm/src/gsm_implode.c; sourceTree = "<group>"; };
+		707180A114865FE2001E87D8 /* gsm_option.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_option.c; path = ../../../codecs/gsm/src/gsm_option.c; sourceTree = "<group>"; };
+		707180A214865FE2001E87D8 /* gsm_print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gsm_print.c; path = ../../../codecs/gsm/src/gsm_print.c; sourceTree = "<group>"; };
+		707180A314865FE2001E87D8 /* long_term.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = long_term.c; path = ../../../codecs/gsm/src/long_term.c; sourceTree = "<group>"; };
+		707180A414865FE2001E87D8 /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc.c; path = ../../../codecs/gsm/src/lpc.c; sourceTree = "<group>"; };
+		707180A514865FE2001E87D8 /* preprocess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = preprocess.c; path = ../../../codecs/gsm/src/preprocess.c; sourceTree = "<group>"; };
+		707180A614865FE2001E87D8 /* rpe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rpe.c; path = ../../../codecs/gsm/src/rpe.c; sourceTree = "<group>"; };
+		707180A714865FE2001E87D8 /* short_term.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = short_term.c; path = ../../../codecs/gsm/src/short_term.c; sourceTree = "<group>"; };
+		707180A814865FE2001E87D8 /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = table.c; path = ../../../codecs/gsm/src/table.c; sourceTree = "<group>"; };
+		707180BB14865FE8001E87D8 /* gsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gsm.h; path = gsm/gsm.h; sourceTree = "<group>"; };
+		707180BC14865FE8001E87D8 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = private.h; path = ../../../codecs/gsm/inc/private.h; sourceTree = "<group>"; };
+		707180BD14865FE8001E87D8 /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proto.h; path = ../../../codecs/gsm/inc/proto.h; sourceTree = "<group>"; };
+		707180BE14865FE8001E87D8 /* toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = toast.h; path = ../../../codecs/gsm/inc/toast.h; sourceTree = "<group>"; };
+		707180BF14865FE8001E87D8 /* unproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unproto.h; path = ../../../codecs/gsm/inc/unproto.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7071808A14865FAD001E87D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7071808214865FAD001E87D8 = {
+			isa = PBXGroup;
+			children = (
+				7071809614865FD2001E87D8 /* gsm */,
+				7071808E14865FAD001E87D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7071808E14865FAD001E87D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7071808D14865FAD001E87D8 /* libgsm.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7071809414865FCF001E87D8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7071809714865FE2001E87D8 /* add.c */,
+				7071809814865FE2001E87D8 /* code.c */,
+				7071809A14865FE2001E87D8 /* decode.c */,
+				7071809B14865FE2001E87D8 /* gsm_create.c */,
+				7071809C14865FE2001E87D8 /* gsm_decode.c */,
+				7071809D14865FE2001E87D8 /* gsm_destroy.c */,
+				7071809E14865FE2001E87D8 /* gsm_encode.c */,
+				7071809F14865FE2001E87D8 /* gsm_explode.c */,
+				707180A014865FE2001E87D8 /* gsm_implode.c */,
+				707180A114865FE2001E87D8 /* gsm_option.c */,
+				707180A214865FE2001E87D8 /* gsm_print.c */,
+				707180A314865FE2001E87D8 /* long_term.c */,
+				707180A414865FE2001E87D8 /* lpc.c */,
+				707180A514865FE2001E87D8 /* preprocess.c */,
+				707180A614865FE2001E87D8 /* rpe.c */,
+				707180A714865FE2001E87D8 /* short_term.c */,
+				707180A814865FE2001E87D8 /* table.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		7071809514865FD0001E87D8 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				707180BB14865FE8001E87D8 /* gsm.h */,
+				707180BC14865FE8001E87D8 /* private.h */,
+				707180BD14865FE8001E87D8 /* proto.h */,
+				707180BE14865FE8001E87D8 /* toast.h */,
+				707180BF14865FE8001E87D8 /* unproto.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		7071809614865FD2001E87D8 /* gsm */ = {
+			isa = PBXGroup;
+			children = (
+				7071809414865FCF001E87D8 /* src */,
+				7071809514865FD0001E87D8 /* include */,
+			);
+			name = gsm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7071808B14865FAD001E87D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707180C014865FE8001E87D8 /* gsm.h in Headers */,
+				707180C114865FE8001E87D8 /* private.h in Headers */,
+				707180C214865FE8001E87D8 /* proto.h in Headers */,
+				707180C314865FE8001E87D8 /* toast.h in Headers */,
+				707180C414865FE8001E87D8 /* unproto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7071808C14865FAD001E87D8 /* gsm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7071809114865FAD001E87D8 /* Build configuration list for PBXNativeTarget "gsm" */;
+			buildPhases = (
+				7071808914865FAD001E87D8 /* Sources */,
+				7071808A14865FAD001E87D8 /* Frameworks */,
+				7071808B14865FAD001E87D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gsm;
+			productName = gsm;
+			productReference = 7071808D14865FAD001E87D8 /* libgsm.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7071808414865FAD001E87D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7071808714865FAD001E87D8 /* Build configuration list for PBXProject "gsm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7071808214865FAD001E87D8;
+			productRefGroup = 7071808E14865FAD001E87D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7071808C14865FAD001E87D8 /* gsm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7071808914865FAD001E87D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707180A914865FE2001E87D8 /* add.c in Sources */,
+				707180AA14865FE2001E87D8 /* code.c in Sources */,
+				707180AC14865FE2001E87D8 /* decode.c in Sources */,
+				707180AD14865FE2001E87D8 /* gsm_create.c in Sources */,
+				707180AE14865FE2001E87D8 /* gsm_decode.c in Sources */,
+				707180AF14865FE2001E87D8 /* gsm_destroy.c in Sources */,
+				707180B014865FE2001E87D8 /* gsm_encode.c in Sources */,
+				707180B114865FE2001E87D8 /* gsm_explode.c in Sources */,
+				707180B214865FE2001E87D8 /* gsm_implode.c in Sources */,
+				707180B314865FE2001E87D8 /* gsm_option.c in Sources */,
+				707180B414865FE2001E87D8 /* gsm_print.c in Sources */,
+				707180B514865FE2001E87D8 /* long_term.c in Sources */,
+				707180B614865FE2001E87D8 /* lpc.c in Sources */,
+				707180B714865FE2001E87D8 /* preprocess.c in Sources */,
+				707180B814865FE2001E87D8 /* rpe.c in Sources */,
+				707180B914865FE2001E87D8 /* short_term.c in Sources */,
+				707180BA14865FE2001E87D8 /* table.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7071808F14865FAD001E87D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7071809014865FAD001E87D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7071809214865FAD001E87D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7071809314865FAD001E87D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7071808714865FAD001E87D8 /* Build configuration list for PBXProject "gsm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7071808F14865FAD001E87D8 /* Debug */,
+				7071809014865FAD001E87D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7071809114865FAD001E87D8 /* Build configuration list for PBXNativeTarget "gsm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7071809214865FAD001E87D8 /* Debug */,
+				7071809314865FAD001E87D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7071808414865FAD001E87D8 /* Project object */;
+}

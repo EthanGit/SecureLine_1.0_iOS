@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		702E92DE1508DA5A0057E727 /* videodec.c in Sources */ = {isa = PBXBuildFile; fileRef = 702E92DC1508DA5A0057E727 /* videodec.c */; };
+		702E92DF1508DA5A0057E727 /* videoenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 702E92DD1508DA5A0057E727 /* videoenc.c */; };
+		702E92F01508DD7A0057E727 /* libavcodec.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92EC1508DD790057E727 /* libavcodec.dylib */; };
+		702E92F11508DD7A0057E727 /* libavcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92ED1508DD790057E727 /* libavcore.dylib */; };
+		702E92F21508DD7A0057E727 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92EE1508DD7A0057E727 /* libavutil.dylib */; };
+		702E92F31508DD7A0057E727 /* libswscale.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92EF1508DD7A0057E727 /* libswscale.dylib */; };
+		702E93001508E0070057E727 /* libmediastreamer2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92FC1508DFE10057E727 /* libmediastreamer2.dylib */; };
+		702E93011508E0070057E727 /* libortp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702E92FF1508DFE10057E727 /* libortp.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		702E92FB1508DFE10057E727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E92F51508DFE10057E727 /* mediastreamer2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B62714867F710098DE41;
+			remoteInfo = mediastreamer2;
+		};
+		702E92FE1508DFE10057E727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E92F41508DFE10057E727 /* ortp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70E0B4AC1486642D0098DE41;
+			remoteInfo = ortp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		702E92C81508DA360057E727 /* libmsffmpeg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmsffmpeg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		702E92D31508DA360057E727 /* msffmpeg-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "msffmpeg-Prefix.pch"; sourceTree = "<group>"; };
+		702E92DC1508DA5A0057E727 /* videodec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = videodec.c; path = ../../../../plugins/msffmpeg/src/videodec.c; sourceTree = "<group>"; };
+		702E92DD1508DA5A0057E727 /* videoenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = videoenc.c; path = ../../../../plugins/msffmpeg/src/videoenc.c; sourceTree = "<group>"; };
+		702E92EC1508DD790057E727 /* libavcodec.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.dylib; path = ../mediastreamer2/ffmpeg/libavcodec.dylib; sourceTree = "<group>"; };
+		702E92ED1508DD790057E727 /* libavcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcore.dylib; path = ../mediastreamer2/ffmpeg/libavcore.dylib; sourceTree = "<group>"; };
+		702E92EE1508DD7A0057E727 /* libavutil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.dylib; path = ../mediastreamer2/ffmpeg/libavutil.dylib; sourceTree = "<group>"; };
+		702E92EF1508DD7A0057E727 /* libswscale.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libswscale.dylib; path = ../mediastreamer2/ffmpeg/libswscale.dylib; sourceTree = "<group>"; };
+		702E92F41508DFE10057E727 /* ortp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ortp.xcodeproj; path = /Volumes/HOME/amoizard/git/amsip/build/macosx/msvp8/../ortp/ortp.xcodeproj; sourceTree = "<absolute>"; };
+		702E92F51508DFE10057E727 /* mediastreamer2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mediastreamer2.xcodeproj; path = /Volumes/HOME/amoizard/git/amsip/build/macosx/msvp8/../mediastreamer2/mediastreamer2.xcodeproj; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		702E92C51508DA360057E727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702E93001508E0070057E727 /* libmediastreamer2.dylib in Frameworks */,
+				702E93011508E0070057E727 /* libortp.dylib in Frameworks */,
+				702E92F01508DD7A0057E727 /* libavcodec.dylib in Frameworks */,
+				702E92F11508DD7A0057E727 /* libavcore.dylib in Frameworks */,
+				702E92F21508DD7A0057E727 /* libavutil.dylib in Frameworks */,
+				702E92F31508DD7A0057E727 /* libswscale.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		702E92BD1508DA360057E727 = {
+			isa = PBXGroup;
+			children = (
+				702E92EC1508DD790057E727 /* libavcodec.dylib */,
+				702E92ED1508DD790057E727 /* libavcore.dylib */,
+				702E92EE1508DD7A0057E727 /* libavutil.dylib */,
+				702E92EF1508DD7A0057E727 /* libswscale.dylib */,
+				702E92F41508DFE10057E727 /* ortp.xcodeproj */,
+				702E92F51508DFE10057E727 /* mediastreamer2.xcodeproj */,
+				702E92D11508DA360057E727 /* msffmpeg */,
+				702E92CA1508DA360057E727 /* Frameworks */,
+				702E92C91508DA360057E727 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		702E92C91508DA360057E727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702E92C81508DA360057E727 /* libmsffmpeg.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		702E92CA1508DA360057E727 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				702E92CD1508DA360057E727 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		702E92CD1508DA360057E727 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		702E92D11508DA360057E727 /* msffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				702E92DC1508DA5A0057E727 /* videodec.c */,
+				702E92DD1508DA5A0057E727 /* videoenc.c */,
+				702E92D21508DA360057E727 /* Supporting Files */,
+			);
+			path = msffmpeg;
+			sourceTree = "<group>";
+		};
+		702E92D21508DA360057E727 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				702E92D31508DA360057E727 /* msffmpeg-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		702E92F61508DFE10057E727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702E92FF1508DFE10057E727 /* libortp.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		702E92F81508DFE10057E727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702E92FC1508DFE10057E727 /* libmediastreamer2.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		702E92C61508DA360057E727 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		702E92C71508DA360057E727 /* msffmpeg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 702E92D91508DA360057E727 /* Build configuration list for PBXNativeTarget "msffmpeg" */;
+			buildPhases = (
+				702E92C41508DA360057E727 /* Sources */,
+				702E92C51508DA360057E727 /* Frameworks */,
+				702E92C61508DA360057E727 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = msffmpeg;
+			productName = msffmpeg;
+			productReference = 702E92C81508DA360057E727 /* libmsffmpeg.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		702E92BF1508DA360057E727 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 702E92C21508DA360057E727 /* Build configuration list for PBXProject "msffmpeg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 702E92BD1508DA360057E727;
+			productRefGroup = 702E92C91508DA360057E727 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 702E92F81508DFE10057E727 /* Products */;
+					ProjectRef = 702E92F51508DFE10057E727 /* mediastreamer2.xcodeproj */;
+				},
+				{
+					ProductGroup = 702E92F61508DFE10057E727 /* Products */;
+					ProjectRef = 702E92F41508DFE10057E727 /* ortp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				702E92C71508DA360057E727 /* msffmpeg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		702E92FC1508DFE10057E727 /* libmediastreamer2.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libmediastreamer2.dylib;
+			remoteRef = 702E92FB1508DFE10057E727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		702E92FF1508DFE10057E727 /* libortp.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libortp.dylib;
+			remoteRef = 702E92FE1508DFE10057E727 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		702E92C41508DA360057E727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702E92DE1508DA5A0057E727 /* videodec.c in Sources */,
+				702E92DF1508DA5A0057E727 /* videoenc.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		702E92D71508DA360057E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		702E92D81508DA360057E727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../mediastreamer2/ffmpeg/,
+					../../../oRTP/include/,
+					../../../mediastreamer2/include/,
+				);
+				INSTALL_PATH = "@rpath";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		702E92DA1508DA360057E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "msffmpeg/msffmpeg-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/amsip-video-dcrcxiqatebrckdjbcysphbqytkk/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		702E92DB1508DA360057E727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "msffmpeg/msffmpeg-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/amsip-video-dcrcxiqatebrckdjbcysphbqytkk/Build/Products/Debug\"",
+					"\"$(SRCROOT)/../mediastreamer2/ffmpeg\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		702E92C21508DA360057E727 /* Build configuration list for PBXProject "msffmpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702E92D71508DA360057E727 /* Debug */,
+				702E92D81508DA360057E727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		702E92D91508DA360057E727 /* Build configuration list for PBXNativeTarget "msffmpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702E92DA1508DA360057E727 /* Debug */,
+				702E92DB1508DA360057E727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 702E92BF1508DA360057E727 /* Project object */;
+}

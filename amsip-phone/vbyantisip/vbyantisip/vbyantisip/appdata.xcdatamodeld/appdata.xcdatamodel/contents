@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D2001" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Contacts" representedClassName="Contacts" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="other" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="section_key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secureid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Recents" representedClassName="Recents" syncable="YES">
+        <attribute name="callid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="direction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteuri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="section_key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secureid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sip_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sip_reason" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_date" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contacts" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Recents" positionX="160" positionY="192" width="128" height="195"/>
+    </elements>
+</model>

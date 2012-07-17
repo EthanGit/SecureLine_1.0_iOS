@@ -1,0 +1,136 @@
+/* 
+  Localizable.strings
+  vbyantisip
+
+  Created by Arthur Tseng on 2012/6/27.
+  Copyright (c) 2012年 Gentrice. All rights reserved.
+*/
+
+"btnAdd" = "新增";
+"btnEdit" = "編輯";
+"btnCancel" = "取消";
+"btnBack" = "返回";
+"btnDone" = "完成";
+"btnEnter" ="確定";
+"btnCallAll" = "所有電話";
+"btnCallLost" = "未接來電";
+
+"tabRecent" = "通話紀錄";
+"tabContacts" = "聯絡資訊";
+"tabMore" = "設定";
+"tabContactInfo"="聯絡人資訊";
+"tabAddContact"="新增聯絡人";
+"tabRecentInfo"="詳細資訊";
+
+"moreAbout" = "產品資訊";
+"morePSInfo" = "帳號管理";
+"moreInvite" = "告訴朋友";
+"morePasscode"= "密碼鎖";
+"moreReport" = "聯絡我們";
+"moreLogout" = "登出";
+
+"callEndCall" = "結束通話";
+"callAnswer" = "接聽";
+"callRedial" = "重撥";
+"callConnected" = "通話中";
+"callDialing" = "撥號中";
+"callBusy" = "對方忙線中";
+"callDisconnecting" = "結束通話中";
+"callIncoming" = "來電中";
+"callDisconnected" = "已斷線";
+"callUserNotFound" = "對方無上線";
+
+//Line Quality
+"qtyTitle" = "連線狀態";
+"qtyPool" = "微弱";
+"qtyGood" = "良好";
+"qtyDialing" = "撥號中";
+
+"Yes" = "是";
+"No" = "否";
+"Ok" = "好";
+
+//Contacts
+
+"sntSecureLineID" = "Secure Line ID";
+"sntCompany" = "公司";
+"sntUserInformation" = "其他資訊";
+"btnCall" = "撥話";
+
+"fphUserFirstname" =  "聯絡人 ﹣ 名字";
+"fphUserLastname" = "聯絡人 ﹣ 姓氏";
+"fphUserSecureLineID" = "聯絡人 Secure Line ID";
+"fphUserCompanyName" = "聯絡人公司名稱";
+
+
+"altmEditContactWarning"="修改錯誤警告";
+"altmAddContactWarning"="新增錯誤警告";
+"altmContactWarningNoFN"="請輸入您的名字!";
+"altmContactWarningNoLN"="請輸入您的姓氏!";
+"altmContactWarningNoSID"="請輸入您的 Secure Line ID!";
+
+
+//Recents
+"Recent"="最近記錄";
+"Today"="今天";
+"Yesterday"="昨天";
+"btnAllCall" = "所有電話";
+"btnLostCall" = "未接來電";
+
+//More 
+
+"altPasscodeSetting"="密碼鎖設定:";
+"fphNewPasscode"="請輸入4碼數值";
+"fphConfirmPasscode"="請輸入新密碼";
+
+"altmPasscodemismatch"="密碼輸入不符合，請重新設定";
+"altmSettingError"="設定錯誤";
+"altmlogoutcheck"="確定登出?";
+
+
+"fphNewPasscode"="新  密碼";
+"fphConfirmPasscode"="確認密碼";
+
+//passcode
+"altmKeyinPassword"="請輸入您的密碼";
+"altmWrongPasscode"="密碼錯誤.";
+"altPasscodeError"="密碼鎖錯誤";
+"altPasscodeWarning"="密碼鎖錯誤";
+
+
+
+//inviteFriend
+"inviteTitle"="通知朋友您也有使用Secure Line:";
+"btnViaEMail"="郵件通知";
+"btnViaSMS"="簡訊通知";
+"inviteEmailSubject"="Come and join me in Secure Line!";
+"inviteEmailBody"="Join today!!";
+"inviteSMSBody"="Come and join me in Secure Line!";
+"altUnknownError"="不知明錯誤";
+
+//Login
+"btnNewAccount"="新增帳號";
+"btnLogin"="登入";
+"fphSecureLineID"="Secure Line ID";
+"fphPassword"="密碼";
+"altmKeyinError"="輸入錯誤";
+"altErrorMessage"="錯誤訊息";
+
+"altmLoginExpired"="您的帳號已到期";
+"altmLoginDataError"="您輸入的帳號密碼錯誤";
+"altmLoginAuthServerError"="認證主機發生不明錯誤，請稍候再登入";
+"altmLoginAuthError"="認證錯誤";
+
+
+
+
+//Reports
+"reportTitle"="如果對此軟體有任何問題，請來信詢問或回報";
+"btnSendReports"="回報問題";
+"reportEMailSubject"="Secure Line Problems";
+"reportfphEMailBody"="Type your problems here to report";
+
+//App delegate
+"notifyCallFrom" = "來電從";
+
+
