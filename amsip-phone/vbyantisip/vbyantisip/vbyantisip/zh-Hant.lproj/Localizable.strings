@@ -1,4 +1,4 @@
-/* 
+	/* 
   Localizable.strings
   vbyantisip
 
@@ -38,7 +38,7 @@
 "callDisconnecting" = "結束通話中";
 "callIncoming" = "來電中";
 "callDisconnected" = "已斷線";
-"callUserNotFound" = "對方無上線";
+"callUserNotFound" = "無此使用者";
 
 //Line Quality
 "qtyTitle" = "連線狀態";
@@ -63,13 +63,6 @@
 "fphUserCompanyName" = "聯絡人公司名稱";
 
 
-"altmEditContactWarning"="修改錯誤警告";
-"altmAddContactWarning"="新增錯誤警告";
-"altmContactWarningNoFN"="請輸入您的名字!";
-"altmContactWarningNoLN"="請輸入您的姓氏!";
-"altmContactWarningNoSID"="請輸入您的 Secure Line ID!";
-
-
 //Recents
 "Recent"="最近記錄";
 "Today"="今天";
@@ -81,19 +74,16 @@
 
 "altPasscodeSetting"="密碼鎖設定:";
 "fphNewPasscode"="請輸入4碼數值";
-"fphConfirmPasscode"="請輸入新密碼";
+"fphConfirmPasscode"="請輸入新密碼鎖";
 
-"altmPasscodemismatch"="密碼輸入不符合，請重新設定";
+"altmPasscodemismatch"="密碼鎖輸入不符合，請重新設定";
 "altmSettingError"="設定錯誤";
 "altmlogoutcheck"="確定登出?";
 
 
-"fphNewPasscode"="新  密碼";
-"fphConfirmPasscode"="確認密碼";
-
 //passcode
-"altmKeyinPassword"="請輸入您的密碼";
-"altmWrongPasscode"="密碼錯誤.";
+"altmKeyinPassword"="請輸入您的密碼鎖";
+"altmWrongPasscode"="密碼鎖錯誤.";
 "altPasscodeError"="密碼鎖錯誤";
 "altPasscodeWarning"="密碼鎖錯誤";
 
@@ -121,6 +111,9 @@
 "altmLoginAuthServerError"="認證主機發生不明錯誤，請稍候再登入";
 "altmLoginAuthError"="認證錯誤";
 
+
+
+//Reports
 
 
 
