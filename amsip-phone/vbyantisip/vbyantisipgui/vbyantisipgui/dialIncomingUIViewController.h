@@ -35,5 +35,6 @@
 - (NSString*)stripSecureIDfromURL:(NSString*) targetString;
 - (NSString*) lookupDisplayName:(NSString*) caller;
 - (void)setRemoteIdentity:(NSString*)str;
+-(BOOL)isDeviceMuted;
 
 @end

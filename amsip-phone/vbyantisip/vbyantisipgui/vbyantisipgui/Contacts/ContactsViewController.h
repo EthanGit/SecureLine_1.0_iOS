@@ -24,11 +24,12 @@
 	NSFetchedResultsController *fetchedResultsController;
     NSManagedObjectContext *managedObjectContext;	    
     NSManagedObjectContext *addingManagedObjectContext;	
+    NSMutableArray *indexArray;
     BOOL isReadOnly; //for callController, by arthur    
 }
 
 
-
+- (NSArray *)selectedIndexPaths;
 
 //@property(nonatomic,retain)NSMutableArray *dataSource;
 @property (unsafe_unretained, nonatomic) IBOutlet UISearchBar *contactUISearchBar;
@@ -36,6 +37,7 @@
 //@property (unsafe_unretained, nonatomic) IBOutlet UITableView *tableView;
 @property(retain,nonatomic) NSArray *filteredListContent;
 @property (nonatomic) BOOL searchIsActive;
+@property (retain, nonatomic) NSMutableArray *indexArray;
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
@@ -46,6 +48,7 @@
 -(void)insertNewObject;
 -(void)addNewContact;
 
++(void)_keepAtLinkTime;
 - (void)addControllerContextDidSave:(NSNotification*)saveNotification;
 
 @end

@@ -98,7 +98,7 @@
     /*
     NSString *querySQL = [NSString stringWithFormat: @"select name,sql from main.sqlite_master where type='table'"];
     */
-        NSLog(@"##### querySQL = %@",querySQL);
+       // NSLog(@"##### querySQL = %@",querySQL);
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -153,7 +153,7 @@
             [arrayHistory addObject:recent];
             
             //  NSLog(@"########## %@ - %@ - %@ - %@ - %@ ",[NSString stringWithUTF8String:callid], [NSString stringWithUTF8String:remoteuri], [NSString stringWithUTF8String:int_val] , [NSString stringWithUTF8String:text_val], [NSString stringWithUTF8String:hid]);
-            NSLog(@"########## %@ - %@ - %@  ",recent.callid, recent.remoteuri,recent.start_date);
+           // NSLog(@"########## %@ - %@ - %@  ",recent.callid, recent.remoteuri,recent.start_date);
             [recent release];
         }
         

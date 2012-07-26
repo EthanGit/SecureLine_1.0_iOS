@@ -68,4 +68,5 @@
 -(void)cleanUpUndoManager;
 */
 - (void)updateRightBarButtonItemState;
+- (int)dial:(NSString*)phonem;
 @end

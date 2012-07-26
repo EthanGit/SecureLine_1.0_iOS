@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		220F9ED915873FA3002E6E58 /* box-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 220F9ED815873FA2002E6E58 /* box-code.png */; };
-		220FA5F715B04BA10065686D /* appdata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 220FA5F515B04BA10065686D /* appdata.xcdatamodeld */; };
+		220FA7B615C111960065686D /* appdata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 220FA7B415C111960065686D /* appdata.xcdatamodeld */; };
 		2210A6DD1551459400E15882 /* oldphone-mono-30s.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2210A6DC1551459400E15882 /* oldphone-mono-30s.caf */; };
 		2249D41E1580B8CC000D8404 /* status_red_call.png in Resources */ = {isa = PBXBuildFile; fileRef = 2249D41A1580B8CC000D8404 /* status_red_call.png */; };
 		2249D41F1580B8CC000D8404 /* status_red_incomming.png in Resources */ = {isa = PBXBuildFile; fileRef = 2249D41B1580B8CC000D8404 /* status_red_incomming.png */; };
@@ -21,6 +21,8 @@
 		226FE934159AD62D0020E9CD /* user-privkey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 226FE931159AD62D0020E9CD /* user-privkey.pem */; };
 		22771EA515AEEA9B0016685D /* detailHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22771EA415AEEA9A0016685D /* detailHistoryViewController.xib */; };
 		227D385D15A438C30090CD4B /* RecentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227D385C15A438C30090CD4B /* RecentsViewController.xib */; };
+		227DED1415BEAA5200FE5B9F /* passcode_modify_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 227DED1215BEAA5200FE5B9F /* passcode_modify_table.png */; };
+		227DED1515BEAA5200FE5B9F /* passcode_setting_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 227DED1315BEAA5200FE5B9F /* passcode_setting_table.png */; };
 		22C440CC15943AD300EC6127 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C440CB15943AD300EC6127 /* CoreData.framework */; };
 		22C606AD15773A880013AD86 /* CellContactUITableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C606AC15773A880013AD86 /* CellContactUITableView.xib */; };
 		22CAC1FB159D439D00D1B286 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CAC1FA159D439D00D1B286 /* Icon.png */; };
@@ -219,7 +221,7 @@
 
 /* Begin PBXFileReference section */
 		220F9ED815873FA2002E6E58 /* box-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "box-code.png"; path = "images-keyStone/box-code.png"; sourceTree = "<group>"; };
-		220FA5F615B04BA10065686D /* appdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appdata.xcdatamodel; sourceTree = "<group>"; };
+		220FA7B515C111960065686D /* appdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appdata.xcdatamodel; sourceTree = "<group>"; };
 		2210A6DC1551459400E15882 /* oldphone-mono-30s.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "oldphone-mono-30s.caf"; sourceTree = "<group>"; };
 		2249D41A1580B8CC000D8404 /* status_red_call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = status_red_call.png; path = images/status_red_call.png; sourceTree = "<group>"; };
 		2249D41B1580B8CC000D8404 /* status_red_incomming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = status_red_incomming.png; path = images/status_red_incomming.png; sourceTree = "<group>"; };
@@ -232,6 +234,8 @@
 		226FE931159AD62D0020E9CD /* user-privkey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "user-privkey.pem"; path = "cafile/user-privkey.pem"; sourceTree = "<group>"; };
 		22771EA415AEEA9A0016685D /* detailHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = detailHistoryViewController.xib; path = ../../vbyantisipgui/vbyantisipgui/detailHistoryViewController.xib; sourceTree = "<group>"; };
 		227D385C15A438C30090CD4B /* RecentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecentsViewController.xib; path = ../../vbyantisipgui/vbyantisipgui/Recent/RecentsViewController.xib; sourceTree = "<group>"; };
+		227DED1215BEAA5200FE5B9F /* passcode_modify_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passcode_modify_table.png; path = "images-keyStone/passcode_modify_table.png"; sourceTree = "<group>"; };
+		227DED1315BEAA5200FE5B9F /* passcode_setting_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passcode_setting_table.png; path = "images-keyStone/passcode_setting_table.png"; sourceTree = "<group>"; };
 		22C440CB15943AD300EC6127 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		22C606AC15773A880013AD86 /* CellContactUITableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellContactUITableView.xib; sourceTree = "<group>"; };
 		22CAC1FA159D439D00D1B286 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -682,7 +686,7 @@
 		70EBBB9814210F1B00051914 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				220FA5F515B04BA10065686D /* appdata.xcdatamodeld */,
+				220FA7B415C111960065686D /* appdata.xcdatamodeld */,
 				226FE92F159AD62D0020E9CD /* cacert.pem */,
 				226FE930159AD62D0020E9CD /* user-cert.pem */,
 				226FE931159AD62D0020E9CD /* user-privkey.pem */,
@@ -698,6 +702,8 @@
 		9A7882A31580C3B800797699 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				227DED1215BEAA5200FE5B9F /* passcode_modify_table.png */,
+				227DED1315BEAA5200FE5B9F /* passcode_setting_table.png */,
 				2255F37A159C0C62005E37F1 /* button-call(contact).png */,
 				2255F37B159C0C62005E37F1 /* icon-phone.png */,
 				9A7F158C1589DC1F006CCC1C /* keypad */,
@@ -1017,6 +1023,8 @@
 				22CAC1FB159D439D00D1B286 /* Icon.png in Resources */,
 				227D385D15A438C30090CD4B /* RecentsViewController.xib in Resources */,
 				22771EA515AEEA9B0016685D /* detailHistoryViewController.xib in Resources */,
+				227DED1415BEAA5200FE5B9F /* passcode_modify_table.png in Resources */,
+				227DED1515BEAA5200FE5B9F /* passcode_setting_table.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,7 +1037,7 @@
 			files = (
 				70EBBB9E14210F1B00051914 /* main.m in Sources */,
 				70C71C47142CA3CD008D337F /* UINavigationBar_vbyantisip.m in Sources */,
-				220FA5F715B04BA10065686D /* appdata.xcdatamodeld in Sources */,
+				220FA7B615C111960065686D /* appdata.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,7 +1248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen PEI-RONG (3FW3A7PP3U)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vbyantisip/vbyantisip-Prefix.pch";
 				INFOPLIST_FILE = "vbyantisip/vbyantisip-Info.plist";
@@ -1254,7 +1262,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "70438C52-45CF-41D4-B13E-F67C1AD815A1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1263,7 +1271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen PEI-RONG (3FW3A7PP3U)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vbyantisip/vbyantisip-Prefix.pch";
 				INFOPLIST_FILE = "vbyantisip/vbyantisip-Info.plist";
@@ -1277,7 +1285,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "70438C52-45CF-41D4-B13E-F67C1AD815A1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1306,12 +1314,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		220FA5F515B04BA10065686D /* appdata.xcdatamodeld */ = {
+		220FA7B415C111960065686D /* appdata.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				220FA5F615B04BA10065686D /* appdata.xcdatamodel */,
+				220FA7B515C111960065686D /* appdata.xcdatamodel */,
 			);
-			currentVersion = 220FA5F615B04BA10065686D /* appdata.xcdatamodel */;
+			currentVersion = 220FA7B515C111960065686D /* appdata.xcdatamodel */;
 			path = appdata.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -37,7 +37,7 @@
     self.navigationItem.title = NSLocalizedString(@"morePSInfo",nil);
     
     //load web view
-    NSString *  	urlPath=@"https://www.google.com/";
+    NSString *  	urlPath=@"https://www.securekingdom.com/demo/join.php";
     NSURLRequest *  request;
     
     request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlPath]];

@@ -38,6 +38,7 @@
 -(void)segmentAction:(UISegmentedControl *)Seg;
 - (int)dial:(NSString*)phonem;
 - (void)deleteAllItems;
++(void)_keepAtLinkTime;
 //- (NSString*) stripSecureIDfromURL:(NSString*) targetString;
 //- (void)insertNewObject;
 //- (void)insertNewObject111;

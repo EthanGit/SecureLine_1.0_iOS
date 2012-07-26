@@ -78,7 +78,7 @@
         NSString *querySQL = [NSString stringWithFormat: @"SELECT a.callid, a.remoteuri , b.text_val as start_date FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid and b.description = 'start_date' where a.remoteuri like '%%sip:%@@%%'   order by   b.text_val desc",keyword];// a left join CALLINFO b on a.id = b.callid where b.int_val !=200  
         //@"SELECT a.callid, a.remoteuri, b.callid, b.int_val ,b.text_val, a.id , b.description FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid and description =\"sip_code\" where b.int_val <>\"200\" "
         //@"SELECT a.callid, a.remoteuri, b.callid, b.int_val ,b.text_val, a.id , b.description FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid where b.id is null or ( b.description = 'sip_code' and b.int_val!=\"200\") "
-        NSLog(@"##### querySQL = %@",querySQL);
+       // NSLog(@"##### querySQL = %@",querySQL);
         const char *query_stmt = [querySQL UTF8String];
         
         if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -104,7 +104,7 @@
             [arrayHistory addObject:historyEntry];
             
             //  NSLog(@"########## %@ - %@ - %@ - %@ - %@ ",[NSString stringWithUTF8String:callid], [NSString stringWithUTF8String:remoteuri], [NSString stringWithUTF8String:int_val] , [NSString stringWithUTF8String:text_val], [NSString stringWithUTF8String:hid]);
-            NSLog(@"########## %s - %s - %s  ",callid, remoteuri,start_date); 
+            //NSLog(@"########## %s - %s - %s  ",callid, remoteuri,start_date); 
         }
         
         sqlite3_finalize(statement);
@@ -171,7 +171,7 @@
     NSString *querySQL = [NSString stringWithFormat: @"SELECT a.callid, a.remoteuri, b.callid, b.int_val ,b.text_val, a.id , b.description FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid and b.description = 'sip_code' where   b.int_val!=\"200\"  and a.callid in (select callid from callinfo where description = 'direction' and int_val = 1) "];// a left join CALLINFO b on a.id = b.callid where b.int_val !=200  
     //@"SELECT a.callid, a.remoteuri, b.callid, b.int_val ,b.text_val, a.id , b.description FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid and description =\"sip_code\" where b.int_val <>\"200\" "
     //@"SELECT a.callid, a.remoteuri, b.callid, b.int_val ,b.text_val, a.id , b.description FROM HISTORY  a left join  CALLINFO b on a.callid = b.callid where b.id is null or ( b.description = 'sip_code' and b.int_val!=\"200\") "
-    NSLog(@"##### querySQL = %@",querySQL);
+    //NSLog(@"##### querySQL = %@",querySQL);
     const char *query_stmt = [querySQL UTF8String];
     
     if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -201,7 +201,7 @@
         [arrayHistory addObject:historyEntry];
         
       //  NSLog(@"########## %@ - %@ - %@ - %@ - %@ ",[NSString stringWithUTF8String:callid], [NSString stringWithUTF8String:remoteuri], [NSString stringWithUTF8String:int_val] , [NSString stringWithUTF8String:text_val], [NSString stringWithUTF8String:hid]);
-        NSLog(@"########## %s - %s - %s - %s - %s - %s - %s ",callid, remoteuri,callid_b, int_val , text_val, hid,description); 
+        //NSLog(@"########## %s - %s - %s - %s - %s - %s - %s ",callid, remoteuri,callid_b, int_val , text_val, hid,description); 
     }
     
     sqlite3_finalize(statement);
@@ -250,7 +250,7 @@
   }
   
   NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO CALLINFO (callid, description, int_val) VALUES (\"%@\", \"%@\", %i)", historyEntry.callid, key, val];
-  NSLog(@"########### insertSQL = %@",insertSQL);
+  //NSLog(@"########### insertSQL = %@",insertSQL);
   const char *insert_stmt = [insertSQL UTF8String];
   
   sqlite3_prepare_v2(myFavoriteContactDb, insert_stmt, -1, &statement, NULL);
@@ -278,7 +278,7 @@
   }
   
   NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO CALLINFO (callid, description, text_val) VALUES (\"%@\", \"%@\", \"%@\")", historyEntry.callid, key, val];
-    NSLog(@"########### insertSQL = %@",insertSQL);
+   // NSLog(@"########### insertSQL = %@",insertSQL);
   const char *insert_stmt = [insertSQL UTF8String];
   
   sqlite3_prepare_v2(myFavoriteContactDb, insert_stmt, -1, &statement, NULL);
