@@ -17,7 +17,7 @@
 #define GENTRICE_DEBUG          1
 
 
-#define APP_VERSION             @"1.0a-125"
+#define APP_VERSION             @"1.0a-140"
 #define APP_SDK_VERSION         @"4.7.0-79"
 #define APP_IOS_VERSION         @"4.7.0-26"
 

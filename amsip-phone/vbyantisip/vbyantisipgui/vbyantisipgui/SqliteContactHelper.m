@@ -96,7 +96,7 @@
     NSString *querySQL = [NSString stringWithFormat: @"SELECT ZLASTNAME || ' ' || ZFIRSTNAME as name  FROM ZCONTACTS WHERE ZSECUREID = '%@'  LIMIT 1;",secureid];//查詢條件式
     
     
-    NSLog(@"######### %@",querySQL);
+    //NSLog(@"######### %@",querySQL);
     const char *query_stmt = [querySQL UTF8String];
     
     if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -133,7 +133,7 @@
 
 - (NSMutableDictionary *) find_all_contact_name
 {
-    NSLog(@"######### find_all_contact_name");
+   // NSLog(@"######### find_all_contact_name");
     
     //NSMutableArray* tmparray =[[NSMutableArray alloc]init];//存放查詣結果
     
@@ -151,7 +151,7 @@
     NSString *querySQL = [NSString stringWithFormat: @"SELECT ZSECUREID , ZLASTNAME || ' ' || ZFIRSTNAME as name FROM ZCONTACTS ;"];//查詢條件式
     
     
-    NSLog(@"######### %@",querySQL);
+    //NSLog(@"######### %@",querySQL);
     const char *query_stmt = [querySQL UTF8String];
     
     if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -169,7 +169,7 @@
 
         const char *name = (const char *) sqlite3_column_text(statement, 1);
         const char *secureid = (const char *) sqlite3_column_text(statement, 0);           
-        NSLog(@"########### secureid  = %@ / name = %@",[NSString stringWithUTF8String:secureid],[NSString stringWithUTF8String:name]); 
+       // NSLog(@"########### secureid  = %@ / name = %@",[NSString stringWithUTF8String:secureid],[NSString stringWithUTF8String:name]); 
         
         
         //one record
@@ -205,7 +205,7 @@
     [newManagedObject setValue:[NSString stringWithFormat:@"%@", newcontact.company] forKey:@"company"];
     [newManagedObject setValue:[NSString stringWithFormat:@"%@", newcontact.other] forKey:@"other"];
     [newManagedObject setValue:[NSString stringWithFormat:@"%@", newcontact.secureid] forKey:@"secureid"];
-    NSLog(@">>>> %@ / %@ / %@ / %@ / %@",newcontact.firstname,newcontact.lastname,newcontact.company,newcontact.secureid,newcontact.other);
+    //NSLog(@">>>> %@ / %@ / %@ / %@ / %@",newcontact.firstname,newcontact.lastname,newcontact.company,newcontact.secureid,newcontact.other);
     
     [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
     return 0;
@@ -232,7 +232,7 @@
     NSString *querySQL = [NSString stringWithFormat: @"SELECT id, lastname, firstname, company, other, secureid FROM CONTACTS where lastname like '%%%@%%' or firstname like '%%%@%%';",keyword,keyword];//查詢條件式
    
     
-    NSLog(@"######### %@",querySQL);
+    //NSLog(@"######### %@",querySQL);
     const char *query_stmt = [querySQL UTF8String];
     
     if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -278,7 +278,7 @@
 
 - (NSMutableArray *) load_data
 {
-    NSLog(@"######### load_data");
+    //NSLog(@"######### load_data");
     
     NSMutableArray* tmparray =[[NSMutableArray alloc]init];//存放查詣結果
     
@@ -296,7 +296,7 @@
     NSString *querySQL = [NSString stringWithFormat: @"SELECT id, firstname, lastname, company, secureid, other  FROM CONTACTS ORDER BY firstname ASC;"];//查詢條件式
     
     
-    NSLog(@"######### %@",querySQL);
+    //NSLog(@"######### %@",querySQL);
     const char *query_stmt = [querySQL UTF8String];
     
     if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -318,7 +318,7 @@
         const char *other = (const char *) sqlite3_column_text(statement, 5);
         const char *company = (const char *) sqlite3_column_text(statement, 3); 
         const char *secureid = (const char *) sqlite3_column_text(statement, 4);   
-        NSLog(@"########### firstname = %@",[NSString stringWithUTF8String:firstname]); 
+       // NSLog(@"########### firstname = %@",[NSString stringWithUTF8String:firstname]); 
         //NSString key_tmp = [[NSString alloc] initWithFormat:@"%@",key];
         //NSString *abc = [NSString stringWithCString:key encoding:NSUTF8StringEncoding] ;
         NSMutableDictionary* dict = [[NSMutableDictionary alloc]init];//one record
@@ -348,7 +348,7 @@
 
 - (int) insert_contact:(ContactEntry *)contact
 {
-    NSLog(@"########## insert_contact");
+   // NSLog(@"########## insert_contact");
   sqlite3_stmt    *statement;
   
   const char *dbpath = [databasePath UTF8String];
@@ -360,7 +360,7 @@
   }
   
   NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO CONTACTS (lastname, firstname, company, other, secureid) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\")", contact.lastname, contact.firstname,  contact.company, contact.other, contact.phone_string];
-    NSLog(@"################ %@",insertSQL);
+   // NSLog(@"################ %@",insertSQL);
   const char *insert_stmt = [insertSQL UTF8String];
   
   sqlite3_prepare_v2(myFavoriteContactDb, insert_stmt, -1, &statement, NULL);
@@ -400,7 +400,7 @@
   for( SipNumber *number in contact.phone_numbers)
   {
     insertSQL = [NSString stringWithFormat: @"INSERT INTO NUMBERS (contactid, number, phonetype) VALUES (%i, \"%@\", \"%@\")", contactid, number.phone_number, number.phone_type];
-      NSLog(@"################ %@",insertSQL);
+      //NSLog(@"################ %@",insertSQL);
 
     insert_stmt = [insertSQL UTF8String];
     sqlite3_prepare_v2(myFavoriteContactDb, insert_stmt, -1, &statement, NULL);
@@ -531,7 +531,7 @@
 
 - (int) load_contacts:(NSMutableArray*)arrayContact
 {
-    NSLog(@"######### load_contacts");
+   // NSLog(@"######### load_contacts");
   sqlite3_stmt    *statement;
   
   const char *dbpath = [databasePath UTF8String];
@@ -543,7 +543,7 @@
   }
   
   NSString *querySQL = [NSString stringWithFormat: @"SELECT id, lastname, firstname FROM CONTACTS"];
-  NSLog(@"######### %@",querySQL);
+ // NSLog(@"######### %@",querySQL);
   const char *query_stmt = [querySQL UTF8String];
   
   if (sqlite3_prepare_v2(myFavoriteContactDb, query_stmt, -1, &statement, NULL) != SQLITE_OK)
@@ -578,7 +578,7 @@
 
 - (int *) update_contact:(ContactEntry *)contact
 {
-    NSLog(@"######### update_contact");
+    //NSLog(@"######### update_contact");
     
 
     sqlite3_stmt    *statement;
@@ -594,7 +594,7 @@
     //NSString *querySQL = [NSString stringWithFormat: @"SELECT id, lastname, firstname FROM CONTACTS where "];
     NSString *querySQL = [NSString stringWithFormat: @"UPDATE CONTACTS SET lastname = \"%@\" , firstname = \"%@\", company = \"%@\", other =\"%@\" , secureid = \"%@\" where id = \"%@\" ",contact.lastname,contact.firstname,contact.company, contact.other, contact.phone_string,contact.cid];//查詢條件式
 
-    NSLog(@"################ %@",querySQL);
+   // NSLog(@"################ %@",querySQL);
     const char *insert_stmt = [querySQL UTF8String];
     
     sqlite3_prepare_v2(myFavoriteContactDb, insert_stmt, -1, &statement, NULL);

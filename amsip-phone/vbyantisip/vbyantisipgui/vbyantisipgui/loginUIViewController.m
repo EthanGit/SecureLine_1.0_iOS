@@ -17,13 +17,17 @@
 @implementation loginUIViewController
 //@synthesize loginIDTextField;
 //@synthesize loginPasswdTextField;
+@synthesize login_message;
+@synthesize avi,activityIndicator;//,loadView;
 @synthesize createAccountButton;
 //@synthesize LoginNavigationBar;
 //@synthesize loginBarButton;
 @synthesize loginUIButton;
 @synthesize user_account;
 @synthesize user_password;
+@synthesize sendUserPwdButton;
 @synthesize tmp_password,connect_finished,tmp_data,tmp_keystone;
+@synthesize loginName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,11 +57,16 @@
     [user_password setPlaceholder:NSLocalizedString(@"fphPassword",@"Password")];
     // Do any additional setup after loading the view from its nib.
     [user_account becomeFirstResponder];
+    tmp_data = nil;
+    connect_finished = NO;
     
+    self.login_message.text = NSLocalizedString(@"labLoginMessage",nil);
+    NSLog(@"----- view=%@",[self.view subviews]);
+
     //[self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(doLoginProcess)] autorelease]];
     //[self.navigationItem setTitle:@"SecurePhone"];
-    
-    
+
+    [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] setDoingPasscodeLogin:YES];
 }
 
 
@@ -71,6 +80,11 @@
     [self setLoginUIButton:nil];
     [self setUser_account:nil];
     [self setUser_password:nil];
+    [self setAvi:nil];
+    //[self setTmp_data:nil];
+    //[self setConnect_finished:NO];
+    [self setSendUserPwdButton:nil];
+    [self setLogin_message:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -89,20 +103,24 @@
 
 - (void) doLoginProcess
 {
+    
+    [user_account resignFirstResponder];
+    [user_password resignFirstResponder];
+    
     //pass username/passwd to URL
 #if GENTRICE_DEBUG > 0
     //NSLog(@"login = %@\npasswd = %@\n", loginIDTextField.text, loginPasswdTextField.text);
 #endif //GENTRICE_DEBUG
 
-
-    
+   
 #if KeystoneAuth > 0    
-    NSError *error = NULL;
+   // NSError *error = NULL;
     // NSString *jsonString = [NSString stringWithFormat:@"{\"uid\":\"%@\",\"token\":\"%@\",\"devicetoken\":\"%@\"}",user_account.text,passwd.text,@""];
     
     NSString *account = [NSString stringWithFormat:@"%@",user_account.text];
-    NSString *password = [NSString stringWithFormat:@"%@", user_password.text];
-    
+    //NSString *password = [NSString stringWithFormat:@"%@", user_password.text];
+
+#if 0
     NSArray *valueArray = [[NSArray alloc] initWithObjects:account,password,[[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"], nil];
     NSArray *keyArray = [[NSArray alloc] initWithObjects:@"uid",@"token",@"devicetoken", nil];
     
@@ -115,17 +133,22 @@
                         options:NSJSONWritingPrettyPrinted
                         error:&error];    
     //NSLog(@"-----------------  jsonData");
-    [self performSelectorOnMainThread : @selector(login_keystone_api:) withObject:jsonData waitUntilDone:YES];
+#endif     
+    [self performSelectorOnMainThread : @selector(login_keystone_api:) withObject:nil waitUntilDone:YES];//
+
+#if 0    
     [valueArray release];
     [keyArray release];
+#endif
     
-    NSLog(@"------------------ login tmp_keystone = %@",tmp_keystone);
+       
+    //NSLog(@"------------------ login tmp_keystone = %@",self.tmp_keystone);
     NSString *message = [[[NSString alloc] init] autorelease];
     NSString *expiredDate = [[[NSString alloc] init] autorelease];
     
     if(tmp_keystone.length>0){
         
-        NSDictionary *dic = [NGJSONParser dictionaryOrArrayFromJSONString:tmp_keystone];
+        NSDictionary *dic = [NGJSONParser dictionaryOrArrayFromJSONString:self.tmp_keystone];
         
         message = [dic objectForKey:@"message"];
         expiredDate = [dic objectForKey:@"date"];
@@ -148,12 +171,22 @@
     if(expiredDate.length>0 && expiredDateInt<nowDateInt){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") 
                                                         message:NSLocalizedString(@"altmLoginExpired",@"Your account expired")
-                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnEnter",nil)
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release]; 
         return;
         
+    }
+    else if(tmp_keystone.length<=0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") 
+                                                        message:NSLocalizedString(@"altmLoginAuthServerError",nil)
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok",nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release]; 
+        return;  
+    
     }
     else if(message.length>0){
         NSString *alertMessage = [[[NSString alloc] init] autorelease];
@@ -172,10 +205,12 @@
         }
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") 
                                                         message:alertMessage
-                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnEnter",nil)
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release]; 
+        
+        [user_password becomeFirstResponder];
         return;
     }
     
@@ -186,13 +221,12 @@
     //get voip's password string
     //[self performSelectorOnMainThread : @selector(get_voip_password:) withObject:account waitUntilDone:YES];
     self.tmp_password = account;
-    NSLog(@"------------------ login tmp_password = %@",self.tmp_password);
+    //NSLog(@"------------------ login tmp_password = %@",self.tmp_password);
     //[self loginkeystoneserver:jsonData];
     
     
     
-    //Login success
-    [self.parentViewController dismissModalViewControllerAnimated:YES];
+
     
     // NSLog(@"loginName.text = %@",loginName.text);
     // NSLog(@"loginName.text = %@",passwd.text);
@@ -201,19 +235,52 @@
     //[self performSelectorOnMainThread : @ selector(getSIPPassword) withObject:nil waitUntilDone:YES];
     //self.tmp_password = user_password.text;
     
+    
+    
+    [self performSelectorOnMainThread : @selector(setting_devicetoken_mapping) withObject:nil waitUntilDone:YES];
+    message = tmp_data;
+    
+    if(![message isEqualToString:@"OK"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") 
+                                                        message:NSLocalizedString(@"altmDeviceMappingError",nil) 
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok",nil)
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release]; 
+        
+        [user_password becomeFirstResponder];
+        return;    
+
+    }
+    
+    
     if(![self.tmp_password isEqualToString:@"Error"] && self.tmp_password.length>0){
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LoginStatus"];
         [[NSUserDefaults standardUserDefaults] setObject:self.tmp_password forKey:@"password_preference"];    
         
         NSString *tmp = [NSString stringWithFormat:@"<sip:%@@%@>", user_account.text, [[NSUserDefaults standardUserDefaults] stringForKey:@"proxy_preference"]];
+                        
         [[NSUserDefaults standardUserDefaults] setObject:tmp forKey:@"identity_preference"];
+
+        
+        
+        //[[(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate]tabBarController] setSelectedIndex:1];        
+    
+        //[(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] updatetokeninfo];
+        
         [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] restartAll];
-        [[(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate]tabBarController] setSelectedIndex:1];
+        [[(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate]tabBarController] setSelectedIndex:1];  
+
         
     }
     
-#if 1
+    //Login success
+    [self.parentViewController dismissModalViewControllerAnimated:YES]; 
+    [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] setDoingPasscodeLogin:NO];
+    [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] restartAll];
+    
+#if 0
     //check if we are configured
     NSString *_proxy = [[NSUserDefaults standardUserDefaults] stringForKey:@"proxy_preference"];
 	NSString *_login = [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
@@ -236,7 +303,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse*)response 
 {
     NSLog(@"############ login connection didReceiveResponse response:%@\n",response);
-}
+}//
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection 
 {
@@ -257,7 +324,7 @@
 }
 
 - (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection{
-    NSLog(@"login connectionShouldUseCredentialStorage connection ");
+    //NSLog(@"login connectionShouldUseCredentialStorage connection ");
     return NO;
 }
 
@@ -271,7 +338,7 @@
 
 // 不管那一種 challenge 都相信
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
-    NSLog(@"login received authen challenge");
+    //NSLog(@"login received authen challenge");
     [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
 }
 
@@ -289,11 +356,10 @@
 //处理数据 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSString *data_tmp = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-    NSLog(@"######### login connection didReceiveData:");
-    NSLog(@"###### login got data %@",data_tmp );
-    //[[NSUserDefaults standardUserDefaults] setObject:data_tmp forKey:@"p_connect_data_tmp"];
+    NSString *data_tmp = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    //NSLog(@"######### connection didReceiveData:%@",data_tmp);
     self.tmp_data = data_tmp;
+    [data_tmp release];
     //[data_tmp release];
 } 
 
@@ -334,12 +400,17 @@
 - (IBAction)loginButtonPressed:(id)sender {
     NSLog(@"login=%@, passwd=%@", user_account.text, user_password.text); 
     
-    if(user_account.text.length>0 && user_password.text.length){
+    if(user_account.text.length>0 && user_password.text.length>0){
+        
+        [self startImageAnimation];
+        //[self webViewDidStartLoad];
         [self doLoginProcess];
+        [self stopImageAnimation];          
+        //[self webViewDidFinishLoad];
     }
     else{
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") message:NSLocalizedString(@"altmKeyinError",@"Keyin Error") delegate:self cancelButtonTitle:NSLocalizedString(@"btnEnter", nil) otherButtonTitles:nil];
+                              initWithTitle:NSLocalizedString(@"altErrorMessage",@"Error Message") message:NSLocalizedString(@"altmKeyinError",@"Keyin Error") delegate:self cancelButtonTitle:NSLocalizedString(@"Ok", nil) otherButtonTitles:nil];
         [alert show];
         [alert release];
     }
@@ -372,6 +443,108 @@
     
 }
 
+- (IBAction)sendUserPwd:(id)sender {
+
+    NSString *message = [NSString stringWithFormat:@"%@\n\n\n",NSLocalizedString(@"altmForgotPwd",nil)];// [NSLocalizedString(@"altmForgotPwd",nil) isAccessibilityElement:@"\n\n\n"]
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altForgotPwd",nil) 
+                                                    message:message
+                                                   delegate:self cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
+                                          otherButtonTitles:NSLocalizedString(@"Ok",nil),nil];
+    
+     //NSString *account = [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
+
+    //if(account.length<=0 || [[[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"] isEqualToString:@""]){
+        self.loginName = [[[UITextField alloc] initWithFrame:CGRectMake(12.0, 75.0, 260.0, 30.0)] autorelease];
+        [self.loginName setPlaceholder:NSLocalizedString(@"fphSecureLineID",nil)];
+        [self.loginName setBackgroundColor:[UIColor whiteColor]];
+        [self.loginName setBorderStyle:UITextBorderStyleRoundedRect];
+        [self.loginName setFont:[UIFont systemFontOfSize:20.0]];
+        //[loginName setAutocorrectionType:UITextAutocorrectionTypeNo];
+        //[loginName setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [self.loginName setDelegate:self];
+        [alert addSubview:loginName];    
+        [self.loginName becomeFirstResponder];    
+/*
+    }
+    else{
+        self.loginName.text = account;
+    }
+*/    
+//    NSLog(@">>>> account:%@",loginName.text);    
+    [alert show];
+    [alert release];
+    
+}
+
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    //NSLog(@"### alter view button index=%d", buttonIndex);
+    
+    [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAlert:nil];
+    
+    if ([alertView.title isEqualToString:NSLocalizedString(@"altForgotPwd", @"")]) {
+        
+        if (buttonIndex==1) { //ok
+            
+            
+            NSString *alertMessage = [[[NSString alloc] init] autorelease];            
+            NSString *message = [[[NSString alloc] init] autorelease];            
+            NSString *account = self.loginName.text;//[[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
+            NSLog(@">>>>> account:%@",account);
+            if(account.length>0){
+
+                self.tmp_keystone = nil;
+
+                [self performSelectorOnMainThread : @selector(send_pass_keystone_api) withObject:nil waitUntilDone:YES];
+
+                if(self.tmp_keystone.length>0){                
+                    NSDictionary *dic = [NGJSONParser dictionaryOrArrayFromJSONString:self.tmp_keystone];                
+                    message = [dic objectForKey:@"message"];
+                }
+                
+            }
+            else{ message = @"400"; }
+
+            
+            //NSLog(@"----------- message:%@ ",message);            
+    
+            if([message isEqualToString:@"200"]){
+                alertMessage = NSLocalizedString(@"altmSendPwdEmail200",nil);
+            }
+            else if([message isEqualToString:@"400"]){
+                alertMessage = NSLocalizedString(@"altmSendPwdEmail400",nil);            
+            }             
+            else if([message isEqualToString:@"500"]){
+                alertMessage = NSLocalizedString(@"altmSendPwdEmail500",nil);            
+            } 
+            else{
+                alertMessage = NSLocalizedString(@"altmSendPwdEmailError",nil);            
+            }
+    
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altSendPwdEmail",nil) 
+                                    message:alertMessage
+                                    delegate:nil cancelButtonTitle:NSLocalizedString(@"Ok",nil) otherButtonTitles:nil];
+                [alert show];
+                [alert release];                  
+        }
+
+    } else if ([alertView.title isEqualToString:NSLocalizedString(@"Login:", @"")]) {
+        if (buttonIndex==1) { //OK
+           // NSLog(@"login=%@, passwd=%@", loginName.text, passwd.text); 
+            [loginAlertView release];
+            [self doLoginProcess];
+        } else {
+            NSLog(@">>>>> Cancel pressed.");
+        }
+        
+    }
+    
+}
+
+
+/*
+
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==1) { //OK
@@ -383,11 +556,11 @@
     }
      
 }
-
+*/
 -(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==0) {
-        NSLog(@"##### Cancel pressed.");
+       // NSLog(@"##### Cancel pressed.");
     }
     
 }
@@ -413,7 +586,7 @@
 #if 0
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"##### textFieldShouldReturn.");
+   // NSLog(@"##### textFieldShouldReturn.");
     
     if (textField == loginPasswdTextField){
         [loginPasswdTextField resignFirstResponder];
@@ -428,7 +601,7 @@
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)field {
-    NSLog(@"####### textFieldShouldReturn");
+   // NSLog(@"####### textFieldShouldReturn");
 	[field resignFirstResponder];
 	return YES;
 }
@@ -437,46 +610,96 @@
 //傳送至web Service
 -(void)login_keystone_api:(NSData*)json
 {
-    NSLog(@"--------------------- loginkeystoneserver");
-    connect_finished = NO;
-    tmp_data = nil;
-    
+    //NSLog(@"--------------------- loginkeystoneserver");
+    self.connect_finished = NO;
+    self.tmp_data = nil;
+    self.tmp_keystone = nil;
     NSString *urlAsString = [[[NSString alloc] initWithString:keystoneGetAPIURL] autorelease];//absoluteString
     NSString *account = [NSString stringWithFormat:@"%@", user_account.text];
     NSString *password = [[NSString stringWithFormat:@"%@", user_password.text] MD5];
-    NSLog(@"MD5->%@",password);
+    //NSLog(@"MD5->%@",password);
     //
     //[user_password.text MD5]
     urlAsString = [urlAsString stringByAppendingString:[NSString stringWithFormat:keystoneLoginVar,account,password,[[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]]];
-    NSLog(@"---------------------  urlAsString:%@",urlAsString);
+    //NSLog(@"---------------------  urlAsString:%@",urlAsString);
     NSURL *url = [NSURL URLWithString:urlAsString];
     
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
-    [urlRequest setTimeoutInterval:30.0f];
-    [urlRequest setHTTPMethod:@"POST"];
-    //直接把NSData(這時的編碼為UTF8)做為傳送的內容
-    [urlRequest setHTTPBody:json];
-    NSLog(@"--------------------- REQUEST: %@", [urlRequest HTTPBody]);
-    [NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    //NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];// requestWithURL:url];
     
-    while(connect_finished == NO) {
-        NSLog(@"--------------------- login LOOP");
+    [urlRequest setTimeoutInterval:20.0f];
+    //[urlRequest setHTTPMethod:@"POST"];
+    //直接把NSData(這時的編碼為UTF8)做為傳送的內容
+    //[urlRequest setHTTPBody:json];
+   // NSLog(@"--------------------- REQUEST: %@", [urlRequest HTTPBody]);
+//    [NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    [[[NSURLConnection alloc] initWithRequest:urlRequest delegate:self] autorelease];    
+    
+    NSInteger try_count = 0;
+    
+    while(self.connect_finished == NO && try_count<10) {
+        //NSLog(@"--------------------- login LOOP");
         
 		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        NSLog(@"--------------------- login tmp:%@",tmp_data);
+        //NSLog(@"--------------------- try_count:%i, send tmp:%@",try_count,tmp_data);
+        sleep(1);  
+        try_count++;
 	} 
-    if(tmp_data.length > 0){ tmp_keystone = tmp_data;}
+    
+    if(self.tmp_data.length>0 && self.tmp_data!=nil){ 
+       // NSLog(@">>>>>>>>>>> go");
+        self.tmp_keystone = self.tmp_data;
+    }
     
 
     return;
 }
 
+- (void)send_pass_keystone_api
+{
+    //NSLog(@"--------------------- send_pass_keystone_api");
+    self.tmp_data = nil;
+    self.connect_finished = NO;
+    self.tmp_keystone = nil;
+    NSString *deviceToken = [[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"];
+    NSString *account = loginName.text;//[[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
+    
+    
+    NSString *sendURL = [[[NSString alloc] initWithString:keystoneSendPwdURL] autorelease];//absoluteString
+    
+    sendURL = [sendURL stringByAppendingString:[NSString stringWithFormat:keystoneSendPwdVar,account,deviceToken]];
+    
+    
+    NSLog(@"--------------------- sendURL:%@",sendURL);
+    NSURL *url = [NSURL URLWithString:sendURL];
+    
+   // NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];
+    [urlRequest setTimeoutInterval:10.0f];
+
+    //[NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    [[[NSURLConnection alloc] initWithRequest:urlRequest delegate:self] autorelease];  
+    
+    NSInteger try_count = 0;
+    
+    
+    while(self.connect_finished == NO && try_count <10) {
+       // NSLog(@"--------------------- login LOOP");
+        
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        //NSLog(@"--------------------- try_count:%i, send tmp:%@",try_count,tmp_data);
+        sleep(1);  
+        try_count++;
+	} 
+    if(self.tmp_data.length > 0){ self.tmp_keystone = self.tmp_data;}    
+    return;
+}
 
 
 //傳送至web Service
 - (void)get_voip_password:(NSString *)username
 {
-    NSLog(@"--------------------- get_voip_password");
+    //NSLog(@"--------------------- get_voip_password");
     tmp_data = nil;
     connect_finished = NO;
     
@@ -485,11 +708,12 @@
     registerURL = [registerURL stringByAppendingString:[NSString stringWithFormat:proxyRegisterVar,username]];
     
     
-    NSLog(@"--------------------- registerURL:%@",registerURL);
+    //NSLog(@"--------------------- registerURL:%@",registerURL);
     NSURL *url = [NSURL URLWithString:registerURL];
     
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
-    [urlRequest setTimeoutInterval:30.0f];
+    //NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];// requestWithURL:url];
+    [urlRequest setTimeoutInterval:10.0f];
     //[urlRequest setHTTPMethod:@"POST"];
     //直接把NSData(這時的編碼為UTF8)做為傳送的內容
     //[urlRequest setHTTPBody:data];
@@ -500,27 +724,158 @@
     
     //NSString *return_data = [[[NSString alloc] init] autorelease];
     // NSData *result = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error ];
-    [NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    [[[NSURLConnection alloc] initWithRequest:urlRequest delegate:self] autorelease]; 
     
-    while(connect_finished == NO) {
-        NSLog(@"--------------------- login LOOP");
+    NSInteger try_count = 0;
+    
+    
+    while(self.connect_finished == NO && try_count <10) {
+        //NSLog(@"--------------------- login LOOP");
         
 		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        NSLog(@"--------------------- login tmp:%@",tmp_data);
-	} 
+        //NSLog(@"--------------------- try_count:%i, send tmp:%@",try_count,tmp_data);
+        sleep(1);  
+    }    
     if(tmp_data.length > 0){ tmp_password = tmp_data;}
     
     return;
 }
 
+- (void)setting_devicetoken_mapping{
+    
+    
+	NSString *_p_devicetoken = @"";
+	NSString *_p_user = @"";
+    self.connect_finished = NO;
+    self.tmp_data = nil;
+    
+    
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]!=nil) _p_devicetoken = [[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"];
+
+    
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"]!=nil) _p_user = 
+        [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
+    
+	//NSLog(@"---------------  %@ vs %@", _p_devicetoken, _p_user);
+
+    
+    NSString *urlAsString = [[[NSString alloc] initWithString:tokenRegisterAPIURL] autorelease];//absoluteString
+    
+    urlAsString = [urlAsString stringByAppendingString:[NSString stringWithFormat:tokenRegisterVar,_p_devicetoken,_p_user]];
+    //NSLog(@"---------------------  urlAsString:%@",urlAsString);
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    
+    
+    //NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease]; 
+    
+    [urlRequest setTimeoutInterval:10.0f];
+    //    [urlRequest setHTTPMethod:@"POST"];
+    
+    //NSLog(@"--------------------- REQUEST: %@", [urlRequest HTTPBody]);
+    //[NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    [[[NSURLConnection alloc] initWithRequest:urlRequest delegate:self] autorelease];
+    
+    NSInteger try_count = 0;
+    
+    
+    while(self.connect_finished == NO && try_count <10) {
+        //NSLog(@"--------------------- login LOOP");
+        
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        //NSLog(@"--------------------- try_count:%i, send tmp:%@",try_count,tmp_data);
+        sleep(1);  
+    }    
+    
+    //sleep(1);
+   // NSLog(@"--------------------- updatetokeninfo end");
+    
+    return;
+}
+
+- (void)hiddenShow{
+
+    self.loginUIButton.hidden = YES;
+    self.createAccountButton.hidden = YES;
+    self.user_account.hidden = YES;
+    self.user_password.hidden = YES;
+    self.sendUserPwdButton.hidden = YES;
+    self.login_message.hidden = NO;
+}
+
+- (void)displayShow{
+ 
+    self.loginUIButton.hidden = NO;
+    self.createAccountButton.hidden = NO;
+    self.user_account.hidden = NO;
+    self.user_password.hidden = NO;
+    self.sendUserPwdButton.hidden = NO;
+    self.login_message.hidden = YES;
+}
 
 
+
+- (void)startImageAnimation {
+    if ([self.avi isAnimating])
+        return;
+    
+    //NSLog(@"------------ startImageAnimation");
+    [self hiddenShow];
+	[self.avi startAnimating]; 
+    
+}
+
+- (void)stopImageAnimation {
+    //NSLog(@"------------ stopImageAnimation");    
+    if ([self.avi isAnimating])
+        [self.avi stopAnimating];
+    
+    [self displayShow];    
+}
+
+
+
+/*
+//开始加载数据  
+- (void)webViewDidStartLoad { 
+    
+    //创建UIActivityIndicatorView背底半透明View
+    
+    self.loadView = [UIView initWithFrame:CGRectMake(0, 0, 320, 480)];  
+    [self.loadView setTag:103];  
+    [self.loadView setBackgroundColor:[UIColor blackColor]];  
+    [self.loadView setAlpha:0.8];  
+    [self.view addSubview:self.loadView];  
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];  
+    [self.activityIndicator setCenter:loadView.center];  
+    [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];  
+    [self.loadView addSubview:self.activityIndicator];  
+    //[self.view addSubview:WebView]; 
+   // self.loadView.hidden = NO;
+   // [self.loadView release];      
+    [self.activityIndicator startAnimating]; 
+     
+}  
+
+//数据加载完  
+- (void)webViewDidFinishLoad {  
+    
+    [self.activityIndicator stopAnimating];     
+    self.loadView = (UIView *)[self.view viewWithTag:103];  
+    [self.loadView removeFromSuperview];  
+     
+} 
+*/
 - (void)dealloc {
     //[LoginNavigationBar release];
     //[loginBarButton release];
     [loginUIButton release];
     [user_account release];
     [user_password release];
+    [avi release];
+    [sendUserPwdButton release];
+    [login_message release];
     [super dealloc];
 }
 

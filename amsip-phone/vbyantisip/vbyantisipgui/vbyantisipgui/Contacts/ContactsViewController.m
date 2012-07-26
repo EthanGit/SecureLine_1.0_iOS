@@ -33,7 +33,7 @@
 @implementation ContactsViewController
 @synthesize aiv;
 @synthesize noTouchView;
-
+@synthesize indexArray;
 
 @synthesize contactUITableView;
 //@synthesize tableView;
@@ -50,7 +50,10 @@
 //@synthesize dataSource;
 
 
-
++(void)_keepAtLinkTime
+{
+    return;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -72,6 +75,7 @@
 #pragma mark - View lifecycle
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -85,6 +89,7 @@
     //self.title = @"Contacts";
     self.navigationItem.title = NSLocalizedString(@"tabContacts",nil);
 
+    //indexArray = [[[NSMutableArray alloc]init] autorelease];
     
     if (self.managedObjectContext == nil) 
     { 
@@ -92,6 +97,8 @@
         //NSLog(@"After managedObjectContext: %@",  self.managedObjectContext);
     }
 
+ 
+    
     
     if (isReadyOnly == NO) {    
 	// Do any additional setup after loading the view, typically from a nib.
@@ -170,33 +177,11 @@
     // e.g. self.myOutlet = nil;
 }
 
-/*
 
-- (void)viewDidDisappear:(BOOL)animated{
-    NSLog(@">>>> viewDidDisappear");
-    [super viewDidDisappear:animated];    
-    //self.editing = NO;
-
-}
-
-
-- (void)viewWillDisappear:(BOOL)animated{
-    NSLog(@">>>> viewWillDisappear");    
-    [super viewWillDisappear:animated];    
-   // self.editing = NO;
-    //NSLog(@">>>> viewWillDisappear");
-
-}
-- (void)viewDidAppear:(BOOL)animated{
-    NSLog(@">>>> viewDidAppear");    
-    [super viewDidAppear:animated];    
-    //self.editing = NO;
-}
-*/
 
 - (void)viewWillAppear:(BOOL)animated 
 {
-    NSLog(@">>>> viewWillAppear");    
+    //NSLog(@">>>> viewWillAppear");    
     [super viewWillAppear:animated];
    // NSLog(@"########## viewWillAppear");   
 
@@ -221,19 +206,30 @@
         
 
     }
-    
+#if 0
     if (isReadOnly == NO) {
         if ([gAppEngine isStarted]==NO) {
             [aiv startAnimating];
         }
         [gAppEngine addRegistrationDelegate:self];
     }
-    self.editing = NO;      
+#endif
+    self.editing = NO;  
+    //indexArray = nil;
     [self.tableView reloadData];
   
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated 
+{
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"########## viewWillDisappear"); 
+    //if (isReadOnly == NO) {
+    //    [gAppEngine removeRegistrationDelegate:self];
+    //}
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -279,16 +275,41 @@
         id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
         numberOfRows = [sectionInfo numberOfObjects];
     }
-    NSLog(@"############# count = %d",numberOfRows);
+    //NSLog(@"############# count = %d",numberOfRows);
     return numberOfRows;
     
 }
-/*
+
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    NSLog(@"############ sectionIndexTitlesForTableView");
-    return [[self->sections allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    //NSLog(@"############ sectionIndexTitlesForTableView");
+    /*
+    if(self.searchIsActive){
+        return nil;
+    }
+    
+    
+    NSMutableArray *indices = [NSMutableArray array];
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo;
+    
+    for( sectionInfo in [fetchedResultsController sections] )
+    {
+        [indices addObject:[sectionInfo name]];
+    }
+    return indices; 
+     */
+    return  nil;
+    /*
+    
+    NSLog(@">>>>>>>> sectionIndexTitlesForTableView");
+    NSMutableArray* indexTitles = [NSMutableArray arrayWithObject:UITableViewIndexSearch];  // add magnifying glass
+    [indexTitles addObjectsFromArray:[self.fetchedResultsController sectionIndexTitles]];
+    return indexTitles;
+*/
+    //return [[self.indexArray allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+
+   // return indexArray;
 }
- */
 
 
 /*
@@ -410,6 +431,17 @@
     //handle movement of UITableViewCells here
     //UITableView cells don't just swap places; one moves directly to an index, others shift by 1 position. 
 }
+/*
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete | UITableViewCellEditingStyleInsert; // return 3;
+}
+
+- (NSArray *)selectedIndexPaths {
+    NSArray *retVal = nil;
+    //object_getInstanceVariable(self, "_selectedIndexPaths", (void **)&retVal);
+    return retVal;
+}
+*/
 
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -444,6 +476,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if(self.editing==YES) return;
    // NSLog(@"############# tableView didSelectRowAtIndexPath");
 /*
     if(self.searchIsActive){
@@ -552,6 +586,9 @@
     NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"section_key" ascending:YES] autorelease];
     //NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     NSArray *sortDescriptors = [[[NSArray alloc] initWithObjects:sortDescriptor,nil] autorelease];
+    
+       
+    
     [fetchRequest setSortDescriptors:sortDescriptors];
     //NSString *sectionKey = [[NSString alloc] init];
     //sectionKey = @"nameFirstLetter";
@@ -853,7 +890,7 @@
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     //self.filteredListContent = nil;
-    NSLog(@"########## searchBarTextDidBeginEditing");  
+   // NSLog(@"########## searchBarTextDidBeginEditing");  
     // only show the status bar's cancel button while in edit mode
     contactUISearchBar.showsCancelButton = YES;
     contactUISearchBar.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -920,6 +957,7 @@
     //[self.tableView beginUpdates];
 }
 
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     //NSLog(@"############  titleForHeaderInSection");
 
@@ -929,11 +967,11 @@
     else{
         //NSLog(@"############  sectionname ->%@ ",[[[self.fetchedResultsController sections] objectAtIndex:section] name]);
         
-        
         id <NSFetchedResultsSectionInfo> sectionInfo = 
         [[self.fetchedResultsController sections] objectAtIndex:section];
-        //return [sectionInfo name];  
-        return [[[self.fetchedResultsController sections] objectAtIndex:section] name];    
+                //return [sectionInfo name];  
+        return [sectionInfo name]; 
+    
     
     }
         //return [[[fetchedResultsController sections] objectAtIndex:section] name];

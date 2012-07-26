@@ -8,6 +8,8 @@
 
 #import "dialStatusUIViewController.h"
 #import "callControlUIViewController.h"
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
 
 @implementation dialStatusUIViewController
 @synthesize endCallUIButton;
@@ -20,6 +22,7 @@
 @synthesize redialUILabel;
 
 NSString *secureID;
+CTCallCenter *gCallCenter;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +52,16 @@ NSString *secureID;
     [lStatusUILabel setText:NSLocalizedString(@"qtyTitle", @"line status")];
     [lineQualityUILabel setText:NSLocalizedString(@"qtyDialing", nil)];
     [actionStateUILabel setText:NSLocalizedString(@"callDialing", nil)];
+    
+    gCallCenter = [[[CTCallCenter alloc] init] autorelease];
+    
+    gCallCenter.callEventHandler = ^(CTCall *call) {
+        if ([call.callState isEqualToString:CTCallStateIncoming] && current_call!=nil) {
+            if ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED) {
+                [current_call hangup];
+            }
+        }
+    };
     
 }
 
@@ -83,9 +96,10 @@ NSString *secureID;
     [lineQualityUILabel release];
     [redialUIButton release];
     [redialUILabel release];
-    if (secureID!=nil) {
-        [secureID release];
-    }
+    //if (secureID!=nil) {
+    //    [secureID release];
+    //}
+    
     [super dealloc];
 }
 
@@ -98,11 +112,13 @@ NSString *secureID;
 
 -(void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+
+#if 1
     if (current_call!=nil) {
         [self setCurrentCall:nil];
     }
     [gAppEngine removeCallDelegate:self];
+#endif
     
     [redialUIButton setHidden:YES];
     [redialUILabel setHidden:YES];
@@ -111,38 +127,53 @@ NSString *secureID;
 
 
 - (IBAction)endCallButtonPressed:(id)sender {
-    NSLog(@"########## endCallButtonPressed...");
+    NSLog(@"########## endCallButtonPressed... state=%d", (current_call!=nil)? [current_call callState]:-1);
 #if 0
-    [self.navigationController.navigationBar setHidden:NO];
-    [self.navigationController popViewControllerAnimated:YES];
-    //[self.tabBarController dismissModalViewControllerAnimated:YES];
+    //[self.navigationController.navigationBar setHidden:NO];
+    //[self.navigationController popViewControllerAnimated:YES];
+    if (current_call!=nil&& ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED)) {
+        [current_call hangup];
+        [gAppEngine removeCallDelegate:self];
+        if (current_call!=nil) {
+            [self setCurrentCall:nil];
+        }
+    }
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
 #else
-    if (current_call!=nil && [current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED)
+    if (current_call!=nil && ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED))
 	{
-		[current_call hangup];
+        NSLog(@"++++++ return code = %d", [current_call hangup]);
+		//[current_call hangup];
         //actionStateUILabel.text = @"Disconnecting...";
         [actionStateUILabel setText:NSLocalizedString(@"callDisconnecting", nil)];
         //sleep(1);
         //[self setCurrentCall:nil];
-	} else if (current_call == nil) {
+	} else {//if (current_call == nil) {
+        if (current_call!=nil) {
+            [current_call hangup];
+        }
         [self.parentViewController dismissModalViewControllerAnimated:YES];
     }
 #endif
 }
 
 - (IBAction)redialButtonPressed:(id)sender {
+    NSLog(@"########## redialButtonPressed... state=%d", (current_call!=nil)? [current_call callState]:-1);
     
-    if ([gAppEngine getNumberOfActiveCalls]>0 || secureID == nil) {
+    if ([gAppEngine getNumberOfActiveCalls]>3 || secureID == nil) {
+        [actionStateUILabel setText:NSLocalizedString(@"wait...", nil)];
         return;
     }
     
     [actionStateUILabel setText:NSLocalizedString(@"callDialing", nil)];
     
     int res = [gAppEngine amsip_start:secureID withReferedby_did:0];
-    [secureID release];
+    //[secureID release];
+    secureID = nil;
+    
     if (res<0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Syntax Error", @"Syntax Error") 
-                                                        message:NSLocalizedString(@"Check syntax of your callee sip url.", @"Check syntax of your callee sip url.")
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Error", @"Syntax Error") 
+                                                        message:NSLocalizedString(@"Redial error, try later.", @"Check syntax of your callee sip url.")
                                                        delegate:nil cancelButtonTitle:@"Cancel"
                                               otherButtonTitles:nil];
         [alert show];
@@ -197,7 +228,8 @@ NSString *secureID;
 
 
 -(void)onCallExist:(Call *)call {
-	[self onCallNew:call];
+    NSLog(@">>>>> dialStatusUIViewController: onCallExist");
+	//[self onCallNew:call];
 }
 
 
@@ -207,7 +239,7 @@ NSString *secureID;
 -(void)onCallNew:(Call *)call {
 	NSLog(@">>>>> dialStatusUIViewController: onCallNew");
     
-    if ([call callState] == RINGING) { //incoming call
+    if ([call callState] == RINGING && secureID!=nil) { //incoming call
         if (current_call==nil && [call isIncomingCall] == true) {
 #if 1
             //[self.parentViewController dismissModalViewControllerAnimated:YES];
@@ -227,12 +259,19 @@ NSString *secureID;
             [dialNavView release];
 #endif
         } else {
-           NSLog(@"discard incoming call..."); 
+            if ([call isIncomingCall]==true) {
+                NSLog(@"discard incoming call... from %@", [call from]);
+                [call decline];
+            } else {
+                [self setCurrentCall:call];
+                secureID = [[[NSString alloc] initWithString:[call to]] autorelease];
+            }
         }
     } else {
         if (current_call==nil) {
             [self setCurrentCall:call];
-            secureID = [[NSString alloc] initWithString:[self stripSecureIDfromURL:[call to]]];
+            //secureID = [[NSString alloc] initWithString:[self stripSecureIDfromURL:[call to]]];
+            secureID = [[[NSString alloc] initWithString:[call to]] autorelease];
         }
     }
 }
@@ -244,6 +283,7 @@ NSString *secureID;
 	NSLog(@">>>>> dialStatusUIViewController: onCallUpdate");
     
     if (call!=current_call) {
+        NSLog(@">>>>> dialStatusUIViewController: not current call %@ %@", call, current_call);
         return;
     }
    

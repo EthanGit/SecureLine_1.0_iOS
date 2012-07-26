@@ -34,17 +34,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    
+    
 #if 0
     [self.navigationController.navigationBar setHidden:NO];
     UIBarButtonItem *myBackButton = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(returnToLoginPage)] autorelease];
     [self.navigationItem setLeftBarButtonItem:myBackButton];
 #else
-    [self.navigationItem setTitle:@"New Account"];
+    [self.navigationItem setTitle:NSLocalizedString(@"btnNewAccount", @"New Account") ];
 #endif
     
     //load web view
-    NSString *  	urlPath=@"https://www.google.com/";
+    NSString *  	urlPath=@"https://www.securekingdom.com/demo/join.php";
     NSURLRequest *  request;
     
     request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlPath]];

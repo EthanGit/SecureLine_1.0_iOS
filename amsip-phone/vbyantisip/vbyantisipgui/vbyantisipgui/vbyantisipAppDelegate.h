@@ -50,6 +50,9 @@
 	
 	Registration *registration;
 
+    NSString *tmp_data;
+    BOOL connect_finished;
+    
 @private
 	bool isInBackground;
 	NSString *proxy;
@@ -80,8 +83,12 @@
 	BOOL h2631998;
 	int uploadbandwidth;
 	int downloadbandwidth;
+    
+
+    
 #ifdef GENTRICE
     UIAlertView *currentAlert;
+    BOOL doingPasscodeLogin;
 #endif
 }
 
@@ -107,6 +114,9 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property UIAlertView *currentAlert;
+@property BOOL doingPasscodeLogin;
+@property (retain, nonatomic) NSString *tmp_data;
+@property BOOL connect_finished;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
@@ -114,6 +124,10 @@
 - (void) checkPasscodeLoginStatus:(Call*) call;
 - (void)createPersistenStoreCoordinator;
 - (NSString*) lookupDisplayName:(NSString*) caller;
+
+- (void)initSystemAlert;
+- (void)dismissSystemAlert;
+
 #endif //GENTRICE
 
 @end

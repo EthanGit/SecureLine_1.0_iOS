@@ -39,16 +39,18 @@ CTCallCenter *gCallCenter;
     if (current_call==nil) {
         //better leave here soon
         [self.parentViewController dismissModalViewControllerAnimated:YES];
-    } else if (current_call!=nil && [current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED)
-	{
-#if 0
+    } else if ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED) {
+#if 1
         if (endDate==nil) {
             endDate = [[NSDate alloc] init];
             [current_call setEnd_date:endDate];
             NSLog(@">>>>> actionButtonhang: endDate=%@", endDate);
+            [endDate release];
+            endDate = nil;
         }
 #endif
 		[current_call hangup];
+        [self onCallRemove:current_call];
 	}
 }
 
@@ -402,7 +404,8 @@ CTCallCenter *gCallCenter;
 				endDate = [[NSDate alloc] init];
                 [current_call setEnd_date:endDate];
                 NSLog(@">>>>>endDate=%@", endDate);
-
+                [endDate release];
+                endDate = nil;
 			}
 			//[buttonother setBackgroundColor:[UIColor colorWithRed:21.0/255.0 green:43.0/255.0 blue:65.0/255.0 alpha:0.69]];
 			//[buttonother setTitle:@"tool" forState:UIControlStateNormal];
@@ -418,6 +421,7 @@ CTCallCenter *gCallCenter;
 			//[call removeCallStateChangeListener:self];
 			//current_call=nil;
       //[self stopImageAnimation];
+            [self onCallRemove:current_call];
 		}
 	}
 }
@@ -497,8 +501,8 @@ CTCallCenter *gCallCenter;
     [lineQualityUILabel setText:NSLocalizedString(@"qtyGood", nil)];
     //[label_status setText:NSLocalizedString(@"callConnected", nil)];
    
-    gCallCenter = [[CTCallCenter alloc] init];
-#if 0
+    gCallCenter = [[[CTCallCenter alloc] init] autorelease];
+
     gCallCenter.callEventHandler = ^(CTCall *call) {
         if ([call.callState isEqualToString:CTCallStateIncoming] && current_call!=nil) {
             if ([current_call callState] == CONNECTED) {
@@ -506,7 +510,7 @@ CTCallCenter *gCallCenter;
             }
         }
     };
-#endif    
+    
 }
 
 - (void)dealloc {
@@ -529,9 +533,11 @@ CTCallCenter *gCallCenter;
         [endDate release];
         endDate=nil;
     }
-    
-    [gCallCenter release];
-    
+    if (startDate!=nil) {
+        [startDate release];
+        startDate=nil;
+    }
+        
     [super dealloc];
 }
 
@@ -559,11 +565,19 @@ CTCallCenter *gCallCenter;
         
         if (current_call!=nil)
         {
+            if ([call callState]==CONNECTED && endDate==nil) {
+				endDate = [[NSDate alloc] init];
+                [current_call setEnd_date:endDate];
+                NSLog(@">>>>> force disconnect: endDate=%@", endDate);
+                [endDate release];
+                endDate = nil;
+			}
+            
             [self setCurrentCall:nil];
             [gAppEngine removeCallDelegate:self];//by arthur
         }
-        [endDate release];
-        endDate=nil;
+        //[endDate release];
+        //endDate=nil;
         contacts = 0;
         
         [self switchSpeaker:SPEAKER_OFF];

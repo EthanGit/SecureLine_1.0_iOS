@@ -254,6 +254,52 @@
     [textField resignFirstResponder];  
     return YES;          
 }  
+
+#define LM_MAXLENGTH 256
+#define FM_MAXLENGTH 256
+#define SID_MAXLENGTH 64
+#define CP_MAXLENGTH 256
+#define UI_MAXLENGTH 256
+
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    
+    
+    if(textField == self.firstname){    
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > FM_MAXLENGTH) ? NO : YES;            
+    }
+    else if(textField == self.lastname)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > LM_MAXLENGTH) ? NO : YES;      
+    }
+    else if(textField == self.secureid)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > SID_MAXLENGTH) ? NO : YES;          
+    }    
+    else if(textField == self.company)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > CP_MAXLENGTH) ? NO : YES;          
+    }
+    
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+        
+    if(textView == self.other){    
+        NSUInteger newLength = [textView.text length] + [text length] - range.length;
+        
+        return (newLength > UI_MAXLENGTH) ? NO : YES;            
+    }
+    
+    return YES;
+}
 /*
 - (void)textFieldDidBeginEditing:(UITextField *)textField  
 {          
@@ -329,40 +375,43 @@
 - (int)dial:(NSString*)phonem
 {
     int res;
+    //無設定
+    
     if ([gAppEngine isConfigured]==FALSE) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Account Creation", @"Account Creation") 
-                                                        message:NSLocalizedString(@"Please configure your settings in the iphone preference panel.", @"Please configure your settings in the iphone preference panel.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Account Creation") 
+                                                        message:NSLocalizedString(@"altmDialErrorNoUser", @"Please configure your settings in the iphone preference panel.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
     if (![gAppEngine isStarted]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Connection", @"No Connection") 
-                                                        message:NSLocalizedString(@"The service is not available.", @"The service is not available.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"No Connection") 
+                                                        message:NSLocalizedString(@"altmDialErrorNoService", @"The service is not available.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
-    
+    //滿線
     if ([gAppEngine getNumberOfActiveCalls]>3) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Max Active Call Reached", @"Max Active Call Reached") 
-                                                        message:NSLocalizedString(@"You already have too much active call.", @"You already have too much active call.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Max Active Call Reached") 
+                                                        message:NSLocalizedString(@"altmDialErrorMaxActiveCallReached", @"You already have too much active call.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
-    
+
+    //網路異常，請稍侯再試
     res = [gAppEngine amsip_start:phonem withReferedby_did:0];
     if (res<0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Syntax Error", @"Syntax Error") 
-                                                        message:NSLocalizedString(@"Check syntax of your callee sip url.", @"Check syntax of your callee sip url.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Syntax Error") 
+                                                        message:NSLocalizedString(@"altmDialErrorNetwork", @"Check syntax of your callee sip url.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
@@ -387,7 +436,7 @@
         if ([firstname.text isEqualToString:@""]&& [lastname.text isEqualToString:@""]) {
             [dialView setRemoteIdentity:secureid.text];
         } else {
-            [dialView setRemoteIdentity:[NSString stringWithFormat:@"%@ %@", firstname.text, lastname.text]];
+            [dialView setRemoteIdentity:[NSString stringWithFormat:@"%@ %@", lastname.text,firstname.text]];
         }
         
         [dialView release];
@@ -414,7 +463,7 @@
  
     // Pass current value to the edited object, then pop.
 
-	NSLog(@"####### %@ - %@ - %@ ",contact.firstname,contact.lastname,contact.secureid);
+	//NSLog(@"####### %@ - %@ - %@ ",contact.firstname,contact.lastname,contact.secureid);
 		NSManagedObjectContext *context = contact.managedObjectContext;
 		NSError *error = nil;
 		if (![context save:&error]) {
@@ -446,7 +495,7 @@
 //    [super setEditing:editing animated:animated];  
     //self.navigationItem.rightBarButtonItem.enabled = !editing;  
     //[contactUITableView beginUpdates];  
-    NSLog(@"######## setEditing");
+   // NSLog(@"######## setEditing");
     
     [self becomeFirstResponder];    
     // Add or remove the Add row as appropriate.  
@@ -487,7 +536,7 @@
         self.callButton.hidden = NO; 
         [callBtnIcon setHidden:NO];
         self.callBtnTitle.hidden = NO;        
-        NSLog(@"#########update");
+        //NSLog(@"#########update");
         //[self save];
         //[self updateContact];
     }    
@@ -507,14 +556,14 @@
         }
         
         NSString *alert_warning = [[[NSString alloc] init] autorelease];
-        
+        /*
         if(self.lastname.text.length==0){
             alert_warning = NSLocalizedString(@"altmContactWarningNoLN", nil);
         }
         else if(firstname.text.length==0){
             alert_warning = NSLocalizedString(@"altmContactWarningNoFN", nil);
         }
-        else if(secureid.text.length==0){
+        else */if(secureid.text.length==0){
             alert_warning = NSLocalizedString(@"altmContactWarningNoSID", nil);
             
         }
@@ -630,7 +679,7 @@
 
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"############# tableView canMoveRowAtIndexPath");
+    //NSLog(@"############# tableView canMoveRowAtIndexPath");
     return NO;
 }
 

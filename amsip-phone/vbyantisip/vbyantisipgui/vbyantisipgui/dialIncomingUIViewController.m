@@ -7,6 +7,8 @@
 //
 
 #import "dialIncomingUIViewController.h"
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
 
 @implementation dialIncomingUIViewController
 @synthesize callStateUILable;
@@ -19,6 +21,10 @@
 @synthesize lStatusUILabel;
 @synthesize lineQualityUILabel;
 @synthesize autoAnswer;
+
+CTCallCenter *gCallCenter;
+bool gAudioSessionInited;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +56,16 @@
     [lStatusUILabel setText:NSLocalizedString(@"qtyTitle", @"line status")];
     [lineQualityUILabel setText:NSLocalizedString(@"qtyGood", nil)];
     [actionStateUILabel setText:NSLocalizedString(@"callIncoming", nil)];
+    
+    gCallCenter = [[[CTCallCenter alloc] init] autorelease];
+    
+    gCallCenter.callEventHandler = ^(CTCall *call) {
+        if ([call.callState isEqualToString:CTCallStateIncoming] && current_call!=nil) {
+            if ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED) {
+                [current_call hangup];
+            }
+        }
+    };
 }
 
 - (void)viewDidUnload
@@ -63,6 +79,7 @@
     [self setUILabelAnswer:nil];
     [self setLStatusUILabel:nil];
     [self setLineQualityUILabel:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -84,20 +101,71 @@
     [UILabelAnswer release];
     [lStatusUILabel release];
     [lineQualityUILabel release];
+    
     [super dealloc];
 }
 
+
+#import <AudioToolbox/AudioServices.h>
+bool speakerOn;
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [gAppEngine addCallDelegate:self];
     
-    //turn on speaker (for ring tone)
-    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
-    AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,
-                             sizeof (audioRouteOverride),
-                             &audioRouteOverride);
+    NSLog(@">>>>>> muted=%d", [self isDeviceMuted]);
+    if ([self isDeviceMuted] == YES) {
+        NSLog(@">>>>>> device is muted!");
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
+    
+#if 1
+#if 1    
+    speakerOn = NO;
+    CFStringRef audioState;
+    UInt32 propertySize = sizeof(CFStringRef);
+    //AudioSessionInitialize(NULL, NULL, NULL, NULL);
+    OSStatus status = AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &audioState);
+    if (status == kAudioSessionNoError && CFStringGetLength(audioState)>0 ) {
+        NSLog(@">>>>>> Audio: normal mode, %@", audioState);
+        //turn on speaker (for ring tone)
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+        AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,
+                                 sizeof (audioRouteOverride),
+                                 &audioRouteOverride);
+        speakerOn = YES;
+    } else {
+        //silent mode
+        NSLog(@">>>>>> Sient mode: %@", audioState);
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
+#else
+    gAudioSessionInited = NO;
+    
+    // "Ambient" makes it respect the mute switch. Must call this once to init session
+    if (!gAudioSessionInited)
+    {
+        AudioSessionInterruptionListener inInterruptionListener = NULL;
+        OSStatus error;
+        if ((error = AudioSessionInitialize (NULL, NULL, inInterruptionListener, NULL))){
+            NSLog(@"*** Error *** error in AudioSessionInitialize: %d.", error);
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        } else {
+            gAudioSessionInited = YES;
+        }
+    }
+    
+    //SInt32  ambient = kAudioSessionCategory_AmbientSound;
+   // if (AudioSessionSetProperty (kAudioSessionProperty_AudioCategory, sizeof (ambient), &ambient))
+    //{
+   //     NSLog(@"*** Error *** could not set Session property to ambient.");
+   // }
+
+#endif
+#endif
+    
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
@@ -105,12 +173,15 @@
     
     [self setCurrentCall:nil];
     [gAppEngine removeCallDelegate:self];
-    
-    //turn off speaker (for ring tone)
-    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
-    AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,
-                             sizeof (audioRouteOverride),
-                             &audioRouteOverride);
+#if 1    
+    if (speakerOn == YES) {
+        //turn off speaker (for ring tone)
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_None;
+        AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,
+                                 sizeof (audioRouteOverride),
+                                 &audioRouteOverride);    
+    }
+#endif
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -121,6 +192,18 @@
     }
     
 }
+
+
+-(BOOL)isDeviceMuted
+{
+    CFStringRef state;
+    UInt32 propertySize = sizeof(CFStringRef);
+    //AudioSessionInitialize(NULL, NULL, NULL, NULL);
+    AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
+    return (CFStringGetLength(state) > 0 ? NO : YES);
+}
+
+
 
 
 #import "callControlUIViewController.h"
@@ -166,7 +249,7 @@
 
 
 - (IBAction)endCallButtonPressed:(id)sender {
-    if (current_call!=nil && [current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED)
+    if (current_call!=nil && ([current_call callState]>=TRYING && [current_call callState]!=DISCONNECTED))
 	{
 		[current_call hangup];
         //actionStateUILabel.text = @"Disconnecting...";
@@ -237,6 +320,7 @@
 
 
 -(void)onCallExist:(Call *)call {
+    NSLog(@">>>>> dialIncomingUIViewController: onCallExist");
 	[self onCallNew:call];
 }
 
@@ -269,10 +353,6 @@
     
     //[self.parentViewController dismissModalViewControllerAnimated:YES];
 	
-	//if ([call_list count]==0)
-	//{
-	//	[self.navigationController popViewControllerAnimated: YES];
-	//}
 }
 #endif
 
@@ -289,20 +369,7 @@
         NSLog(@">>>> callState == RINGING");
 
 	} else if ([current_call callState]==DISCONNECTED){
-#if 0
-        if (myTimer!=nil)
-        {
-            [myTimer invalidate];
-            myTimer=nil;
-        }
-        if (endDate==nil)
-        {
-            endDate = [[NSDate alloc] init];
-            [current_call setEnd_date:endDate];
-            NSLog(@">>>>>endDate=%@", endDate);
-            
-        }
-#endif
+
         [UILabelAnswer setHidden:YES];
         [answerUIButton setHidden:YES];
         

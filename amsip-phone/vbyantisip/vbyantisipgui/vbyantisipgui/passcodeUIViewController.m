@@ -38,6 +38,7 @@
     self.title_message.text = NSLocalizedString(@"altmKeyinPassword", nil) ;
 	[self.navigationController.navigationBar setHidden:YES];
 	//timerPlus=nil;
+    [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] setDoingPasscodeLogin:YES];
 	return;
 }
 
@@ -59,7 +60,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)field {
-    NSLog(@"####### textFieldShouldReturn");
+    //NSLog(@"####### textFieldShouldReturn");
 	[field resignFirstResponder];
 	return YES;
 }
@@ -189,7 +190,7 @@
 -(void)setShowfield:(NSString *)string{
 
    // [textField becomeFirstResponder ];
-    NSLog(@"######## setShowfield:%@",string);
+   // NSLog(@"######## setShowfield:%@",string);
     
     if(string.length<=4) [target_field setText:string];
     /*
@@ -248,7 +249,7 @@
    // [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"PasscodeString"];
     
     NSString *keypassword = target_field.text;
-    NSLog(@"##### passcode:%@ / target_field:%@ ",[[NSUserDefaults standardUserDefaults] stringForKey:@"PasscodeString"],keypassword);
+   // NSLog(@"##### passcode:%@ / target_field:%@ ",[[NSUserDefaults standardUserDefaults] stringForKey:@"PasscodeString"],keypassword);
     
     
     if(![keypassword isEqualToString:[[NSUserDefaults standardUserDefaults] stringForKey:@"PasscodeString"]]){
@@ -400,7 +401,7 @@
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    NSLog(@"######## textFieldDidEndEditing");
+   // NSLog(@"######## textFieldDidEndEditing");
    
 
 }
@@ -412,9 +413,11 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    NSLog(@">>>>>>>> viewDidDisappear.....");
+    //NSLog(@">>>>>>>> viewDidDisappear.....");
     vbyantisipAppDelegate *appDelegate = (vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate];
-    //[appDelegate.tabBarController setSelectedIndex:2];
+    
+    [appDelegate setDoingPasscodeLogin:NO];
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LoginStatus"] == NO) {
         
         //[self.parentViewController dismissModalViewControllerAnimated:NO];
@@ -425,7 +428,9 @@
         [appDelegate.tabBarController presentModalViewController:loginNavView animated:NO];
         [loginView release];
         [loginNavView release];
-    } 
+    } else if([gAppEngine getNumberOfActiveCalls]==0){
+        [appDelegate restartAll];
+    }
     
 }
 

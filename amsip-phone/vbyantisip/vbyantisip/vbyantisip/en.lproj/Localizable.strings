@@ -6,6 +6,7 @@
   Copyright (c) 2012年 Gentrice. All rights reserved.
 */
 
+"sysRegistering" = "Registering...";
 
 "btnAdd" = "Add";
 "btnEdit" = "Edit";
@@ -72,8 +73,6 @@
 "altmContactWarningNoSID"="Please enter your Secure Line ID!";
 
 
-
-
 //Recent
 
 "Recent"="Recent";
@@ -90,11 +89,26 @@
 
 "altmPasscodemismatch"="Passcode mismatch";
 "altmSettingError"="Setting Error";
+
+"altmOldPasscodeFormatError"="Old Passcode error";
+"altmOldPasscodeError"="Old Passcode error";
+"altmNewPasscodeNotSame"="New Password should not be same as old password";
+"altPasscodeDisabledSetting"="Passcode Disabled";
+
 "altmlogoutcheck"="Are you sure?";
 
 
 "fphNewPasscode"="New Passcode";
 "fphConfirmPasscode"="Confirm Passcode";
+
+
+
+"fphOldPasscode"="Old Passcode";
+"labOldPasscode"="Old Passcode";
+"labNewPasscode"="New Passcode";
+"labCheckPasscode"="Check Passcode";
+"labSettingPasscodeTitle"="Set / Change Passcode";
+
 
 
 //passcode
@@ -118,15 +132,29 @@
 "btnLogin"="Login";
 "fphSecureLineID"="Secure Line ID";
 "fphPassword"="Password";
+"labLoginMessage"="Login...";
 "altmKeyinError"="Keyin Error";
 "altErrorMessage"="Error Message";
 
-"altmLoginExpired"="Your account expired";
-"altmLoginDataError"="Your account or password error";
-"altmLoginAuthServerError"="auth server error";
-"altmLoginAuthError"="auth error";
 
 
+
+"altmLoginExpired"="Your account is expired!";
+"altmLoginDataError"="wrong account or password";
+"altmLoginAuthServerError"="authentication server error";
+"altmLoginAuthError"="authentication error";
+
+
+"altSendPwdEmail"="Forgot Your Password";
+"altmSendPwdEmail200"="Your password has sent to your registered e-mail.";
+"altmSendPwdEmail400"="Your Secure Line ID is empty!";
+"altmSendPwdEmail500"="server error!";            
+"altmSendPwdEmailError"="server error";
+
+"altForgotPwd"="Forgot Password";
+"altmForgotPwd"="Send password to your registered e-mail？";
+
+"altmDeviceMappingError"="Data mapping error";
 
 //Reports
 "reportTitle"="If you have problems, please let us know.";
@@ -139,5 +167,14 @@
 //App delegate
 "notifyCallFrom" = "Call from";
 
+
+
+//Network Warning 
+
+"altmDialErrorNetwork"="Network error, please try again later.";
+"altDialError"="Dial Error";
+"altmDialErrorNoUser"="Please configure your settings in the iphone preference panel.";
+"altmDialErrorNoService"="Service is not available.";
+"altmDialErrorMaxActiveCallReached"="You already have too much active call.";
 
 

@@ -19,8 +19,8 @@
 //#import "SqliteContactHelper.h"
 
 @interface RecentsViewController ()
- - (void)configureCell:(RecentsCellTableView *)cell atIndexPath:(NSIndexPath *)indexPath;
-- (void)configureCellDelete:(RecentsCellTableView *)cell atIndexPath:(NSIndexPath *)indexPath atIndexButton:(BOOL)button;
+- (void)configureCell:(RecentsCellTableView *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @implementation RecentsViewController
@@ -31,6 +31,13 @@
 @synthesize managedObjectContext;
 //@synthesize filteredListContent = _filteredListContent;
 @synthesize addingManagedObjectContext;
+
+
++(void)_keepAtLinkTime
+{
+    return;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,7 +75,7 @@
     if (self.managedObjectContext == nil) 
     { 
         self.managedObjectContext = [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext]; 
-        NSLog(@"After managedObjectContext: %@",  self.managedObjectContext);
+        //NSLog(@"After managedObjectContext: %@",  self.managedObjectContext);
     }
     
 
@@ -79,7 +86,7 @@
 		//exit(-1);
         //self.filteredListContent = [NSMutableArray arrayWithCapacity:[[[self fetchedResultsController] fetchedObjects] count]];        
 	}
-    NSLog(@"After fetchedResultsController: %@",  self.fetchedResultsController);    
+    //NSLog(@"After fetchedResultsController: %@",  self.fetchedResultsController);    
     self.navigationItem.title = NSLocalizedString(@"tabRecent",nil);
     /*
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteAllItems)];
@@ -235,34 +242,6 @@
 }
 
 
-- (void)configureCellDelete:(RecentsCellTableView *)cell atIndexPath:(NSIndexPath *)indexPath atIndexButton:(BOOL)button {
-    // Configure the cell
-    
-    //NSLog(@">>>>>>>> configureCell %i",indexPath.row);
-    Recents *recent = nil;
-    
-    recent = [fetchedResultsController objectAtIndexPath:indexPath];
-    
-    cell.recent = recent;
-    NSString *name = [[NSString alloc] initWithFormat:@"%@",[name_dir objectForKey:[NSString stringWithFormat:@"%@",recent.secureid ]]];
-   // NSLog(@" >>>>>>>>> name : %@",name);
-    if(name !=nil && ![name isEqualToString:@"(null)"]){
-        cell.nameLabel.text = name;
-    }
-    else cell.nameLabel.text = recent.secureid;
-    
-    [name release];
-      //  NSLog(@"cell.addbutton = %@",cell.addbutton==YES?@"YES":@"NO");
-
-    cell.addbutton = button;
-
-   
-    NSLog(@"cell.addbutton = %@",cell.addbutton==YES?@"YES":@"NO");    
-    
-
-}
-
-
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"############# tableView canMoveRowAtIndexPath");
@@ -276,33 +255,6 @@
     //UITableView cells don't just swap places; one moves directly to an index, others shift by 1 position. 
 }
 /*
-//自定義劃動時del按鈕內容 
--(NSString *)tableView:(UITableView *)d_tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath      
-{      
-    NSLog(@"########## titleForDeleteConfirmationButtonForRowAtIndexPath :%i",indexPath.row);
-  
-    if(UITableViewCellEditingStyleDelete){
-
-    [self configureCellDelete:[d_tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath button:YES];
-    }
-   // [self configureCellDelete:Cell atIndexPath:indexPath];
-    return  @"Delete";      
-}
-*/
-
-- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"willBeginEditingRowAtIndexPath:%i",indexPath.row);
-    
-    [self configureCellDelete:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath atIndexButton:YES];
-    //[self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-
-}
-- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"didEndEditingRowAtIndexPath:%i",indexPath.row);
-    [self configureCellDelete:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath atIndexButton:NO];
-    //[self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-}
-
 //滑動列編輯
 -(UITableViewCellEditingStyle)tableView:(UITableView *)d_tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -322,7 +274,7 @@
     return result;
 
 }
-
+*/
 
 
 // Override to support editing the table view.//點擊編輯
@@ -422,20 +374,10 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
    // NSLog(@"############  titleForHeaderInSection %i",section);
-    /*
-     if(self.searchIsActive){
-     return nil;
-     }
-     else
-     return [[[fetchedResultsController sections] objectAtIndex:section] name];
-     */
-    //NSDate *nowDate = [NSDate date];
+
 
     NSString *rawDateStr = [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 
-    id <NSFetchedResultsSectionInfo> sectionInfo = 
-    [[self.fetchedResultsController sections] objectAtIndex:section];
-    
     //convert default date string to NSDate...
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
     [formatter setDateFormat:@"yyyy/MM/dd"];
@@ -451,13 +393,14 @@
     }   
    
     //if (!(section == 0 && [self.tableView numberOfSections] == 1)) {
-    NSLog(@">>>> have section :%@",[[[self.fetchedResultsController sections] objectAtIndex:section] name]);
-   /*
+    //NSLog(@">>>> have section :%@",[[[self.fetchedResultsController sections] objectAtIndex:section] name]);
+
+    
     id <NSFetchedResultsSectionInfo> sectionInfo = 
     [[self.fetchedResultsController sections] objectAtIndex:section];
-*/
-        //return [sectionInfo name];  
-    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+    
+    
+    return [sectionInfo name];
    // }
    // return nil ;
 }
@@ -472,7 +415,7 @@
     if (fetchedResultsController != nil ) {
         return fetchedResultsController;
     }
-    NSLog(@">>>>>>>>>>>>>> run reload data");
+    //NSLog(@">>>>>>>>>>>>>> run reload data");
     // Set up the fetched results controller.
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init]autorelease];
@@ -630,7 +573,7 @@
     
     switch(type) {
         case NSFetchedResultsChangeInsert:
-            NSLog(@">>>>>>>>> NSFetchedResultsChangeInsert  %i",indexPath.row);
+            //NSLog(@">>>>>>>>> NSFetchedResultsChangeInsert  %i",indexPath.row);
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];//UITableViewRowAnimationFade
             
             
@@ -640,7 +583,7 @@
             //[self.tableView select:newIndexPath];
             break;
         case NSFetchedResultsChangeDelete:
-            NSLog(@">>>>>>>>> NSFetchedResultsChangeDelete %i",indexPath.row);            
+            //NSLog(@">>>>>>>>> NSFetchedResultsChangeDelete %i",indexPath.row);            
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             
 
@@ -648,7 +591,7 @@
             break;
         case NSFetchedResultsChangeUpdate:
         {
-            NSLog(@">>>>>>>>> NSFetchedResultsChangeUpdate ");            
+            //NSLog(@">>>>>>>>> NSFetchedResultsChangeUpdate ");            
             NSString *sectionKeyPath = [controller sectionNameKeyPath];
             if (sectionKeyPath == nil)
                 break;
@@ -690,7 +633,7 @@
             break;
         }
         case NSFetchedResultsChangeMove:
-            NSLog(@">>>>>>>>> NSFetchedResultsChangeMove ");              
+            //NSLog(@">>>>>>>>> NSFetchedResultsChangeMove ");              
             if (newIndexPath != nil) {
                 
                 NSUInteger tableSectionCount = [self.tableView numberOfSections];
@@ -729,7 +672,7 @@
 
 -(void)segmentAction:(UISegmentedControl *)Seg{
     NSInteger Index = Seg.selectedSegmentIndex;
-    NSLog(@"########## Index %i", Index);
+   // NSLog(@"########## Index %i", Index);
     switch (Index) {
         case 0:
             [self searchAll];
@@ -744,10 +687,10 @@
 
 -(void)searchAll{
     
-    NSLog(@"searchAll");    
+    //NSLog(@"searchAll");    
     searchIsLost = NO; 
     //fetchedResultsController = nil;    
-    NSLog(@">>>>>>>>>>>>>>>> searchInLost = NO");
+    //NSLog(@">>>>>>>>>>>>>>>> searchInLost = NO");
     NSPredicate * predicate = [NSPredicate predicateWithFormat:@" secureid !='' "];
     [NSFetchedResultsController deleteCacheWithName:@"Master"];
     [[[self fetchedResultsController] fetchRequest] setPredicate:predicate];
@@ -765,7 +708,7 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     } 
-        
+    self.editing = NO;
     [self.tableView reloadData];
 }
 
@@ -776,7 +719,7 @@
     searchIsLost = YES;
     //fetchedResultsController = nil;
     //NSLog(@"After fetchedResultsController: %@",  self.fetchedResultsController);
-    NSLog(@">>>>>>>>>>>>>>>> searchInLost = YES");
+   // NSLog(@">>>>>>>>>>>>>>>> searchInLost = YES");
     NSPredicate * predicate = [NSPredicate predicateWithFormat:@"  direction ='1' and sip_code !='200'"];
     [NSFetchedResultsController deleteCacheWithName:@"Master"];
     [[[self fetchedResultsController] fetchRequest] setPredicate:predicate];
@@ -800,6 +743,8 @@
     //fetchedResultsController.delegate = nil;
     
     [self fetchedResultsController];*/
+    
+    self.editing = NO;    
     [self.tableView reloadData];
 }
 
@@ -809,64 +754,9 @@
 }
 
 
-
-- (int)dial:(NSString*)phonem
-{
-    int res;
-    if ([gAppEngine isConfigured]==FALSE) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Account Creation", @"Account Creation") 
-                                                        message:NSLocalizedString(@"Please configure your settings in the iphone preference panel.", @"Please configure your settings in the iphone preference panel.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return -1;
-    }
-    if (![gAppEngine isStarted]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Connection", @"No Connection") 
-                                                        message:NSLocalizedString(@"The service is not available.", @"The service is not available.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return -1;
-    }
-    
-    if ([gAppEngine getNumberOfActiveCalls]>3) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Max Active Call Reached", @"Max Active Call Reached") 
-                                                        message:NSLocalizedString(@"You already have too much active call.", @"You already have too much active call.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return -1;
-    }
-    
-    res = [gAppEngine amsip_start:phonem withReferedby_did:0];
-    if (res<0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Syntax Error", @"Syntax Error") 
-                                                        message:NSLocalizedString(@"Check syntax of your callee sip url.", @"Check syntax of your callee sip url.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return -1;
-    }
-    
-    vbyantisipAppDelegate *appDelegate = (vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if ([appDelegate.tabBarController selectedIndex]!=1)
-    {
-        [appDelegate.tabBarController setSelectedIndex: 1];
-    }
-    UIViewControllerDialpad *_viewControllerDialpad = (UIViewControllerDialpad *)appDelegate->viewControllerDialpad;
-    [_viewControllerDialpad pushCallControlList];
-    return res;
-}
-
-
 - (void)saveContext
 {
-    NSLog(@">>>>>>> saveContext");
+    //NSLog(@">>>>>>> saveContext");
     
     NSError *error = nil;
    // NSManagedObjectContext *managedObjectContext = self.managedObjectContext;

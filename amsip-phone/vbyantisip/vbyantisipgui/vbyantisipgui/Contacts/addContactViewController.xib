@@ -80,6 +80,7 @@
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
+								<int key="IBUIClearButtonMode">3</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="798789005">
 									<int key="type">1</int>
 									<double key="pointSize">14</double>
@@ -112,6 +113,7 @@
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
+								<int key="IBUIClearButtonMode">3</int>
 								<reference key="IBUIFontDescription" ref="798789005"/>
 								<reference key="IBUIFont" ref="536961537"/>
 							</object>
@@ -140,7 +142,7 @@
 				<real value="99" key="IBUIRowHeight"/>
 			</object>
 			<object class="IBUITableViewCell" id="845486013">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="555737617">
@@ -183,6 +185,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 150}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="555737617"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
@@ -191,7 +194,7 @@
 				<real value="150" key="IBUIRowHeight"/>
 			</object>
 			<object class="IBUITableViewCell" id="393767577">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="320653022">
@@ -221,6 +224,7 @@
 									<int key="IBUIKeyboardType">7</int>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
+								<int key="IBUIClearButtonMode">3</int>
 								<reference key="IBUIFontDescription" ref="798789005"/>
 								<reference key="IBUIFont" ref="536961537"/>
 							</object>
@@ -237,6 +241,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 44}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="320653022"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
@@ -244,7 +249,7 @@
 				<string key="IBUIReuseIdentifier">cell_secureid</string>
 			</object>
 			<object class="IBUITableViewCell" id="477788794">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="1071563733">
@@ -273,6 +278,7 @@
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
+								<int key="IBUIClearButtonMode">3</int>
 								<reference key="IBUIFontDescription" ref="798789005"/>
 								<reference key="IBUIFont" ref="536961537"/>
 							</object>
@@ -289,6 +295,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 44}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1071563733"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
@@ -296,9 +303,10 @@
 				<string key="IBUIReuseIdentifier">cell_company</string>
 			</object>
 			<object class="IBUITableView" id="824095467">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<string key="NSFrameSize">{325, 422}</string>
+				<reference key="NSSuperview"/>
 				<reference key="IBUIBackgroundColor" ref="866478692"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClipsSubviews">YES</bool>

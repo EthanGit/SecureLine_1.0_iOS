@@ -740,6 +740,9 @@ PPL_DECLARE (int) am_option_set_user_agent(const char *user_agent)
 		if (timestamp[i] == ' ')
 			timestamp[i] = '-';
 	}
+
+#define SHORT_USER_AGENT
+    
 #ifdef SHORT_USER_AGENT
 	snprintf(_antisipc.user_agent, sizeof(_antisipc.user_agent),
 			 "%s", user_agent);

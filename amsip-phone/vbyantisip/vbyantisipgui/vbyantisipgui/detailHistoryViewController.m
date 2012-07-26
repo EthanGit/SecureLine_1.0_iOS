@@ -69,7 +69,7 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"############## detailHistoryViewController viewDidLoad ");
+    //NSLog(@"############## detailHistoryViewController viewDidLoad ");
     [super viewDidLoad];
     self.title = NSLocalizedString(@"tabRecentInfo", nil);
     /*
@@ -109,6 +109,7 @@
 
 - (void)viewWillAppear:(BOOL)animated 
 {
+   // NSLog(@"-------->viewWillAppear");
     if([self.first_name.text isEqualToString:@"Unknown"]){    
         fnstring = [self lookupDisplayName:secureid];
         if(fnstring.length>0){
@@ -116,6 +117,14 @@
             showAddButton = NO;
         }
     }
+    myHistoryList = [[NSMutableArray arrayWithObjects:nil] retain];
+    myHistoryDb = [SqliteRecentsHelper alloc];
+    [myHistoryDb open_database];
+    //[myHistoryDb load_history:myHistoryList];
+    
+    [myHistoryDb find_callid:myHistoryList:secureid];
+    [myHistoryDb release];
+    
     
     [self.tableView reloadData];
     [super viewWillAppear:YES];    
@@ -198,7 +207,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@">>> section:%i / row:%i",indexPath.section,indexPath.row);
+    //NSLog(@">>> section:%i / row:%i",indexPath.section,indexPath.row);
     if(indexPath.section==0){
         //[cell_profile setBackgroundColor:[UIColor clearColor]];
         return cell_profile;
@@ -218,7 +227,7 @@
             [Cell setBackgroundColor:[UIColor clearColor]];// setBackgroundColor
             //Cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
-        NSLog(@"cellForRowAtIndexPath : %d",indexPath.row);
+        //NSLog(@"cellForRowAtIndexPath : %d",indexPath.row);
         [self configureCell:Cell atIndexPath:indexPath];
         
         return Cell;
@@ -234,7 +243,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@">>> section:%i / row:%i",indexPath.section,indexPath.row);    
+    //NSLog(@">>> section:%i / row:%i",indexPath.section,indexPath.row);    
 	if (indexPath.section == 0) {
 		return 140;
 	}
@@ -271,7 +280,7 @@
     RecentsEntry *recent = nil;
 
     recent = [myHistoryList objectAtIndex:indexPath.row];
-    NSLog(@"callid = %@,remoteuri= %@,secureid= %@,start_date= %@,end_date= %@,duration= %@,direction= %@,sip_code= %@,sip_reason= %@",recent.callid,recent.remoteuri,recent.secureid,recent.start_date,recent.end_date,recent.duration,recent.direction,recent.sip_code,recent.sip_reason);
+    //NSLog(@"callid = %@,remoteuri= %@,secureid= %@,start_date= %@,end_date= %@,duration= %@,direction= %@,sip_code= %@,sip_reason= %@",recent.callid,recent.remoteuri,recent.secureid,recent.start_date,recent.end_date,recent.duration,recent.direction,recent.sip_code,recent.sip_reason);
     cell.recentEntry = recent;
     
   
@@ -282,40 +291,43 @@
 - (int)dial:(NSString*)phonem
 {
     int res;
+    //無設定
+    
     if ([gAppEngine isConfigured]==FALSE) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Account Creation", @"Account Creation") 
-                                                        message:NSLocalizedString(@"Please configure your settings in the iphone preference panel.", @"Please configure your settings in the iphone preference panel.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Account Creation") 
+                                                        message:NSLocalizedString(@"altmDialErrorNoUser", @"Please configure your settings in the iphone preference panel.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
     if (![gAppEngine isStarted]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No Connection", @"No Connection") 
-                                                        message:NSLocalizedString(@"The service is not available.", @"The service is not available.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"No Connection") 
+                                                        message:NSLocalizedString(@"altmDialErrorNoService", @"The service is not available.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
-    
+    //滿線
     if ([gAppEngine getNumberOfActiveCalls]>3) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Max Active Call Reached", @"Max Active Call Reached") 
-                                                        message:NSLocalizedString(@"You already have too much active call.", @"You already have too much active call.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Max Active Call Reached") 
+                                                        message:NSLocalizedString(@"altmDialErrorMaxActiveCallReached", @"You already have too much active call.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
         return -1;
     }
     
+    //網路異常，請稍侯再試
     res = [gAppEngine amsip_start:phonem withReferedby_did:0];
     if (res<0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Syntax Error", @"Syntax Error") 
-                                                        message:NSLocalizedString(@"Check syntax of your callee sip url.", @"Check syntax of your callee sip url.")
-                                                       delegate:nil cancelButtonTitle:@"Cancel"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"altDialError", @"Syntax Error") 
+                                                        message:NSLocalizedString(@"altmDialErrorNetwork", @"Check syntax of your callee sip url.")
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"btnCancel",nil)
                                               otherButtonTitles:nil];
         [alert show];
         [alert release];
@@ -341,7 +353,7 @@
         //[self.navigationController pushViewController:dialView animated:YES]; 
         
         //NSLog(@">>>>> name length=%d, string=%@, secureid=%@", [first_name.text length], first_name.text, secure_id.text);
-        if ([first_name.text isEqualToString:@" "]) {
+        if ([first_name.text isEqualToString:@"Unknown"]) {
             [dialView setRemoteIdentity:secure_id.text];
         } else {
             [dialView setRemoteIdentity:first_name.text];

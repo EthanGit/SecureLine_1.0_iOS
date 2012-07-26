@@ -12,7 +12,7 @@
 #include "MultiCastDelegate.h"
 #import "apiGlobal.h"
 #import "AppEngine.h"
-//#import "gentriceGlobal.h"
+#import "gentriceGlobal.h"
 #include <amsip/am_options.h>
 
 AppEngine *gAppEngine=nil;
@@ -66,8 +66,11 @@ void libmsilbc_init(void);
 	registration=nil;
 	thread_start=false;
 	thread_started=false;
-	[self setUserAgent:@"vbyantisip/vX.Y.Z"];
-	am_init("vbyantisip/vX.Y.Z", 5);
+    NSString *UserAgent = [NSString stringWithFormat:@"SecureLine/%@",APP_VERSION];
+    const char *UserAgent_c = [UserAgent UTF8String];
+
+	[self setUserAgent:UserAgent];//@"vbyantisip/vX.Y.Z"
+	am_init(UserAgent_c, 5);
 
 #ifdef MY_ENABLE_G729
 	libmsitug729_init();
@@ -1397,8 +1400,8 @@ void libmsilbc_init(void);
         NSString *user_certpath = [[NSBundle mainBundle] pathForResource:@"user-cert" ofType:@"pem"];
         NSString *user_privkeypath = [[NSBundle mainBundle] pathForResource:@"user-privkey" ofType:@"pem"];
         NSString *root_capath = [[NSBundle mainBundle] pathForResource:@"cacert" ofType:@"pem"];
-        //const char *user_pwd = "24336498";
-        const char *user_pwd = "!@#!@#!@#";
+        const char *user_pwd = "24336498";
+        
         snprintf (tls_ctx.client.cert, sizeof(tls_ctx.client.cert), "%s", [user_certpath UTF8String]);
         snprintf (tls_ctx.client.priv_key, sizeof(tls_ctx.client.priv_key), "%s", [user_privkeypath UTF8String]);
         snprintf(tls_ctx.client.priv_key_pw, sizeof(tls_ctx.client.priv_key_pw), "%s", user_pwd);

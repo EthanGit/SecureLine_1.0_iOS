@@ -82,7 +82,7 @@
     //UIImageView *tableBgImage = [[UIImage alloc] initWithImage:[UIImage imageNamed:@"contact-offline.png"]];
     imageView.image =[UIImage imageNamed:@"contact-offline.png"];
     
-    NSLog(@"###### start_date = %@ / end_date = %@ / direction = %@ / sip_code = %@ / duration = %@", recentEntry.start_date,recentEntry.end_date,recentEntry.direction,recentEntry.sip_code,recentEntry.duration);
+   // NSLog(@"###### start_date = %@ / end_date = %@ / direction = %@ / sip_code = %@ / duration = %@", recentEntry.start_date,recentEntry.end_date,recentEntry.direction,recentEntry.sip_code,recentEntry.duration);
     // int direction = 1;//[recentEntry.direction];
     //int sip_code = 200;//[recentEntry.sip_code];
     

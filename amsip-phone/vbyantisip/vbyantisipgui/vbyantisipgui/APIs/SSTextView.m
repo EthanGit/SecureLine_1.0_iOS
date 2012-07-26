@@ -79,7 +79,7 @@
 
     if (_shouldDrawPlaceholder) {
         NSInteger y = 8.0f;
-        NSLog(@">>> text length :%i / _text_height:%i",self.text.length,_text_height);
+       // NSLog(@">>> text length :%i / _text_height:%i",self.text.length,_text_height);
         if(self.text.length>0 && _text_height>0){
             
            y = _text_height;

@@ -17,6 +17,8 @@
 
 
 #ifdef GENTRICE
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
 #import "dialIncomingUIViewController.h"
 #import "loginUINavigationController.h"
 #endif //GENTRICE
@@ -38,7 +40,10 @@ void (^keepAliveHandler)(void) = ^{
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize currentAlert;
+@synthesize currentAlert, doingPasscodeLogin;
+@synthesize tmp_data,connect_finished;
+CTCallCenter *gCallCenter;
+NSString *gCallState;
 #endif
 
 @synthesize window;
@@ -78,6 +83,11 @@ void (^keepAliveHandler)(void) = ^{
         case NotReachable:
         {
             connectionRequired= NO;
+#ifdef GENTRICE
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network error", nil) message:NSLocalizedString(@"You are disconnected from internet, please check your network setting.", nil) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+#endif
             break;
         }
             
@@ -116,7 +126,7 @@ void (^keepAliveHandler)(void) = ^{
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	NSLog(@"applicationDidFinishLaunchingWithOptions\n");
+	NSLog(@"----------------> applicationDidFinishLaunchingWithOptions\n");
     
     
     
@@ -126,7 +136,9 @@ void (^keepAliveHandler)(void) = ^{
 										 UIRemoteNotificationTypeAlert)]; 
 	
 	isInBackground = true;
+    
 
+    
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstRun"] == false){
         NSString *sip_proxy_addr = [[[NSString alloc] init] autorelease];
         sip_proxy_addr = [SIPProxyServer stringByAppendingString:SIPProxyPort];
@@ -160,7 +172,9 @@ void (^keepAliveHandler)(void) = ^{
 		[[NSUserDefaults standardUserDefaults] setInteger:128 forKey:@"downloadbandwidth_preference"];
 		
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstRun"];
-        [[NSUserDefaults standardUserDefaults] setObject:@"0000" forKey:@"PasscodeString"];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"IconBadgeNumber"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"PasscodeString"];
 	}
 	
   // Add the tab bar controller's current view as a subview of the window
@@ -170,6 +184,8 @@ void (^keepAliveHandler)(void) = ^{
 	
   if ([application applicationIconBadgeNumber]>0)
     [application setApplicationIconBadgeNumber:0];
+   // NSLog(@"------------ setApplicationIconBadgeNumber:0");
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"IconBadgeNumber"];
   
 	NetworkTracking *gNetworkTracking = [NetworkTracking getInstance];
 	[gNetworkTracking addNetworkTrackingDelegate:self];
@@ -202,7 +218,20 @@ void (^keepAliveHandler)(void) = ^{
 			}
 		}
 	}
-	
+
+#ifdef GENTRICE
+    gCallCenter = [[[CTCallCenter alloc] init] autorelease];
+    gCallState = CTCallStateDisconnected;
+
+    gCallCenter.callEventHandler = ^(CTCall *call) {
+        gCallState = [call callState];
+        NSLog(@">>>>>>> gCallState=%@", gCallState);
+    };
+    
+    [self checkPasscodeLoginStatus:nil];    
+    [self.tabBarController setSelectedIndex:1];
+    
+#endif
    
 	return true;
 }
@@ -211,11 +240,34 @@ void (^keepAliveHandler)(void) = ^{
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     NSLog(@"applicationDidEnterBackground");
+
+
+    
+    
+#ifdef GENTRICE
+       
+    if( [gAppEngine getNumberOfActiveCalls]==0){
+        
+       // NSLog(@"--------------- setSelectedIndex:1");
+
+        //[self.tabBarController.view reloadInputViews];// remoteControlReceivedWithEvent:UIEventTypeTouches];
+        //NSLog(@"view :%@",self.tabBarController.viewControllers);
+        if([[NSUserDefaults standardUserDefaults] boolForKey:@"PasscodeEnabled"]!=YES && 
+           [[NSUserDefaults standardUserDefaults] boolForKey:@"LoginStatus"] == YES){
+            [self.tabBarController.view removeFromSuperview];
+            [self.window reloadInputViews];
+            [self.window addSubview:self.tabBarController.view];      
+        }
+    }
+
+    [self checkPasscodeLoginStatus:nil];      
+    
+#endif    
     if (currentAlert!=nil) {
         [currentAlert dismissWithClickedButtonIndex:[currentAlert cancelButtonIndex] animated:NO];
     }    
     
-    [self.tabBarController viewDidLoad];
+    //[self.tabBarController viewDidLoad];
     
 	if ([[UIDevice currentDevice] isMultitaskingSupported]) {
 		
@@ -249,28 +301,27 @@ void (^keepAliveHandler)(void) = ^{
 		}
 		
 	}
+    
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
 #ifdef GENTRICE
-    [self checkPasscodeLoginStatus:nil];
+    //[self checkPasscodeLoginStatus:nil];
 #if GENTRICE_DEBUG >0
-    //show the contact tab
-
-    if ([self.tabBarController selectedIndex]!=1)
-    {
-        [self.tabBarController setSelectedIndex: 1];
-    }
-    
-//    [self.tabBarController setSelectedIndex:1];//2
+    //show the contact tab 
+    //[self.tabBarController setSelectedIndex:1];//2
     
 #endif //GENTRICE_DEBUG    
 #endif    
     
-	NSLog(@"applicationDidBecomeActive\n");
+	NSLog(@"---------->applicationDidBecomeActive\n");
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"IconBadgeNumber"];
+   // NSLog(@"------------ setApplicationIconBadgeNumber:0");
     //application.applicationIconBadgeNumber = 0;
+    
 	if (bgTask!=0)
 		[[UIApplication sharedApplication] endBackgroundTask:bgTask];
 	bgTask=0;
@@ -279,7 +330,9 @@ void (^keepAliveHandler)(void) = ^{
 	NSString *_proxy = [[NSUserDefaults standardUserDefaults] stringForKey:@"proxy_preference"];
 	NSString *_login = [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
 	NSString *_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"];
-	NSString *_identity = [[NSUserDefaults standardUserDefaults] stringForKey:@"identity_preference"];
+#ifndef GENTRICE	
+    NSString *_identity = [[NSUserDefaults standardUserDefaults] stringForKey:@"identity_preference"];
+#endif    
 	NSString *_transport = [[NSUserDefaults standardUserDefaults] stringForKey:@"transport_preference"];
 	NSString *_outboundproxy = [[NSUserDefaults standardUserDefaults] stringForKey:@"outboundproxy_preference"];
 	NSString *_stun = [[NSUserDefaults standardUserDefaults] stringForKey:@"stun_preference"];
@@ -412,7 +465,10 @@ void (^keepAliveHandler)(void) = ^{
 {
 	NSLog(@"applicationWillEnterForeground\n");
 	NSLog(@"bgTask %i\n",bgTask);    
-
+#ifdef GENTRICE
+    //[self checkPasscodeLoginStatus:nil];
+    
+#endif    
     if (currentAlert!=nil) {
         [currentAlert dismissWithClickedButtonIndex:[currentAlert cancelButtonIndex] animated:NO];
     }    
@@ -457,30 +513,79 @@ void (^keepAliveHandler)(void) = ^{
 #endif     
 }
 
+
+#ifdef GENTRICE
+UIAlertView *waitAlert;
+UIActivityIndicatorView *waitAIV;
+
+- (void)initSystemAlert 
+{
+    if (waitAlert==nil) {
+        if (currentAlert!=nil) {
+            [currentAlert dismissWithClickedButtonIndex:[currentAlert cancelButtonIndex] animated:NO];
+            [self setCurrentAlert:nil];
+        }
+        waitAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"sysRegistering", nil) message:@"\n" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [waitAlert show];
+        waitAIV = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        waitAIV.center = CGPointMake(139.5, 75.5);
+        [waitAlert addSubview:waitAIV];
+        [waitAIV startAnimating];
+        [self setCurrentAlert:waitAlert];
+    }
+}
+
+
+- (void)dismissSystemAlert
+{
+    if (waitAlert!=nil) {
+        [waitAlert dismissWithClickedButtonIndex:0 animated:YES];
+        [waitAIV stopAnimating];
+        [waitAIV removeFromSuperview];
+        [waitAlert release];
+        waitAlert = nil;
+        [waitAIV release];
+        waitAIV = nil;
+        [self setCurrentAlert:nil];
+    }
+}
+
+#endif
+
 -(void) restartAll {
+#ifdef GENTRICE
+    if (doingPasscodeLogin==YES) {
+        return;
+    } else {
+        [self initSystemAlert];
+    }
+#endif
+    
 	NSString *_proxy = [[NSUserDefaults standardUserDefaults] stringForKey:@"proxy_preference"];
 	NSString *_login = [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
-    NSString *_tmp_login = [[NSUserDefaults standardUserDefaults] stringForKey:@"tmp_user_preference"];
+    //NSString *_tmp_login = [[NSUserDefaults standardUserDefaults] stringForKey:@"tmp_user_preference"];
 	NSString *_password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"];
 	NSString *_identity = [[NSUserDefaults standardUserDefaults] stringForKey:@"identity_preference"];
 	NSString *_transport = [[NSUserDefaults standardUserDefaults] stringForKey:@"transport_preference"];
 	NSString *_outboundproxy = [[NSUserDefaults standardUserDefaults] stringForKey:@"outboundproxy_preference"];
 	NSString *_stun = [[NSUserDefaults standardUserDefaults] stringForKey:@"stun_preference"];
-	
-	NSLog(@"%@ vs %@", proxy, _proxy);
+    
+	//NSLog(@"%@ vs %@", proxy, _proxy);
 	NSLog(@"%@ vs %@", login, _login);
 	NSLog(@"%@ vs %@", password, _password);
 	//NSLog(@"%@ vs %@", identity, _identity);
     //NSLog(@"identity = %@",identity);
     //NSLog(@"_identity = %@",_identity);
-	NSLog(@"%@ vs %@", transport, _transport);
-	NSLog(@"%@ vs %@", outboundproxy, _outboundproxy);
-	NSLog(@"%@ vs %@", stun, _stun);
+	//NSLog(@"%@ vs %@", transport, _transport);
+	//NSLog(@"%@ vs %@", outboundproxy, _outboundproxy);
+	//NSLog(@"%@ vs %@", stun, _stun);
 	
+    /*(
     if(_tmp_login!=_login && _login!=nil){
-        [self performSelectorOnMainThread : @ selector(updatetokeninfo) withObject:nil waitUntilDone:NO];
+        [self performSelectorOnMainThread : @ selector(updatetokeninfo) withObject:nil waitUntilDone:YES];
     }
-    
+    */
+    //NSLog(@"------------------------ jump updatetokeninfo");
     [[NSUserDefaults standardUserDefaults] setObject:_login forKey:@"tmp_user_preference"];
 
     
@@ -523,55 +628,62 @@ void (^keepAliveHandler)(void) = ^{
 
 -(void)updatetokeninfo{
 
-    NSString *host =tokenRegisterAPIURL ;//@"https://sip.securekingdom.com//RAPI/"
     
 	NSString *_p_devicetoken = @"";
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]!=nil) _p_devicetoken = [[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"];
 	NSString *_p_user = @"";
     
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"]!=nil) _p_user = 
-    [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
-
-	NSLog(@"%@ vs %@", _p_devicetoken, _p_user);
+        [[NSUserDefaults standardUserDefaults] stringForKey:@"user_preference"];
+    
+	//NSLog(@"%@ vs %@", _p_devicetoken, _p_user);
 	// !!! CHANGE "/apns.php?" TO THE PATH TO WHERE apns.php IS INSTALLED
 	// !!! ( MUST START WITH / AND END WITH ? ).
 	// !!! SAMPLE: "/path/to/apns.php?"
 	//NSString *urlString = [@"/RAPI/?"stringByAppendingString:@"Action=setPhonePIN"];
-    NSString *urlString =[[[NSString alloc] initWithString:@""] autorelease];
-    
-    urlString = [urlString stringByAppendingString:@"mapping.php?Action=setPhoneMapping"];
-	/*urlString = [urlString stringByAppendingString:@"&appname="];
-     urlString = [urlString stringByAppendingString:appName];*/
-	urlString = [urlString stringByAppendingString:@"&UDID="];
-	urlString = [urlString stringByAppendingString:_p_devicetoken];    
-	urlString = [urlString stringByAppendingString:@"&exten="];
-	urlString = [urlString stringByAppendingString:_p_user];     
-	  
-    
-    [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"p_connect_finished"];
-    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"p_connect_data_tmp"];
-    
-    
-    
-    NSLog(@"########## connect finished:%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"p_connect_finished"]);
-    
-    NSString *url =[NSString stringWithFormat:@"%@%@",host,urlString];
 
-    NSLog(@"########## url:%@",url);
-    NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:url]
-                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                          timeoutInterval:5];
     
-    //NSURLConnection *urlConnect=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    NSURLConnection *urlConnect = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];    
-	while([[[NSUserDefaults standardUserDefaults] stringForKey:@"p_connect_finished"] isEqualToString:@"NO"]) {
-        NSLog(@"LOOP\n");
-        NSLog(@"#### tmp:%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"p_connect_data_tmp"]);
+    
+    NSString *urlAsString = [[[NSString alloc] initWithString:tokenRegisterAPIURL] autorelease];//absoluteString
+    
+    urlAsString = [urlAsString stringByAppendingString:[NSString stringWithFormat:tokenRegisterVar,_p_devicetoken,_p_user]];
+    NSLog(@"---------------------  urlAsString:%@",urlAsString);
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    
+    
+    self.connect_finished = NO;
+    self.tmp_data = nil;
+    
+    
+   // NSLog(@"########## connect finished:%@",self.connect_finished);
+        
+    
+    //NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease]; 
+    
+    [urlRequest setTimeoutInterval:10.0f];
+    //    [urlRequest setHTTPMethod:@"POST"];
+    
+    //NSLog(@"--------------------- REQUEST: %@", [urlRequest HTTPBody]);
+    //[NSURLConnection connectionWithRequest:urlRequest delegate:self];
+    [[[NSURLConnection alloc] initWithRequest:urlRequest delegate:self] autorelease];
+    
+    NSInteger try_count = 0;
+    
+    while(self.connect_finished == NO && try_count <10) {
+       // NSLog(@"--------------------- login LOOP");
+        
 		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        
+        sleep(1);  
+        try_count++;
 	} 
-
-   // [urlConnect release];
-
+    NSLog(@"--------------------- try_count:%i, send tmp:%@",try_count,self.tmp_data);
+    //sleep(1);
+    //NSLog(@"--------------------- updatetokeninfo end");
+    
+    //return;
+    
 }
 
 -(void)onCallExist:(Call *)call {
@@ -592,7 +704,7 @@ void (^keepAliveHandler)(void) = ^{
 	//	}
 	//}
 #ifdef GENTRICE    
-    if ([gAppEngine getNumberOfActiveCalls]>1)
+    if ([gAppEngine getNumberOfActiveCalls]>1||[gCallState isEqualToString:CTCallStateConnected])
 	{
 		[call decline];
 		return;
@@ -619,16 +731,25 @@ void (^keepAliveHandler)(void) = ^{
 				alarm.fireDate = [[NSDate date] dateByAddingTimeInterval:0];;
 				alarm.timeZone = [NSTimeZone defaultTimeZone];
 				alarm.repeatInterval = 0;
-				alarm.soundName = @"oldphone-mono-30s.caf";//@"alarmsound.caf";
+				alarm.soundName = @"alarmsound.caf";//@"oldphone-mono-30s.caf";
+                NSLog(@"------ local notify = %i",[[NSUserDefaults standardUserDefaults] integerForKey:@"IconBadgeNumber"]);    
+                NSInteger iconbadge = [[NSUserDefaults standardUserDefaults] integerForKey:@"IconBadgeNumber"];
+                if(iconbadge<=0) iconbadge = 1;    
+                else iconbadge+=1;
                 
+                [[NSUserDefaults standardUserDefaults] setInteger:iconbadge forKey:@"IconBadgeNumber"];
+                
+                NSLog(@"------ local notify = %i",iconbadge);
+                alarm.applicationIconBadgeNumber = iconbadge;
 				NSString *body = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"notifyCallFrom",nil), displayName];
 				alarm.alertBody = body;
 				alarm.alertAction = NSLocalizedString(@"callAnswer",nil);
+            
 				
 				[app presentLocalNotificationNow:alarm];
 			}
 #ifdef GENTRICE
-            [self checkPasscodeLoginStatus:call];   
+            //[self checkPasscodeLoginStatus:call];   
 #endif
 		}
 	}
@@ -684,7 +805,7 @@ void (^keepAliveHandler)(void) = ^{
     NSString *result;
     
     NSString *secureID = [self stripSecureIDfromURL:caller];
-    NSLog(@"$$$$$ SecureID = %@", secureID);
+    //NSLog(@"$$$$$ SecureID = %@", secureID);
     
     SqliteContactHelper *contactsDB = [SqliteContactHelper alloc];
     [contactsDB open_database];
@@ -712,6 +833,10 @@ void (^keepAliveHandler)(void) = ^{
 - (void)onRegistrationRemove:(Registration*)_registration;
 {
 	registration = nil;
+
+#ifdef GENTRICE
+    [self dismissSystemAlert];
+#endif
 }
 
 - (void)onRegistrationUpdate:(Registration*)_registration;
@@ -721,6 +846,22 @@ void (^keepAliveHandler)(void) = ^{
 		NSLog(@"onRegistrationUpdate: <bug> 2 active registration with different rid pending");
 	}
 	registration = _registration;
+    
+#ifdef GENTRICE
+    NSLog(@">>>>> AppDelegate: onRegistrationUpdate, code=%d", [_registration code]);
+
+	if ([_registration code]>=200 && [_registration code]<=299) {
+		//label_sipstatus.text = @"Registered on server";
+        [self dismissSystemAlert];
+	} else if ([_registration code]==0) {
+		//label_sipstatus.text = [NSString stringWithFormat: @"--- %@", [registration reason]];
+        //[aiv startAnimating];
+	} else {
+		//label_sipstatus.text = [NSString stringWithFormat: @"%i %@", [registration code], [registration reason]];
+        //[aiv startAnimating];
+	}
+#endif
+    
 }
 
 
@@ -728,7 +869,7 @@ void (^keepAliveHandler)(void) = ^{
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo  
 {  
-    NSLog(@"######### AppDelegate didReceiveRemoteNotification \n");
+    NSLog(@"--------------> AppDelegate didReceiveRemoteNotification \n");
     /*
      // NSLog(@"收到推送消息 ：%@",[[objectForKey:@"aps"] objectForKey:@"alert"]);  
      if ([[userInfo objectForKey:@"aps"] objectForKey:@"alert"]!=NULL) {  
@@ -750,20 +891,62 @@ void (^keepAliveHandler)(void) = ^{
 	NSString *alert = [apsInfo objectForKey:@"alert"];
 	NSLog(@"Received Push Alert: %@", alert);
     
-	NSString *sound = [apsInfo objectForKey:@"sound"];
+	NSString *sound = @"default";//[apsInfo objectForKey:@"sound"];
 	NSLog(@"Received Push Sound: %@", sound);
     
     
     //AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-	NSString *badge = [apsInfo objectForKey:@"badge"];
-	NSLog(@"Received Push Badge: %@", badge);
-	application.applicationIconBadgeNumber = [[apsInfo objectForKey:@"badge"] integerValue];
+	//NSString *badge = [apsInfo objectForKey:@"badge"];
+	//NSLog(@"Received Push Badge: %@", badge);
+    NSLog(@"------ remote notify = %i",[[NSUserDefaults standardUserDefaults] integerForKey:@"IconBadgeNumber"]);    
+    NSInteger iconbadge = [[NSUserDefaults standardUserDefaults] integerForKey:@"IconBadgeNumber"];
+    if(iconbadge<=0) iconbadge = 1;    
+    else iconbadge+=1;
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:iconbadge forKey:@"IconBadgeNumber"];
+
+    NSLog(@"------ remote notify = %i",iconbadge);
+
+	//application.applicationIconBadgeNumber = iconbadge;//[[apsInfo objectForKey:@"badge"] integerValue];
+    
+    //[UIApplication sharedApplication].applicationIconBadgeNumber = iconbadge;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = [UIApplication sharedApplication].applicationIconBadgeNumber - 1;
+
+    /*
+    for (id key1 in apsInfo){
+        NSLog(@"key1: %@", key1);
+        id alert = [apsInfo objectForKey:key1];
+        if ([alert isKindOfClass:[NSDictionary class]]) {
+            message = [alert objectForKey:@"body"];
+            NSLog(@"body: %@, value: %@", key1, message);
+            message = [alert objectForKey:@"loc-args"];
+            NSLog(@"loc-args: %@, value: %@", key1, message);
+            NSArray *args = (NSArray *) [alert objectForKey:@"loc-args"] ;
+            for (id key2 in args){
+                NSLog(@"key2: %@, value: ", key2);
+            }
+            message = [alert objectForKey:@"action-loc-key"];
+            NSLog(@"action-loc-key: %@, value: %@", key1, message);
+            
+        }
+        else if ([alert isKindOfClass:[NSArray class]]) {
+            for (id key2 in key1){
+                NSLog(@"key2: %@, value: %@", key2, [key1 objectForKey:key2]);
+            }
+        }
+        else if([key1 isKindOfClass:[NSString class]]) {
+            message = [apsInfo objectForKey:key1];
+            NSLog(@"key1: %@, value: %@", key1, message);
+        } 
+        
+    }*/   
+    
     //[[[[[self tabBarController] tabBar] items] objectAtIndex:2] setBadgeValue:[NSString stringWithFormat:@"%@",badge]];
     //[[[[[self tabBarController] tabBar] items] objectAtIndex:20] setBadgeValue:badge];
     //[[[[[self tabBarController] tabBar] objectAtIndex:20] tabBarItem] setBadgeValue:badge];
 #endif
-    //    for(id key in userInfo){ NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]); }  
+
     
     //UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Super" message:@"welcome" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     /*
@@ -839,6 +1022,9 @@ void (^keepAliveHandler)(void) = ^{
 }   
 
 
+
+
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse*)response 
 {
     NSLog(@"############ connection didReceiveResponse response:%@\n",response);
@@ -846,23 +1032,25 @@ void (^keepAliveHandler)(void) = ^{
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection 
 {
-    NSLog(@"connectionDidFinishLoading connection ");
-    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"p_connect_finished"];
+   // NSLog(@"connectionDidFinishLoading connection ");
+    self.connect_finished = YES;
     //[_waitingDialog dismissWithClickedButtonIndex:0 animated:NO];
     
-    [connection release];
+    //[connection release];
     //[DownloadConnection release];
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 { 
     NSLog(@" ########### connection error:%@\n",error);
-    [[NSUserDefaults standardUserDefaults] setObject:@"Error" forKey:@"p_connect_finished"];
+    self.connect_finished = NO;
     
 }
 
+
+
 - (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection{
-    NSLog(@"connectionShouldUseCredentialStorage connection ");
+   // NSLog(@"connectionShouldUseCredentialStorage connection ");
     
     return NO;
 }
@@ -897,13 +1085,13 @@ void (^keepAliveHandler)(void) = ^{
 //处理数据 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSString *data_tmp = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-    NSLog(@"######### connection didReceiveData:");
-    NSLog(@"###### got data %@",data_tmp );
-    [[NSUserDefaults standardUserDefaults] setObject:data_tmp forKey:@"p_connect_data_tmp"];
+    NSString *data_tmp = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"######### connection didReceiveData:%@",data_tmp);
+    self.tmp_data = data_tmp;
+    [data_tmp release];
+    //    [[NSUserDefaults standardUserDefaults] setObject:data_tmp forKey:@"p_connect_data_tmp"];
     //[data_tmp release];
 } 
-
 
 
 #import "passcodeUIViewController.h"
@@ -912,7 +1100,9 @@ void (^keepAliveHandler)(void) = ^{
 
 - (void) checkPasscodeLoginStatus:(Call *) call
 {
+
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PasscodeEnabled"] == YES) {
+        NSLog(@"-------- PasscodeEnabled YES");        
         passcodeUIViewController *passcodeView = [[passcodeUIViewController alloc] initWithNibName:@"passcode" bundle:nil];
         loginUINavigationController *passcodeNavView = [[loginUINavigationController alloc] initWithRootViewController:passcodeView];
         [tabBarController presentModalViewController:passcodeNavView animated:NO];
@@ -920,6 +1110,8 @@ void (^keepAliveHandler)(void) = ^{
         [passcodeView release];
         [passcodeNavView release];        
     } else if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LoginStatus"] == NO) {
+        
+        NSLog(@"-------- LoginStatus NO");           
         UIViewController *loginView = [[loginUIViewController alloc] initWithNibName:@"loginUIViewController" bundle:nil];
         loginUINavigationController *loginNavView = [[loginUINavigationController alloc] initWithRootViewController:loginView];
         [loginNavView.navigationBar setHidden:YES];

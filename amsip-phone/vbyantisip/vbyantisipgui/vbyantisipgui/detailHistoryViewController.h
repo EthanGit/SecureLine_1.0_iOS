@@ -52,4 +52,5 @@
 
 -(void)back;
 - (IBAction)callNumber:(id)sender;
+- (int)dial:(NSString*)phonem;
 @end

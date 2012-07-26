@@ -8,6 +8,7 @@
 
 #import "reportUIViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "apiGlobal.h"
 
 @implementation reportUIViewController
 @synthesize cell_sendbutton;
@@ -145,7 +146,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@">>>> section:%i",indexPath.section);
+   // NSLog(@">>>> section:%i",indexPath.section);
     if(indexPath.section==0){
         return 90;
     }
@@ -198,8 +199,8 @@
         
         [mailer setSubject:NSLocalizedString(@"reportEMailSubject",nil)];
         
-        //NSArray *toRecipients = [NSArray arrayWithObjects:@"fisrtMail@example.com", @"secondMail@example.com", nil];
-        //[mailer setToRecipients:toRecipients];
+        NSArray *toRecipients = [NSArray arrayWithObjects:reportServiceMail, nil];
+        [mailer setToRecipients:toRecipients];
         
         //UIImage *myImage = [UIImage imageNamed:@"mobiletuts-logo.png"];
         //NSData *imageData = UIImagePNGRepresentation(myImage);

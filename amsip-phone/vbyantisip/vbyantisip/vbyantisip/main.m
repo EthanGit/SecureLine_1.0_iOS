@@ -16,6 +16,7 @@
 #import "UIViewControllerAbook.h"
 #import "UIViewControllerHistory.h"
 
+
 int main(int argc, char *argv[])
 {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -26,7 +27,8 @@ int main(int argc, char *argv[])
   [UIViewControllerAbook _keepAtLinkTime];
   [UIViewControllerHistory _keepAtLinkTime];
   [UIViewControllerAbout _keepAtLinkTime];
-  
+
+    
   int retVal = UIApplicationMain(argc, argv, nil, nil);
   [pool release];
   return retVal;

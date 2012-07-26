@@ -54,7 +54,7 @@
     self.view.backgroundColor = background;
     [background release];
     */
-    NSLog(@"----------- addContactViewController viewDidLoad");
+    //NSLog(@"----------- addContactViewController viewDidLoad");
     self.title = NSLocalizedString(@"tabAddContact", nil);    
     UIBarButtonItem *rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save)] autorelease];
     
@@ -118,25 +118,14 @@
 
 
 -(void)cancel{
-	/*
-     [contact.managedObjectContext deleteObject:contact];
-     
-     NSError *error = nil;
-     if (![contact.managedObjectContext save:&error]) {
-     
-     NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-     abort();
-     }		
-     */
-    // [self.delegate recipeAddViewController:self didAddRecipe:nil];
-    // [delegate newContactUIViewController:self didFinishWithSave:YES];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
 
 - (void)save{
-    NSLog(@"######### save");
+    //NSLog(@"######### save");
     contact =  [[[ContactsEntry alloc]init] autorelease];
     
     contact.firstname = self.firstname_field.text;
@@ -145,20 +134,32 @@
     contact.secureid = self.secureid_field.text;
     contact.other = self.other_field.text;
     
+    
+    for(int i=0;i<contact.firstname.length;i++){
+        unichar current = [contact.firstname characterAtIndex:i];
+        NSLog(@"%i: %C\n",i,current);
+    }
+    
+
+    
+    
     if(self.lastname.text.length>0){
-        contact.section_key = [[self.lastname.text substringToIndex:1] uppercaseString];
+        
+        contact.section_key = [[[NSString stringWithFormat:@"%@", self.lastname.text] substringToIndex:1] uppercaseString];
+
     }else{contact.section_key = nil;}
     
+    //NSLog(@">>>>>>> section_key:%@",contact.section_key);
     
     NSString *alert_warning = [[[NSString alloc] init] autorelease];
-    
+    /*
     if(self.lastname.text.length==0){
         alert_warning = NSLocalizedString(@"altmContactWarningNoLN", nil);
     }
     else if(firstname_field.text.length==0){
         alert_warning = NSLocalizedString(@"altmContactWarningNoFN", nil);
     }
-    else if(secureid_field.text.length==0){
+    else */if(secureid_field.text.length==0){
         alert_warning = NSLocalizedString(@"altmContactWarningNoSID", nil);
     
     }
@@ -189,7 +190,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"### addContactViewController alter view button index=%d", buttonIndex);
+    //NSLog(@"### addContactViewController alter view button index=%d", buttonIndex);
     
     [(vbyantisipAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAlert:nil];
     
@@ -226,6 +227,54 @@
     [textField resignFirstResponder];  
     return YES;          
 }  
+
+
+
+#define LM_MAXLENGTH 256
+#define FM_MAXLENGTH 256
+#define SID_MAXLENGTH 64
+#define CP_MAXLENGTH 256
+#define UI_MAXLENGTH 256
+
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+
+    if(textField == self.firstname_field){    
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > FM_MAXLENGTH) ? NO : YES;            
+    }
+    else if(textField == self.lastname)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > LM_MAXLENGTH) ? NO : YES;      
+    }
+    else if(textField == self.secureid_field)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > SID_MAXLENGTH) ? NO : YES;          
+    }    
+    else if(textField == self.company_field)    
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength > CP_MAXLENGTH) ? NO : YES;          
+    }
+    
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+
+    if(textView == self.other_field){    
+        NSUInteger newLength = [textView.text length] + [text length] - range.length;
+
+        return (newLength > UI_MAXLENGTH) ? NO : YES;            
+    }
+        
+    return YES;
+}
+
+
 /*
 - (void)textFieldDidBeginEditing:(UITextField *)textField  
 {          
@@ -344,6 +393,5 @@
     }
     return nil;
 }
-
 
 @end

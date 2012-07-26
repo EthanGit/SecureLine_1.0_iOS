@@ -1,10 +1,12 @@
-	/* 
+/* 
   Localizable.strings
   vbyantisip
 
   Created by Arthur Tseng on 2012/6/27.
   Copyright (c) 2012年 Gentrice. All rights reserved.
 */
+
+"sysRegistering" = "加入網路中...";
 
 "btnAdd" = "新增";
 "btnEdit" = "編輯";
@@ -63,6 +65,13 @@
 "fphUserCompanyName" = "聯絡人公司名稱";
 
 
+"altmEditContactWarning"="修改錯誤警告";
+"altmAddContactWarning"="新增錯誤警告";
+"altmContactWarningNoFN"="請輸入您的名字!";
+"altmContactWarningNoLN"="請輸入您的姓氏!";
+"altmContactWarningNoSID"="請輸入您的 Secure Line ID!";
+
+
 //Recents
 "Recent"="最近記錄";
 "Today"="今天";
@@ -74,18 +83,34 @@
 
 "altPasscodeSetting"="密碼鎖設定:";
 "fphNewPasscode"="請輸入4碼數值";
-"fphConfirmPasscode"="請輸入新密碼鎖";
+"fphConfirmPasscode"="請輸入新密碼";
 
-"altmPasscodemismatch"="密碼鎖輸入不符合，請重新設定";
+"altmPasscodemismatch"="密碼輸入不符合，請重新設定";
+"altmOldPasscodeFormatError"="舊密碼錯誤，請重新設定";
+"altmOldPasscodeError"="舊密碼錯誤，請重新設定";
+"altmNewPasscodeNotSame"="新密碼不可與舊密碼設定相同，請重新設定";
+"altPasscodeDisabledSetting"="密碼鎖關閉";
+
 "altmSettingError"="設定錯誤";
 "altmlogoutcheck"="確定登出?";
 
 
+"fphNewPasscode"="新  密碼";
+"fphConfirmPasscode"="確認密碼";
+
+"fphOldPasscode"="舊  密碼";
+"labOldPasscode"="舊  密碼";
+"labNewPasscode"="新  密碼";
+"labCheckPasscode"="確認密碼";
+"labSettingPasscodeTitle"="設定／變更密碼";
+
+
+
 //passcode
-"altmKeyinPassword"="請輸入您的密碼鎖";
-"altmWrongPasscode"="密碼鎖錯誤.";
-"altPasscodeError"="密碼鎖錯誤";
-"altPasscodeWarning"="密碼鎖錯誤";
+"altmKeyinPassword"="請輸入您的密碼";
+"altmWrongPasscode"="密碼錯誤.";
+"altPasscodeError"="密碼錯誤";
+"altPasscodeWarning"="密碼錯誤";
 
 
 
@@ -103,6 +128,7 @@
 "btnLogin"="登入";
 "fphSecureLineID"="Secure Line ID";
 "fphPassword"="密碼";
+"labLoginMessage"="登入中...";
 "altmKeyinError"="輸入錯誤";
 "altErrorMessage"="錯誤訊息";
 
@@ -112,10 +138,16 @@
 "altmLoginAuthError"="認證錯誤";
 
 
+"altSendPwdEmail"="查詢密碼";
+"altmSendPwdEmail200"="您的密碼已寄送至註冊信箱，請至信箱查詢";
+"altmSendPwdEmail400"="Secure Line ID 不可為空值，請重新輸入查詢資料";
+"altmSendPwdEmail500"="server error";            
+"altmSendPwdEmailError"="server error";
 
-//Reports
+"altForgotPwd"="忘記密碼";
+"altmForgotPwd"="寄送密碼至您的註冊信箱？";
 
-
+"altmDeviceMappingError"="資料連線發生錯誤";
 
 //Reports
 "reportTitle"="如果對此軟體有任何問題，請來信詢問或回報";
@@ -125,5 +157,16 @@
 
 //App delegate
 "notifyCallFrom" = "來電從";
+
+
+//Network Warning 
+"altmDialErrorNetwork"="網路異常，請稍侯再試";
+"altDialError"="撥話錯誤";
+
+"altmDialErrorNoUser"="Please configure your settings in the iphone preference panel.";
+"altmDialErrorNoService"="The service is not available.";
+"altmDialErrorMaxActiveCallReached"="You already have too much active call.";
+
+
 
 
